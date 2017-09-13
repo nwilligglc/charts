@@ -1,0 +1,91 @@
+River,Year,Fraction,Unit,Value
+Raisin,2008,Annual TP Loading,Metric Tons,172
+Raisin,2009,Annual TP Loading,Metric Tons,128
+Raisin,2010,Annual TP Loading,Metric Tons,83
+Raisin,2011,Annual TP Loading,Metric Tons,135
+Raisin,2012,Annual TP Loading,Metric Tons,163
+Raisin,2013,Annual TP Loading,Metric Tons,68
+Raisin,2014,Annual TP Loading,Metric Tons,79.7
+Raisin,2015,Annual TP Loading,Metric Tons,88.9
+Raisin,2016,Annual TP Loading,Metric Tons,62.5
+Raisin,2008,Annual DRP Loading,Metric Tons,42.0
+Raisin,2009,Annual DRP Loading,Metric Tons,26.3
+Raisin,2010,Annual DRP Loading,Metric Tons,20.2
+Raisin,2011,Annual DRP Loading,Metric Tons,34.6
+Raisin,2012,Annual DRP Loading,Metric Tons,37.8
+Raisin,2013,Annual DRP Loading,Metric Tons,17.3
+Raisin,2014,Annual DRP Loading,Metric Tons,24.5
+Raisin,2015,Annual DRP Loading,Metric Tons,37.5
+Raisin,2016,Annual DRP Loading,Metric Tons,16
+Raisin,2008,Annual TP FWMC,milligrams / liter,
+Raisin,2009,Annual TP FWMC,milligrams / liter,0.134736842
+Raisin,2010,Annual TP FWMC,milligrams / liter,
+Raisin,2011,Annual TP FWMC,milligrams / liter,0.152198422
+Raisin,2012,Annual TP FWMC,milligrams / liter,
+Raisin,2013,Annual TP FWMC,milligrams / liter,
+Raisin,2014,Annual TP FWMC,milligrams / liter,0.12112462
+Raisin,2015,Annual TP FWMC,milligrams / liter,0.135312024
+Raisin,2016,Annual TP FWMC,milligrams / liter,0.119047619
+Raisin,2008,Annual DRP FWMC,milligrams / liter,
+Raisin,2009,Annual DRP FWMC,milligrams / liter,0.027684211
+Raisin,2010,Annual DRP FWMC,milligrams / liter,
+Raisin,2011,Annual DRP FWMC,milligrams / liter,0.039007892
+Raisin,2012,Annual DRP FWMC,milligrams / liter,
+Raisin,2013,Annual DRP FWMC,milligrams / liter,
+Raisin,2014,Annual DRP FWMC,milligrams / liter,0.037234043
+Raisin,2015,Annual DRP FWMC,milligrams / liter,0.057077626
+Raisin,2016,Annual DRP FWMC,milligrams / liter,0.03047619
+Raisin,2008,Annual Discharge,million cubic meters,1098
+Raisin,2009,Annual Discharge,million cubic meters,950
+Raisin,2010,Annual Discharge,million cubic meters,750
+Raisin,2011,Annual Discharge,million cubic meters,887
+Raisin,2012,Annual Discharge,million cubic meters,930
+Raisin,2013,Annual Discharge,million cubic meters,583
+Raisin,2014,Annual Discharge,million cubic meters,658
+Raisin,2015,Annual Discharge,million cubic meters,657
+Raisin,2016,Annual Discharge,million cubic meters,525
+Raisin,2008,Spring TP Loading,Metric Tons,83
+Raisin,2009,Spring TP Loading,Metric Tons,92
+Raisin,2010,Spring TP Loading,Metric Tons,68
+Raisin,2011,Spring TP Loading,Metric Tons,133
+Raisin,2012,Spring TP Loading,Metric Tons,27
+Raisin,2013,Spring TP Loading,Metric Tons,57
+Raisin,2014,Spring TP Loading,Metric Tons,58.8
+Raisin,2015,Spring TP Loading,Metric Tons,84.2
+Raisin,2016,Spring TP Loading,Metric Tons,40.2
+Raisin,2008,Spring DRP Loading,Metric Tons,19.59
+Raisin,2009,Spring DRP Loading,Metric Tons,16.67
+Raisin,2010,Spring DRP Loading,Metric Tons,16.75
+Raisin,2011,Spring DRP Loading,Metric Tons,29.44
+Raisin,2012,Spring DRP Loading,Metric Tons,6.37
+Raisin,2013,Spring DRP Loading,Metric Tons,14.34
+Raisin,2014,Spring DRP Loading,Metric Tons,17.83
+Raisin,2015,Spring DRP Loading,Metric Tons,33.11
+Raisin,2016,Spring DRP Loading,Metric Tons,9.14
+Raisin,2008,Spring TP FWMC,milligrams / liter,0.148
+Raisin,2009,Spring TP FWMC,milligrams / liter,0.16
+Raisin,2010,Spring TP FWMC,milligrams / liter,0.127
+Raisin,2011,Spring TP FWMC,milligrams / liter,0.192
+Raisin,2012,Spring TP FWMC,milligrams / liter,0.108
+Raisin,2013,Spring TP FWMC,milligrams / liter,0.128
+Raisin,2014,Spring TP FWMC,milligrams / liter,0.129
+Raisin,2015,Spring TP FWMC,milligrams / liter,0.165
+Raisin,2016,Spring TP FWMC,milligrams / liter,0.121
+Raisin,2008,Spring DRP FWMC,milligrams / liter,0.035
+Raisin,2009,Spring DRP FWMC,milligrams / liter,0.029
+Raisin,2010,Spring DRP FWMC,milligrams / liter,0.031
+Raisin,2011,Spring DRP FWMC,milligrams / liter,0.043
+Raisin,2012,Spring DRP FWMC,milligrams / liter,0.025
+Raisin,2013,Spring DRP FWMC,milligrams / liter,0.032
+Raisin,2014,Spring DRP FWMC,milligrams / liter,0.039
+Raisin,2015,Spring DRP FWMC,milligrams / liter,0.065
+Raisin,2016,Spring DRP FWMC,milligrams / liter,0.027
+Raisin,2008,Spring Discharge,million cubic meters,562
+Raisin,2009,Spring Discharge,million cubic meters,575
+Raisin,2010,Spring Discharge,million cubic meters,537
+Raisin,2011,Spring Discharge,million cubic meters,691
+Raisin,2012,Spring Discharge,million cubic meters,250
+Raisin,2013,Spring Discharge,million cubic meters,445
+Raisin,2014,Spring Discharge,million cubic meters,455
+Raisin,2015,Spring Discharge,million cubic meters,511
+Raisin,2016,Spring Discharge,million cubic meters,333

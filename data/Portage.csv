@@ -1,0 +1,91 @@
+River,Year,Fraction,Unit,Value
+Portage,2008,Annual TP Loading,Metric Tons,
+Portage,2009,Annual TP Loading,Metric Tons,
+Portage,2010,Annual TP Loading,Metric Tons,
+Portage,2011,Annual TP Loading,Metric Tons,232
+Portage,2012,Annual TP Loading,Metric Tons,188
+Portage,2013,Annual TP Loading,Metric Tons,117
+Portage,2014,Annual TP Loading,Metric Tons,163
+Portage,2015,Annual TP Loading,Metric Tons,123
+Portage,2016,Annual TP Loading,Metric Tons,103
+Portage,2008,Annual DRP Loading,Metric Tons,
+Portage,2009,Annual DRP Loading,Metric Tons,
+Portage,2010,Annual DRP Loading,Metric Tons,
+Portage,2011,Annual DRP Loading,Metric Tons,51.0
+Portage,2012,Annual DRP Loading,Metric Tons,58.6
+Portage,2013,Annual DRP Loading,Metric Tons,35.2
+Portage,2014,Annual DRP Loading,Metric Tons,50.1
+Portage,2015,Annual DRP Loading,Metric Tons,45.1
+Portage,2016,Annual DRP Loading,Metric Tons,20.2
+Portage,2008,Annual TP FWMC,milligrams / liter,
+Portage,2009,Annual TP FWMC,milligrams / liter,
+Portage,2010,Annual TP FWMC,milligrams / liter,
+Portage,2011,Annual TP FWMC,milligrams / liter,0.399
+Portage,2012,Annual TP FWMC,milligrams / liter,0.371
+Portage,2013,Annual TP FWMC,milligrams / liter,0.312
+Portage,2014,Annual TP FWMC,milligrams / liter,0.370
+Portage,2015,Annual TP FWMC,milligrams / liter,0.280
+Portage,2016,Annual TP FWMC,milligrams / liter,0.220
+Portage,2008,Annual DRP FWMC,milligrams / liter,
+Portage,2009,Annual DRP FWMC,milligrams / liter,
+Portage,2010,Annual DRP FWMC,milligrams / liter,
+Portage,2011,Annual DRP FWMC,milligrams / liter,0.088
+Portage,2012,Annual DRP FWMC,milligrams / liter,0.116
+Portage,2013,Annual DRP FWMC,milligrams / liter,0.094
+Portage,2014,Annual DRP FWMC,milligrams / liter,0.114
+Portage,2015,Annual DRP FWMC,milligrams / liter,0.103
+Portage,2016,Annual DRP FWMC,milligrams / liter,0.043
+Portage,2008,Annual Discharge,million cubic meters,650
+Portage,2009,Annual Discharge,million cubic meters,353
+Portage,2010,Annual Discharge,million cubic meters,251
+Portage,2011,Annual Discharge,million cubic meters,582
+Portage,2012,Annual Discharge,million cubic meters,507
+Portage,2013,Annual Discharge,million cubic meters,375
+Portage,2014,Annual Discharge,million cubic meters,440.0
+Portage,2015,Annual Discharge,million cubic meters,439
+Portage,2016,Annual Discharge,million cubic meters,469
+Portage,2008,Spring TP Loading,Metric Tons,
+Portage,2009,Spring TP Loading,Metric Tons,
+Portage,2010,Spring TP Loading,Metric Tons,
+Portage,2011,Spring TP Loading,Metric Tons,186
+Portage,2012,Spring TP Loading,Metric Tons,35
+Portage,2013,Spring TP Loading,Metric Tons,73
+Portage,2014,Spring TP Loading,Metric Tons,63
+Portage,2015,Spring TP Loading,Metric Tons,111
+Portage,2016,Spring TP Loading,Metric Tons,67.1
+Portage,2008,Spring DRP Loading,Metric Tons,
+Portage,2009,Spring DRP Loading,Metric Tons,
+Portage,2010,Spring DRP Loading,Metric Tons,
+Portage,2011,Spring DRP Loading,Metric Tons,35.53
+Portage,2012,Spring DRP Loading,Metric Tons,7.11
+Portage,2013,Spring DRP Loading,Metric Tons,22.14
+Portage,2014,Spring DRP Loading,Metric Tons,14.23
+Portage,2015,Spring DRP Loading,Metric Tons,40.1
+Portage,2016,Spring DRP Loading,Metric Tons,10.9
+Portage,2008,Spring TP FWMC,milligrams / liter,
+Portage,2009,Spring TP FWMC,milligrams / liter,
+Portage,2010,Spring TP FWMC,milligrams / liter,
+Portage,2011,Spring TP FWMC,milligrams / liter,0.427
+Portage,2012,Spring TP FWMC,milligrams / liter,0.354
+Portage,2013,Spring TP FWMC,milligrams / liter,0.323
+Portage,2014,Spring TP FWMC,milligrams / liter,0.335
+Portage,2015,Spring TP FWMC,milligrams / liter,0.285
+Portage,2016,Spring TP FWMC,milligrams / liter,0.344
+Portage,2008,Spring DRP FWMC,milligrams / liter,
+Portage,2009,Spring DRP FWMC,milligrams / liter,
+Portage,2010,Spring DRP FWMC,milligrams / liter,
+Portage,2011,Spring DRP FWMC,milligrams / liter,0.081
+Portage,2012,Spring DRP FWMC,milligrams / liter,0.072
+Portage,2013,Spring DRP FWMC,milligrams / liter,0.098
+Portage,2014,Spring DRP FWMC,milligrams / liter,0.076
+Portage,2015,Spring DRP FWMC,milligrams / liter,0.103
+Portage,2016,Spring DRP FWMC,milligrams / liter,0.056
+Portage,2008,Spring Discharge,million cubic meters,
+Portage,2009,Spring Discharge,million cubic meters,
+Portage,2010,Spring Discharge,million cubic meters,
+Portage,2011,Spring Discharge,million cubic meters,436
+Portage,2012,Spring Discharge,million cubic meters,99
+Portage,2013,Spring Discharge,million cubic meters,226
+Portage,2014,Spring Discharge,million cubic meters,188
+Portage,2015,Spring Discharge,million cubic meters,389
+Portage,2016,Spring Discharge,million cubic meters,195
