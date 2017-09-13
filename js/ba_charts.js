@@ -479,7 +479,16 @@ var ColorPicker = {
 //     // });
 // };
 
-
+/**
+ *
+ * @param eleID
+ * @param name
+ * @param filename
+ * @param fraction
+ * @param chartType
+ * @param target
+ * @param startingVal Not in use. Reserved if need to change the starting value.
+ */
 function createWatershedChart(eleID, name, filename, fraction, chartType, target, startingVal){
     var watershed = {
         name: name,
