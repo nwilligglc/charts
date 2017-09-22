@@ -611,22 +611,25 @@ function createWatershedChart(eleID, name, filename, fraction, chartType, target
         }
 
 
-        // Highcharts.addEvent(chart, 'click', function(){
-        //     var ch = this;
-        //     setTimeout(function(){
-        //         ch.exportChart({
-        //             type: 'image/png',
-        //             filename: watershed.name + '_' + watershed[fraction].name,
-        //             options: {
-        //                                            backgroundColor: '#9E9E9E'
-        //
-        //             }
-        //         });
-        //     },1);
-        // });
+        /**
+         * The following event is for click-and-save
+         */
+        Highcharts.addEvent(chart, 'click', function(){
+            var ch = this;
+            setTimeout(function(){
+                ch.exportChart({
+                    type: 'image/png',
+                    filename: watershed.name + '_' + watershed[fraction].name  + '_watermark_grey_credits',
+                    options: {
+                                                   backgroundColor: '#9E9E9E'
+
+                    }
+                });
+            },1);
+        });
         // chart.exportChart({
         //     type: 'image/png',
-        //     filename: watershed.name + '_' + watershed[fraction].name
+        //     filename: watershed.name + '_' + watershed[fraction].name + '_watermark_red'
         // });
         // chart.exportChart({
         //     type: 'image/svg+xml',
@@ -669,24 +672,48 @@ function options_general(w_name, data, color){
         chart: {
             width: chart_width,
             height: chart_height,
+            style: {
+                fontFamily: 'Montserrat, sans-serif',
+                color: ColorPicker.body
+            },
             // backgroundColor: '#00ff00'
+            /**
+             * The following events is for watermark
+             */
+            events:{
+                load: function () {
+                    // this.renderer.image("https://c1.staticflickr.com/5/4382/36578347693_3c6032000b_o.png", 0, 0, chart_width, chart_height).add();   //red watermark
+                    this.renderer.image("https://c1.staticflickr.com/5/4495/36578347753_723f8371e3_o.png", 0, 0, chart_width, chart_height).add();   //grey watermark
+                }
+            }
         },
         title: {
-            text: w_name + " River " + data.name
+            text: w_name + " River " + data.name,
+            style:{
+                color: ColorPicker.body
+            }
         },
         credits: {
-            enabled: false
+            // enabled: false,
+            href: "http://www.glc.org",
+            text: "Great Lakes Commission"
         },
         xAxis: {
             categories: xAxis,
             title: {
-                text: 'Year'
+                text: 'Year',
+                style:{
+                    color: ColorPicker.body
+                }
             },
             // lineColor: '#ff0000'
         },
         yAxis: {
             title: {
-                text: data.name + '<br/> (' + data.unit + ')'
+                text: data.name + '<br/> (' + data.unit + ')',
+                style:{
+                    color: ColorPicker.body
+                }
             },
             // lineColor: '#ff0000',
             // lineWidth: 2
@@ -696,7 +723,11 @@ function options_general(w_name, data, color){
             unit: data.unit,
             data: data.series,
             color: color
-        }]
+        }],
+        lang: {
+            numericSymbols: null,
+            thousandsSep: ','
+        }
     };
 }
 
