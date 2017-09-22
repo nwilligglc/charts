@@ -614,19 +614,19 @@ function createWatershedChart(eleID, name, filename, fraction, chartType, target
         /**
          * The following event is for click-and-save
          */
-        Highcharts.addEvent(chart, 'click', function(){
-            var ch = this;
-            setTimeout(function(){
-                ch.exportChart({
-                    type: 'image/png',
-                    filename: watershed.name + '_' + watershed[fraction].name  + '_watermark_grey_credits',
-                    options: {
-                                                   backgroundColor: '#9E9E9E'
-
-                    }
-                });
-            },1);
-        });
+        // Highcharts.addEvent(chart, 'click', function(){
+        //     var ch = this;
+        //     setTimeout(function(){
+        //         ch.exportChart({
+        //             type: 'image/png',
+        //             filename: watershed.name + '_' + watershed[fraction].name  + '_watermark_grey_credits',
+        //             options: {
+        //                                            backgroundColor: '#9E9E9E'
+        //
+        //             }
+        //         });
+        //     },1);
+        // });
         // chart.exportChart({
         //     type: 'image/png',
         //     filename: watershed.name + '_' + watershed[fraction].name + '_watermark_red'
@@ -694,9 +694,9 @@ function options_general(w_name, data, color){
             }
         },
         credits: {
-            // enabled: false,
-            href: "http://www.glc.org",
-            text: "Great Lakes Commission"
+            enabled: false,
+            // href: "http://www.glc.org",
+            // text: "Great Lakes Commission"
         },
         xAxis: {
             categories: xAxis,
