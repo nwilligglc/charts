@@ -5,6 +5,13 @@ var chart_height = 300;
 // var chart_width = 800;
 // var chart_height = 400;
 
+function BA_charts(){
+}
+
+BA_charts.prototype.test = function(){
+
+}
+
 var ColorPicker = {
     heading1: '#2271a2',//getColor(34, 113, 162),
     heading2: '#314766',//getColor(49, 71, 102),
@@ -668,10 +675,17 @@ function createLineChartOption(data, dataName, eleId, title, yAxisText, color) {
 };
 
 function options_general(w_name, data, color){
+    Highcharts.setOptions({
+        lang: {
+            numericSymbols: null,
+            thousandsSep: ','
+        }
+
+    });
     return {
         chart: {
-            width: chart_width,
-            height: chart_height,
+            width: undefined,//chart_width,
+            height: undefined,//chart_height,
             style: {
                 fontFamily: 'Montserrat, sans-serif',
                 color: ColorPicker.body
@@ -683,7 +697,7 @@ function options_general(w_name, data, color){
             events:{
                 load: function () {
                     // this.renderer.image("https://c1.staticflickr.com/5/4382/36578347693_3c6032000b_o.png", 0, 0, chart_width, chart_height).add();   //red watermark
-                    this.renderer.image("https://c1.staticflickr.com/5/4495/36578347753_723f8371e3_o.png", 0, 0, chart_width, chart_height).add();   //grey watermark
+                    this.renderer.image("https://c1.staticflickr.com/5/4495/36578347753_723f8371e3_o.png", this.plotTop, this.plotLeft, this.plotWidth, this.plotHeight).add();   //grey watermark
                 }
             }
         },
@@ -724,10 +738,7 @@ function options_general(w_name, data, color){
             data: data.series,
             color: color
         }],
-        lang: {
-            numericSymbols: null,
-            thousandsSep: ','
-        }
+
     };
 }
 
