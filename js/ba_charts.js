@@ -626,7 +626,7 @@ function createWatershedChart(eleID, name, filename, fraction, chartType, target
         //     setTimeout(function(){
         //         ch.exportChart({
         //             type: 'image/png',
-        //             filename: watershed.name + '_' + watershed[fraction].name  + '_watermark_grey_credits',
+        //             filename: watershed.name + '_' + watershed[fraction].name  + '_watermark_grey',
         //             options: {
         //                                            backgroundColor: '#9E9E9E'
         //
@@ -697,7 +697,7 @@ function options_general(w_name, data, color){
             events:{
                 load: function () {
                     // this.renderer.image("https://c1.staticflickr.com/5/4382/36578347693_3c6032000b_o.png", 0, 0, chart_width, chart_height).add();   //red watermark
-                    this.renderer.image("https://c1.staticflickr.com/5/4495/36578347753_723f8371e3_o.png", this.plotTop, this.plotLeft, this.plotWidth, this.plotHeight).add();   //grey watermark
+                    this.renderer.image("https://c1.staticflickr.com/5/4514/23628988768_984b3f3343_o.png", this.plotLeft, this.plotTop, this.plotWidth, this.plotHeight).add();   //grey watermark
                 }
             }
         },
