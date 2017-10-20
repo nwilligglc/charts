@@ -645,6 +645,199 @@ function createWatershedChart(eleID, name, filename, fraction, chartType, target
     });
 }
 
+function createDualAxesChart(eleID, chartName, filename, fraction1, fraction2, series1type, series2type, target){
+    var watershed = {
+        name: name,
+        TPloading: {
+            name: 'Annual TP Loading',
+            unit: 'Metric Tons',
+            series: []
+        },
+        DRPloading: {
+            name: 'Annual DRP Loading',
+            unit: 'Metric Tons',
+            series: []
+        },
+        TPFWMC: {
+            name: 'Annual TP FWMC',
+            unit: 'mg/L',
+            series: []
+        },
+        DRPFWMC: {
+            name: 'Annual DRP FWMC',
+            unit: 'mg/L',
+            series: []
+        },
+        discharge:{
+            name: 'Annual Discharge',
+            unit: 'Million Cubic Meters',
+            series: []
+        },
+        TPloading_S: {
+            name: 'Spring TP Loading',
+            unit: 'Metric Tons',
+            series: []
+        },
+        DRPloading_S: {
+            name: 'Spring DRP Loading',
+            unit: 'Metric Tons',
+            series: []
+        },
+        TPFWMC_S: {
+            name: 'Spring TP FWMC',
+            unit: 'mg/L',
+            series: []
+        },
+        DRPFWMC_S: {
+            name: 'Spring DRP FWMC',
+            unit: 'mg/L',
+            series: []
+        },
+        discharge_S:{
+            name: 'Spring Discharge',
+            unit: 'Million Cubic Meters',
+            series: []
+        },
+        addToFraction: function(name, year, val){
+            switch (name){
+                case this.TPloading.name:
+                    this.TPloading.series.splice(year - 2008, 0, (val));
+                    break;
+                case this.DRPloading.name:
+                    this.DRPloading.series.splice(year - 2008, 0, (val));
+                    break;
+                case this.TPFWMC.name:
+                    this.TPFWMC.series.splice(year - 2008, 0, (val));
+                    break;
+                case this.DRPFWMC.name:
+                    this.DRPFWMC.series.splice(year - 2008, 0, (val));
+                    break;
+                case this.discharge.name:
+                    this.discharge.series.splice(year - 2008, 0, (val));
+                    break;
+                case this.TPloading_S.name:
+                    this.TPloading_S.series.splice(year - 2008, 0, val);
+                    break;
+                case this.DRPloading_S.name:
+                    this.DRPloading_S.series.splice(year - 2008, 0, val);
+                    break;
+                case this.TPFWMC_S.name:
+                    this.TPFWMC_S.series.splice(year - 2008, 0, val);
+                    break;
+                case this.DRPFWMC_S.name:
+                    this.DRPFWMC_S.series.splice(year - 2008, 0, val);
+                    break;
+                case this.discharge_S.name:
+                    this.discharge_S.series.splice(year - 2008, 0, val);
+                    break;
+                default:
+                    alert(name + ' ' + year + ' ' + val);
+            }
+        }
+    };
+
+    d3.csv(filename, function (in_file){
+        in_file.forEach(function (obj){
+            watershed.addToFraction(obj.Fraction, parseInt(obj.Year), parseFloat(obj.Value));
+        });
+        Highcharts.setOptions({
+            lang: {
+                numericSymbols: null,
+                thousandsSep: ','
+            }
+
+        });
+        var chart = Highcharts.chart(eleID, {
+            chart: {
+                width: undefined,//chart_width,
+                height: chart_height, //undefined,//chart_height,
+                style: {
+                    fontFamily: 'Montserrat, sans-serif',
+                    color: ColorPicker.body
+                },
+                // backgroundColor: '#00ff00'
+                /**
+                 * The following events is for watermark
+                 */
+                events:{
+                    load: function () {
+                        // this.renderer.image("https://c1.staticflickr.com/5/4382/36578347693_3c6032000b_o.png", 0, 0, chart_width, chart_height).add();   //red watermark
+                        this.renderer.image("https://c1.staticflickr.com/5/4514/23628988768_984b3f3343_o.png", this.plotLeft, this.plotTop, this.plotWidth, this.plotHeight).add();   //grey watermark
+                    }
+                }
+            },
+            title: {
+                text: chartName + ' River Watershed',
+                style:{
+                    color: ColorPicker.body
+                }
+            },
+            credits: {
+                enabled: false,
+                // href: "http://www.glc.org",
+                // text: "Great Lakes Commission"
+            },
+            xAxis: {
+                categories: xAxis,
+                title: {
+                    text: 'Year',
+                    style:{
+                        color: ColorPicker.body
+                    }
+                },
+                // lineColor: '#ff0000'
+            },
+            yAxis: [{
+                title: {
+                    text: watershed[fraction1].name + '<br>(' + watershed[fraction1].unit + ')',
+                    style:{
+                        color: ColorPicker.body
+                    }
+                }},
+                {
+                    title: {
+                        text: watershed[fraction2].name + '<br>(' + watershed[fraction2].unit + ')',
+                        style:{
+                            color: ColorPicker.body
+                        },
+
+                    },
+                    opposite: true
+                }
+            ],
+            series: [{
+                name: watershed[fraction1].name,
+                type: series1type,
+                // data: [1414, 1370, 1307, 2318, 393, 1249, 1155, 1863, 755.3],
+                data: watershed[fraction1].series,
+                color: ColorPicker.blue1
+                },
+                {
+                    type: 'line',
+                    data: createTargetSeries(target),
+                    name: watershed[fraction1].name + ' Target',
+                    color: ColorPicker.target_red,
+                    lineWidth: 1,
+                    marker:{
+                        radius: 0
+                    },
+                },
+                {
+                    name: watershed[fraction2].name,
+                    type: series2type,
+                    yAxis: 1,
+                    // data: [3756, 3335, 3613, 5097, 1039, 3342, 3475, 4099, 2490],
+                    data: watershed[fraction2].series,
+                    color: ColorPicker.blue3
+                }
+
+            ]
+
+        });
+    })
+}
+
+
 function createLineChartOption(data, dataName, eleId, title, yAxisText, color) {
     var options = {
         chart: {
