@@ -645,7 +645,7 @@ function createWatershedChart(eleID, name, filename, fraction, chartType, target
     });
 }
 
-function createDualAxesChart(eleID, chartName, filename, fraction1, fraction2, series1type, series2type, target){
+function createDualAxesChart(eleID, chartName, filename, fraction1, fraction2, series1type, series2type, max1, max2, target){
     var watershed = {
         name: name,
         TPloading: {
@@ -793,7 +793,11 @@ function createDualAxesChart(eleID, chartName, filename, fraction1, fraction2, s
                     style:{
                         color: ColorPicker.body
                     }
-                }},
+                },
+                // ceiling: 2000,
+                max: max1,
+                // tickAmount: 4,
+                },
                 {
                     title: {
                         text: watershed[fraction2].name + '<br>(' + watershed[fraction2].unit + ')',
@@ -802,6 +806,8 @@ function createDualAxesChart(eleID, chartName, filename, fraction1, fraction2, s
                         },
 
                     },
+                    max: max2,
+                    // tickAmount: 4,
                     opposite: true
                 }
             ],
