@@ -1,6 +1,6 @@
 var xAxis = ["2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016"];
-var chart_width = 500;
-var chart_height = 300;
+//var chart_width = 500;
+//var chart_height = 300;
 
 // var chart_width = 800;
 // var chart_height = 400;
