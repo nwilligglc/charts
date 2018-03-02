@@ -5,40 +5,39 @@ var xAxis = ["2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "20
 // var chart_width = 800;
 // var chart_height = 400;
 
-function BA_charts(){
-}
+function BA_charts() {}
 
-BA_charts.prototype.test = function(){
+BA_charts.prototype.test = function () {
 
 }
 
 var ColorPicker = {
-    heading1: '#2271a2',//getColor(34, 113, 162),
-    heading2: '#314766',//getColor(49, 71, 102),
-    heading3: '#2271a2',//getColor(34, 113, 162),
-    heading4: '#2271a2',//getColor(34, 113, 162),
-    heading5: '#333333',//getColor(51, 51, 51),
-    heading6: '#314766',//getColor(49, 71, 102),
-    body: '#333333',//getColor(51, 51, 51),
-    body_resource: '#333333',//getColor(51, 51, 51),
+    heading1: '#2271a2', //getColor(34, 113, 162),
+    heading2: '#314766', //getColor(49, 71, 102),
+    heading3: '#2271a2', //getColor(34, 113, 162),
+    heading4: '#2271a2', //getColor(34, 113, 162),
+    heading5: '#333333', //getColor(51, 51, 51),
+    heading6: '#314766', //getColor(49, 71, 102),
+    body: '#333333', //getColor(51, 51, 51),
+    body_resource: '#333333', //getColor(51, 51, 51),
 
-    blue_header: '#2b4e7c',//getColor(43, 78, 124),
-    green_selection_whtbg: '#6db227',//getColor(109, 178, 39),
-    green_selection_dkbg: '#b8e986',//getColor(184, 233, 134),
-    orange_selection: '#f7b141',//getColor(247, 177, 65),
-    grey_menu: '#dddddd',//getColor(221, 221, 221),
-    infographic_bg: '#d8e2db',//getColor(216, 226, 235),
-    slideshow_arrow: '#9b9b9b',//getColor(155, 155, 155),
+    blue_header: '#2b4e7c', //getColor(43, 78, 124),
+    green_selection_whtbg: '#6db227', //getColor(109, 178, 39),
+    green_selection_dkbg: '#b8e986', //getColor(184, 233, 134),
+    orange_selection: '#f7b141', //getColor(247, 177, 65),
+    grey_menu: '#dddddd', //getColor(221, 221, 221),
+    infographic_bg: '#d8e2db', //getColor(216, 226, 235),
+    slideshow_arrow: '#9b9b9b', //getColor(155, 155, 155),
 
-    blue1: '#1c2d5a',//getColor(28, 45, 90),
-    blue2: '#afdfe4',//getColor(175, 223, 228),
-    blue3: '#7eb4d2',//getColor(126, 111, 247),
-    blue4: '#7ed3f7',//getColor(126, 211, 247),
-    blue5: '#188ccc',//getColor(24, 140, 204),
-    blue6: '#00b0e6',//getColor(0, 176, 230),
-    blue7: '#1b75ba',//getColor(30, 117, 186),
+    blue1: '#1c2d5a', //getColor(28, 45, 90),
+    blue2: '#afdfe4', //getColor(175, 223, 228),
+    blue3: '#7eb4d2', //getColor(126, 111, 247),
+    blue4: '#7ed3f7', //getColor(126, 211, 247),
+    blue5: '#188ccc', //getColor(24, 140, 204),
+    blue6: '#00b0e6', //getColor(0, 176, 230),
+    blue7: '#1b75ba', //getColor(30, 117, 186),
 
-    target_red: '#ff0000',//getColor(206, 0, 0),
+    target_red: '#ff0000', //getColor(206, 0, 0),
 };
 
 // function createOptions(chartDiv, style, title, yAxisText, dataSeries){
@@ -496,7 +495,7 @@ var ColorPicker = {
  * @param target
  * @param startingVal Not in use. Reserved if need to change the starting value.
  */
-function createWatershedChart(eleID, name, filename, fraction, chartType, target, startingVal){
+function createWatershedChart(eleID, name, filename, fraction, chartType, target, bgimage = true, startingVal) {
     var watershed = {
         name: name,
         TPloading: {
@@ -519,7 +518,7 @@ function createWatershedChart(eleID, name, filename, fraction, chartType, target
             unit: 'mg/L',
             series: []
         },
-        discharge:{
+        discharge: {
             name: 'Annual Discharge',
             unit: 'Million Cubic Meters',
             series: []
@@ -544,76 +543,76 @@ function createWatershedChart(eleID, name, filename, fraction, chartType, target
             unit: 'mg/L',
             series: []
         },
-        discharge_S:{
+        discharge_S: {
             name: 'Spring Discharge',
             unit: 'Million Cubic Meters',
             series: []
         },
-        addToFraction: function(name, year, val){
-            switch (name){
-                case this.TPloading.name:
-                    this.TPloading.series.splice(year - 2008, 0, (val));
-                    break;
-                case this.DRPloading.name:
-                    this.DRPloading.series.splice(year - 2008, 0, (val));
-                    break;
-                case this.TPFWMC.name:
-                    this.TPFWMC.series.splice(year - 2008, 0, (val));
-                    break;
-                case this.DRPFWMC.name:
-                    this.DRPFWMC.series.splice(year - 2008, 0, (val));
-                    break;
-                case this.discharge.name:
-                    this.discharge.series.splice(year - 2008, 0, (val));
-                    break;
-                case this.TPloading_S.name:
-                    this.TPloading_S.series.splice(year - 2008, 0, val);
-                    break;
-                case this.DRPloading_S.name:
-                    this.DRPloading_S.series.splice(year - 2008, 0, val);
-                    break;
-                case this.TPFWMC_S.name:
-                    this.TPFWMC_S.series.splice(year - 2008, 0, val);
-                    break;
-                case this.DRPFWMC_S.name:
-                    this.DRPFWMC_S.series.splice(year - 2008, 0, val);
-                    break;
-                case this.discharge_S.name:
-                    this.discharge_S.series.splice(year - 2008, 0, val);
-                    break;
-                default:
-                    alert(name + ' ' + year + ' ' + val);
+        addToFraction: function (name, year, val) {
+            switch (name) {
+            case this.TPloading.name:
+                this.TPloading.series.splice(year - 2008, 0, (val));
+                break;
+            case this.DRPloading.name:
+                this.DRPloading.series.splice(year - 2008, 0, (val));
+                break;
+            case this.TPFWMC.name:
+                this.TPFWMC.series.splice(year - 2008, 0, (val));
+                break;
+            case this.DRPFWMC.name:
+                this.DRPFWMC.series.splice(year - 2008, 0, (val));
+                break;
+            case this.discharge.name:
+                this.discharge.series.splice(year - 2008, 0, (val));
+                break;
+            case this.TPloading_S.name:
+                this.TPloading_S.series.splice(year - 2008, 0, val);
+                break;
+            case this.DRPloading_S.name:
+                this.DRPloading_S.series.splice(year - 2008, 0, val);
+                break;
+            case this.TPFWMC_S.name:
+                this.TPFWMC_S.series.splice(year - 2008, 0, val);
+                break;
+            case this.DRPFWMC_S.name:
+                this.DRPFWMC_S.series.splice(year - 2008, 0, val);
+                break;
+            case this.discharge_S.name:
+                this.discharge_S.series.splice(year - 2008, 0, val);
+                break;
+            default:
+                alert(name + ' ' + year + ' ' + val);
             }
         }
     };
 
-    d3.csv(filename, function (in_file){
-        in_file.forEach(function (obj){
+    d3.csv(filename, function (in_file) {
+        in_file.forEach(function (obj) {
             watershed.addToFraction(obj.Fraction, parseInt(obj.Year), parseFloat(obj.Value));
         });
         var chart;
         switch (chartType) {
-            case 'line':
-                /**
-                 * Default starting value for line chart is 0
-                 */
-                chart = createLineChart(eleID, watershed.name, watershed[fraction], ColorPicker.blue7);
-                // chart = createLineChart(eleID, watershed[fraction].series, watershed[fraction].name, watershed[fraction].unit, watershed[fraction].name, watershed[fraction].unit, ColorPicker.blue1);
-                // if(startingVal!==undefined){
-                //     chart = createLineChart_start(eleID, watershed.name, watershed[fraction], ColorPicker.blue7, startingVal);
-                // }else{
-                //     chart = createLineChart(eleID, watershed.name, watershed[fraction], ColorPicker.blue7);
-                // }
-                break;
-            case 'column':
-                // chart = createColumnChart(eleID, watershed[fraction].series, watershed[fraction].name, watershed[fraction].unit, watershed[fraction].name, watershed[fraction].unit, ColorPicker.blue2);
-                chart = createColumnChart2(eleID, watershed.name, watershed[fraction], ColorPicker.blue7);
-                break;
+        case 'line':
+            /**
+             * Default starting value for line chart is 0
+             */
+            chart = createLineChart(eleID, watershed.name, watershed[fraction], ColorPicker.blue7, bgimage);
+            // chart = createLineChart(eleID, watershed[fraction].series, watershed[fraction].name, watershed[fraction].unit, watershed[fraction].name, watershed[fraction].unit, ColorPicker.blue1);
+            // if(startingVal!==undefined){
+            //     chart = createLineChart_start(eleID, watershed.name, watershed[fraction], ColorPicker.blue7, startingVal);
+            // }else{
+            //     chart = createLineChart(eleID, watershed.name, watershed[fraction], ColorPicker.blue7);
+            // }
+            break;
+        case 'column':
+            // chart = createColumnChart(eleID, watershed[fraction].series, watershed[fraction].name, watershed[fraction].unit, watershed[fraction].name, watershed[fraction].unit, ColorPicker.blue2);
+            chart = createColumnChart2(eleID, watershed.name, watershed[fraction], ColorPicker.blue7, bgimage);
+            break;
             // case '':
             //     chart = createColumnChart2(eleID, watershed.name, watershed[fraction], ColorPicker.blue3);
             //     break;
         };
-        if(target){
+        if (target) {
             addTargetLine(chart, target, 'line');
         }
 
@@ -645,7 +644,7 @@ function createWatershedChart(eleID, name, filename, fraction, chartType, target
     });
 }
 
-function createDualAxesChart(eleID, chartName, filename, fraction1, fraction2, series1type, series2type, max1, max2, target){
+function createDualAxesChart(eleID, chartName, filename, fraction1, fraction2, series1type, series2type, max1, max2, target) {
     var watershed = {
         name: name,
         TPloading: {
@@ -668,7 +667,7 @@ function createDualAxesChart(eleID, chartName, filename, fraction1, fraction2, s
             unit: 'mg/L',
             series: []
         },
-        discharge:{
+        discharge: {
             name: 'Annual Discharge',
             unit: 'Million Cubic Meters',
             series: []
@@ -693,51 +692,51 @@ function createDualAxesChart(eleID, chartName, filename, fraction1, fraction2, s
             unit: 'mg/L',
             series: []
         },
-        discharge_S:{
+        discharge_S: {
             name: 'Spring Discharge',
             unit: 'Million Cubic Meters',
             series: []
         },
-        addToFraction: function(name, year, val){
-            switch (name){
-                case this.TPloading.name:
-                    this.TPloading.series.splice(year - 2008, 0, (val));
-                    break;
-                case this.DRPloading.name:
-                    this.DRPloading.series.splice(year - 2008, 0, (val));
-                    break;
-                case this.TPFWMC.name:
-                    this.TPFWMC.series.splice(year - 2008, 0, (val));
-                    break;
-                case this.DRPFWMC.name:
-                    this.DRPFWMC.series.splice(year - 2008, 0, (val));
-                    break;
-                case this.discharge.name:
-                    this.discharge.series.splice(year - 2008, 0, (val));
-                    break;
-                case this.TPloading_S.name:
-                    this.TPloading_S.series.splice(year - 2008, 0, val);
-                    break;
-                case this.DRPloading_S.name:
-                    this.DRPloading_S.series.splice(year - 2008, 0, val);
-                    break;
-                case this.TPFWMC_S.name:
-                    this.TPFWMC_S.series.splice(year - 2008, 0, val);
-                    break;
-                case this.DRPFWMC_S.name:
-                    this.DRPFWMC_S.series.splice(year - 2008, 0, val);
-                    break;
-                case this.discharge_S.name:
-                    this.discharge_S.series.splice(year - 2008, 0, val);
-                    break;
-                default:
-                    alert(name + ' ' + year + ' ' + val);
+        addToFraction: function (name, year, val) {
+            switch (name) {
+            case this.TPloading.name:
+                this.TPloading.series.splice(year - 2008, 0, (val));
+                break;
+            case this.DRPloading.name:
+                this.DRPloading.series.splice(year - 2008, 0, (val));
+                break;
+            case this.TPFWMC.name:
+                this.TPFWMC.series.splice(year - 2008, 0, (val));
+                break;
+            case this.DRPFWMC.name:
+                this.DRPFWMC.series.splice(year - 2008, 0, (val));
+                break;
+            case this.discharge.name:
+                this.discharge.series.splice(year - 2008, 0, (val));
+                break;
+            case this.TPloading_S.name:
+                this.TPloading_S.series.splice(year - 2008, 0, val);
+                break;
+            case this.DRPloading_S.name:
+                this.DRPloading_S.series.splice(year - 2008, 0, val);
+                break;
+            case this.TPFWMC_S.name:
+                this.TPFWMC_S.series.splice(year - 2008, 0, val);
+                break;
+            case this.DRPFWMC_S.name:
+                this.DRPFWMC_S.series.splice(year - 2008, 0, val);
+                break;
+            case this.discharge_S.name:
+                this.discharge_S.series.splice(year - 2008, 0, val);
+                break;
+            default:
+                alert(name + ' ' + year + ' ' + val);
             }
         }
     };
 
-    d3.csv(filename, function (in_file){
-        in_file.forEach(function (obj){
+    d3.csv(filename, function (in_file) {
+        in_file.forEach(function (obj) {
             watershed.addToFraction(obj.Fraction, parseInt(obj.Year), parseFloat(obj.Value));
         });
         Highcharts.setOptions({
@@ -749,7 +748,7 @@ function createDualAxesChart(eleID, chartName, filename, fraction1, fraction2, s
         });
         var chart = Highcharts.chart(eleID, {
             chart: {
-                width: undefined,//chart_width,
+                width: undefined, //chart_width,
                 height: chart_height, //undefined,//chart_height,
                 style: {
                     fontFamily: 'Montserrat, sans-serif',
@@ -759,16 +758,16 @@ function createDualAxesChart(eleID, chartName, filename, fraction1, fraction2, s
                 /**
                  * The following events is for watermark
                  */
-                events:{
+                events: {
                     load: function () {
                         // this.renderer.image("https://c1.staticflickr.com/5/4382/36578347693_3c6032000b_o.png", 0, 0, chart_width, chart_height).add();   //red watermark
-                        this.renderer.image("https://c1.staticflickr.com/5/4514/23628988768_984b3f3343_o.png", this.plotLeft, this.plotTop, this.plotWidth, this.plotHeight).add();   //grey watermark
+                        this.renderer.image("https://c1.staticflickr.com/5/4514/23628988768_984b3f3343_o.png", this.plotLeft, this.plotTop, this.plotWidth, this.plotHeight).add(); //grey watermark
                     }
                 }
             },
             title: {
                 text: chartName + ' River Watershed',
-                style:{
+                style: {
                     color: ColorPicker.body
                 }
             },
@@ -781,27 +780,27 @@ function createDualAxesChart(eleID, chartName, filename, fraction1, fraction2, s
                 categories: xAxis,
                 title: {
                     text: 'Year',
-                    style:{
+                    style: {
                         color: ColorPicker.body
                     }
                 },
                 // lineColor: '#ff0000'
             },
             yAxis: [{
-                title: {
-                    text: watershed[fraction1].name + '<br>(' + watershed[fraction1].unit + ')',
-                    style:{
-                        color: ColorPicker.body
-                    }
-                },
-                // ceiling: 2000,
-                max: max1,
-                // tickAmount: 4,
+                    title: {
+                        text: watershed[fraction1].name + '<br>(' + watershed[fraction1].unit + ')',
+                        style: {
+                            color: ColorPicker.body
+                        }
+                    },
+                    // ceiling: 2000,
+                    max: max1,
+                    // tickAmount: 4,
                 },
                 {
                     title: {
                         text: watershed[fraction2].name + '<br>(' + watershed[fraction2].unit + ')',
-                        style:{
+                        style: {
                             color: ColorPicker.body
                         },
 
@@ -812,11 +811,11 @@ function createDualAxesChart(eleID, chartName, filename, fraction1, fraction2, s
                 }
             ],
             series: [{
-                name: watershed[fraction1].name,
-                type: series1type,
-                // data: [1414, 1370, 1307, 2318, 393, 1249, 1155, 1863, 755.3],
-                data: watershed[fraction1].series,
-                color: ColorPicker.blue1
+                    name: watershed[fraction1].name,
+                    type: series1type,
+                    // data: [1414, 1370, 1307, 2318, 393, 1249, 1155, 1863, 755.3],
+                    data: watershed[fraction1].series,
+                    color: ColorPicker.blue1
                 },
                 {
                     type: 'line',
@@ -824,7 +823,7 @@ function createDualAxesChart(eleID, chartName, filename, fraction1, fraction2, s
                     name: watershed[fraction1].name + ' Target',
                     color: ColorPicker.target_red,
                     lineWidth: 1,
-                    marker:{
+                    marker: {
                         radius: 0
                     },
                 },
@@ -873,7 +872,7 @@ function createLineChartOption(data, dataName, eleId, title, yAxisText, color) {
     return options;
 };
 
-function options_general(w_name, data, color){
+function options_general(w_name, data, color, withBgimage) {
     Highcharts.setOptions({
         lang: {
             numericSymbols: null,
@@ -883,8 +882,8 @@ function options_general(w_name, data, color){
     });
     return {
         chart: {
-            width: undefined,//chart_width,
-            height: undefined,//chart_height,
+            width: undefined, //chart_width,
+            height: undefined, //chart_height,
             style: {
                 fontFamily: 'Montserrat, sans-serif',
                 color: ColorPicker.body
@@ -893,16 +892,18 @@ function options_general(w_name, data, color){
             /**
              * The following events is for watermark
              */
-            events:{
+            events: {
                 load: function () {
                     // this.renderer.image("https://c1.staticflickr.com/5/4382/36578347693_3c6032000b_o.png", 0, 0, chart_width, chart_height).add();   //red watermark
-                    this.renderer.image("https://c1.staticflickr.com/5/4514/23628988768_984b3f3343_o.png", this.plotLeft, this.plotTop, this.plotWidth, this.plotHeight).add();   //grey watermark
+                    if (this.withBgimage) {
+                        this.renderer.image("https://c1.staticflickr.com/5/4514/23628988768_984b3f3343_o.png", this.plotLeft, this.plotTop, this.plotWidth, this.plotHeight).add(); //grey watermark
+                    }
                 }
             }
         },
         title: {
             text: w_name + " River " + data.name,
-            style:{
+            style: {
                 color: ColorPicker.body
             }
         },
@@ -915,7 +916,7 @@ function options_general(w_name, data, color){
             categories: xAxis,
             title: {
                 text: 'Year',
-                style:{
+                style: {
                     color: ColorPicker.body
                 }
             },
@@ -924,7 +925,7 @@ function options_general(w_name, data, color){
         yAxis: {
             title: {
                 text: data.name + '<br/> (' + data.unit + ')',
-                style:{
+                style: {
                     color: ColorPicker.body
                 }
             },
@@ -941,8 +942,8 @@ function options_general(w_name, data, color){
     };
 }
 
-function createLineChart(eleId, w_name, data, color) {
-    var o = options_general(w_name, data, color);
+function createLineChart(eleId, w_name, data, color, bg) {
+    var o = options_general(w_name, data, color, bg);
     o.chart.type = 'line';
     o.yAxis.min = 0;
     return Highcharts.chart(eleId, o);
@@ -982,8 +983,8 @@ function createLineChart(eleId, w_name, data, color) {
     // });
 };
 
-function createLineChart_start(eleId, w_name, data, color, start) {
-    var o = options_general(w_name, data, color);
+function createLineChart_start(eleId, w_name, data, color, start, bg) {
+    var o = options_general(w_name, data, color, bg);
     o.chart.type = 'line';
     o.yAxis.min = start;
     return Highcharts.chart(eleId, o);
@@ -1049,7 +1050,7 @@ function createColumnChart(eleId, data, dataName, unit, title, yAxisText, color)
 };
 
 function createColumnChart2(eleId, w_name, data, color) {
-    var o = options_general(w_name,data, color);
+    var o = options_general(w_name, data, color);
     o.chart.type = 'column';
     // chart.options.chart.type = 'column';
     // chart.options({
@@ -1093,32 +1094,32 @@ function createColumnChart2(eleId, w_name, data, color) {
     // });
 };
 
-function createTargetSeries(val){
+function createTargetSeries(val) {
     var s = [];
-    xAxis.map(function(){
+    xAxis.map(function () {
         s.push(val)
     });
     return s;
 };
 
-function addTargetLine(chart, target){
+function addTargetLine(chart, target) {
     chart.addSeries({
         type: 'line',
         data: createTargetSeries(target),
         name: 'Target',
         color: ColorPicker.target_red,
         lineWidth: 1,
-        marker:{
+        marker: {
             radius: 0
         },
     })
 };
 
-function createCompositeChart(){
+function createCompositeChart() {
 
 };
 
-function setChartTheme(){
+function setChartTheme() {
     // Highcharts.theme = {
     //     chart:{
     //         xAxis: {
@@ -1168,7 +1169,7 @@ function setChartTheme(){
     // Apply the theme
     // Highcharts.setOptions(Highcharts.theme);
     Highcharts.setOptions({
-        chart:{
+        chart: {
             style: {
                 fontFamily: 'Montserrat, sans-serif'
             },
@@ -1186,6 +1187,3 @@ function setChartTheme(){
         }
     })
 };
-
-
-
