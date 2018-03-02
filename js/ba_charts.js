@@ -1049,8 +1049,8 @@ function createColumnChart(eleId, data, dataName, unit, title, yAxisText, color)
     });
 };
 
-function createColumnChart2(eleId, w_name, data, color) {
-    var o = options_general(w_name, data, color);
+function createColumnChart2(eleId, w_name, data, color, bg) {
+    var o = options_general(w_name, data, color, bg);
     o.chart.type = 'column';
     // chart.options.chart.type = 'column';
     // chart.options({
