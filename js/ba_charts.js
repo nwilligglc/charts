@@ -1108,7 +1108,7 @@ function addTargetLine(chart, target) {
         data: createTargetSeries(target),
         name: 'Target',
         color: ColorPicker.target_red,
-        lineWidth: 1,
+        lineWidth: 1.5,
         marker: {
             radius: 0
         },
