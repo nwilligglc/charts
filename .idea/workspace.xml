@@ -2,16 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2060f17f-d24d-43ab-93ce-eea2abbf1a20" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ErieStat_MapChart.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ErieStat_MapChart_Leaflet.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/Maumee.json" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/all_data.json" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/all_watersheds.csv" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/ba_chart2.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/charts.iml" afterPath="$PROJECT_DIR$/.idea/charts.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ba_charts.js" afterPath="$PROJECT_DIR$/js/ba_charts.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -61,8 +58,8 @@
       <file leaf-file-name="ErieStat_MapChart_Leaflet.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ErieStat_MapChart_Leaflet.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
-              <caret line="72" column="0" lean-forward="true" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+            <state relative-caret-position="253">
+              <caret line="76" column="0" lean-forward="true" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -250,7 +247,7 @@
       <workItem from="1508520442536" duration="5761000" />
       <workItem from="1509041365354" duration="3669000" />
       <workItem from="1510000570319" duration="1314000" />
-      <workItem from="1521121753359" duration="18934000" />
+      <workItem from="1521121753359" duration="19023000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1505328347494</created>
@@ -371,11 +368,18 @@
       <option name="project" value="LOCAL" />
       <updated>1509126868644</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Add link to the map/chart page">
+      <created>1521209073876</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1521209073876</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55653000" />
+    <option name="totallyTimeSpent" value="55742000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="83" y="-8" width="1289" height="784" extended-state="6" />
@@ -417,7 +421,8 @@
     <MESSAGE value="changed to full-scale grey watermark" />
     <MESSAGE value="added dual axes" />
     <MESSAGE value="changed dual axes ranges" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed dual axes ranges" />
+    <MESSAGE value="Add link to the map/chart page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add link to the map/chart page" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -906,8 +911,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ErieStat_MapChart_Leaflet.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="72" column="0" lean-forward="true" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+        <state relative-caret-position="253">
+          <caret line="76" column="0" lean-forward="true" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
           <folding />
         </state>
       </provider>

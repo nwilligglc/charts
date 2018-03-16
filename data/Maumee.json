@@ -1,0 +1,722 @@
+[
+  {
+    "River": "Maumee",
+    "Year": 2008,
+    "Fraction": "Annual TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 3560,
+    "": ""
+  },
+  {
+    "River": "Maumee",
+    "Year": 2009,
+    "Fraction": "Annual TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 2160,
+    "": ""
+  },
+  {
+    "River": "Maumee",
+    "Year": 2010,
+    "Fraction": "Annual TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 1530,
+    "": ""
+  },
+  {
+    "River": "Maumee",
+    "Year": 2011,
+    "Fraction": "Annual TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 2780,
+    "": ""
+  },
+  {
+    "River": "Maumee",
+    "Year": 2012,
+    "Fraction": "Annual TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 2230,
+    "": ""
+  },
+  {
+    "River": "Maumee",
+    "Year": 2013,
+    "Fraction": "Annual TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 2130,
+    "": ""
+  },
+  {
+    "River": "Maumee",
+    "Year": 2014,
+    "Fraction": "Annual TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 1960,
+    "": ""
+  },
+  {
+    "River": "Maumee",
+    "Year": 2015,
+    "Fraction": "Annual TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 2200,
+    "": ""
+  },
+  {
+    "River": "Maumee",
+    "Year": 2016,
+    "Fraction": "Annual TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 1240,
+    "": ""
+  },
+  {
+    "River": "Maumee",
+    "Year": 2008,
+    "Fraction": "Annual DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 835,
+    "": ""
+  },
+  {
+    "River": "Maumee",
+    "Year": 2009,
+    "Fraction": "Annual DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 346,
+    "": ""
+  },
+  {
+    "River": "Maumee",
+    "Year": 2010,
+    "Fraction": "Annual DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 404,
+    "": ""
+  },
+  {
+    "River": "Maumee",
+    "Year": 2011,
+    "Fraction": "Annual DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 570,
+    "": ""
+  },
+  {
+    "River": "Maumee",
+    "Year": 2012,
+    "Fraction": "Annual DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 614,
+    "": ""
+  },
+  {
+    "River": "Maumee",
+    "Year": 2013,
+    "Fraction": "Annual DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 468,
+    "": ""
+  },
+  {
+    "River": "Maumee",
+    "Year": 2014,
+    "Fraction": "Annual DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 577,
+    "": ""
+  },
+  {
+    "River": "Maumee",
+    "Year": 2015,
+    "Fraction": "Annual DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 752,
+    "": ""
+  },
+  {
+    "River": "Maumee",
+    "Year": 2016,
+    "Fraction": "Annual DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 253,
+    "": ""
+  },
+  {
+    "River": "Maumee",
+    "Year": 2008,
+    "Fraction": "Annual TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.444,
+    "": ""
+  },
+  {
+    "River": "Maumee",
+    "Year": 2009,
+    "Fraction": "Annual TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.426,
+    "": ""
+  },
+  {
+    "River": "Maumee",
+    "Year": 2010,
+    "Fraction": "Annual TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.329,
+    "": ""
+  },
+  {
+    "River": "Maumee",
+    "Year": 2011,
+    "Fraction": "Annual TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.446,
+    "": ""
+  },
+  {
+    "River": "Maumee",
+    "Year": 2012,
+    "Fraction": "Annual TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.374,
+    "": ""
+  },
+  {
+    "River": "Maumee",
+    "Year": 2013,
+    "Fraction": "Annual TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.423,
+    "": ""
+  },
+  {
+    "River": "Maumee",
+    "Year": 2014,
+    "Fraction": "Annual TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.335,
+    "": ""
+  },
+  {
+    "River": "Maumee",
+    "Year": 2015,
+    "Fraction": "Annual TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.331,
+    "": ""
+  },
+  {
+    "River": "Maumee",
+    "Year": 2016,
+    "Fraction": "Annual TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.292,
+    "": ""
+  },
+  {
+    "River": "Maumee",
+    "Year": 2008,
+    "Fraction": "Annual DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.104,
+    "": ""
+  },
+  {
+    "River": "Maumee",
+    "Year": 2009,
+    "Fraction": "Annual DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.068,
+    "": ""
+  },
+  {
+    "River": "Maumee",
+    "Year": 2010,
+    "Fraction": "Annual DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.087,
+    "": ""
+  },
+  {
+    "River": "Maumee",
+    "Year": 2011,
+    "Fraction": "Annual DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.091,
+    "": ""
+  },
+  {
+    "River": "Maumee",
+    "Year": 2012,
+    "Fraction": "Annual DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.103,
+    "": ""
+  },
+  {
+    "River": "Maumee",
+    "Year": 2013,
+    "Fraction": "Annual DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.093,
+    "": ""
+  },
+  {
+    "River": "Maumee",
+    "Year": 2014,
+    "Fraction": "Annual DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.099,
+    "": ""
+  },
+  {
+    "River": "Maumee",
+    "Year": 2015,
+    "Fraction": "Annual DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.113,
+    "": ""
+  },
+  {
+    "River": "Maumee",
+    "Year": 2016,
+    "Fraction": "Annual DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.06,
+    "": ""
+  },
+  {
+    "River": "Maumee",
+    "Year": 2008,
+    "Fraction": "Annual Discharge",
+    "Unit": "million cubic meters",
+    "Value": 8026,
+    "": ""
+  },
+  {
+    "River": "Maumee",
+    "Year": 2009,
+    "Fraction": "Annual Discharge",
+    "Unit": "million cubic meters",
+    "Value": 5075,
+    "": ""
+  },
+  {
+    "River": "Maumee",
+    "Year": 2010,
+    "Fraction": "Annual Discharge",
+    "Unit": "million cubic meters",
+    "Value": 4648,
+    "": ""
+  },
+  {
+    "River": "Maumee",
+    "Year": 2011,
+    "Fraction": "Annual Discharge",
+    "Unit": "million cubic meters",
+    "Value": 6230,
+    "": ""
+  },
+  {
+    "River": "Maumee",
+    "Year": 2012,
+    "Fraction": "Annual Discharge",
+    "Unit": "million cubic meters",
+    "Value": 5960,
+    "": ""
+  },
+  {
+    "River": "Maumee",
+    "Year": 2013,
+    "Fraction": "Annual Discharge",
+    "Unit": "million cubic meters",
+    "Value": 5030,
+    "": ""
+  },
+  {
+    "River": "Maumee",
+    "Year": 2014,
+    "Fraction": "Annual Discharge",
+    "Unit": "million cubic meters",
+    "Value": 5850,
+    "": ""
+  },
+  {
+    "River": "Maumee",
+    "Year": 2015,
+    "Fraction": "Annual Discharge",
+    "Unit": "million cubic meters",
+    "Value": 6650,
+    "": ""
+  },
+  {
+    "River": "Maumee",
+    "Year": 2016,
+    "Fraction": "Annual Discharge",
+    "Unit": "million cubic meters",
+    "Value": 3970,
+    "": ""
+  },
+  {
+    "River": "Maumee",
+    "Year": 2008,
+    "Fraction": "Spring TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 1414,
+    "": ""
+  },
+  {
+    "River": "Maumee",
+    "Year": 2009,
+    "Fraction": "Spring TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 1370,
+    "": ""
+  },
+  {
+    "River": "Maumee",
+    "Year": 2010,
+    "Fraction": "Spring TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 1307,
+    "": ""
+  },
+  {
+    "River": "Maumee",
+    "Year": 2011,
+    "Fraction": "Spring TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 2318,
+    "": 186
+  },
+  {
+    "River": "Maumee",
+    "Year": 2012,
+    "Fraction": "Spring TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 393,
+    "": 186
+  },
+  {
+    "River": "Maumee",
+    "Year": 2013,
+    "Fraction": "Spring TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 1249,
+    "": 186
+  },
+  {
+    "River": "Maumee",
+    "Year": 2014,
+    "Fraction": "Spring TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 1155,
+    "": 186
+  },
+  {
+    "River": "Maumee",
+    "Year": 2015,
+    "Fraction": "Spring TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 1863,
+    "": 186
+  },
+  {
+    "River": "Maumee",
+    "Year": 2016,
+    "Fraction": "Spring TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 755.3,
+    "": 186
+  },
+  {
+    "River": "Maumee",
+    "Year": 2008,
+    "Fraction": "Spring DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 302,
+    "": 186
+  },
+  {
+    "River": "Maumee",
+    "Year": 2009,
+    "Fraction": "Spring DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 211,
+    "": 186
+  },
+  {
+    "River": "Maumee",
+    "Year": 2010,
+    "Fraction": "Spring DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 324,
+    "": 186
+  },
+  {
+    "River": "Maumee",
+    "Year": 2011,
+    "Fraction": "Spring DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 430,
+    "": ""
+  },
+  {
+    "River": "Maumee",
+    "Year": 2012,
+    "Fraction": "Spring DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 64,
+    "": ""
+  },
+  {
+    "River": "Maumee",
+    "Year": 2013,
+    "Fraction": "Spring DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 289,
+    "": ""
+  },
+  {
+    "River": "Maumee",
+    "Year": 2014,
+    "Fraction": "Spring DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 306,
+    "": ""
+  },
+  {
+    "River": "Maumee",
+    "Year": 2015,
+    "Fraction": "Spring DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 422,
+    "": ""
+  },
+  {
+    "River": "Maumee",
+    "Year": 2016,
+    "Fraction": "Spring DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 144,
+    "": ""
+  },
+  {
+    "River": "Maumee",
+    "Year": 2008,
+    "Fraction": "Spring TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.376,
+    "": ""
+  },
+  {
+    "River": "Maumee",
+    "Year": 2009,
+    "Fraction": "Spring TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.411,
+    "": ""
+  },
+  {
+    "River": "Maumee",
+    "Year": 2010,
+    "Fraction": "Spring TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.362,
+    "": ""
+  },
+  {
+    "River": "Maumee",
+    "Year": 2011,
+    "Fraction": "Spring TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.455,
+    "": ""
+  },
+  {
+    "River": "Maumee",
+    "Year": 2012,
+    "Fraction": "Spring TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.378,
+    "": ""
+  },
+  {
+    "River": "Maumee",
+    "Year": 2013,
+    "Fraction": "Spring TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.374,
+    "": ""
+  },
+  {
+    "River": "Maumee",
+    "Year": 2014,
+    "Fraction": "Spring TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.332,
+    "": ""
+  },
+  {
+    "River": "Maumee",
+    "Year": 2015,
+    "Fraction": "Spring TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.454,
+    "": ""
+  },
+  {
+    "River": "Maumee",
+    "Year": 2016,
+    "Fraction": "Spring TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.303,
+    "": ""
+  },
+  {
+    "River": "Maumee",
+    "Year": 2008,
+    "Fraction": "Spring DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.08,
+    "": ""
+  },
+  {
+    "River": "Maumee",
+    "Year": 2009,
+    "Fraction": "Spring DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.063,
+    "": ""
+  },
+  {
+    "River": "Maumee",
+    "Year": 2010,
+    "Fraction": "Spring DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.09,
+    "": ""
+  },
+  {
+    "River": "Maumee",
+    "Year": 2011,
+    "Fraction": "Spring DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.084,
+    "": ""
+  },
+  {
+    "River": "Maumee",
+    "Year": 2012,
+    "Fraction": "Spring DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.061,
+    "": ""
+  },
+  {
+    "River": "Maumee",
+    "Year": 2013,
+    "Fraction": "Spring DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.086,
+    "": ""
+  },
+  {
+    "River": "Maumee",
+    "Year": 2014,
+    "Fraction": "Spring DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.088,
+    "": ""
+  },
+  {
+    "River": "Maumee",
+    "Year": 2015,
+    "Fraction": "Spring DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.103,
+    "": ""
+  },
+  {
+    "River": "Maumee",
+    "Year": 2016,
+    "Fraction": "Spring DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.058,
+    "": ""
+  },
+  {
+    "River": "Maumee",
+    "Year": 2008,
+    "Fraction": "Spring Discharge",
+    "Unit": "million cubic liters",
+    "Value": 3756,
+    "": ""
+  },
+  {
+    "River": "Maumee",
+    "Year": 2009,
+    "Fraction": "Spring Discharge",
+    "Unit": "million cubic meters",
+    "Value": 3335,
+    "": ""
+  },
+  {
+    "River": "Maumee",
+    "Year": 2010,
+    "Fraction": "Spring Discharge",
+    "Unit": "million cubic meters",
+    "Value": 3613,
+    "": ""
+  },
+  {
+    "River": "Maumee",
+    "Year": 2011,
+    "Fraction": "Spring Discharge",
+    "Unit": "million cubic meters",
+    "Value": 5097,
+    "": ""
+  },
+  {
+    "River": "Maumee",
+    "Year": 2012,
+    "Fraction": "Spring Discharge",
+    "Unit": "million cubic meters",
+    "Value": 1039,
+    "": ""
+  },
+  {
+    "River": "Maumee",
+    "Year": 2013,
+    "Fraction": "Spring Discharge",
+    "Unit": "million cubic meters",
+    "Value": 3342,
+    "": ""
+  },
+  {
+    "River": "Maumee",
+    "Year": 2014,
+    "Fraction": "Spring Discharge",
+    "Unit": "million cubic meters",
+    "Value": 3475,
+    "": ""
+  },
+  {
+    "River": "Maumee",
+    "Year": 2015,
+    "Fraction": "Spring Discharge",
+    "Unit": "million cubic meters",
+    "Value": 4099,
+    "": ""
+  },
+  {
+    "River": "Maumee",
+    "Year": 2016,
+    "Fraction": "Spring Discharge",
+    "Unit": "million cubic meters",
+    "Value": 2490,
+    "": ""
+  }
+]

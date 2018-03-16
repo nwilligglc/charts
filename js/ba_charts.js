@@ -495,7 +495,7 @@ var ColorPicker = {
  * @param target
  * @param startingVal Not in use. Reserved if need to change the starting value.
  */
-function createWatershedChart(eleID, name, filename, fraction, chartType, target, bgimage = true, startingVal) {
+function createWatershedChart(eleID, name, filename, fraction, chartType, target, bgimage = true, startingVal=0) {
     var watershed = {
         name: name,
         TPloading: {

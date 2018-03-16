@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Leaflet tryout</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"></script>
+    <!--<script rel="script" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>-->
+    <!-- Load Esri Leaflet from CDN -->
+    <script src="https://unpkg.com/esri-leaflet@2.1.3/dist/esri-leaflet.js"></script>
+    <script src="http://colorbrewer2.org/export/colorbrewer.js"></script>
+    <script src="//code.highcharts.com/highcharts.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!--&lt;!&ndash; Optional theme &ndash;&gt;-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!--&lt;!&ndash; Latest compiled and minified JavaScript &ndash;&gt;-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script src="js/ba_chart2.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0; }
+        #map { position: absolute; top:0; bottom:0; right:50%; left:0; }
+        #right_panel {
+            margin-left: 50%;
+            margin-right: 10px;
+            height: 100px;
+        }
+        #upperCanvas{
+            height: 50%;
+        }
+        #lowerCanvas{
+            margin-top: 50%;
+        }
+    </style>
+
+</head>
+<body>
+<div id="map"></div>
+<div id="right_panel">
+    <div id="upperCanvas">
+        <div id="upperChart"></div>
+    </div>
+    <div id="lowerCanvas">
+        <div id="lowerChart"></div>
+    </div>
+</div>
+
+<script>
+    var data;
+    var map = L.map("map").setView([42.1, -83.1], 8);
+    L.esri.basemapLayer("Topographic").addTo(map);
+
+    var watersheds = L.esri.dynamicMapLayer({
+        url: "http://gis.glc.org/server/rest/services/ErieStat/ErieStat_WatershedsDemo/MapServer",
+        layers:[1]
+    }).addTo(map);
+
+    watersheds.bindPopup(function (error, featureCollection) {
+        if(error || featureCollection.features.length === 0) {
+            return false;
+        } else {
+            test(featureCollection.features[0]);
+            return 'Risk Level: ' ;
+//            return 'Risk Level: ' + featureCollection.features[0].properties;
+        }
+    });
+
+    $.getJSON("data/all_data.json", function(d){
+        data = d;
+    });
+
+
+
+    //load watershed data
+//    ba = BA_Charts();
+//    var w = ba.init("data/Maumee.csv");
+
+    var w = loadWatershedsData("data/Maumee.csv");
+
+    function test(feature){
+        /**
+         * Build two charts for each watershed, using the BA library
+         */
+        //get the watershed name
+        var maumee_data = getWatershedMetric(data, feature.properties.Name, metrics.DRP_L_S);
+        var data_series = [];
+        for (var i = 0; i < maumee_data.length; i++){
+            data_series.push(maumee_data[i].Value);
+        }
+        createChart("upperChart", "column", metrics.DRP_L_S, data_series, ColorPicker.blue7, "Maumee River " + metrics.DRP_L_S, metrics.DRP_L_S + "<br/>(" + units.DRP_L_S + ")", false, maumee_targets.DRP_L_S)
+        createChart("lowerChart", "line", "Annual TP Loading", data_series, ColorPicker.blue7, "Maumee River Annual TP Loading", metrics.TP_L + "<br/>(" + units.TP_L + ")", true, 1000)
+
+        //pass data to createchart function, and render the two charting canvas
+        $("#text_pane").text(feature.properties.Name);
+        $("test_section").text(feature.properties.Name);
+//        var ele = $("#text_pane");
+//        ele.html = "<p>bbbb</p>";
+
+    }
+
+</script>
+</body>
+</html>
