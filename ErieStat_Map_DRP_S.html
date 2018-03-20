@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Spring DRP Loading in ErieStat Watersheds</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"></script>
+    <!-- Load Esri Leaflet from CDN -->
+    <script src="https://unpkg.com/esri-leaflet@2.1.3/dist/esri-leaflet.js"></script>
+    <script src="//code.highcharts.com/highcharts.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!--&lt;!&ndash; Optional theme &ndash;&gt;-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!--&lt;!&ndash; Latest compiled and minified JavaScript &ndash;&gt;-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script src="js/ba_chart2.js"></script>
+    <link rel="stylesheet" href="css/BA_Style.css">
+    <style>
+        body {
+            /*height: 500px;*/
+            margin: 0;
+            padding: 0; }
+        #map { position: absolute; top:0; bottom:0; right:50%; left:0;}
+        #right_panel {
+            margin-left: 50%;
+            padding-left: 6px;
+
+            margin-right: 10px;
+        }
+        #upperCanvas{
+            margin-top: 30%;
+            height: 70%;
+        }
+        #lowerCanvas{
+            margin-top: 50%;
+        }
+        .vl {
+            border-left: 6px solid #1b75ba;
+            height: 100%;
+            position: absolute;
+            left: 50%;
+            margin-left: -3px;
+            top: 0;
+        }
+    </style>
+
+</head>
+<body>
+<div>
+    <div id="map"></div>
+    <div class="vl"></div>
+    <div id="right_panel">
+        <div>
+            <p>some nice text</p>
+        </div>
+        <div id="upperCanvas">
+            <div id="upperChart"></div>
+        </div>
+        <!--<div id="lowerCanvas">-->
+            <!--<div id="lowerChart"></div>-->
+        <!--</div>-->
+    </div>
+</div>
+
+
+<script>
+    var data;
+    var map = L.map("map").setView([42.1, -83.1], 8);
+    L.esri.basemapLayer("Topographic").addTo(map);
+
+    var watersheds = L.esri.dynamicMapLayer({
+        url: "https://gis.glc.org/server/rest/services/ErieStat/ErieStat_WatershedsDemo/MapServer",
+        layers:[1]
+    }).addTo(map);
+
+    // try not to bind with a popup, just bind with a query/highlight
+    watersheds.bindPopup(function (error, featureCollection) {
+        if(error || featureCollection.features.length === 0) {
+            return false;
+        } else {
+            test(featureCollection.features[0]);
+            return 'Watershed: ' + featureCollection.features[0].properties.Name;
+//            return 'Risk Level: ' + featureCollection.features[0].properties;
+        }
+    });
+
+    $.getJSON("data/all_data.json", function(d){
+        data = d;
+    });
+//    var height =
+
+    function test(feature){
+        /**
+         * Build two charts for each watershed, using the BA library
+         */
+        //get the watershed name
+        var w_name = feature.properties.Name;
+        var m = metrics.DRP_L_S;
+        var u = units.DRP_L_S;
+        var t = targets[w_name].DRP_L_S;
+        var w_data = getWatershedMetric(data, w_name, m);
+        var data_series = [];
+        for (var i = 0; i < w_data.length; i++){
+            data_series.push(w_data[i].Value);
+        }
+        createChart("upperChart", "column", m, data_series, ColorPicker.blue7, w_name + " River " + m, m + "<br/>(" + u + ")", false, t)
+//        createChart("lowerChart", "line", "Annual TP Loading", data_series, ColorPicker.blue7, "Maumee River Annual TP Loading", metrics.TP_L + "<br/>(" + units.TP_L + ")", true, 1000)
+
+        //pass data to createchart function, and render the two charting canvas
+        $("#text_pane").text(feature.properties.Name);
+        $("test_section").text(feature.properties.Name);
+//        var ele = $("#text_pane");
+//        ele.html = "<p>bbbb</p>";
+
+    }
+
+</script>
+</body>
+</html>
