@@ -55,6 +55,38 @@ var units = {
     "Discharge_S": "million cubic meters"
 }
 
+var targets = {
+    "Maumee": {
+        "TP_L": 2288,
+        "TP_L_S": 860,
+        "DRP_L_S": 186,
+        "TP_FWMS_S": 0.23,
+        "DRP_FWMS_S": 0.05
+    },
+    "Portage": {
+        "TP_L": 0,
+        "TP_L_S": 0,
+        "DRP_L_S": 0,
+        "TP_FWMS_S": 0,
+        "DRP_FWMS_S": 0
+    },
+    "Raisin": {
+        "TP_L": 0,
+        "TP_L_S": 0,
+        "DRP_L_S": 0,
+        "TP_FWMS_S": 0,
+        "DRP_FWMS_S": 0
+    },
+
+    "Sandusky": {
+        "TP_L": 661,
+        "TP_L_S": 230,
+        "DRP_L_S": 43,
+        "TP_FWMS_S": 0.23,
+        "DRP_FWMS_S": 0.05
+    }
+}
+
 var maumee_targets = {
     "DRP_L_S": 186,
 }
@@ -233,7 +265,7 @@ function createOptions(type, series_name, data, color, title, unit, isBgImg){
         chart: {
             type: type,
             width: undefined, //chart_width,
-            height: undefined, //chart_height,
+            height: window.innerHeight * 0.65, //chart_height,
             style: {
                 fontFamily: 'Montserrat, sans-serif',
                 color: ColorPicker.body
