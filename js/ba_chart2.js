@@ -1,3 +1,5 @@
+var id = "918102a3bff04636924faa2d1915cae1";
+
 var ColorPicker = {
     heading1: '#2271a2', //getColor(34, 113, 162),
     heading2: '#314766', //getColor(49, 71, 102),
@@ -267,7 +269,7 @@ function createOptions(type, series_name, data, color, title, unit, isBgImg){
             width: undefined, //chart_width,
             height: window.innerHeight * 0.65, //chart_height,
             style: {
-                fontFamily: 'Montserrat, sans-serif',
+                // fontFamily: 'Lato Regular, sans-serif',
                 color: ColorPicker.body
             },
             // backgroundColor: '#00ff00'
@@ -309,10 +311,19 @@ function createOptions(type, series_name, data, color, title, unit, isBgImg){
                 text: unit,
                 style: {
                     color: ColorPicker.body
-                }
+                },
+                // margin: 50,
+                // rotation: 0,
             },
             // lineColor: '#ff0000',
             // lineWidth: 2
+        },
+        legend: {
+            title: {
+                style: {
+                    fontWeight: 'normal'
+                }
+            },
         },
         series: [{
             name: series_name,

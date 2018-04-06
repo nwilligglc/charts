@@ -1,12 +1,17 @@
 .highcharts-root text{
-    /*font-family: 'Montserrat', sans-serif;*/
+    font-family: Lato, Regular;
 }
 .highcharts-axis-line{
     fill: '#1c2d5a';
     stroke: '#1c2d5a';
 }
 .leaflet-popup-content-wrapper{
-    font-family: 'Montserrat', sans-serif;
+    /*font-family: 'Montserrat', sans-serif;*/
+    font-family: Lato Regular, sans-serif;
+}
+.highcharts-title text{
+    font-family: Lato, Bold;
+    font-size: 18px;
 }
 /*.svg.highcharts-root text{*/
     /*font-family: 'Lato', sans-serif;*/
@@ -15,12 +20,21 @@
     /*font-family: 'Lato', sans-serif;*/
     /*font-size: large;*/
 /*}*/
-/*.highcharts-legend text{*/
-    /*font-family: 'Lato', sans-serif;*/
-/*}*/
-/*.highcharts-axis-labels text{*/
-    /*font-family: 'Lato', sans-serif;*/
-/*}*/
+.highcharts-legend-item text{
+    font-family: 'Lato', sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+}
+.highcharts-axis-labels.highcharts-xaxis-labels  text{
+    font-family: Lato;
+    font-size: 12px;
+}
+.highcharts-axis-labels.highcharts-yaxis-labels  text{
+    font-family: Lato;
+    font-size: 12px;
+
+}
+
 .highcharts-background {
     /*fill: #d8e2eb;*/
 }
