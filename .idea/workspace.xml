@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2060f17f-d24d-43ab-93ce-eea2abbf1a20" name="Default" comment="Load watershed contents">
+    <list default="true" id="2060f17f-d24d-43ab-93ce-eea2abbf1a20" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ErieStat_MapChart_Leaflet.html" afterPath="$PROJECT_DIR$/ErieStat_MapChart_Leaflet.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ErieStat_Map_DRP_S.html" afterPath="$PROJECT_DIR$/ErieStat_Map_DRP_S.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ErieStat_Map_TP_L.html" afterPath="$PROJECT_DIR$/ErieStat_Map_TP_L.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/BA_Style.css" afterPath="$PROJECT_DIR$/css/BA_Style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ba_chart2.js" afterPath="$PROJECT_DIR$/js/ba_chart2.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -88,8 +83,8 @@
       <file leaf-file-name="ErieStat_Map_TP_L.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ErieStat_Map_TP_L.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="355">
-              <caret line="98" column="64" lean-forward="false" selection-start-line="98" selection-start-column="64" selection-end-line="98" selection-end-column="64" />
+            <state relative-caret-position="304">
+              <caret line="95" column="0" lean-forward="true" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
               <folding>
                 <marker date="1523307034683" expanded="true" signature="4091:4135" ph="..." />
               </folding>
@@ -306,7 +301,7 @@
       <workItem from="1521835616562" duration="3627000" />
       <workItem from="1522090387133" duration="1334000" />
       <workItem from="1523043904702" duration="92000" />
-      <workItem from="1523296723343" duration="8749000" />
+      <workItem from="1523296723343" duration="8961000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1505328347494</created>
@@ -462,11 +457,18 @@
       <option name="project" value="LOCAL" />
       <updated>1523043971150</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Render watershed contents dynamically with charts.&#10;Merged page CSS with BA CSS">
+      <created>1523307088834</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1523307088834</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79194000" />
+    <option name="totallyTimeSpent" value="79406000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -522,7 +524,8 @@
     <MESSAGE value="change reference to https" />
     <MESSAGE value="More updates" />
     <MESSAGE value="added the AGO map id" />
-    <option name="LAST_COMMIT_MESSAGE" value="added the AGO map id" />
+    <MESSAGE value="Render watershed contents dynamically with charts.&#10;Merged page CSS with BA CSS" />
+    <option name="LAST_COMMIT_MESSAGE" value="Render watershed contents dynamically with charts.&#10;Merged page CSS with BA CSS" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -974,8 +977,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ErieStat_Map_TP_L.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="98" column="64" lean-forward="false" selection-start-line="98" selection-start-column="64" selection-end-line="98" selection-end-column="64" />
+        <state relative-caret-position="304">
+          <caret line="95" column="0" lean-forward="true" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
           <folding>
             <marker date="1523307034683" expanded="true" signature="4091:4135" ph="..." />
           </folding>
