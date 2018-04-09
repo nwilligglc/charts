@@ -301,7 +301,7 @@
       <workItem from="1521835616562" duration="3627000" />
       <workItem from="1522090387133" duration="1334000" />
       <workItem from="1523043904702" duration="92000" />
-      <workItem from="1523296723343" duration="8961000" />
+      <workItem from="1523296723343" duration="8979000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1505328347494</created>
@@ -464,11 +464,18 @@
       <option name="project" value="LOCAL" />
       <updated>1523307088834</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Render watershed contents dynamically with charts.&#10;Merged page CSS with BA CSS">
+      <created>1523307265632</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1523307265632</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79406000" />
+    <option name="totallyTimeSpent" value="79424000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
