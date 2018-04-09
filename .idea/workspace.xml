@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2060f17f-d24d-43ab-93ce-eea2abbf1a20" name="Default" comment="">
+    <list default="true" id="2060f17f-d24d-43ab-93ce-eea2abbf1a20" name="Default" comment="Load watershed contents">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ErieStat_MapChart_Leaflet.html" afterPath="$PROJECT_DIR$/ErieStat_MapChart_Leaflet.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ErieStat_Map_DRP_S.html" afterPath="$PROJECT_DIR$/ErieStat_Map_DRP_S.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ErieStat_Map_TP_L.html" afterPath="$PROJECT_DIR$/ErieStat_Map_TP_L.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/BA_Style.css" afterPath="$PROJECT_DIR$/css/BA_Style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ba_chart2.js" afterPath="$PROJECT_DIR$/js/ba_chart2.js" />
     </list>
@@ -35,15 +38,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ba_chart2.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ba_chart2.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/ba_chart2.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+            <state relative-caret-position="-1005">
+              <caret line="30" column="48" lean-forward="true" selection-start-line="30" selection-start-column="48" selection-end-line="30" selection-end-column="48" />
               <folding>
-                <element signature="e#2821#7427#0" expanded="false" />
-                <element signature="e#4167#5717#0" expanded="false" />
-                <element signature="e#8447#8545#0" expanded="false" />
+                <element signature="e#5413#10019#0" expanded="false" />
+                <element signature="e#6759#8309#0" expanded="false" />
+                <element signature="e#11039#11137#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -52,7 +55,7 @@
       <file leaf-file-name="ErieStat_MapChart_Leaflet.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ErieStat_MapChart_Leaflet.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1496">
+            <state relative-caret-position="658">
               <caret line="88" column="14" lean-forward="false" selection-start-line="88" selection-start-column="14" selection-end-line="88" selection-end-column="14" />
               <folding />
             </state>
@@ -62,9 +65,12 @@
       <file leaf-file-name="ErieStat_Map_DRP_S.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ErieStat_Map_DRP_S.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="14" lean-forward="false" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
-              <folding />
+            <state relative-caret-position="746">
+              <caret line="123" column="76" lean-forward="false" selection-start-line="123" selection-start-column="76" selection-end-line="123" selection-end-column="76" />
+              <folding>
+                <marker date="1523304767255" expanded="true" signature="4230:4255" ph="..." />
+                <marker date="1523304767255" expanded="true" signature="4230:4274" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -72,19 +78,21 @@
       <file leaf-file-name="BA_Style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/BA_Style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="22" column="23" lean-forward="false" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
+            <state relative-caret-position="425">
+              <caret line="25" column="20" lean-forward="true" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ErieStat_Map_TP_L.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ErieStat_Map_TP_L.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ErieStat_Map_TP_L.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="51" lean-forward="false" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="51" />
-              <folding />
+            <state relative-caret-position="355">
+              <caret line="98" column="64" lean-forward="false" selection-start-line="98" selection-start-column="64" selection-end-line="98" selection-end-column="64" />
+              <folding>
+                <marker date="1523307034683" expanded="true" signature="4091:4135" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -168,11 +176,11 @@
         <option value="$PROJECT_DIR$/js/ba_charts.js" />
         <option value="$PROJECT_DIR$/ErieStat_MapChart.html" />
         <option value="$PROJECT_DIR$/ErieStat_MapChart_Leaflet.html" />
-        <option value="$PROJECT_DIR$/ErieStat_Map_DRP_S.html" />
-        <option value="$PROJECT_DIR$/ErieStat_Map_TP_L.html" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/css/BA_Style.css" />
+        <option value="$PROJECT_DIR$/ErieStat_Map_DRP_S.html" />
         <option value="$PROJECT_DIR$/js/ba_chart2.js" />
+        <option value="$PROJECT_DIR$/css/BA_Style.css" />
+        <option value="$PROJECT_DIR$/ErieStat_Map_TP_L.html" />
       </list>
     </option>
   </component>
@@ -248,13 +256,13 @@
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Github_Repositories\BlueAccounting\charts\css" />
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Github_Repositories\BlueAccounting\charts" />
       <recent name="C:\Github_Repositories\BlueAccounting\charts\docs" />
       <recent name="C:\Github_Repositories\BlueAccounting\charts\js" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Github_Repositories\BlueAccounting\charts\css" />
       <recent name="C:\Github_Repositories\BlueAccounting\charts" />
       <recent name="C:\Github_Repositories\BlueAccounting\charts\docs" />
       <recent name="C:\Github_Repositories\BlueAccounting\charts\js" />
@@ -297,7 +305,8 @@
       <workItem from="1521560255946" duration="2800000" />
       <workItem from="1521835616562" duration="3627000" />
       <workItem from="1522090387133" duration="1334000" />
-      <workItem from="1523043904702" duration="34000" />
+      <workItem from="1523043904702" duration="92000" />
+      <workItem from="1523296723343" duration="8749000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1505328347494</created>
@@ -446,11 +455,18 @@
       <option name="project" value="LOCAL" />
       <updated>1521560289875</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="added the AGO map id">
+      <created>1523043971150</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1523043971150</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70387000" />
+    <option name="totallyTimeSpent" value="79194000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -505,7 +521,8 @@
     <MESSAGE value="Create updated version of charting library. Created the map/chart page" />
     <MESSAGE value="change reference to https" />
     <MESSAGE value="More updates" />
-    <option name="LAST_COMMIT_MESSAGE" value="More updates" />
+    <MESSAGE value="added the AGO map id" />
+    <option name="LAST_COMMIT_MESSAGE" value="added the AGO map id" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -908,14 +925,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ErieStat_MapChart_Leaflet.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1496">
-          <caret line="88" column="14" lean-forward="false" selection-start-line="88" selection-start-column="14" selection-end-line="88" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ErieStat_MapChart.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -924,38 +933,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ErieStat_Map_TP_L.html">
+    <entry file="file://$PROJECT_DIR$/ErieStat_MapChart_Leaflet.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="51" lean-forward="false" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ErieStat_Map_DRP_S.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="14" lean-forward="false" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/BA_Style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="22" column="23" lean-forward="false" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
+        <state relative-caret-position="658">
+          <caret line="88" column="14" lean-forward="false" selection-start-line="88" selection-start-column="14" selection-end-line="88" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/ba_chart2.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        <state relative-caret-position="-1005">
+          <caret line="30" column="48" lean-forward="true" selection-start-line="30" selection-start-column="48" selection-end-line="30" selection-end-column="48" />
           <folding>
-            <element signature="e#2821#7427#0" expanded="false" />
-            <element signature="e#4167#5717#0" expanded="false" />
-            <element signature="e#8447#8545#0" expanded="false" />
+            <element signature="e#5413#10019#0" expanded="false" />
+            <element signature="e#6759#8309#0" expanded="false" />
+            <element signature="e#11039#11137#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ErieStat_Map_DRP_S.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="746">
+          <caret line="123" column="76" lean-forward="false" selection-start-line="123" selection-start-column="76" selection-end-line="123" selection-end-column="76" />
+          <folding>
+            <marker date="1523304767255" expanded="true" signature="4230:4255" ph="..." />
+            <marker date="1523304767255" expanded="true" signature="4230:4274" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/BA_Style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="20" lean-forward="true" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ErieStat_Map_TP_L.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="98" column="64" lean-forward="false" selection-start-line="98" selection-start-column="64" selection-end-line="98" selection-end-column="64" />
+          <folding>
+            <marker date="1523307034683" expanded="true" signature="4091:4135" ph="..." />
           </folding>
         </state>
       </provider>

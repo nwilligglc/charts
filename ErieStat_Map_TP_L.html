@@ -20,34 +20,7 @@
 
     <script src="js/ba_chart2.js"></script>
     <link rel="stylesheet" href="css/BA_Style.css">
-    <style>
-        body {
-            /*height: 500px;*/
-            margin: 0;
-            padding: 0; }
-        #map { position: absolute; top:0; bottom:0; right:50%; left:0;}
-        #right_panel {
-            margin-left: 50%;
-            padding-left: 6px;
 
-            margin-right: 10px;
-        }
-        #upperCanvas{
-            margin-top: 30%;
-            height: 70%;
-        }
-        #lowerCanvas{
-            margin-top: 50%;
-        }
-        .vl {
-            border-left: 6px solid #1b75ba;
-            height: 100%;
-            position: absolute;
-            left: 50%;
-            margin-left: -3px;
-            top: 0;
-        }
-    </style>
 
 </head>
 <body>
@@ -55,13 +28,11 @@
     <div id="map"></div>
     <div class="vl"></div>
     <div id="right_panel">
-        <div>
-            <p>some nice text</p>
-            <div>
-                <p id="text_pane"></p>
-            </div>
+        <div id="narrative-section">
+            <p id="narrative-caption"></p>
+            <p id="narrative-content"></p>
         </div>
-        <div id="upperCanvas">
+        <div id="chartCanvas">
             <div id="upperChart"></div>
         </div>
         <!--<div id="lowerCanvas">-->
@@ -78,43 +49,76 @@
 
     var watersheds = L.esri.dynamicMapLayer({
         url: "https://gis.glc.org/server/rest/services/ErieStat/ErieStat_WatershedsDemo/MapServer",
-        layers:[1]
+        layers:[0, 1, 2, 3, 4]
     }).addTo(map);
 
     // try not to bind with a popup, just bind with a query/highlight
     watersheds.bindPopup(function (error, featureCollection) {
-        if(error || featureCollection.features.length === 0) {
+        if(error || featureCollection.features.length === 0)
+        {
             return false;
         } else {
-            test(featureCollection.features[0]);
-            return 'Watershed: ' + featureCollection.features[0].properties.Name;
+            var index = findFeatureLayer(featureCollection);
+            return 'Watershed: ' + featureCollection.features[index].properties.Name;
 //            return 'Risk Level: ' + featureCollection.features[0].properties;
         }
     });
 
+    //    pilotWatersheds.bindPopup(function (layer) {
+    //        if(error || layer.feature)
+    //        {
+    //            return false;
+    //        } else {
+    //            test(layer.feature);
+    //            return 'Watershed: ' + featureCollection.features[0].properties.Name;
+    ////            return 'Risk Level: ' + featureCollection.features[0].properties;
+    //        }
+    //    });
+
     $.getJSON("data/all_data.json", function(d){
         data = d;
     });
-//    var height =
 
-    function test(feature){
+    function findFeatureLayer(featureCol){
+        for(var i = 0; i < featureCol.features.length; i++){
+            if(featureCol.features[i].layerId == 1){
+                buildChart(featureCol.features[i]);
+                return i;
+            }
+        }
+        return null;
+    }
+
+    function buildNarratives(w_name){
+        $("#narrative-caption").text(w_name + " River Watershed");
+        $("#narrative-content").html(narratives[w_name]);
+    }
+
+    function buildChart(feature){
         /**
          * Build two charts for each watershed, using the BA library
          */
-        //get the watershed name
+
+            //get the watershed name
         var w_name = feature.properties.Name;
         var m = metrics.TP_L;
         var u = units.TP_L;
-        var t = targets[w_name].TP_L;
-        var w_data = getWatershedMetric(data, w_name, m);
-        var data_series = [];
-        for (var i = 0; i < w_data.length; i++){
-            data_series.push(w_data[i].Value);
-        }
-        createChart("upperChart", "column", m, data_series, ColorPicker.blue7, w_name + " River " + m, m + "<br/>(" + u + ")", false, t)
+//        var t = targets[w_name].DRP_L_S;
+        buildNarratives(w_name);
+        if(!targets[w_name]){
 
-        //pass data to createchart function, and render the two charting canvas
-        $("#text_pane").text(feature.properties.Name);
+
+            $("#upperChart").html("<p style='text-transform: uppercase;font-style: italic'>*DATA UNAVAILABLE FOR " + feature.properties.Name + " WATERSHED</p>");
+        }
+        else{
+            var t = targets[w_name].TP_L;
+            var w_data = getWatershedMetric(data, w_name, m);
+            var data_series = [];
+            for (var i = 0; i < w_data.length; i++){
+                data_series.push(w_data[i].Value);
+            }
+            createChart("upperChart", "column", m, data_series, ColorPicker.blue7, w_name + " River " + m, m + "<br/>(" + u + ")", false, t);
+        }
 
 
     }
