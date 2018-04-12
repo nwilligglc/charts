@@ -9,15 +9,15 @@
     blue7: '#1b75ba';
  */
 body{
-    font-family: Lato, sans-serif;
+    /*font-family: Lato, sans-serif;*/
+    font-family: "Montserrat", sans-serif;
     margin: 0;
     padding: 0;
 }
 #map { position: absolute; top:0; bottom:0; right:50%; left:0;}
-#right_panel {
+#right-panel {
     margin-left: 50%;
     padding-left: 6px;
-
     margin-right: 10px;
 }
 #narrative-section{
@@ -31,15 +31,14 @@ body{
 
 #narrative-content{
     text-indent: 50px;
-    font-size: large;
 }
-#chartCanvas{
+#chart-canvas{
     padding-top: 5%;
     /*position: absolute;*/
     height: 70%;
     padding-bottom: 5%;
 }
-#lowerCanvas{
+#lower-canvas{
     margin-top: 50%;
 }
 .vl {
@@ -52,7 +51,8 @@ body{
 }
 
 .highcharts-root text{
-    font-family: Lato, sans-serif;
+    /*font-family: Lato, sans-serif;*/
+    font-family: "Montserrat", sans-serif;
 }
 .highcharts-axis-line{
     fill: '#1c2d5a';
