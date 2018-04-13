@@ -59,11 +59,12 @@ body{
     stroke: '#1c2d5a';
 }
 .leaflet-popup-content-wrapper{
-    /*font-family: 'Montserrat', sans-serif;*/
-    font-family: Lato Regular, sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    /*font-family: Lato Regular, sans-serif;*/
 }
 .highcharts-title text{
-    font-family: Lato, Bold;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
     font-size: 18px;
 }
 /*.svg.highcharts-root text{*/
@@ -75,16 +76,16 @@ body{
 /*}*/
 
 .highcharts-legend-item text{
-    font-family: 'Lato', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 12px;
     font-weight: normal;
 }
 .highcharts-axis-labels.highcharts-xaxis-labels  text{
-    font-family: Lato;
+    font-family: "Montserrat", sans-serif;
     font-size: 12px;
 }
 .highcharts-axis-labels.highcharts-yaxis-labels  text{
-    font-family: Lato;
+    font-family: "Montserrat", sans-serif;
     font-size: 12px;
 
 }
