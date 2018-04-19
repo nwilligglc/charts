@@ -29,7 +29,7 @@
     <div id="map"></div>
     <div class="vl"></div>
     <div id="right-panel">
-        <div id="narrative-section">
+        <div>
             <p id="narrative-caption"></p>
             <p id="narrative-content"></p>
         </div>
@@ -37,7 +37,7 @@
             <div id="upperChart"></div>
         </div>
         <!--<div id="lowerCanvas">-->
-            <!--<div id="lowerChart"></div>-->
+        <!--<div id="lowerChart"></div>-->
         <!--</div>-->
     </div>
 </div>
@@ -48,10 +48,32 @@
     var map = L.map("map").setView([42.1, -83.1], 8);
     L.esri.basemapLayer("Topographic").addTo(map);
 
+    var watershed_boundary = L.esri.featureLayer({
+            url: "https://gis.glc.org/server/rest/services/ErieStat/PriorityWatersheds/MapServer/0",
+            style: function(feature){
+                return {
+                    weight: 2,
+                    color: ColorPicker.body,
+                    fill: false
+                }
+            }
+        }
+    ).addTo(map);
+    watershed_boundary.query().bounds(function (error, latlngbounds) {
+        map.fitBounds(latlngbounds);
+    });
     var watersheds = L.esri.dynamicMapLayer({
-        url: "https://gis.glc.org/server/rest/services/ErieStat/ErieStat_WatershedsDemo/MapServer",
-        layers:[0, 1, 2, 3, 4]
+        url: "https://gis.glc.org/server/rest/services/ErieStat/PriorityWatersheds/MapServer",
+        layers:[ 1, 2]
     }).addTo(map);
+
+
+
+
+    //    var pilotWatersheds = L.esri.featureLayer({
+    //        url: 'https://gis.glc.org/server/rest/services/ErieStat/ErieStat_WatershedsDemo/MapServer/1',
+    //        //layers: [1]
+    //    }).addTo(map);
 
     // try not to bind with a popup, just bind with a query/highlight
     watersheds.bindPopup(function (error, featureCollection) {
@@ -60,7 +82,7 @@
             return false;
         } else {
             var index = findFeatureLayer(featureCollection);
-            return ;//'Watershed: ' + featureCollection.features[index].properties.Name;
+            return 'Watershed: ' + featureCollection.features[index].properties["Watershed Name"];
 //            return 'Risk Level: ' + featureCollection.features[0].properties;
         }
     });
@@ -83,7 +105,7 @@
     function findFeatureLayer(featureCol){
         for(var i = 0; i < featureCol.features.length; i++){
             if(featureCol.features[i].layerId == 1){
-                buildChart(featureCol.features[i]);
+                buildChart(featureCol.features[i].properties["Watershed Name"]);
                 return i;
             }
         }
@@ -95,13 +117,13 @@
         $("#narrative-content").html(narratives[w_name]);
     }
 
-    function buildChart(feature){
+    function buildChart(name){
         /**
          * Build two charts for each watershed, using the BA library
          */
 
             //get the watershed name
-        var w_name = feature.properties.Name;
+        var w_name = name;//feature.properties.Name;
         var m = metrics.TP_L;
         var u = units.TP_L;
 //        var t = targets[w_name].DRP_L_S;
@@ -109,7 +131,7 @@
         if(!targets[w_name]){
 
 
-            $("#upperChart").html("<p style='text-transform: uppercase;font-style: italic'>*DATA UNAVAILABLE FOR " + feature.properties.Name + " WATERSHED</p>");
+            $("#upperChart").html("<p style='text-transform: uppercase;font-style: italic'>*DATA UNAVAILABLE FOR " + w_name + " WATERSHED</p>");
         }
         else{
             var t = targets[w_name].TP_L;

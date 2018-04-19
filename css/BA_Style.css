@@ -30,7 +30,7 @@ body{
 }
 
 #narrative-content{
-    text-indent: 50px;
+    /*text-indent: 50px;*/
 }
 #chart-canvas{
     padding-top: 5%;

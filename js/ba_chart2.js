@@ -281,8 +281,8 @@ function createOptions(type, series_name, data, color, title, unit, isBgImg){
         chart: {
             type: type,
             width: undefined, //chart_width,
-            // height: window.innerHeight  - $("#narrative-section").height() - 30, //"* 0.65, //chart_height,
-            height: window.innerHeight * 0.65, //chart_height,
+            height: window.innerHeight  - $("#narrative-section").height() - 30, //"* 0.65, //chart_height,
+            // height: window.innerHeight * 0.65, //chart_height,
             style: {
                 // fontFamily: 'Lato Regular, sans-serif',
                 color: ColorPicker.body
