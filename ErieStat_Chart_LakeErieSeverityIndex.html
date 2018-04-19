@@ -22,9 +22,9 @@
 </head>
 <body>
 <div id="chart-canvas">
-    <div id="chart">
+    <div id="chart" style="margin-right: 20px">
     </div>
-    <div id="chart2">
+    <div id="chart2" style="margin-right: 20px">
     </div>
     <div id="chart3">
     </div>
@@ -77,20 +77,20 @@
             color: ColorPicker.blue7
         }],
 
-//        responsive: {
-//            rules: [{
-//                condition: {
-//                    maxWidth: 500
-//                },
-//                chartOptions: {
-//                    legend: {
-//                        layout: 'horizontal',
-//                        align: 'center',
-//                        verticalAlign: 'bottom'
-//                    }
-//                }
-//            }]
-//        }
+        responsive: {
+            rules: [{
+                condition: {
+                    maxWidth: 500
+                },
+                chartOptions: {
+                    legend: {
+                        layout: 'horizontal',
+                        align: 'center',
+                        verticalAlign: 'bottom'
+                    }
+                }
+            }]
+        }
     });
 
     Highcharts.chart("chart2", {
@@ -100,11 +100,6 @@
         title: {
             text: 'Lake Erie Severity Index'
         },
-
-//        subtitle: {
-//            text: 'Source: noaa.gov'
-//        },
-
         yAxis: {
             title: {
                 text: 'Severity Index'
@@ -113,7 +108,7 @@
         credits: {
             enabled: true,
             href: "http://noaa.gov",
-            text: "NOAA"
+            text: "Source: NOAA"
         },
 
 //        legend: {
