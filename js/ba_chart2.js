@@ -242,7 +242,7 @@ function loadWatershedsData(filename){
 
 function getWatershedMetric(in_data, w_name, metric){
     var vals = $(in_data).filter(function(i, n){
-        return n.River===w_name && n.Fraction===metric
+        return w_name.includes(n.River)&& n.Fraction===metric // n.River===w_name
     })
     vals.sort(function(a, b){
         return (a.Year > b.Year) ? 1 : ((a.Year < b.Year) ? -1 : 0);
@@ -256,6 +256,12 @@ function createChart(div, type, series_name, data, color, title, unit, isBgImg=1
     if(target){
         addTargetLine(chart, target, target_color);
     }
+    return chart;
+}
+
+function createDualAxesChart(div, title, x_axis, s1_name, s1_data, s1_type, s1_color, s2_name, s2_data, s2_type, s2_color){
+    var o = createDualAxesOptions(title, x_axis, s1_name, s1_data, s1_type, s1_color, s2_name, s2_data, s2_type, s2_color);
+    var chart = Highcharts.chart(div, o);
     return chart;
 }
 
@@ -275,6 +281,7 @@ function createOptions(type, series_name, data, color, title, unit, isBgImg){
         chart: {
             type: type,
             width: undefined, //chart_width,
+            // height: window.innerHeight  - $("#narrative-section").height() - 30, //"* 0.65, //chart_height,
             height: window.innerHeight * 0.65, //chart_height,
             style: {
                 // fontFamily: 'Lato Regular, sans-serif',
@@ -341,6 +348,150 @@ function createOptions(type, series_name, data, color, title, unit, isBgImg){
         }],
 
     };
+}
+
+function createDualAxesOptions_column_line(title, x_axis, s1_name, s1_data, s1_color, s2_name, s2_data, s2_color){
+    return {
+        chart: {
+            height: window.innerHeight * 0.65, //chart_height,
+            style: {
+                // fontFamily: 'Lato Regular, sans-serif',
+                color: ColorPicker.body
+            },
+        },
+        title: {
+            text: title,
+            style: {
+                color: ColorPicker.body
+            }
+        },
+        credits: {
+            enabled: false,
+            // href: "http://www.glc.org",
+            // text: "Great Lakes Commission"
+        },
+        xAxis: [{
+            categories: x_axis,
+            crosshair: true
+        }],
+        yAxis: [{ // Primary yAxis
+            title: {
+                text: s1_name,
+                style: {
+                    color: s1_color
+                }
+            }
+        }, { // Secondary yAxis
+            title: {
+                text: s2_name,
+                style: {
+                    color: s2_color
+                }
+            },
+            opposite: true
+        }],
+        series: [{
+            name: s1_name,
+            type: "column",
+
+            data: s1_data,
+            color: s1_color
+            // tooltip: {
+            //     valueSuffix: ' mm'
+            // }
+
+        }, {
+            name: s2_name,
+            type: "line",
+            yAxis: 1,
+            data: s2_data,
+            color: s2_color
+            // tooltip: {
+            //     valueSuffix: '°C'
+            // }
+        }]
+    }
+
+}
+
+function createDualAxesOptions_column_area(title, x_axis, s1_name, s1_data, s1_color, s2_name, s2_data, s2_color){
+    return {
+        chart: {
+            height: window.innerHeight * 0.65, //chart_height,
+            style: {
+                // fontFamily: 'Lato Regular, sans-serif',
+                color: ColorPicker.body
+            },
+        },
+        title: {
+            text: title,
+            style: {
+                color: ColorPicker.body
+            }
+        },
+        credits: {
+            enabled: false,
+            // href: "http://www.glc.org",
+            // text: "Great Lakes Commission"
+        },
+        xAxis: [{
+            categories: x_axis,
+            crosshair: true
+        }],
+        yAxis: [{ // Primary yAxis
+            title: {
+                text: s1_name,
+                style: {
+                    color: s1_color
+                }
+            }
+        }, { // Secondary yAxis
+            title: {
+                text: s2_name,
+                style: {
+                    color: s2_color
+                }
+            },
+            opposite: true
+        }],
+        plotOptions: {
+            area: {
+                fillColor: {
+                    linearGradient: {
+                        x1: 0,
+                        y1: 0,
+                        x2: 0,
+                        y2: 1
+                    },
+                    stops: [
+                        [0, s2_color],
+                        [1, Highcharts.Color(Highcharts.getOptions().colors[0]).setOpacity(0).get('rgba')]
+                    ]
+                },
+            }
+        },
+        series: [{
+            name: s1_name,
+            type: "column",
+
+            data: s1_data,
+            color: s1_color
+            // tooltip: {
+            //     valueSuffix: ' mm'
+            // }
+
+        }, {
+            name: s2_name,
+            type: "area",
+            yAxis: 1,
+            data: s2_data,
+            color: s2_color
+            // tooltip: {
+            //     valueSuffix: '°C'
+            // }
+        }]
+    }
+
 }
 
 function addTargetLine(chart, target, color) {
