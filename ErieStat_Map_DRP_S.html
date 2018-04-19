@@ -45,67 +45,67 @@
 
 <script>
     var data;
+    $.getJSON("data/all_data.json", function(d){
+        data = d;
+    });
+
     var map = L.map("map").setView([42.1, -83.1], 8);
     L.esri.basemapLayer("Topographic").addTo(map);
 
-    var watershed_boundary = L.esri.featureLayer({
-            url: "https://gis.glc.org/server/rest/services/ErieStat/PriorityWatersheds/MapServer/0",
-        style: function(feature){
-                return {
-                    weight: 2,
-                    color: ColorPicker.body,
-                    fill: false
-                }
-        }
-        }
-    ).addTo(map);
-    watershed_boundary.query().bounds(function (error, latlngbounds) {
-        map.fitBounds(latlngbounds);
-    });
     var watersheds = L.esri.dynamicMapLayer({
         url: "https://gis.glc.org/server/rest/services/ErieStat/PriorityWatersheds/MapServer",
-        layers:[ 1, 2]
+        layers:[0, 1, 2]
     }).addTo(map);
 
-
-
-
-//    var pilotWatersheds = L.esri.featureLayer({
-//        url: 'https://gis.glc.org/server/rest/services/ErieStat/ErieStat_WatershedsDemo/MapServer/1',
-//        //layers: [1]
-//    }).addTo(map);
-
-    // try not to bind with a popup, just bind with a query/highlight
-    watersheds.bindPopup(function (error, featureCollection) {
-        if(error || featureCollection.features.length === 0)
-        {
-            return false;
-        } else {
-            var index = findFeatureLayer(featureCollection);
-            return 'Watershed: ' + featureCollection.features[index].properties["Watershed Name"];
-//            return 'Risk Level: ' + featureCollection.features[0].properties;
-        }
+    var boundary_query = L.esri.query({
+        url: "https://gis.glc.org/server/rest/services/ErieStat/PriorityWatersheds/MapServer/0"
+    });
+    boundary_query.bounds(function(error, latlngbounds){
+        map.fitBounds(latlngbounds);
     });
 
-//    pilotWatersheds.bindPopup(function (layer) {
-//        if(error || layer.feature)
-//        {
-//            return false;
-//        } else {
-//            test(layer.feature);
-//            return 'Watershed: ' + featureCollection.features[0].properties.Name;
-////            return 'Risk Level: ' + featureCollection.features[0].properties;
-//        }
-//    });
+    var query = L.esri.query({
+        url: 'https://gis.glc.org/server/rest/services/ErieStat/PriorityWatersheds/MapServer/1'
+    });
 
-    $.getJSON("data/all_data.json", function(d){
-        data = d;
+    var selectedFeature;
+    map.on("click", function (e){
+        if(selectedFeature){
+            map.removeLayer(selectedFeature);
+        }
+        watersheds.identify().on(map).at(e.latlng).run(function (error, featureCollection){
+            if(featureCollection.features.length >1){
+                for(var i = 0; i < featureCollection.features.length; i++){
+                    if (featureCollection.features[i].layerId == 1){
+                        selectedFeature = L.geoJSON(featureCollection.features[i]);
+                        selectedFeature.setStyle({
+                            fill: false,
+                            weight: 2,
+                            color: "#07fcf0"
+                        });
+                        selectedFeature.addTo(map);
+                        var name = featureCollection.features[i].properties["Watershed Name"];
+                        buildChart(name);
+                        buildNarratives(name);
+                        query.where("MergeNm='"+ name +"'").bounds(function(error, latLngBounds, response){
+                            map.fitBounds(latLngBounds);
+                        });
+                    }
+                }
+            }
+        })
+
     });
 
     function findFeatureLayer(featureCol){
         for(var i = 0; i < featureCol.features.length; i++){
             if(featureCol.features[i].layerId == 1){
-                buildChart(featureCol.features[i].properties["Watershed Name"]);
+                var name = featureCol.features[i].properties["Watershed Name"];
+                buildChart(name);
+                buildNarratives(name);
+                query.where("MergeNm='"+ name +"'").bounds(function(error, latLngBounds, response){
+                    map.fitBounds(latLngBounds);
+                });
                 return i;
             }
         }
@@ -127,7 +127,6 @@
         var m = metrics.DRP_L_S;
         var u = units.DRP_L_S;
 //        var t = targets[w_name].DRP_L_S;
-        buildNarratives(w_name);
         if(!targets[w_name]){
 
 
