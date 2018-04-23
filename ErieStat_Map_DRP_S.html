@@ -25,6 +25,16 @@
 
 </head>
 <body>
+<style>
+    .label div {
+        color: black;
+        position: relative;
+        left: -70%;
+        font-size: 12px;
+        font-style: italic;
+        /*text-shadow: 0px 2px 1px rgba(255,255,255,0.85);*/
+    }
+</style>
 <div>
     <div id="map"></div>
     <div class="vl"></div>
@@ -96,6 +106,53 @@
         })
 
     });
+
+    /*****
+     * Section added for labels
+     */
+
+    var labels = {};
+    var pilotWatersheds = L.esri.featureLayer({
+        url: 'https://gis.glc.org/server/rest/services/ErieStat/PriorityWatersheds/MapServer/1',
+        style: function(feature){
+            return {
+                opacity: 0,
+                fill: false
+            }
+        }
+    }).addTo(map);
+    pilotWatersheds.on('createfeature', function(e){
+        var id = e.feature.id;
+        var feature = pilotWatersheds.getFeature(id);
+        var center = feature.getBounds().getCenter();
+        var label = L.marker(center, {
+            icon: L.divIcon({
+                iconSize: null,
+                className: 'label',
+                html: '<div>' + e.feature.properties.MergeNm + '</div>'
+            })
+        }).addTo(map);
+        labels[id] = label;
+    });
+
+    pilotWatersheds.on('addfeature', function(e){
+        var label = labels[e.feature.id];
+        if(label){
+            label.addTo(map);
+        }
+    });
+
+    pilotWatersheds.on('removefeature', function(e){
+        var label = labels[e.feature.id];
+        if(label){
+            map.removeLayer(label);
+        }
+    });
+    /***
+     * End of section
+     * */
+
+
 
     function findFeatureLayer(featureCol){
         for(var i = 0; i < featureCol.features.length; i++){
