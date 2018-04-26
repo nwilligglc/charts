@@ -1,4 +1,4 @@
-var id = "918102a3bff04636924faa2d1915cae1";
+var mapID = "918102a3bff04636924faa2d1915cae1";
 
 var narratives = {
     "Raisin": "The River Raisin is a river in southeastern Michigan that flows into Lake Erie. The area today is an agricultural and industrial center of Michigan. The river flows for almost 150 miles (241 km), draining an area of 1,072 square miles (2,780 km<sup>2</sup>) in the Michigan counties of Lenawee, Washtenaw, Jackson, Hillsdale, a portion of Fulton County, Ohio. The mouth of the river is located in Monroe County, Michigan <a href=\"https://www.riverraisin.org/watershed-facts\">(River Raisin Watershed Council)</a>.",
@@ -259,8 +259,8 @@ function createChart(div, type, series_name, data, color, title, unit, isBgImg=1
     return chart;
 }
 
-function createDualAxesChart(div, title, x_axis, s1_name, s1_data, s1_type, s1_color, s2_name, s2_data, s2_type, s2_color){
-    var o = createDualAxesOptions(title, x_axis, s1_name, s1_data, s1_type, s1_color, s2_name, s2_data, s2_type, s2_color);
+function createDualAxesChart(div, title, x_axis, s1_name, s1_data, s1_type, s1_unit, s1_color, s2_name, s2_data, s2_type, s2_unit, s2_color){
+    var o = createDualAxesOptions(title, x_axis, s1_name, s1_data, s1_type, s1_unit, s1_color, s2_name, s2_data, s2_type, s2_unit, s2_color);
     var chart = Highcharts.chart(div, o);
     return chart;
 }
@@ -323,7 +323,7 @@ function createOptions(type, series_name, data, color, title, unit, isBgImg){
         },
         yAxis: {
             title: {
-                text: unit,
+                text: series_name + "<br>(" + unit + ")",
                 style: {
                     color: ColorPicker.body
                 },
@@ -350,7 +350,7 @@ function createOptions(type, series_name, data, color, title, unit, isBgImg){
     };
 }
 
-function createDualAxesOptions_column_line(title, x_axis, s1_name, s1_data, s1_color, s2_name, s2_data, s2_color){
+function createDualAxesOptions_column_line(title, x_axis, s1_name, s1_data, s1_unit, s1_color, s2_name, s2_data, s2_unit, s2_color){
     return {
         chart: {
             height: window.innerHeight * 0.65, //chart_height,
@@ -376,14 +376,14 @@ function createDualAxesOptions_column_line(title, x_axis, s1_name, s1_data, s1_c
         }],
         yAxis: [{ // Primary yAxis
             title: {
-                text: s1_name,
+                text: s1_name + "<br>(" + s1_unit + ")",
                 style: {
                     color: s1_color
                 }
             }
         }, { // Secondary yAxis
             title: {
-                text: s2_name,
+                text: s2_name + "<br>(" + s2_unit + ")",
                 style: {
                     color: s2_color
                 }
@@ -393,7 +393,7 @@ function createDualAxesOptions_column_line(title, x_axis, s1_name, s1_data, s1_c
         series: [{
             name: s1_name,
             type: "column",
-
+            unit: s1_unit,
             data: s1_data,
             color: s1_color
             // tooltip: {
@@ -404,6 +404,7 @@ function createDualAxesOptions_column_line(title, x_axis, s1_name, s1_data, s1_c
             name: s2_name,
             type: "line",
             yAxis: 1,
+            unit: s2_unit,
             data: s2_data,
             color: s2_color
             // tooltip: {
@@ -414,7 +415,7 @@ function createDualAxesOptions_column_line(title, x_axis, s1_name, s1_data, s1_c
 
 }
 
-function createDualAxesOptions_column_area(title, x_axis, s1_name, s1_data, s1_color, s2_name, s2_data, s2_color){
+function createDualAxesOptions_column_area(title, x_axis, s1_name, s1_data, s1_unit, s1_color, s2_name, s2_data, s2_unit, s2_color){
     return {
         chart: {
             height: window.innerHeight * 0.65, //chart_height,
@@ -440,14 +441,14 @@ function createDualAxesOptions_column_area(title, x_axis, s1_name, s1_data, s1_c
         }],
         yAxis: [{ // Primary yAxis
             title: {
-                text: s1_name,
+                text: s1_name + "<br>(" + s1_unit + ")",
                 style: {
                     color: s1_color
                 }
             }
         }, { // Secondary yAxis
             title: {
-                text: s2_name,
+                text: s2_name + "<br>(" + s2_unit + ")",
                 style: {
                     color: s2_color
                 }
@@ -473,7 +474,7 @@ function createDualAxesOptions_column_area(title, x_axis, s1_name, s1_data, s1_c
         series: [{
             name: s1_name,
             type: "column",
-
+            unit: s1_unit,
             data: s1_data,
             color: s1_color
             // tooltip: {
@@ -484,6 +485,7 @@ function createDualAxesOptions_column_area(title, x_axis, s1_name, s1_data, s1_c
             name: s2_name,
             type: "area",
             yAxis: 1,
+            unit: s2_unit,
             data: s2_data,
             color: s2_color
             // tooltip: {
