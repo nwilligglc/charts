@@ -77,8 +77,9 @@
     L.esri.basemapLayer("Topographic").addTo(map);
 
     var watersheds = L.esri.dynamicMapLayer({
-        url: "https://services.arcgisonline.com/arcgis/rest/services/Specialty/Soil_Survey_Map/MapServer",
-        layers:[0, 1, 2]
+        url: "https://gis.glc.org/server/rest/services/ErieStat/PriorityWatersheds/MapServer",
+        layers:[0, 1, 2],
+        f: "image"
     }).addTo(map);
 
     var boundary_query = L.esri.query({
