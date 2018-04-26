@@ -53,19 +53,19 @@
     L.esri.basemapLayer("Topographic").addTo(map);
 
     var watersheds = L.esri.dynamicMapLayer({
-        url: "https://gis.glc.org/server/rest/services/ErieStat/PriorityWatersheds/MapServer",
+        url: "http://gis.glc.org/server/rest/services/ErieStat/PriorityWatersheds/MapServer",
         layers:[0, 1, 2]
     }).addTo(map);
 
     var boundary_query = L.esri.query({
-        url: "https://gis.glc.org/server/rest/services/ErieStat/PriorityWatersheds/MapServer/0"
+        url: "http://gis.glc.org/server/rest/services/ErieStat/PriorityWatersheds/MapServer/0"
     });
     boundary_query.bounds(function(error, latlngbounds){
         map.fitBounds(latlngbounds);
     });
 
     var query = L.esri.query({
-        url: 'https://gis.glc.org/server/rest/services/ErieStat/PriorityWatersheds/MapServer/1'
+        url: 'http://gis.glc.org/server/rest/services/ErieStat/PriorityWatersheds/MapServer/1'
     });
 
     var selectedFeature;
