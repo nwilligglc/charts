@@ -56,13 +56,13 @@
         //var o = createDualAxesOptions_column_area(title, x_axis, s1_name, s1_data, s1_color, s2_name, s2_data, s2_color);
         var chart1 = Highcharts.chart("chart1", createDualAxesOptions_column_line(
             w_name + " River " + metrics.DRP_L_S + " and " + metrics.Discharge_S, xAxis,
-            series1, s1_data, ColorPicker.blue7,
-            series2, s2_data, ColorPicker.blue2));
+            series1, s1_data, units.DRP_L_S, ColorPicker.blue7,
+            series2, s2_data, units.Discharge_S, ColorPicker.blue2));
 
         var chart2 = Highcharts.chart("chart2", createDualAxesOptions_column_area(
             w_name + " River " + metrics.DRP_L_S + " and " + metrics.Discharge_S, xAxis,
-            series1, s1_data, ColorPicker.blue7,
-            series2, s2_data, ColorPicker.blue2));
+            series1, s1_data, units.DRP_L_S, ColorPicker.blue7,
+            series2, s2_data, units.Discharge_S, ColorPicker.blue2));
 
         //return chart;
     });
