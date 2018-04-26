@@ -54,7 +54,8 @@
 
     var watersheds = L.esri.dynamicMapLayer({
         url: "https://gis.glc.org/server/rest/services/ErieStat/PriorityWatersheds/MapServer",
-        layers:[0, 1, 2]
+        layers:[0, 1, 2],
+        f: "image"
     }).addTo(map);
 
     var boundary_query = L.esri.query({
