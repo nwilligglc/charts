@@ -223,7 +223,6 @@
             });
 
             function executeQueryTask(event){
-                view.graphics.removeAll();
                 var queryparcelTask  = new QueryTask({url: "https://gis.glc.org/server/rest/services/ErieStat/PriorityWatersheds/MapServer/1"});
                 var query = new Query();
                 query.geometry = event.mapPoint;
@@ -333,6 +332,7 @@
             }
 
             function zoomFeature(result){
+                view.graphics.removeAll();
                 var aoi = result.features;
                 geometry = aoi[0].geometry;
                 var graphicGeometry = new Graphic({

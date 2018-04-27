@@ -331,6 +331,7 @@
             }
 
             function zoomFeature(result){
+                view.graphics.removeAll();
                 var aoi = result.features;
                 geometry = aoi[0].geometry;
                 var graphicGeometry = new Graphic({

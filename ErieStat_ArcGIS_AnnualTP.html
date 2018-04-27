@@ -75,6 +75,7 @@
             "esri/tasks/support/Query",
             "esri/tasks/support/IdentifyParameters",
             "dojo/_base/array",
+            "esri/Graphic",
             "dojo/dom",
             "dojo/on",
             "dojo/dom-construct",
@@ -91,6 +92,7 @@
             Query,
             IdentifyParameters,
             arrayUtils,
+            Graphic,
             dom,
             on,
             domConstruct
@@ -329,6 +331,7 @@
             }
 
             function zoomFeature(result){
+                view.graphics.removeAll();
                 var aoi = result.features;
                 geometry = aoi[0].geometry;
                 var graphicGeometry = new Graphic({
