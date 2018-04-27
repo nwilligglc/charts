@@ -70,55 +70,51 @@ var metrics = {
 }
 
 var units = {
-    "TP_L": "Metric Tons",
-    "DRP_L": "Metric Tons",
-    "TP_FWMC": "milligrams / liter",
-    "DRP_FWMC": "milligrams / liter",
+    "Annual TP Loading": "Metric Tons",
+    "Annual DRP Loading": "Metric Tons",
+    "Annual TP FWMC": "milligrams / liter",
+    "Annual DRP FWMC": "milligrams / liter",
     "Discharge": "million cubic meters",
-    "TP_L_S": "Metric Tons",
-    "DRP_L_S": "Metric Tons",
-    "TP_FWMS_S": "milligrams / liter",
-    "DRP_FWMC_S": "milligrams / liter",
-    "Discharge_S": "million cubic meters"
+    "Spring TP Loading": "Metric Tons",
+    "Spring DRP Loading": "Metric Tons",
+    "Spring TP FWMC": "milligrams / liter",
+    "Spring DRP FWMC": "milligrams / liter",
+    "Spring Discharge": "million cubic meters"
 }
 
 var targets = {
     "Maumee River": {
-        "TP_L": 2288,
-        "TP_L_S": 860,
-        "DRP_L_S": 186,
-        "TP_FWMS_S": 0.23,
-        "DRP_FWMS_S": 0.05
+        "Annual TP Loading": 2288,
+        "Spring TP Loading": 860,
+        "Spring DRP Loading": 186,
+        "Spring TP FWMC": 0.23,
+        "Spring DRP FWMC": 0.05
     },
-    "Portage River": {
-        "TP_L": 0,
-        "TP_L_S": 0,
-        "DRP_L_S": 0,
-        "TP_FWMS_S": 0,
-        "DRP_FWMS_S": 0
-    },
-    "River Raisin": {
-        "TP_L": 0,
-        "TP_L_S": 0,
-        "DRP_L_S": 0,
-        "TP_FWMS_S": 0,
-        "DRP_FWMS_S": 0
-    },
+    // "Portage River": {
+    //     "Annual TP Loading": 0,
+    //     "Spring TP Loading": 0,
+    //     "Spring DRP Loading": 0,
+    //     "Spring TP FWMC": 0,
+    //     "Spring DRP FWMC": 0
+    // },
+    // "River Raisin": {
+    //     "Annual TP Loading": 0,
+    //     "Spring TP Loading": 0,
+    //     "Spring DRP Loading": 0,
+    //     "Spring TP FWMC": 0,
+    //     "Spring DRP FWMC": 0
+    // },
 
     "Sandusky River": {
-        "TP_L": 661,
-        "TP_L_S": 230,
-        "DRP_L_S": 43,
-        "TP_FWMS_S": 0.23,
-        "DRP_FWMS_S": 0.05
+        "Annual TP Loading": 661,
+        "Spring TP Loading": 230,
+        "Spring DRP Loading": 43,
+        "Spring TP FWMC": 0.23,
+        "Spring DRP FWMC": 0.05
     },
     "Cuyahoga River": {
-        "TP_L": 271,
+        "Annual TP Loading": 271,
     }
-}
-
-var maumee_targets = {
-    "DRP_L_S": 186,
 }
 
 function BA_Charts(){}
@@ -299,6 +295,7 @@ function createOptions(type, series_name, data, color, title, unit, isBgImg){
     });
     return {
         chart: {
+            backgroundColor:'transparent',
             type: type,
             width: undefined, //chart_width,
             height: window.innerHeight  - $("#narrative-section").height() - 30, //"* 0.65, //chart_height,
@@ -550,24 +547,31 @@ function buildNarratives(w_name){
     $("#narrative-content").html(n);
 }
 
-function buildChart(name){
+function buildChart(data, tag, name, metric, unit){
     /**
      * Build two charts for each watershed, using the BA library
      */
 
         //get the watershed name
     var w_name = watershedNames[name];//feature.properties.Name;
-    var m = metrics.DRP_L_S;
-    var u = units.DRP_L_S;
-    var w_data = getWatershedMetric(data, w_name, m);
+    // var m = metrics.DRP_L_S;
+    // var u = units.DRP_L_S;
+    var w_data = getWatershedMetric(data, w_name, metric);
     if(w_data.length > 0){
-        var t = targets[w_name].DRP_L_S;
+        var t = undefined;
+        if(targets[w_name] && targets[w_name][metric]){
+
+                t = targets[w_name][metric];
+
+        }
+
+        // var t = targets[w_name][metric];
         var data_series = [];
         for (var i = 0; i < w_data.length; i++){
             data_series.push(w_data[i].Value);
         }
-        createChart("upperChart", "column", m, data_series, ColorPicker.blue7, w_name + " " + m, u, false, t);
+        createChart(tag, "column", metric, data_series, ColorPicker.blue7, w_name + " " + metric, unit, false, t);
     }else{
-        $("#upperChart").html("<p style='text-transform: uppercase;font-style: italic'>*DATA UNAVAILABLE FOR " + w_name + " WATERSHED</p>");
+        $("#"+tag).html("<p style='text-transform: uppercase;font-style: italic'>*DATA UNAVAILABLE FOR " + w_name + " WATERSHED</p>");
     }
 }
