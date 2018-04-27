@@ -86,7 +86,7 @@
                        });
                        selectedFeature.addTo(map);
                        var name = featureCollection.features[i].properties["Watershed Name"];
-                       buildChart(name);
+                       buildChart(data, "upperChart", name, metrics.TP_L, units[metrics.TP_L]);
                        buildNarratives(name);
                        query.where("MergeNm='"+ name +"'").bounds(function(error, latLngBounds, response){
                            map.fitBounds(latLngBounds);

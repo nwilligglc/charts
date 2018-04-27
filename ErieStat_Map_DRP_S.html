@@ -110,7 +110,7 @@
                         });
                         selectedFeature.addTo(map);
                         var name = featureCollection.features[i].properties["Watershed Name"];
-                        buildChart(name);
+                        buildChart(data, "upperChart", name, metrics.DRP_L_S, units[metrics.DRP_L_S]);
                         buildNarratives(name);
                         query.where("MergeNm='"+ name +"'").bounds(function(error, latLngBounds, response){
                             map.fitBounds(latLngBounds);
@@ -183,20 +183,20 @@
 
 
 
-    function findFeatureLayer(featureCol){
-        for(var i = 0; i < featureCol.features.length; i++){
-            if(featureCol.features[i].layerId == 1){
-                var name = featureCol.features[i].properties["Watershed Name"];
-                buildChart(name);
-                buildNarratives(name);
-                query.where("MergeNm='"+ name +"'").bounds(function(error, latLngBounds, response){
-                    map.fitBounds(latLngBounds);
-                });
-                return i;
-            }
-        }
-        return null;
-    }
+//    function findFeatureLayer(featureCol){
+//        for(var i = 0; i < featureCol.features.length; i++){
+//            if(featureCol.features[i].layerId == 1){
+//                var name = featureCol.features[i].properties["Watershed Name"];
+//                buildChart("upperChart", name);
+//                buildNarratives(name);
+//                query.where("MergeNm='"+ name +"'").bounds(function(error, latLngBounds, response){
+//                    map.fitBounds(latLngBounds);
+//                });
+//                return i;
+//            }
+//        }
+//        return null;
+//    }
 
 
 

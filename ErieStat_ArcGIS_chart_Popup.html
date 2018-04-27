@@ -36,13 +36,31 @@
         }
 
         .esri-popup .esri-popup-body .esri-popup-content {
-            font-size: 14px;
+            font-size: 16px;
+        }
+        .esri-popup__content p{
+            font-size: 16px;
+        }
+        #canvas-chart{
+            visibility: hidden;
+            z-index: 99;
+            position: absolute;
+            top: 15px;
+            left: 70%;
+            padding: 5px;
+            margin-right: 25px;
+            height: 400px;
+            width: 500px;
+            background: rgba(255, 255, 255, 0.8);
+            color: black;
         }
 
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://js.arcgis.com/4.7/esri/css/main.css">
     <script src="https://js.arcgis.com/4.7/"></script>
+    <script src="//code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
 
     <script>
         require([
@@ -53,6 +71,8 @@
             "esri/layers/FeatureLayer",
             "esri/geometry/geometryEngine",
             "esri/tasks/IdentifyTask",
+            "esri/tasks/QueryTask",
+            "esri/tasks/support/Query",
             "esri/tasks/support/IdentifyParameters",
             "dojo/_base/array",
             "dojo/dom",
@@ -67,6 +87,8 @@
             FeatureLayer,
             geometryEngine,
             IdentifyTask,
+            QueryTask,
+            Query,
             IdentifyParameters,
             arrayUtils,
             dom,
@@ -74,7 +96,7 @@
             domConstruct
         ) {
             var data;
-            $.getJSON("data/all_data.json", function(d){
+            $.getJSON("data/all_data2.json", function(d){
                 data = d;
             });
             var identifyTask, params;
@@ -106,17 +128,34 @@
                 zoom: 7
             });
 
-//            map.layers.add(erieStatLayer);
+            map.layers.add(erieStatLayer);
             map.layers.add(pilotWatershedLayer);
 
-
-
-            view.on("layerview-create", function(event) {
-                if (event.layer.id === "esLayer") {
-                    // Explore the properties of the housing layer's layer view here
-                    console.log("LayerView for New York housing density created!", event.layerView);
-                }
+//            pilotWatershedLayer.when(function(){
+//                return pilotWatershedLayer.queryExtent();
+//            })
+//                .then(function(response){
+//                    view.goTo(response.extent);
+//                });
+            view.whenLayerView(pilotWatershedLayer).then(function(layerView){
+                layerView.watch("updating", function(val){
+                    // wait for the layer view to finish updating
+                    if(!val){
+                        layerView.queryExtent().then(function(response){
+                            // go to the extent of all the graphics in the layer view
+                            view.goTo(response.extent);
+                        });
+                    }
+                });
             });
+
+
+//            view.on("layerview-create", function(event) {
+//                if (event.layer.id === "esLayer") {
+//                    // Explore the properties of the housing layer's layer view here
+//                    console.log("LayerView for New York housing density created!", event.layerView);
+//                }
+//            });
 
 //            on(erieStatLayer, "click", function(){
 //                var query = erieStatLayer.createQuery();
@@ -160,6 +199,8 @@
             view.when(function() {
                 // executeIdentifyTask() is called each time the view is clicked
                 on(view, "click", executeIdentifyTask);
+                on(view, "click", executeQueryTask);
+
 
                 // Create identify task for the specified map service
                 identifyTask = new IdentifyTask(serviceURL);
@@ -172,6 +213,15 @@
                 params.width = view.width;
                 params.height = view.height;
             });
+
+            function executeQueryTask(event){
+                var queryparcelTask  = new QueryTask({url: "https://gis.glc.org/server/rest/services/ErieStat/PriorityWatersheds/MapServer/1"});
+                var query = new Query();
+                query.geometry = event.mapPoint;
+                query.returnGeometry = true;
+//                query.where = "MergeNm = '" +   value + "'";
+                queryparcelTask.execute(query).then(zoomFeature);
+            }
 
             function executeIdentifyTask(event) {
 
@@ -207,14 +257,21 @@
 
                         feature.popupTemplate = {
                             title: "{Watershed Name}" + " Watershed",
-                            content: "<p>chart goes here</p><div id='chart'></div>"
+                            content: nara(w_name)
 
                         };
 
-                        var w_data = getWatershedMetric(data, w_name, metric);
 
-                        var chart = createChart("chart", "column", "{Watershed Name}" + metric, w_data, ColorPicker.blue7,
-                        metric, unit);
+
+                        var w_data = getWatershedMetric(data, watershedNames[w_name], metric);
+                        buildChart(data, "chart", w_name, metric, units[metric]);
+//                        var data_series = [];
+//                        for (var i = 0; i < w_data.length; i++){
+//                            data_series.push(w_data[i].Value);
+//                        }
+//                        var chart = createChart("chart", "column", w_name + " " + metric, data_series, ColorPicker.blue7,
+//                        metric, unit);
+                        $("#canvas-chart").css("visibility", "visible");
 
 //                        feature.attributes.layerName = layerName;
 //                        if (layerName === 'Soil Survey Geographic') {
@@ -244,8 +301,19 @@
                     });
                 }).then(showPopup);
 
+                function nara(w_name){
+                    if(narratives[watershedNames[w_name]]){
+                        return "<p style='font-size: 16px'>" + narratives[watershedNames[w_name]] + "</p>";
+                    }else{
+                        return "<p style='text-transform: uppercase;font-style: italic'>*Watershed Description unavailable.</p>"
+                    }
+                };
+
                 function showPopup(response) {
                     if (response.length > 0) {
+                        view.popup.dockOptions = {
+                            position: "top-left"
+                        };
                         view.popup.open({
                             features: response,
                             location: event.mapPoint
@@ -253,7 +321,11 @@
                     }
                     dom.byId("viewDiv").style.cursor = "auto";
                 }
+            }
 
+            function zoomFeature(result){
+                var aoi = result.features;
+                view.goTo(aoi);
             }
 
 
@@ -263,8 +335,12 @@
 
 <body>
 <div id="viewDiv"></div>
-<div id="legend">Legend goes here. it is a long <br> paragraph with breaks</div>
-<div id="instruction">Click any location on the map to see its street address</div>
+<!--<div id="legend">Legend goes here. it is a long <br> paragraph with breaks</div>-->
+<div id="canvas-chart">
+    <div id="chart">
+
+    </div>
+</div>
 </body>
 
 </html>
