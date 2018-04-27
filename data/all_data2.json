@@ -1,0 +1,3202 @@
+[
+  {
+    "River": "Maumee River",
+    "Year": 2008,
+    "Fraction": "Annual TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 3560,
+    "": ""
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2009,
+    "Fraction": "Annual TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 2160,
+    "": ""
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2010,
+    "Fraction": "Annual TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 1530,
+    "": ""
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2011,
+    "Fraction": "Annual TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 2780,
+    "": ""
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2012,
+    "Fraction": "Annual TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 2230,
+    "": ""
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2013,
+    "Fraction": "Annual TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 2130,
+    "": ""
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2014,
+    "Fraction": "Annual TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 1960,
+    "": ""
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2015,
+    "Fraction": "Annual TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 2200,
+    "": ""
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2016,
+    "Fraction": "Annual TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 1240,
+    "": ""
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2008,
+    "Fraction": "Annual DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 835,
+    "": ""
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2009,
+    "Fraction": "Annual DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 346,
+    "": ""
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2010,
+    "Fraction": "Annual DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 404,
+    "": ""
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2011,
+    "Fraction": "Annual DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 570,
+    "": ""
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2012,
+    "Fraction": "Annual DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 614,
+    "": ""
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2013,
+    "Fraction": "Annual DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 468,
+    "": ""
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2014,
+    "Fraction": "Annual DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 577,
+    "": ""
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2015,
+    "Fraction": "Annual DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 752,
+    "": ""
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2016,
+    "Fraction": "Annual DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 253,
+    "": ""
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2008,
+    "Fraction": "Annual TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.444,
+    "": ""
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2009,
+    "Fraction": "Annual TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.426,
+    "": ""
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2010,
+    "Fraction": "Annual TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.329,
+    "": ""
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2011,
+    "Fraction": "Annual TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.446,
+    "": ""
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2012,
+    "Fraction": "Annual TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.374,
+    "": ""
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2013,
+    "Fraction": "Annual TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.423,
+    "": ""
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2014,
+    "Fraction": "Annual TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.335,
+    "": ""
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2015,
+    "Fraction": "Annual TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.331,
+    "": ""
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2016,
+    "Fraction": "Annual TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.292,
+    "": ""
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2008,
+    "Fraction": "Annual DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.104,
+    "": ""
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2009,
+    "Fraction": "Annual DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.068,
+    "": ""
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2010,
+    "Fraction": "Annual DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.087,
+    "": ""
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2011,
+    "Fraction": "Annual DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.091,
+    "": ""
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2012,
+    "Fraction": "Annual DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.103,
+    "": ""
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2013,
+    "Fraction": "Annual DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.093,
+    "": ""
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2014,
+    "Fraction": "Annual DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.099,
+    "": ""
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2015,
+    "Fraction": "Annual DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.113,
+    "": ""
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2016,
+    "Fraction": "Annual DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.06,
+    "": ""
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2008,
+    "Fraction": "Annual Discharge",
+    "Unit": "million cubic meters",
+    "Value": 8026,
+    "": ""
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2009,
+    "Fraction": "Annual Discharge",
+    "Unit": "million cubic meters",
+    "Value": 5075,
+    "": ""
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2010,
+    "Fraction": "Annual Discharge",
+    "Unit": "million cubic meters",
+    "Value": 4648,
+    "": ""
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2011,
+    "Fraction": "Annual Discharge",
+    "Unit": "million cubic meters",
+    "Value": 6230,
+    "": ""
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2012,
+    "Fraction": "Annual Discharge",
+    "Unit": "million cubic meters",
+    "Value": 5960,
+    "": ""
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2013,
+    "Fraction": "Annual Discharge",
+    "Unit": "million cubic meters",
+    "Value": 5030,
+    "": ""
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2014,
+    "Fraction": "Annual Discharge",
+    "Unit": "million cubic meters",
+    "Value": 5850,
+    "": ""
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2015,
+    "Fraction": "Annual Discharge",
+    "Unit": "million cubic meters",
+    "Value": 6650,
+    "": ""
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2016,
+    "Fraction": "Annual Discharge",
+    "Unit": "million cubic meters",
+    "Value": 3970,
+    "": ""
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2008,
+    "Fraction": "Spring TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 1414,
+    "": ""
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2009,
+    "Fraction": "Spring TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 1370,
+    "": ""
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2010,
+    "Fraction": "Spring TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 1307,
+    "": ""
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2011,
+    "Fraction": "Spring TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 2318,
+    "": 186
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2012,
+    "Fraction": "Spring TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 393,
+    "": 186
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2013,
+    "Fraction": "Spring TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 1249,
+    "": 186
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2014,
+    "Fraction": "Spring TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 1155,
+    "": 186
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2015,
+    "Fraction": "Spring TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 1863,
+    "": 186
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2016,
+    "Fraction": "Spring TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 755.3,
+    "": 186
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2008,
+    "Fraction": "Spring DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 302,
+    "": 186
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2009,
+    "Fraction": "Spring DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 211,
+    "": 186
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2010,
+    "Fraction": "Spring DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 324,
+    "": 186
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2011,
+    "Fraction": "Spring DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 430,
+    "": ""
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2012,
+    "Fraction": "Spring DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 64,
+    "": ""
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2013,
+    "Fraction": "Spring DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 289,
+    "": ""
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2014,
+    "Fraction": "Spring DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 306,
+    "": ""
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2015,
+    "Fraction": "Spring DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 422,
+    "": ""
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2016,
+    "Fraction": "Spring DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 144,
+    "": ""
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2008,
+    "Fraction": "Spring TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.376,
+    "": ""
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2009,
+    "Fraction": "Spring TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.411,
+    "": ""
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2010,
+    "Fraction": "Spring TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.362,
+    "": ""
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2011,
+    "Fraction": "Spring TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.455,
+    "": ""
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2012,
+    "Fraction": "Spring TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.378,
+    "": ""
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2013,
+    "Fraction": "Spring TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.374,
+    "": ""
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2014,
+    "Fraction": "Spring TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.332,
+    "": ""
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2015,
+    "Fraction": "Spring TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.454,
+    "": ""
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2016,
+    "Fraction": "Spring TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.303,
+    "": ""
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2008,
+    "Fraction": "Spring DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.08,
+    "": ""
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2009,
+    "Fraction": "Spring DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.063,
+    "": ""
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2010,
+    "Fraction": "Spring DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.09,
+    "": ""
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2011,
+    "Fraction": "Spring DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.084,
+    "": ""
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2012,
+    "Fraction": "Spring DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.061,
+    "": ""
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2013,
+    "Fraction": "Spring DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.086,
+    "": ""
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2014,
+    "Fraction": "Spring DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.088,
+    "": ""
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2015,
+    "Fraction": "Spring DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.103,
+    "": ""
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2016,
+    "Fraction": "Spring DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.058,
+    "": ""
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2008,
+    "Fraction": "Spring Discharge",
+    "Unit": "million cubic liters",
+    "Value": 3756,
+    "": ""
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2009,
+    "Fraction": "Spring Discharge",
+    "Unit": "million cubic meters",
+    "Value": 3335,
+    "": ""
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2010,
+    "Fraction": "Spring Discharge",
+    "Unit": "million cubic meters",
+    "Value": 3613,
+    "": ""
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2011,
+    "Fraction": "Spring Discharge",
+    "Unit": "million cubic meters",
+    "Value": 5097,
+    "": ""
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2012,
+    "Fraction": "Spring Discharge",
+    "Unit": "million cubic meters",
+    "Value": 1039,
+    "": ""
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2013,
+    "Fraction": "Spring Discharge",
+    "Unit": "million cubic meters",
+    "Value": 3342,
+    "": ""
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2014,
+    "Fraction": "Spring Discharge",
+    "Unit": "million cubic meters",
+    "Value": 3475,
+    "": ""
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2015,
+    "Fraction": "Spring Discharge",
+    "Unit": "million cubic meters",
+    "Value": 4099,
+    "": ""
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2016,
+    "Fraction": "Spring Discharge",
+    "Unit": "million cubic meters",
+    "Value": 2490,
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2008,
+    "Fraction": "Annual TP Loading",
+    "Unit": "Metric Tons",
+    "Value": "",
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2009,
+    "Fraction": "Annual TP Loading",
+    "Unit": "Metric Tons",
+    "Value": "",
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2010,
+    "Fraction": "Annual TP Loading",
+    "Unit": "Metric Tons",
+    "Value": "",
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2011,
+    "Fraction": "Annual TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 232,
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2012,
+    "Fraction": "Annual TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 188,
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2013,
+    "Fraction": "Annual TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 117,
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2014,
+    "Fraction": "Annual TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 163,
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2015,
+    "Fraction": "Annual TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 123,
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2016,
+    "Fraction": "Annual TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 103,
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2008,
+    "Fraction": "Annual DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": "",
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2009,
+    "Fraction": "Annual DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": "",
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2010,
+    "Fraction": "Annual DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": "",
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2011,
+    "Fraction": "Annual DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 51,
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2012,
+    "Fraction": "Annual DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 58.6,
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2013,
+    "Fraction": "Annual DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 35.2,
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2014,
+    "Fraction": "Annual DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 50.1,
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2015,
+    "Fraction": "Annual DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 45.1,
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2016,
+    "Fraction": "Annual DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 20.2,
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2008,
+    "Fraction": "Annual TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": "",
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2009,
+    "Fraction": "Annual TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": "",
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2010,
+    "Fraction": "Annual TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": "",
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2011,
+    "Fraction": "Annual TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.399,
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2012,
+    "Fraction": "Annual TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.371,
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2013,
+    "Fraction": "Annual TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.312,
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2014,
+    "Fraction": "Annual TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.37,
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2015,
+    "Fraction": "Annual TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.28,
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2016,
+    "Fraction": "Annual TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.22,
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2008,
+    "Fraction": "Annual DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": "",
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2009,
+    "Fraction": "Annual DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": "",
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2010,
+    "Fraction": "Annual DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": "",
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2011,
+    "Fraction": "Annual DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.088,
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2012,
+    "Fraction": "Annual DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.116,
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2013,
+    "Fraction": "Annual DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.094,
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2014,
+    "Fraction": "Annual DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.114,
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2015,
+    "Fraction": "Annual DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.103,
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2016,
+    "Fraction": "Annual DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.043,
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2008,
+    "Fraction": "Annual Discharge",
+    "Unit": "million cubic meters",
+    "Value": 650,
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2009,
+    "Fraction": "Annual Discharge",
+    "Unit": "million cubic meters",
+    "Value": 353,
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2010,
+    "Fraction": "Annual Discharge",
+    "Unit": "million cubic meters",
+    "Value": 251,
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2011,
+    "Fraction": "Annual Discharge",
+    "Unit": "million cubic meters",
+    "Value": 582,
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2012,
+    "Fraction": "Annual Discharge",
+    "Unit": "million cubic meters",
+    "Value": 507,
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2013,
+    "Fraction": "Annual Discharge",
+    "Unit": "million cubic meters",
+    "Value": 375,
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2014,
+    "Fraction": "Annual Discharge",
+    "Unit": "million cubic meters",
+    "Value": 440,
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2015,
+    "Fraction": "Annual Discharge",
+    "Unit": "million cubic meters",
+    "Value": 439,
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2016,
+    "Fraction": "Annual Discharge",
+    "Unit": "million cubic meters",
+    "Value": 469,
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2008,
+    "Fraction": "Spring TP Loading",
+    "Unit": "Metric Tons",
+    "Value": "",
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2009,
+    "Fraction": "Spring TP Loading",
+    "Unit": "Metric Tons",
+    "Value": "",
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2010,
+    "Fraction": "Spring TP Loading",
+    "Unit": "Metric Tons",
+    "Value": "",
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2011,
+    "Fraction": "Spring TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 186,
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2012,
+    "Fraction": "Spring TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 35,
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2013,
+    "Fraction": "Spring TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 73,
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2014,
+    "Fraction": "Spring TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 63,
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2015,
+    "Fraction": "Spring TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 111,
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2016,
+    "Fraction": "Spring TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 67.1,
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2008,
+    "Fraction": "Spring DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": "",
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2009,
+    "Fraction": "Spring DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": "",
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2010,
+    "Fraction": "Spring DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": "",
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2011,
+    "Fraction": "Spring DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 35.53,
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2012,
+    "Fraction": "Spring DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 7.11,
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2013,
+    "Fraction": "Spring DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 22.14,
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2014,
+    "Fraction": "Spring DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 14.23,
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2015,
+    "Fraction": "Spring DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 40.1,
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2016,
+    "Fraction": "Spring DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 10.9,
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2008,
+    "Fraction": "Spring TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": "",
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2009,
+    "Fraction": "Spring TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": "",
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2010,
+    "Fraction": "Spring TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": "",
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2011,
+    "Fraction": "Spring TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.427,
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2012,
+    "Fraction": "Spring TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.354,
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2013,
+    "Fraction": "Spring TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.323,
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2014,
+    "Fraction": "Spring TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.335,
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2015,
+    "Fraction": "Spring TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.285,
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2016,
+    "Fraction": "Spring TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.344,
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2008,
+    "Fraction": "Spring DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": "",
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2009,
+    "Fraction": "Spring DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": "",
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2010,
+    "Fraction": "Spring DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": "",
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2011,
+    "Fraction": "Spring DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.081,
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2012,
+    "Fraction": "Spring DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.072,
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2013,
+    "Fraction": "Spring DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.098,
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2014,
+    "Fraction": "Spring DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.076,
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2015,
+    "Fraction": "Spring DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.103,
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2016,
+    "Fraction": "Spring DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.056,
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2008,
+    "Fraction": "Spring Discharge",
+    "Unit": "million cubic meters",
+    "Value": "",
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2009,
+    "Fraction": "Spring Discharge",
+    "Unit": "million cubic meters",
+    "Value": "",
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2010,
+    "Fraction": "Spring Discharge",
+    "Unit": "million cubic meters",
+    "Value": "",
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2011,
+    "Fraction": "Spring Discharge",
+    "Unit": "million cubic meters",
+    "Value": 436,
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2012,
+    "Fraction": "Spring Discharge",
+    "Unit": "million cubic meters",
+    "Value": 99,
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2013,
+    "Fraction": "Spring Discharge",
+    "Unit": "million cubic meters",
+    "Value": 226,
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2014,
+    "Fraction": "Spring Discharge",
+    "Unit": "million cubic meters",
+    "Value": 188,
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2015,
+    "Fraction": "Spring Discharge",
+    "Unit": "million cubic meters",
+    "Value": 389,
+    "": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2016,
+    "Fraction": "Spring Discharge",
+    "Unit": "million cubic meters",
+    "Value": 195,
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2008,
+    "Fraction": "Annual TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 172,
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2009,
+    "Fraction": "Annual TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 128,
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2010,
+    "Fraction": "Annual TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 83,
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2011,
+    "Fraction": "Annual TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 135,
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2012,
+    "Fraction": "Annual TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 163,
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2013,
+    "Fraction": "Annual TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 68,
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2014,
+    "Fraction": "Annual TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 79.7,
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2015,
+    "Fraction": "Annual TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 88.9,
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2016,
+    "Fraction": "Annual TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 62.5,
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2008,
+    "Fraction": "Annual DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 42,
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2009,
+    "Fraction": "Annual DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 26.3,
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2010,
+    "Fraction": "Annual DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 20.2,
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2011,
+    "Fraction": "Annual DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 34.6,
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2012,
+    "Fraction": "Annual DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 37.8,
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2013,
+    "Fraction": "Annual DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 17.3,
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2014,
+    "Fraction": "Annual DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 24.5,
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2015,
+    "Fraction": "Annual DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 37.5,
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2016,
+    "Fraction": "Annual DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 16,
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2008,
+    "Fraction": "Annual TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": "",
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2009,
+    "Fraction": "Annual TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.134736842,
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2010,
+    "Fraction": "Annual TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": "",
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2011,
+    "Fraction": "Annual TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.152198422,
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2012,
+    "Fraction": "Annual TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": "",
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2013,
+    "Fraction": "Annual TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": "",
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2014,
+    "Fraction": "Annual TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.12112462,
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2015,
+    "Fraction": "Annual TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.135312024,
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2016,
+    "Fraction": "Annual TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.119047619,
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2008,
+    "Fraction": "Annual DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": "",
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2009,
+    "Fraction": "Annual DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.027684211,
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2010,
+    "Fraction": "Annual DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": "",
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2011,
+    "Fraction": "Annual DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.039007892,
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2012,
+    "Fraction": "Annual DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": "",
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2013,
+    "Fraction": "Annual DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": "",
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2014,
+    "Fraction": "Annual DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.037234043,
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2015,
+    "Fraction": "Annual DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.057077626,
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2016,
+    "Fraction": "Annual DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.03047619,
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2008,
+    "Fraction": "Annual Discharge",
+    "Unit": "million cubic meters",
+    "Value": 1098,
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2009,
+    "Fraction": "Annual Discharge",
+    "Unit": "million cubic meters",
+    "Value": 950,
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2010,
+    "Fraction": "Annual Discharge",
+    "Unit": "million cubic meters",
+    "Value": 750,
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2011,
+    "Fraction": "Annual Discharge",
+    "Unit": "million cubic meters",
+    "Value": 887,
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2012,
+    "Fraction": "Annual Discharge",
+    "Unit": "million cubic meters",
+    "Value": 930,
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2013,
+    "Fraction": "Annual Discharge",
+    "Unit": "million cubic meters",
+    "Value": 583,
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2014,
+    "Fraction": "Annual Discharge",
+    "Unit": "million cubic meters",
+    "Value": 658,
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2015,
+    "Fraction": "Annual Discharge",
+    "Unit": "million cubic meters",
+    "Value": 657,
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2016,
+    "Fraction": "Annual Discharge",
+    "Unit": "million cubic meters",
+    "Value": 525,
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2008,
+    "Fraction": "Spring TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 83,
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2009,
+    "Fraction": "Spring TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 92,
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2010,
+    "Fraction": "Spring TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 68,
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2011,
+    "Fraction": "Spring TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 133,
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2012,
+    "Fraction": "Spring TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 27,
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2013,
+    "Fraction": "Spring TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 57,
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2014,
+    "Fraction": "Spring TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 58.8,
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2015,
+    "Fraction": "Spring TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 84.2,
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2016,
+    "Fraction": "Spring TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 40.2,
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2008,
+    "Fraction": "Spring DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 19.59,
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2009,
+    "Fraction": "Spring DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 16.67,
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2010,
+    "Fraction": "Spring DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 16.75,
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2011,
+    "Fraction": "Spring DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 29.44,
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2012,
+    "Fraction": "Spring DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 6.37,
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2013,
+    "Fraction": "Spring DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 14.34,
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2014,
+    "Fraction": "Spring DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 17.83,
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2015,
+    "Fraction": "Spring DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 33.11,
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2016,
+    "Fraction": "Spring DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 9.14,
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2008,
+    "Fraction": "Spring TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.148,
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2009,
+    "Fraction": "Spring TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.16,
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2010,
+    "Fraction": "Spring TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.127,
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2011,
+    "Fraction": "Spring TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.192,
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2012,
+    "Fraction": "Spring TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.108,
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2013,
+    "Fraction": "Spring TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.128,
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2014,
+    "Fraction": "Spring TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.129,
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2015,
+    "Fraction": "Spring TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.165,
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2016,
+    "Fraction": "Spring TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.121,
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2008,
+    "Fraction": "Spring DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.035,
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2009,
+    "Fraction": "Spring DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.029,
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2010,
+    "Fraction": "Spring DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.031,
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2011,
+    "Fraction": "Spring DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.043,
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2012,
+    "Fraction": "Spring DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.025,
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2013,
+    "Fraction": "Spring DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.032,
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2014,
+    "Fraction": "Spring DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.039,
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2015,
+    "Fraction": "Spring DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.065,
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2016,
+    "Fraction": "Spring DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.027,
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2008,
+    "Fraction": "Spring Discharge",
+    "Unit": "million cubic meters",
+    "Value": 562,
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2009,
+    "Fraction": "Spring Discharge",
+    "Unit": "million cubic meters",
+    "Value": 575,
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2010,
+    "Fraction": "Spring Discharge",
+    "Unit": "million cubic meters",
+    "Value": 537,
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2011,
+    "Fraction": "Spring Discharge",
+    "Unit": "million cubic meters",
+    "Value": 691,
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2012,
+    "Fraction": "Spring Discharge",
+    "Unit": "million cubic meters",
+    "Value": 250,
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2013,
+    "Fraction": "Spring Discharge",
+    "Unit": "million cubic meters",
+    "Value": 445,
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2014,
+    "Fraction": "Spring Discharge",
+    "Unit": "million cubic meters",
+    "Value": 455,
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2015,
+    "Fraction": "Spring Discharge",
+    "Unit": "million cubic meters",
+    "Value": 511,
+    "": ""
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2016,
+    "Fraction": "Spring Discharge",
+    "Unit": "million cubic meters",
+    "Value": 333,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2008,
+    "Fraction": "Annual TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 877,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2009,
+    "Fraction": "Annual TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 368,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2010,
+    "Fraction": "Annual TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 345,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2011,
+    "Fraction": "Annual TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 938,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2012,
+    "Fraction": "Annual TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 640,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2013,
+    "Fraction": "Annual TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 642,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2014,
+    "Fraction": "Annual TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 558,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2015,
+    "Fraction": "Annual TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 352,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2016,
+    "Fraction": "Annual TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 295,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2008,
+    "Fraction": "Annual DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 187,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2009,
+    "Fraction": "Annual DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 70.7,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2010,
+    "Fraction": "Annual DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 74,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2011,
+    "Fraction": "Annual DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 194,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2012,
+    "Fraction": "Annual DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 181,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2013,
+    "Fraction": "Annual DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 153,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2014,
+    "Fraction": "Annual DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 160,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2015,
+    "Fraction": "Annual DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 98.7,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2016,
+    "Fraction": "Annual DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 63.8,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2008,
+    "Fraction": "Annual TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.46,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2009,
+    "Fraction": "Annual TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.389,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2010,
+    "Fraction": "Annual TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.391,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2011,
+    "Fraction": "Annual TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.494,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2012,
+    "Fraction": "Annual TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.421,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2013,
+    "Fraction": "Annual TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.431,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2014,
+    "Fraction": "Annual TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.394,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2015,
+    "Fraction": "Annual TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.332,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2016,
+    "Fraction": "Annual TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.34,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2008,
+    "Fraction": "Annual DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.098,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2009,
+    "Fraction": "Annual DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.075,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2010,
+    "Fraction": "Annual DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.084,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2011,
+    "Fraction": "Annual DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.102,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2012,
+    "Fraction": "Annual DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.119,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2013,
+    "Fraction": "Annual DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.103,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2014,
+    "Fraction": "Annual DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.113,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2015,
+    "Fraction": "Annual DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.093,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2016,
+    "Fraction": "Annual DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.074,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2008,
+    "Fraction": "Annual Discharge",
+    "Unit": "million cubic meters",
+    "Value": "1,906",
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2009,
+    "Fraction": "Annual Discharge",
+    "Unit": "million cubic meters",
+    "Value": 946,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2010,
+    "Fraction": "Annual Discharge",
+    "Unit": "million cubic meters",
+    "Value": 882,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2011,
+    "Fraction": "Annual Discharge",
+    "Unit": "million cubic meters",
+    "Value": 1900,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2012,
+    "Fraction": "Annual Discharge",
+    "Unit": "million cubic meters",
+    "Value": 1520,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2013,
+    "Fraction": "Annual Discharge",
+    "Unit": "million cubic meters",
+    "Value": 1490,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2014,
+    "Fraction": "Annual Discharge",
+    "Unit": "million cubic meters",
+    "Value": 1418,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2015,
+    "Fraction": "Annual Discharge",
+    "Unit": "million cubic meters",
+    "Value": 1060,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2016,
+    "Fraction": "Annual Discharge",
+    "Unit": "million cubic meters",
+    "Value": 867,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2008,
+    "Fraction": "Spring TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 366.9,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2009,
+    "Fraction": "Spring TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 204.1,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2010,
+    "Fraction": "Spring TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 311.7,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2011,
+    "Fraction": "Spring TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 752.1,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2012,
+    "Fraction": "Spring TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 150.9,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2013,
+    "Fraction": "Spring TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 372.6,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2014,
+    "Fraction": "Spring TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 270.8,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2015,
+    "Fraction": "Spring TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 328.8,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2016,
+    "Fraction": "Spring TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 162.8,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2008,
+    "Fraction": "Spring DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 69.1,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2009,
+    "Fraction": "Spring DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 29.8,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2010,
+    "Fraction": "Spring DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 65.9,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2011,
+    "Fraction": "Spring DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 137.3,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2012,
+    "Fraction": "Spring DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 16,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2013,
+    "Fraction": "Spring DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 89.2,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2014,
+    "Fraction": "Spring DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 60.2,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2015,
+    "Fraction": "Spring DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 91.9,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2016,
+    "Fraction": "Spring DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 31,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2008,
+    "Fraction": "Spring TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.381,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2009,
+    "Fraction": "Spring TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.46,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2010,
+    "Fraction": "Spring TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.425,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2011,
+    "Fraction": "Spring TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.555,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2012,
+    "Fraction": "Spring TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.533,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2013,
+    "Fraction": "Spring TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.42,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2014,
+    "Fraction": "Spring TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.414,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2015,
+    "Fraction": "Spring TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.361,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2016,
+    "Fraction": "Spring TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.326,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2008,
+    "Fraction": "Spring DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.072,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2009,
+    "Fraction": "Spring DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.067,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2010,
+    "Fraction": "Spring DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.09,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2011,
+    "Fraction": "Spring DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.101,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2012,
+    "Fraction": "Spring DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.057,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2013,
+    "Fraction": "Spring DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.101,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2014,
+    "Fraction": "Spring DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.092,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2015,
+    "Fraction": "Spring DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.101,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2016,
+    "Fraction": "Spring DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.062,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2008,
+    "Fraction": "Spring Discharge",
+    "Unit": "million cubic meters",
+    "Value": 963,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2009,
+    "Fraction": "Spring Discharge",
+    "Unit": "million cubic meters",
+    "Value": 444,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2010,
+    "Fraction": "Spring Discharge",
+    "Unit": "million cubic meters",
+    "Value": 733,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2011,
+    "Fraction": "Spring Discharge",
+    "Unit": "million cubic meters",
+    "Value": 1356,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2012,
+    "Fraction": "Spring Discharge",
+    "Unit": "million cubic meters",
+    "Value": 283,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2013,
+    "Fraction": "Spring Discharge",
+    "Unit": "million cubic meters",
+    "Value": 887,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2014,
+    "Fraction": "Spring Discharge",
+    "Unit": "million cubic meters",
+    "Value": 654,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2015,
+    "Fraction": "Spring Discharge",
+    "Unit": "million cubic meters",
+    "Value": 911,
+    "": ""
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2016,
+    "Fraction": "Spring Discharge",
+    "Unit": "million cubic meters",
+    "Value": 499,
+    "": ""
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2008,
+    "Fraction": "Annual Discharge",
+    "Unit": "Million cubic meters",
+    "Value": 1174,
+    "": ""
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2009,
+    "Fraction": "Annual Discharge",
+    "Unit": "Million cubic meters",
+    "Value": 871,
+    "": ""
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2010,
+    "Fraction": "Annual Discharge",
+    "Unit": "Million cubic meters",
+    "Value": 704,
+    "": ""
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2011,
+    "Fraction": "Annual Discharge",
+    "Unit": "Million cubic meters",
+    "Value": 1370,
+    "": ""
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2012,
+    "Fraction": "Annual Discharge",
+    "Unit": "Million cubic meters",
+    "Value": 1080,
+    "": ""
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2013,
+    "Fraction": "Annual Discharge",
+    "Unit": "Million cubic meters",
+    "Value": 990,
+    "": ""
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2014,
+    "Fraction": "Annual Discharge",
+    "Unit": "Million cubic meters",
+    "Value": 1040,
+    "": ""
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2015,
+    "Fraction": "Annual Discharge",
+    "Unit": "Million cubic meters",
+    "Value": 970,
+    "": ""
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2008,
+    "Fraction": "Annual TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 300,
+    "": ""
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2009,
+    "Fraction": "Annual TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 259,
+    "": ""
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2010,
+    "Fraction": "Annual TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 148,
+    "": ""
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2011,
+    "Fraction": "Annual TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 329,
+    "": ""
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2012,
+    "Fraction": "Annual TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 197,
+    "": ""
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2013,
+    "Fraction": "Annual TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 240,
+    "": ""
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2014,
+    "Fraction": "Annual TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 264,
+    "": ""
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2015,
+    "Fraction": "Annual TP Loading",
+    "Unit": "Metric Tons",
+    "Value": 194,
+    "": ""
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2008,
+    "Fraction": "Annual DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 44.8,
+    "": ""
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2009,
+    "Fraction": "Annual DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 30.5,
+    "": ""
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2010,
+    "Fraction": "Annual DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 31,
+    "": ""
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2011,
+    "Fraction": "Annual DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 29,
+    "": ""
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2012,
+    "Fraction": "Annual DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 27.8,
+    "": ""
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2013,
+    "Fraction": "Annual DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 38,
+    "": ""
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2014,
+    "Fraction": "Annual DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 25.5,
+    "": ""
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2015,
+    "Fraction": "Annual DRP Loading",
+    "Unit": "Metric Tons",
+    "Value": 23.8,
+    "": ""
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2008,
+    "Fraction": "Annual TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.256,
+    "": ""
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2009,
+    "Fraction": "Annual TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.297,
+    "": ""
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2010,
+    "Fraction": "Annual TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.21,
+    "": ""
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2011,
+    "Fraction": "Annual TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.24,
+    "": ""
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2012,
+    "Fraction": "Annual TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.182,
+    "": ""
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2013,
+    "Fraction": "Annual TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.242,
+    "": ""
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2014,
+    "Fraction": "Annual TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.254,
+    "": ""
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2015,
+    "Fraction": "Annual TP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.2,
+    "": ""
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2008,
+    "Fraction": "Annual DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.038,
+    "": ""
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2009,
+    "Fraction": "Annual DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.035,
+    "": ""
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2010,
+    "Fraction": "Annual DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.044,
+    "": ""
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2011,
+    "Fraction": "Annual DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.021,
+    "": ""
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2012,
+    "Fraction": "Annual DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.026,
+    "": ""
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2013,
+    "Fraction": "Annual DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.038,
+    "": ""
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2014,
+    "Fraction": "Annual DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.025,
+    "": ""
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2015,
+    "Fraction": "Annual DRP FWMC",
+    "Unit": "milligrams / liter",
+    "Value": 0.025,
+    "": ""
+  }
+]
