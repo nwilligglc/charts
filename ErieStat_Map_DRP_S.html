@@ -69,7 +69,7 @@
 <script>
     var data;
     var serviceURL = "https://gis.glc.org/server/rest/services/ErieStat/PriorityWatersheds/MapServer";
-    $.getJSON("data/all_data.json", function(d){
+    $.getJSON("data/all_data2.json", function(d){
         data = d;
     });
 
@@ -115,6 +115,7 @@
                         query.where("MergeNm='"+ name +"'").bounds(function(error, latLngBounds, response){
                             map.fitBounds(latLngBounds);
                         });
+                        break;
                     }
                 }
             }
@@ -197,38 +198,7 @@
         return null;
     }
 
-    function buildNarratives(w_name){
-        $("#narrative-caption").text(w_name + " River Watershed");
-        $("#narrative-content").html(narratives[w_name]);
-    }
 
-    function buildChart(name){
-        /**
-         * Build two charts for each watershed, using the BA library
-         */
-
-        //get the watershed name
-        var w_name = name;//feature.properties.Name;
-        var m = metrics.DRP_L_S;
-        var u = units.DRP_L_S;
-//        var t = targets[w_name].DRP_L_S;
-        if(!targets[w_name]){
-
-
-            $("#upperChart").html("<p style='text-transform: uppercase;font-style: italic'>*DATA UNAVAILABLE FOR " + w_name + " WATERSHED</p>");
-        }
-        else{
-            var t = targets[w_name].DRP_L_S;
-            var w_data = getWatershedMetric(data, w_name, m);
-            var data_series = [];
-            for (var i = 0; i < w_data.length; i++){
-                data_series.push(w_data[i].Value);
-            }
-            createChart("upperChart", "column", m, data_series, ColorPicker.blue7, w_name + " River " + m, u, false, t);
-        }
-
-
-    }
 
 </script>
 </body>

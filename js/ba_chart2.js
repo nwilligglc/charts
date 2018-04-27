@@ -1,12 +1,29 @@
 var mapID = "918102a3bff04636924faa2d1915cae1";
 
 var narratives = {
-    "Raisin": "The River Raisin is a river in southeastern Michigan that flows into Lake Erie. The area today is an agricultural and industrial center of Michigan. The river flows for almost 150 miles (241 km), draining an area of 1,072 square miles (2,780 km<sup>2</sup>) in the Michigan counties of Lenawee, Washtenaw, Jackson, Hillsdale, a portion of Fulton County, Ohio. The mouth of the river is located in Monroe County, Michigan <a href=\"https://www.riverraisin.org/watershed-facts\">(River Raisin Watershed Council)</a>.",
-    "Maumee": "The Maumee River watershed is located in northwestern Ohio and drains a total of 5,024 square miles in Ohio, flowing through all or part of 18 counties. Major municipalities in the watershed include Toledo, Defiance, Findlay, Lima, Van Wert, Napoleon and Perrysburg. The watershed is predominantly comprised of cultivated crops with some urban development, hay and pasture lands, and forest <a href=\"http://epa.ohio.gov/dsw/tmdl/PortageToussaintRivers.aspx\">(Ohio EPA)</a>.",
-    "Portage": "The Portage River is located in northwestern Ohio. The Portage River flows into Lake Erie at Port Clinton in Ottawa County. The watershed is distributed across Ottawa, Sandusky, Hancock and Wood counties with a small portion in Seneca County. Land use in the watershed is comprised predominantly of 78 percent cultivated cropland, 11 percent developed land and 5 percent forest. The city of McComb obtains its drinking water from Rader Creek, North Baltimore from Rocky Ford Creek and Fostoria from the East Branch of the Portage River <a href=\"http://epa.ohio.gov/dsw/tmdl/PortageToussaintRivers.aspx\">(Ohio EPA)</a>.",
-    "Sandusky": "The Sandusky River and Sandusky Bay watersheds are located in northwestern Ohio. They drain a total of 1,828 square miles and flow through all or part of 12 counties. Major municipalities in the watershed include Sandusky, Fremont, Tiffin, Bucyrus and Upper Sandusky. The watersheds are predominantly comprised of cultivated crops with some areas of urban development and pasture and hay lands. Wetlands are located in the northern portion of the watersheds <a href=\"http://epa.ohio.gov/dsw/tmdl/PortageToussaintRivers.aspx\">(Ohio EPA)</a>.",
-    "Thames": "The Thames River is 280 km long, draining approximately 5,800 km2 of Southwestern Ontario to Lake St. Clair. The watershed is primarily (approximately 80%) agricultural, but also contains cities and towns such as London, Woodstock, Chatham, as well as numerous smaller urban areas, with a total population of approximately 600,000 people."
-}
+    "River Raisin": "The River Raisin is a river in southeastern Michigan that flows into Lake Erie. The area today is an agricultural and industrial center of Michigan. The river flows for almost 150 miles (241 km), draining an area of 1,072 square miles (2,780 km<sup>2</sup>) in the Michigan counties of Lenawee, Washtenaw, Jackson, Hillsdale, a portion of Fulton County, Ohio. The mouth of the river is located in Monroe County, Michigan <a href=\"https://www.riverraisin.org/watershed-facts\">(River Raisin Watershed Council)</a>.",
+    "Maumee River": "The Maumee River watershed is located in northwestern Ohio and drains a total of 5,024 square miles in Ohio, flowing through all or part of 18 counties. Major municipalities in the watershed include Toledo, Defiance, Findlay, Lima, Van Wert, Napoleon and Perrysburg. The watershed is predominantly comprised of cultivated crops with some urban development, hay and pasture lands, and forest <a href=\"http://epa.ohio.gov/dsw/tmdl/PortageToussaintRivers.aspx\">(Ohio EPA)</a>.",
+    "Portage River": "The Portage River is located in northwestern Ohio. The Portage River flows into Lake Erie at Port Clinton in Ottawa County. The watershed is distributed across Ottawa, Sandusky, Hancock and Wood counties with a small portion in Seneca County. Land use in the watershed is comprised predominantly of 78 percent cultivated cropland, 11 percent developed land and 5 percent forest. The city of McComb obtains its drinking water from Rader Creek, North Baltimore from Rocky Ford Creek and Fostoria from the East Branch of the Portage River <a href=\"http://epa.ohio.gov/dsw/tmdl/PortageToussaintRivers.aspx\">(Ohio EPA)</a>.",
+    "Sandusky River": "The Sandusky River and Sandusky Bay watersheds are located in northwestern Ohio. They drain a total of 1,828 square miles and flow through all or part of 12 counties. Major municipalities in the watershed include Sandusky, Fremont, Tiffin, Bucyrus and Upper Sandusky. The watersheds are predominantly comprised of cultivated crops with some areas of urban development and pasture and hay lands. Wetlands are located in the northern portion of the watersheds <a href=\"http://epa.ohio.gov/dsw/tmdl/PortageToussaintRivers.aspx\">(Ohio EPA)</a>.",
+    "Thames River": "The Thames River is 280 km long, draining approximately 5,800 km2 of Southwestern Ontario to Lake St. Clair. The watershed is primarily (approximately 80%) agricultural, but also contains cities and towns such as London, Woodstock, Chatham, as well as numerous smaller urban areas, with a total population of approximately 600,000 people."
+};
+
+var watershedNames = {
+    "Cattaraugus": "Cattaraugus River",
+    "Cuyahoga": "Cuyahoga River",
+    "Detroit": "Detroit River",
+    "Grand": "Grand River",
+    "Grand (Ontario)": "Grand (Ontario) River",
+    "Huron": "Huron River",
+    "Leamington Tributaries": "Leamington Tributaries",
+    "Maumee": "Maumee River",
+    "Raisin": "River Raisin",
+    "Portage": "Portage River",
+    "Sandusky": "Sandusky River",
+    "Thames": "Thames River",
+    "Toussaint Creek": "Toussaint Creek",
+    "Vermillion": "Vermillion River"
+};
 
 var ColorPicker = {
     heading1: '#2271a2', //getColor(34, 113, 162),
@@ -66,21 +83,21 @@ var units = {
 }
 
 var targets = {
-    "Maumee": {
+    "Maumee River": {
         "TP_L": 2288,
         "TP_L_S": 860,
         "DRP_L_S": 186,
         "TP_FWMS_S": 0.23,
         "DRP_FWMS_S": 0.05
     },
-    "Portage": {
+    "Portage River": {
         "TP_L": 0,
         "TP_L_S": 0,
         "DRP_L_S": 0,
         "TP_FWMS_S": 0,
         "DRP_FWMS_S": 0
     },
-    "Raisin": {
+    "River Raisin": {
         "TP_L": 0,
         "TP_L_S": 0,
         "DRP_L_S": 0,
@@ -88,12 +105,15 @@ var targets = {
         "DRP_FWMS_S": 0
     },
 
-    "Sandusky": {
+    "Sandusky River": {
         "TP_L": 661,
         "TP_L_S": 230,
         "DRP_L_S": 43,
         "TP_FWMS_S": 0.23,
         "DRP_FWMS_S": 0.05
+    },
+    "Cuyahoga River": {
+        "TP_L": 271,
     }
 }
 
@@ -516,3 +536,38 @@ function createTargetSeries(val) {
     });
     return s;
 };
+
+function getStandardWatershedName(w_name){
+    return
+};
+
+function buildNarratives(w_name){
+    $("#narrative-caption").text(watershedNames[w_name] + " Watershed");
+    var n = narratives[watershedNames[w_name]];
+    if(!n){
+        n = "<p style='text-transform: uppercase;font-style: italic'>*Watershed Description unavailable.</p>"
+    }
+    $("#narrative-content").html(n);
+}
+
+function buildChart(name){
+    /**
+     * Build two charts for each watershed, using the BA library
+     */
+
+        //get the watershed name
+    var w_name = watershedNames[name];//feature.properties.Name;
+    var m = metrics.DRP_L_S;
+    var u = units.DRP_L_S;
+    var w_data = getWatershedMetric(data, w_name, m);
+    if(w_data.length > 0){
+        var t = targets[w_name].DRP_L_S;
+        var data_series = [];
+        for (var i = 0; i < w_data.length; i++){
+            data_series.push(w_data[i].Value);
+        }
+        createChart("upperChart", "column", m, data_series, ColorPicker.blue7, w_name + " " + m, u, false, t);
+    }else{
+        $("#upperChart").html("<p style='text-transform: uppercase;font-style: italic'>*DATA UNAVAILABLE FOR " + w_name + " WATERSHED</p>");
+    }
+}
