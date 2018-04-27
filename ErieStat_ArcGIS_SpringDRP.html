@@ -102,8 +102,13 @@
             var identifyTask, params;
             var serviceURL = "https://gis.glc.org/server/rest/services/ErieStat/PriorityWatersheds/MapServer";
             var metric = metrics.DRP_L_S;
-            var unit = units.DRP_L_S;
-
+//            var unit = units.DRP_L_S;
+            var geometry;
+            var highlightSymbol = {
+                type: "simple-line",  // autocasts as SimpleLineSymbol()
+                color: "#07fcf0",
+                width: 4
+            };
 
             var erieStatLayer = new MapImageLayer({
                 url: "https://gis.glc.org/server/rest/services/ErieStat/PriorityWatersheds/MapServer",
@@ -325,7 +330,13 @@
 
             function zoomFeature(result){
                 var aoi = result.features;
+                geometry = aoi[0].geometry;
+                var graphicGeometry = new Graphic({
+                    geometry: geometry,
+                    symbol: highlightSymbol
+                });
                 view.goTo(aoi);
+                view.graphics.add(graphicGeometry);
             }
 
 

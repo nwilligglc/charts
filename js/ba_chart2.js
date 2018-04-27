@@ -74,7 +74,7 @@ var units = {
     "Annual DRP Loading": "Metric Tons",
     "Annual TP FWMC": "milligrams / liter",
     "Annual DRP FWMC": "milligrams / liter",
-    "Discharge": "million cubic meters",
+    "Annual Discharge": "million cubic meters",
     "Spring TP Loading": "Metric Tons",
     "Spring DRP Loading": "Metric Tons",
     "Spring TP FWMC": "milligrams / liter",
