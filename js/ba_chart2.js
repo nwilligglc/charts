@@ -266,11 +266,11 @@ function getWatershedMetric(in_data, w_name, metric){
     return vals;
 }
 
-function createChart(div, type, series_name, data, color, title, unit, isBgImg=1, target=0, target_color=ColorPicker.target_red){
-    var o = createOptions(type, series_name, data, color, title, unit, isBgImg);
+function createChart(div, type, series_name, data, color, title, unit, isBgImg=1, target=0, width=null, height = null){
+    var o = createOptions(type, series_name, data, color, title, unit, isBgImg, width, height);
     var chart = Highcharts.chart(div, o);
     if(target){
-        addTargetLine(chart, target, target_color);
+        addTargetLine(chart, target);
     }
     return chart;
 }
@@ -285,7 +285,7 @@ function createColumnChart(){
 
 }
 
-function createOptions(type, series_name, data, color, title, unit, isBgImg){
+function createOptions(type, series_name, data, color, title, unit, isBgImg, width, height){
     Highcharts.setOptions({
         lang: {
             numericSymbols: null,
@@ -297,8 +297,8 @@ function createOptions(type, series_name, data, color, title, unit, isBgImg){
         chart: {
             backgroundColor:'transparent',
             type: type,
-            width: undefined, //chart_width,
-            height: window.innerHeight  - $("#narrative-section").height() - 30, //"* 0.65, //chart_height,
+            width: width, //chart_width,
+            height: height, //window.innerHeight  - $("#narrative-section").height() - 30, //"* 0.65, //chart_height,
             // height: window.innerHeight * 0.65, //chart_height,
             style: {
                 // fontFamily: 'Lato Regular, sans-serif',
@@ -312,7 +312,7 @@ function createOptions(type, series_name, data, color, title, unit, isBgImg){
                 load: function () {
                     // this.renderer.image("https://c1.staticflickr.com/5/4382/36578347693_3c6032000b_o.png", 0, 0, chart_width, chart_height).add();   //red watermark
                     if (isBgImg) {
-                        this.renderer.image("https://c1.staticflickr.com/5/4514/23628988768_984b3f3343_o.png", this.plotLeft, this.plotTop, this.plotWidth, this.plotHeight).add(); //grey watermark
+                        this.renderer.image("img/background_draft.png", this.plotLeft, this.plotTop, this.plotWidth, this.plotHeight).add(); //grey watermark
                     }
                 }
             }
@@ -513,12 +513,12 @@ function createDualAxesOptions_column_area(title, x_axis, s1_name, s1_data, s1_u
 
 }
 
-function addTargetLine(chart, target, color) {
+function addTargetLine(chart, target) {
     chart.addSeries({
         type: 'line',
         data: createTargetSeries(target),
         name: 'Target',
-        color: color,
+        color: ColorPicker.target_red,
         lineWidth: 3,
         marker: {
             radius: 0
@@ -547,7 +547,7 @@ function buildNarratives(w_name){
     $("#narrative-content").html(n);
 }
 
-function buildChart(data, tag, name, metric, unit){
+function buildChart(data, tag, name, metric, unit, width=null, height = null){
     /**
      * Build two charts for each watershed, using the BA library
      */
@@ -570,7 +570,7 @@ function buildChart(data, tag, name, metric, unit){
         for (var i = 0; i < w_data.length; i++){
             data_series.push(w_data[i].Value);
         }
-        createChart(tag, "column", metric, data_series, ColorPicker.blue7, w_name + " " + metric, unit, false, t);
+        createChart(tag, "column", metric, data_series, ColorPicker.blue7, w_name + " " + metric, unit, false, t, width=width, height=height);
     }else{
         $("#"+tag).html("<p style='text-transform: uppercase;font-style: italic'>*DATA UNAVAILABLE FOR " + w_name + " WATERSHED</p>");
     }
