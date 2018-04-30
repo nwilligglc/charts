@@ -21,6 +21,16 @@
 
     <script src="js/ba_chart2.js"></script>
     <link rel="stylesheet" href="css/BA_Style.css">
+    <style>
+        .label div {
+            color: black;
+            position: relative;
+            left: -70%;
+            font-size: 12px;
+            font-style: italic;
+            /*text-shadow: 0px 2px 1px rgba(255,255,255,0.85);*/
+        }
+    </style>
 
 
 </head>
@@ -45,6 +55,7 @@
 
 <script>
     var data;
+    var serviceURL = "https://gis.glc.org/server/rest/services/ErieStat/PriorityWatersheds/MapServer";
     $.getJSON("data/all_data2.json", function(d){
         data = d;
     });
@@ -55,7 +66,8 @@
     var watersheds = L.esri.dynamicMapLayer({
         url: "https://gis.glc.org/server/rest/services/ErieStat/PriorityWatersheds/MapServer",
         layers:[0, 1, 2],
-        f: "image"
+        f: "image",
+        opacity: 0.7
     }).addTo(map);
 
     var boundary_query = L.esri.query({
@@ -71,31 +83,32 @@
 
     var selectedFeature;
     map.on("click", function (e){
-       if(selectedFeature){
-           map.removeLayer(selectedFeature);
-       }
+        if(selectedFeature){
+            map.removeLayer(selectedFeature);
+        }
         watersheds.identify().on(map).at(e.latlng).run(function (error, featureCollection){
             if(featureCollection.features.length >1){
-               for(var i = 0; i < featureCollection.features.length; i++){
-                   if (featureCollection.features[i].layerId == 1){
-                       selectedFeature = L.geoJSON(featureCollection.features[i]);
-                       selectedFeature.setStyle({
-                           fill: false,
-                           weight: 2,
-                           color: "#07fcf0"
-                       });
-                       selectedFeature.addTo(map);
-                       var name = featureCollection.features[i].properties["Watershed Name"];
-                       buildChart(data, "upperChart", name, metrics.TP_L, units[metrics.TP_L]);
-                       buildNarratives(name);
-                       query.where("MergeNm='"+ name +"'").bounds(function(error, latLngBounds, response){
-                           map.fitBounds(latLngBounds);
-                       });
-                       break;
-                   }
-               }
-           }
-       })
+                for(var i = 0; i < featureCollection.features.length; i++){
+                    if (featureCollection.features[i].layerId == 1){
+                        selectedFeature = L.geoJSON(featureCollection.features[i]);
+                        selectedFeature.setStyle({
+                            fill: false,
+                            weight: 4,
+//                            color: "#07fcf0"
+                            color: "#F3A51E"
+                        });
+                        selectedFeature.addTo(map);
+                        var name = featureCollection.features[i].properties["Watershed Name"];
+                        buildChart(data, "upperChart", name, metrics.DRP_L_S, units[metrics.DRP_L_S]);
+                        buildNarratives(name);
+//                        query.where("MergeNm='"+ name +"'").bounds(function(error, latLngBounds, response){
+//                            map.fitBounds(latLngBounds);
+//                        });
+                        break;
+                    }
+                }
+            }
+        })
 
     });
 
@@ -112,16 +125,50 @@
 //        }
 //    });
 
-    //    pilotWatersheds.bindPopup(function (layer) {
-    //        if(error || layer.feature)
-    //        {
-    //            return false;
-    //        } else {
-    //            test(layer.feature);
-    //            return 'Watershed: ' + featureCollection.features[0].properties.Name;
-    ////            return 'Risk Level: ' + featureCollection.features[0].properties;
-    //        }
-    //    });
+    /*****
+     * Section added for labels
+     */
+
+    var labels = {};
+    var pilotWatersheds = L.esri.featureLayer({
+        url: 'https://gis.glc.org/server/rest/services/ErieStat/PriorityWatersheds/MapServer/1',
+        style: function(feature){
+            return {
+                opacity: 0,
+                fill: false
+            }
+        }
+    }).addTo(map);
+    pilotWatersheds.on('createfeature', function(e){
+        var id = e.feature.id;
+        var feature = pilotWatersheds.getFeature(id);
+        var center = feature.getBounds().getCenter();
+        var label = L.marker(center, {
+            icon: L.divIcon({
+                iconSize: null,
+                className: 'label',
+                html: '<div>' + e.feature.properties.MergeNm + '</div>'
+            })
+        }).addTo(map);
+        labels[id] = label;
+    });
+
+    pilotWatersheds.on('addfeature', function(e){
+        var label = labels[e.feature.id];
+        if(label){
+            label.addTo(map);
+        }
+    });
+
+    pilotWatersheds.on('removefeature', function(e){
+        var label = labels[e.feature.id];
+        if(label){
+            map.removeLayer(label);
+        }
+    });
+    /***
+     * End of section
+     * */
 
 
 
@@ -139,39 +186,7 @@
 //        return null;
 //    }
 
-//    function buildNarratives(w_name){
-//        $("#narrative-caption").text(w_name + " River Watershed");
-//        $("#narrative-content").html(narratives[w_name]);
-//    }
-//
-//    function buildChart(name){
-//        /**
-//         * Build two charts for each watershed, using the BA library
-//         */
-//
-//            //get the watershed name
-//        var w_name = name;//feature.properties.Name;
-//        var m = metrics.TP_L;
-//        var u = units.TP_L;
-////        var t = targets[w_name].DRP_L_S;
-//        buildNarratives(w_name);
-//        if(!targets[w_name]){
-//
-//
-//            $("#upperChart").html("<p style='text-transform: uppercase;font-style: italic'>*DATA UNAVAILABLE FOR " + w_name + " WATERSHED</p>");
-//        }
-//        else{
-//            var t = targets[w_name].TP_L;
-//            var w_data = getWatershedMetric(data, w_name, m);
-//            var data_series = [];
-//            for (var i = 0; i < w_data.length; i++){
-//                data_series.push(w_data[i].Value);
-//            }
-//            createChart("upperChart", "column", m, data_series, ColorPicker.blue7, w_name + " River " + m, m + "<br/>(" + u + ")", false, t);
-//        }
-//
-//
-//    }
+
 
 </script>
 </body>
