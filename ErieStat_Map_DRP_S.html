@@ -52,7 +52,7 @@
     <!--<div id="legend">Legend here</div>-->
     <div class="vl"></div>
     <div id="right-panel">
-        <div>
+        <div id="narrative-section">
             <p id="narrative-caption"></p>
             <p id="narrative-content"></p>
         </div>
@@ -112,8 +112,10 @@
                         });
                         selectedFeature.addTo(map);
                         var name = featureCollection.features[i].properties["Watershed Name"];
-                        buildChart(data, "upperChart", name, metrics.DRP_L_S, units[metrics.DRP_L_S]);
                         buildNarratives(name);
+                        var temp = window.innerHeight  - $("#narrative-section").height() - 300;
+                        buildChart(data, "upperChart", name, metrics.DRP_L_S, units[metrics.DRP_L_S], null, (window.innerHeight  - $("#narrative-section").height()) * 0.8);
+
 //                        query.where("MergeNm='"+ name +"'").bounds(function(error, latLngBounds, response){
 //                            map.fitBounds(latLngBounds);
 //                        });
