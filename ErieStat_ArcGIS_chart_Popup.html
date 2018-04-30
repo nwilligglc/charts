@@ -35,24 +35,25 @@
             font-weight: bolder;
         }
 
-        .esri-popup .esri-popup-body .esri-popup-content {
-            font-size: 16px;
-        }
-        .esri-popup__content p{
-            font-size: 16px;
-        }
-        #canvas-chart{
+        /*.esri-popup .esri-popup-body .esri-popup-content {*/
+            /*font-size: 16px;*/
+        /*}*/
+        /*.esri-popup__content p{*/
+            /*font-size: 16px;*/
+        /*}*/
+        #chart{
             visibility: hidden;
             z-index: 99;
             position: absolute;
             top: 15px;
-            left: 70%;
-            padding: 5px;
-            margin-right: 25px;
+            /*left: 70%;*/
+            right: 15px;
+            /*padding: 5px;*/
+            /*margin-right: 25px;*/
             height: 400px;
-            width: 500px;
+            /*width: 500px;*/
             background: rgba(255, 255, 255, 0.8);
-            color: black;
+            /*color: black;*/
         }
 
     </style>
@@ -108,18 +109,59 @@
             var geometry;
             var highlightSymbol = {
                 type: "simple-line",  // autocasts as SimpleLineSymbol()
-                color: "#07fcf0",
-                width: 4
+                color: "#F3A51E",//"#07fcf0",
+                width: 3
             };
 
 
             var erieStatLayer = new MapImageLayer({
                 url: "https://gis.glc.org/server/rest/services/ErieStat/PriorityWatersheds/MapServer",
-                id: "esLayer"
+                id: "esLayer",
+                sublayers: [{
+                    id: 0
+                }, {
+                    id: 1,
+                    labelsVisible: true,
+                    labelingInfo: [{
+                        labelExpression: "[MergeNm]",
+                        labelPlacement: "always-horizontal",
+                        symbol: {
+                            type: "text",  // autocasts as new TextSymbol()
+                            color: [255, 0, 0],
+                            family: "Montserrat, sans-serif",
+                            font: {
+                                size: 12,
+                                weight: "bolder",
+                                style: "italic"
+                            }
+                        },
+                    }],
+                }, {
+                    id: 2,
+                    opacity: 0.7,
+//                    labelsVisible: true,
+//                    labelingInfo: [{
+//                        labelExpression: "[Name]",
+//                        labelPlacement: "always-horizontal",
+//                        symbol: {
+//                            type: "text",  // autocasts as new TextSymbol()
+//                            color: [255, 0, 0, 0.85],
+//                            family: "Montserrat, sans-serif",
+//                            font: {
+//                                size: 9,
+//                                weight: "bolder",
+//                                style: "italic"
+//                            }
+//                        },
+//                        minScale: 18500000,
+//                        maxScale: 9250000
+//                    }]
+                }]
             });
 
             var pilotWatershedLayer = new FeatureLayer({
                url:  "https://gis.glc.org/server/rest/services/ErieStat/PriorityWatersheds/MapServer/1",
+//                opacity: 0.7
             });
 
             // Create the Map
@@ -156,6 +198,13 @@
                     }
                 });
             });
+
+            view.popup.set("dockEnabled", true);
+            view.popup.set("dockOptions", {
+                breakpoint: false,
+                position: "bottom-left",
+                    buttonEnabled: false
+            } );
 
 
 //            view.on("layerview-create", function(event) {
@@ -228,7 +277,7 @@
                 query.geometry = event.mapPoint;
                 query.returnGeometry = true;
 //                query.where = "MergeNm = '" +   value + "'";
-                queryparcelTask.execute(query).then(zoomFeature);
+                queryparcelTask.execute(query).then(highlightFeature);//.then(zoomFeature);
             }
 
             function executeIdentifyTask(event) {
@@ -263,23 +312,35 @@
                         var layerName = result.layerName;
                         var w_name = feature.attributes["Watershed Name"];
 
-                        feature.popupTemplate = {
-                            title: "{Watershed Name}" + " Watershed",
-                            content: nara(w_name)
 
-                        };
+                            feature.popupTemplate = {
+                                title: "{Watershed Name}" + " Watershed",
+                                content: function(value, key, data){
+                                    if(narratives[watershedNames[w_name]]){
+                                        return "<p style='font-size: 16px'>" + narratives[watershedNames[w_name]] + "</p>";
+                                    }else{
+                                        return "<p style='text-transform: uppercase;font-style: italic'>*Watershed Description unavailable.</p>"
+                                    }
+                                }
+
+
+                            };
 
 
 
                         var w_data = getWatershedMetric(data, watershedNames[w_name], metric);
-                        buildChart(data, "chart", w_name, metric, units[metric]);
+                        var chart_size = [window.innerWidth*0.45, window.innerHeight*0.45];
+                        buildChart(data, "chart", w_name, metric, units[metric],chart_size[0], chart_size[1]);
 //                        var data_series = [];
 //                        for (var i = 0; i < w_data.length; i++){
 //                            data_series.push(w_data[i].Value);
 //                        }
 //                        var chart = createChart("chart", "column", w_name + " " + metric, data_series, ColorPicker.blue7,
 //                        metric, unit);
-                        $("#canvas-chart").css("visibility", "visible");
+                        $("#chart").css("visibility", "visible");
+                        $("#chart").css("width", chart_size[0]);
+                        $("#chart").css("height", chart_size[1]);
+//                        $("#canvas-chart").css("left", window.innerWidth*0.7+"px");
 
 //                        feature.attributes.layerName = layerName;
 //                        if (layerName === 'Soil Survey Geographic') {
@@ -309,22 +370,27 @@
                     });
                 }).then(showPopup);
 
-                function nara(w_name){
-                    if(narratives[watershedNames[w_name]]){
-                        return "<p style='font-size: 16px'>" + narratives[watershedNames[w_name]] + "</p>";
-                    }else{
-                        return "<p style='text-transform: uppercase;font-style: italic'>*Watershed Description unavailable.</p>"
-                    }
-                };
-
                 function showPopup(response) {
                     if (response.length > 0) {
-                        view.popup.dockOptions = {
-                            position: "top-left"
-                        };
+//                        if(window.innerHeight > window.innerWidth){
+//                            view.popup.dockOptions = {
+//                                position: "top-left"
+//                            };
+//                        }else{
+//                            view.popup.dockOptions = {
+//                                position: "top-left"
+//                            };
+//                        }
+//                        if(window.innerHeight < 768 || window.innerWidth < 768){
+//                            $("")
+//                        }
+//                        view.popup.dockOptions = {
+//                                position: "top-left"
+//                            };
+
                         view.popup.open({
                             features: response,
-                            location: event.mapPoint
+//                            location: event.mapPoint
                         });
                     }
                     dom.byId("viewDiv").style.cursor = "auto";
@@ -343,6 +409,20 @@
                 view.graphics.add(graphicGeometry);
             }
 
+            function highlightFeature(result){
+                view.graphics.removeAll();
+                var aoi = result.features;
+                geometry = aoi[0].geometry;
+                var graphicGeometry = new Graphic({
+                    geometry: geometry,
+                    symbol: highlightSymbol
+                });
+                view.goTo({
+                    center: [geometry.centroid.longitude, geometry.centroid.latitude]
+                });
+                view.graphics.add(graphicGeometry);
+            }
+
 
         });
     </script>
@@ -351,11 +431,11 @@
 <body>
 <div id="viewDiv"></div>
 <!--<div id="legend">Legend goes here. it is a long <br> paragraph with breaks</div>-->
-<div id="canvas-chart">
+<!--<div id="canvas-chart">-->
     <div id="chart">
 
     </div>
-</div>
+<!--</div>-->
 </body>
 
 </html>
