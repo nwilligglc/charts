@@ -547,7 +547,7 @@ function buildNarratives(w_name){
     $("#narrative-content").html(n);
 }
 
-function buildChart(data, tag, name, metric, unit, width=null, height = null){
+function buildChart(data, tag, name, metric, unit, width=null, height=null){
     /**
      * Build two charts for each watershed, using the BA library
      */
