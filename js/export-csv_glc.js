@@ -28,7 +28,7 @@
         lang: {
             downloadCSV: 'Download CSV',
             downloadXLS: 'Download XLS',
-            viewData: 'View data table'
+            // viewData: 'View data table'
         }
     });
 
@@ -364,7 +364,8 @@
             this.dataTableDiv.style.display = "";
         }
 
-        var inner = this.getTable();// + '<a onClick="hideTable(this);">Hide Data Table</a>';
+        // var inner = this.getTable();// + '<a onClick="hideTable(this);">Hide Data Table</a>';
+        var inner = '<a onClick="hideTable(this);">Hide Data Table</a>';
         this.dataTableDiv.innerHTML = inner;//this.getTable();
     };
 
@@ -378,11 +379,14 @@
             onclick: function () { this.downloadCSV(); }
         }, {
             textKey: 'downloadXLS',
-            onclick: function () { this.downloadXLS(); }
-        }, {
-            textKey: 'viewData',
-            onclick: function () { this.viewData(); }
-        });
+            onclick: function () {
+                this.downloadXLS();
+            }
+        })
+        // }, {
+        //     textKey: 'viewData',
+        //     onclick: function () { this.viewData(); }
+        // });
     }
 
     // Series specific
