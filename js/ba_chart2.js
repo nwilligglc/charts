@@ -249,7 +249,7 @@ function loadWatershedsData(filename){
     var data;
 
     /// NEED TO CHANGE THE DATASET. COMBINE ALL FOUR WATERSHED DATA THEN CONVERT TO A JSON
-    $.getJSON("data/all_data.json", function(d){
+    $.getJSON("data/all_data2.json", function(d){
        data = d;
     });
 
@@ -304,12 +304,26 @@ function createOptions(type, series_name, data, color, title, unit, isBgImg, wid
                 // fontFamily: 'Lato Regular, sans-serif',
                 color: ColorPicker.body
             },
+            // plotBackgroundImage: 'https://www.highcharts.com/samples/graphics/skies.jpg',
             // backgroundColor: '#00ff00'
             /**
              * The following events is for watermark
              */
             events: {
                 load: function () {
+                    var logoX = 15;
+                    // var size = this.chartWidth / 10;
+                    var size = this.plotBox.x < this.plotBox.y ? this.plotBox.x : this.plotBox.y;
+                    size -= 5;
+
+                    if(this.chartWidth < 500){
+                        logoX = 10;
+                        // size = this.chartWidth / 10;
+                    }
+                    var w = this.chartWidth - this.title.alignAttr.x;
+                    // this.renderer.image("img/BlueAcctg-Logo-square.png", logoX, 0, size, size).add();
+                    this.renderer.image("img/BlueAcctg-Logo.png", logoX, 0, size / 660*2640, size).add();
+
                     // this.renderer.image("https://c1.staticflickr.com/5/4382/36578347693_3c6032000b_o.png", 0, 0, chart_width, chart_height).add();   //red watermark
                     if (isBgImg) {
                         this.renderer.image("img/background_draft.png", this.plotLeft, this.plotTop, this.plotWidth, this.plotHeight).add(); //grey watermark
@@ -516,7 +530,7 @@ function createDualAxesOptions_column_area(title, x_axis, s1_name, s1_data, s1_u
 function addTargetLine(chart, target) {
     chart.addSeries({
         type: 'line',
-        data: createTargetSeries(target),
+        data: createTargetSeries(target, xAxis),
         name: 'Target',
         color: ColorPicker.target_red,
         lineWidth: 3,
@@ -526,7 +540,7 @@ function addTargetLine(chart, target) {
     })
 };
 
-function createTargetSeries(val) {
+function createTargetSeries(val, xAxis) {
     var s = [];
     xAxis.map(function () {
         s.push(val)
