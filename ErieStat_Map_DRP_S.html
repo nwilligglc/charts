@@ -69,6 +69,8 @@
 <script>
     var data;
     var serviceURL = "https://gis.glc.org/server/rest/services/ErieStat/PriorityWatersheds/MapServer";
+    var metric = metrics.DRP_L_S;
+
     $.getJSON("data/all_data2.json", function(d){
         data = d;
     });
@@ -114,7 +116,7 @@
                         var name = featureCollection.features[i].properties["Watershed Name"];
                         buildNarratives(name);
                         var temp = window.innerHeight  - $("#narrative-section").height() - 300;
-                        buildChart(data, "upperChart", name, metrics.DRP_L_S, units[metrics.DRP_L_S], null, (window.innerHeight  - $("#narrative-section").height()) * 0.8);
+                        buildChart(data, "upperChart", name, metric, units[metric], null, (window.innerHeight  - $("#narrative-section").height()) * 0.8);
 
 //                        query.where("MergeNm='"+ name +"'").bounds(function(error, latLngBounds, response){
 //                            map.fitBounds(latLngBounds);
