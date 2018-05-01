@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="48ec6877-d297-4550-a7f7-5aa78160b0a7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/background_draft.png" />
+    <list default="true" id="48ec6877-d297-4550-a7f7-5aa78160b0a7" name="Default" comment="update units">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ErieStat_Map_DRP_S.html" afterPath="$PROJECT_DIR$/ErieStat_Map_DRP_S.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ErieStat_Map_TP_L.html" afterPath="$PROJECT_DIR$/ErieStat_Map_TP_L.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,51 +18,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ba_chart2.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ba_chart2.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/ba_chart2.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
-              <caret line="552" column="7" lean-forward="true" selection-start-line="552" selection-start-column="7" selection-end-line="552" selection-end-column="7" />
+            <state relative-caret-position="170">
+              <caret line="527" column="1" lean-forward="true" selection-start-line="527" selection-start-column="1" selection-end-line="527" selection-end-column="1" />
               <folding>
                 <element signature="e#2704#3208#0" expanded="false" />
                 <element signature="e#3229#4432#0" expanded="false" />
+                <element signature="e#4908#5346#0" expanded="false" />
+                <element signature="e#5362#6235#0" expanded="false" />
                 <element signature="e#6335#10941#0" expanded="false" />
+                <element signature="n#!!block;n#createOptions#0" expanded="false" />
                 <element signature="n#!!block;n#createDualAxesOptions_column_line#0" expanded="false" />
                 <element signature="n#!!block;n#createDualAxesOptions_column_area#0" expanded="false" />
-                <marker date="1525124958536" expanded="true" signature="19199:19243" ph="..." />
-                <marker date="1525124958536" expanded="true" signature="20247:20291" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ErieStat_ArcGIS_chart_Popup.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ErieStat_ArcGIS_chart_Popup.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
-              <caret line="148" column="56" lean-forward="false" selection-start-line="148" selection-start-column="56" selection-end-line="148" selection-end-column="56" />
-              <folding>
-                <element signature="e#7043#7102#0" expanded="false" />
-                <element signature="e#7386#7438#0" expanded="false" />
-                <element signature="e#7517#7575#0" expanded="false" />
-                <element signature="e#7653#7700#0" expanded="false" />
-                <element signature="e#8520#8564#0" expanded="false" />
-                <element signature="e#9979#10042#0" expanded="false" />
-                <marker date="1525124118942" expanded="true" signature="11626:11641" ph="..." />
-                <marker date="1525124118942" expanded="true" signature="11793:11837" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BA_Style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/BA_Style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="12" column="41" lean-forward="false" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="41" />
-              <folding>
-                <marker date="1524833909094" expanded="true" signature="217:223" ph="{...}" />
-                <marker date="1524833909094" expanded="true" signature="1879:1904" ph="{...}" />
+                <marker date="1525209642736" expanded="true" signature="19972:20016" ph="..." />
+                <marker date="1525209642736" expanded="true" signature="21020:21064" ph="..." />
               </folding>
             </state>
           </provider>
@@ -96,9 +68,21 @@
       <file leaf-file-name="ErieStat_Map_TP_L.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ErieStat_Map_TP_L.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="103" column="167" lean-forward="false" selection-start-line="103" selection-start-column="167" selection-end-line="103" selection-end-column="167" />
+            <state relative-caret-position="374">
+              <caret line="22" column="48" lean-forward="false" selection-start-line="22" selection-start-column="48" selection-end-line="22" selection-end-column="48" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ErieStat_Chart_LakeErieSeverityIndex.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ErieStat_Chart_LakeErieSeverityIndex.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="592">
+              <caret line="120" column="21" lean-forward="true" selection-start-line="120" selection-start-column="21" selection-end-line="120" selection-end-column="21" />
+              <folding>
+                <element signature="e#1662#1695#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -106,8 +90,18 @@
       <file leaf-file-name="ErieStat_Map_DRP_S.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ErieStat_Map_DRP_S.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
-              <caret line="107" column="40" lean-forward="true" selection-start-line="107" selection-start-column="40" selection-end-line="107" selection-end-column="40" />
+            <state relative-caret-position="93">
+              <caret line="22" column="48" lean-forward="true" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="48" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="export-csv_glc.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/export-csv_glc.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="381" column="34" lean-forward="true" selection-start-line="381" selection-start-column="34" selection-end-line="381" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -127,8 +121,9 @@
       <find>getwat</find>
       <find>dock</find>
       <find>popup</find>
-      <find>pilotwatershed</find>
       <find>build</find>
+      <find>pilotwatershed</find>
+      <find>viewData</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -138,7 +133,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/ErieStat_Chart_DualAxex_DRP_S_Discharge_S.html" />
-        <option value="$PROJECT_DIR$/ErieStat_Chart_LakeErieSeverityIndex.html" />
         <option value="$PROJECT_DIR$/css/BA_Style.css" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/Charts_Maume_S_DRP_L.html" />
@@ -146,9 +140,12 @@
         <option value="$PROJECT_DIR$/ErieStat_ArcGIS_SpringDRP.html" />
         <option value="$PROJECT_DIR$/ErieStat_ArcGIS_chart_Popup.html" />
         <option value="$PROJECT_DIR$/ErieStat_ArcGIS_AnnualTP.html" />
-        <option value="$PROJECT_DIR$/js/ba_chart2.js" />
-        <option value="$PROJECT_DIR$/ErieStat_Map_TP_L.html" />
         <option value="$PROJECT_DIR$/ErieStat_Map_DRP_S.html" />
+        <option value="$PROJECT_DIR$/js/export-csv_glc.js" />
+        <option value="$PROJECT_DIR$/ErieStat_Map_TP_L.html" />
+        <option value="$PROJECT_DIR$/ErieStat_Chart_DualAxes_DRP_S_Discharge_S.html" />
+        <option value="$PROJECT_DIR$/js/ba_chart2.js" />
+        <option value="$PROJECT_DIR$/ErieStat_Chart_LakeErieSeverityIndex.html" />
       </list>
     </option>
   </component>
@@ -232,6 +229,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Github_Repositories\BlueAccounting\charts\img" />
       <recent name="C:\Github_Repositories\BlueAccounting\charts" />
     </key>
   </component>
@@ -328,7 +326,7 @@
       <workItem from="1523554995105" duration="6536000" />
       <workItem from="1523981220062" duration="7190000" />
       <workItem from="1524144189356" duration="9197000" />
-      <workItem from="1525093967488" duration="17193000" />
+      <workItem from="1525093967488" duration="27398000" />
     </task>
     <task id="LOCAL-00001" summary="Changed narrative content font size.&#10;Added exporting">
       <created>1523556097229</created>
@@ -484,16 +482,72 @@
       <option name="project" value="LOCAL" />
       <updated>1525126054414</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="save &quot;draft&quot; background to relative path">
+      <created>1525126081155</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1525126081155</updated>
+    </task>
+    <task id="LOCAL-00024" summary="update units">
+      <created>1525187482670</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1525187482670</updated>
+    </task>
+    <task id="LOCAL-00025" summary="minor change">
+      <created>1525201322292</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1525201322292</updated>
+    </task>
+    <task id="LOCAL-00026" summary="disabled view data">
+      <created>1525208908057</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1525208908057</updated>
+    </task>
+    <task id="LOCAL-00027" summary="BA logos">
+      <created>1525209919279</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1525209919279</updated>
+    </task>
+    <task id="LOCAL-00028" summary="add logo to chart">
+      <created>1525209955241</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1525209955241</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Only keep column and line combination">
+      <created>1525209982780</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1525209982780</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Only keep the bottom-right credit chart">
+      <created>1525210006109</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1525210006109</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56836000" />
+    <option name="totallyTimeSpent" value="67041000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="83" y="-8" width="1845" height="1096" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26563364" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26563364" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298647" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -554,8 +608,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Changed narrative content font size.&#10;Added exporting" />
-    <MESSAGE value="Changed axis font" />
     <MESSAGE value="Added dual axes function. Created the Lake Erie Severity Index chart" />
     <MESSAGE value="Adjusted the &quot;margin-right&quot; for charts" />
     <MESSAGE value="changed the y-axis title" />
@@ -573,7 +625,15 @@
     <MESSAGE value="minor updates" />
     <MESSAGE value="changed page title. changed chart size and location. changed highlight color. disabled select and zoom in. added label for layer. changed popup docking options." />
     <MESSAGE value="testing" />
-    <option name="LAST_COMMIT_MESSAGE" value="testing" />
+    <MESSAGE value="save &quot;draft&quot; background to relative path" />
+    <MESSAGE value="update units" />
+    <MESSAGE value="minor change" />
+    <MESSAGE value="disabled view data" />
+    <MESSAGE value="BA logos" />
+    <MESSAGE value="add logo to chart" />
+    <MESSAGE value="Only keep column and line combination" />
+    <MESSAGE value="Only keep the bottom-right credit chart" />
+    <option name="LAST_COMMIT_MESSAGE" value="Only keep the bottom-right credit chart" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -582,21 +642,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/js/ba_charts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9180">
-          <caret line="628" column="14" lean-forward="false" selection-start-line="616" selection-start-column="11" selection-end-line="628" selection-end-column="14" />
-          <folding>
-            <element signature="e#1486#1559#0" expanded="false" />
-            <element signature="e#3380#3408#0" expanded="false" />
-            <element signature="e#13380#13497#0" expanded="false" />
-            <element signature="n#!!block;n#createDualAxesChart#0" expanded="false" />
-            <element signature="e#24748#27500#0" expanded="false" />
-            <element signature="n#!!block;n#createLineChartOption#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Charts_SideBySide.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="578">
@@ -722,13 +767,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/export-csv_glc.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6120">
-          <caret line="399" column="35" lean-forward="true" selection-start-line="399" selection-start-column="35" selection-end-line="399" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
@@ -755,11 +793,14 @@
           <folding>
             <element signature="e#2704#3208#0" expanded="false" />
             <element signature="e#3229#4432#0" expanded="false" />
+            <element signature="e#4908#5346#0" expanded="false" />
+            <element signature="e#5362#6235#0" expanded="false" />
             <element signature="e#6335#10941#0" expanded="false" />
+            <element signature="n#!!block;n#createOptions#0" expanded="false" />
             <element signature="n#!!block;n#createDualAxesOptions_column_line#0" expanded="false" />
             <element signature="n#!!block;n#createDualAxesOptions_column_area#0" expanded="false" />
-            <marker date="1525124958536" expanded="true" signature="19199:19243" ph="..." />
-            <marker date="1525124958536" expanded="true" signature="20247:20291" ph="..." />
+            <marker date="1525209642736" expanded="true" signature="19972:20016" ph="..." />
+            <marker date="1525209642736" expanded="true" signature="21020:21064" ph="..." />
           </folding>
         </state>
       </provider>
@@ -825,11 +866,14 @@
           <folding>
             <element signature="e#2704#3208#0" expanded="false" />
             <element signature="e#3229#4432#0" expanded="false" />
+            <element signature="e#4908#5346#0" expanded="false" />
+            <element signature="e#5362#6235#0" expanded="false" />
             <element signature="e#6335#10941#0" expanded="false" />
+            <element signature="n#!!block;n#createOptions#0" expanded="false" />
             <element signature="n#!!block;n#createDualAxesOptions_column_line#0" expanded="false" />
             <element signature="n#!!block;n#createDualAxesOptions_column_area#0" expanded="false" />
-            <marker date="1525124958536" expanded="true" signature="19199:19243" ph="..." />
-            <marker date="1525124958536" expanded="true" signature="20247:20291" ph="..." />
+            <marker date="1525209642736" expanded="true" signature="19972:20016" ph="..." />
+            <marker date="1525209642736" expanded="true" signature="21020:21064" ph="..." />
           </folding>
         </state>
       </provider>
@@ -845,9 +889,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
           <caret line="29" column="52" lean-forward="false" selection-start-line="29" selection-start-column="52" selection-end-line="29" selection-end-column="52" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -900,23 +942,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ErieStat_Chart_DualAxes_DRP_S_Discharge_S.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="29" column="52" lean-forward="false" selection-start-line="29" selection-start-column="52" selection-end-line="29" selection-end-column="52" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ErieStat_Chart_LakeErieSeverityIndex.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="133" column="0" lean-forward="true" selection-start-line="133" selection-start-column="0" selection-end-line="133" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -982,17 +1007,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/BA_Style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="12" column="41" lean-forward="false" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="41" />
-          <folding>
-            <marker date="1524833909094" expanded="true" signature="217:223" ph="{...}" />
-            <marker date="1524833909094" expanded="true" signature="1879:1904" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ErieStat_ArcGIS_SpringDRP.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -1004,19 +1018,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ErieStat_Map_TP_L.html">
+    <entry file="file://$PROJECT_DIR$/ErieStat_ArcGIS_AnnualTP.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="103" column="167" lean-forward="false" selection-start-line="103" selection-start-column="167" selection-end-line="103" selection-end-column="167" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ErieStat_Map_DRP_S.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="107" column="40" lean-forward="true" selection-start-line="107" selection-start-column="40" selection-end-line="107" selection-end-column="40" />
-          <folding />
+        <state relative-caret-position="137">
+          <caret line="171" column="37" lean-forward="true" selection-start-line="171" selection-start-column="37" selection-end-line="171" selection-end-column="37" />
+          <folding>
+            <marker date="1525124208775" expanded="true" signature="11593:11608" ph="..." />
+            <marker date="1525124208775" expanded="true" signature="11760:11804" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1037,29 +1046,82 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ErieStat_ArcGIS_AnnualTP.html">
+    <entry file="file://$PROJECT_DIR$/js/export-csv_glc.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="171" column="37" lean-forward="true" selection-start-line="171" selection-start-column="37" selection-end-line="171" selection-end-column="37" />
+        <state relative-caret-position="375">
+          <caret line="381" column="34" lean-forward="true" selection-start-line="381" selection-start-column="34" selection-end-line="381" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/BA_Style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="12" column="41" lean-forward="false" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="41" />
           <folding>
-            <marker date="1525124208775" expanded="true" signature="11593:11608" ph="..." />
-            <marker date="1525124208775" expanded="true" signature="11760:11804" ph="..." />
+            <marker date="1524833909094" expanded="true" signature="217:223" ph="{...}" />
+            <marker date="1524833909094" expanded="true" signature="1879:1904" ph="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/all_data2.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1239">
+          <caret line="2990" column="17" lean-forward="true" selection-start-line="2990" selection-start-column="17" selection-end-line="2990" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ErieStat_Chart_DualAxes_DRP_S_Discharge_S.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="607">
+          <caret line="59" column="66" lean-forward="false" selection-start-line="59" selection-start-column="66" selection-end-line="59" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ErieStat_Map_TP_L.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="48" lean-forward="false" selection-start-line="22" selection-start-column="48" selection-end-line="22" selection-end-column="48" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/ba_chart2.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="552" column="7" lean-forward="true" selection-start-line="552" selection-start-column="7" selection-end-line="552" selection-end-column="7" />
+        <state relative-caret-position="170">
+          <caret line="527" column="1" lean-forward="true" selection-start-line="527" selection-start-column="1" selection-end-line="527" selection-end-column="1" />
           <folding>
             <element signature="e#2704#3208#0" expanded="false" />
             <element signature="e#3229#4432#0" expanded="false" />
+            <element signature="e#4908#5346#0" expanded="false" />
+            <element signature="e#5362#6235#0" expanded="false" />
             <element signature="e#6335#10941#0" expanded="false" />
+            <element signature="n#!!block;n#createOptions#0" expanded="false" />
             <element signature="n#!!block;n#createDualAxesOptions_column_line#0" expanded="false" />
             <element signature="n#!!block;n#createDualAxesOptions_column_area#0" expanded="false" />
-            <marker date="1525124958536" expanded="true" signature="19199:19243" ph="..." />
-            <marker date="1525124958536" expanded="true" signature="20247:20291" ph="..." />
+            <marker date="1525209642736" expanded="true" signature="19972:20016" ph="..." />
+            <marker date="1525209642736" expanded="true" signature="21020:21064" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ErieStat_Map_DRP_S.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="22" column="48" lean-forward="true" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ErieStat_Chart_LakeErieSeverityIndex.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="592">
+          <caret line="120" column="21" lean-forward="true" selection-start-line="120" selection-start-column="21" selection-end-line="120" selection-end-column="21" />
+          <folding>
+            <element signature="e#1662#1695#0" expanded="false" />
           </folding>
         </state>
       </provider>
