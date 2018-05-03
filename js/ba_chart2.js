@@ -15,7 +15,7 @@ var watershedNames = {
     "Grand": "Grand River",
     "Grand (Ontario)": "Grand (Ontario) River",
     "Huron": "Huron River",
-    "Leamington Tributaries": "Leamington Tributaries",
+    "Leamington": "Leamington Tributaries",
     "Maumee": "Maumee River",
     "Raisin": "River Raisin",
     "Portage": "Portage River",
@@ -58,27 +58,27 @@ var xAxis = ["2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "20
 
 var metrics = {
     "TP_L": "Annual TP Loading",
-    "DRP_L": "Annual DRP Loading",
+    "SRP_L": "Annual SRP Loading",
     "TP_FWMC": "Annual TP FWMC",
-    "DRP_FWMC": "Annual DRP FWMC",
+    "SRP_FWMC": "Annual SRP FWMC",
     "Discharge": "Annual Discharge",
     "TP_L_S": "Spring TP Loading",
-    "DRP_L_S": "Spring DRP Loading",
+    "SRP_L_S": "Spring SRP Loading",
     "TP_FWMS_S": "Spring TP FWMC",
-    "DRP_FWMC_S": "Spring DRP FWMC",
+    "SRP_FWMC_S": "Spring SRP FWMC",
     "Discharge_S": "Spring Discharge"
 }
 
 var units = {
     "Annual TP Loading": "Metric Tons",
-    "Annual DRP Loading": "Metric Tons",
+    "Annual SRP Loading": "Metric Tons",
     "Annual TP FWMC": "milligrams / liter",
-    "Annual DRP FWMC": "milligrams / liter",
+    "Annual SRP FWMC": "milligrams / liter",
     "Annual Discharge": "million cubic meters",
     "Spring TP Loading": "Metric Tons",
-    "Spring DRP Loading": "Metric Tons",
+    "Spring SRP Loading": "Metric Tons",
     "Spring TP FWMC": "milligrams / liter",
-    "Spring DRP FWMC": "milligrams / liter",
+    "Spring SRP FWMC": "milligrams / liter",
     "Spring Discharge": "million cubic meters"
 }
 
@@ -86,31 +86,31 @@ var targets = {
     "Maumee River": {
         "Annual TP Loading": 2288,
         "Spring TP Loading": 860,
-        "Spring DRP Loading": 186,
+        "Spring SRP Loading": 186,
         "Spring TP FWMC": 0.23,
-        "Spring DRP FWMC": 0.05
+        "Spring SRP FWMC": 0.05
     },
     // "Portage River": {
     //     "Annual TP Loading": 0,
     //     "Spring TP Loading": 0,
-    //     "Spring DRP Loading": 0,
+    //     "Spring SRP Loading": 0,
     //     "Spring TP FWMC": 0,
-    //     "Spring DRP FWMC": 0
+    //     "Spring SRP FWMC": 0
     // },
     // "River Raisin": {
     //     "Annual TP Loading": 0,
     //     "Spring TP Loading": 0,
-    //     "Spring DRP Loading": 0,
+    //     "Spring SRP Loading": 0,
     //     "Spring TP FWMC": 0,
-    //     "Spring DRP FWMC": 0
+    //     "Spring SRP FWMC": 0
     // },
 
     "Sandusky River": {
         "Annual TP Loading": 661,
         "Spring TP Loading": 230,
-        "Spring DRP Loading": 43,
+        "Spring SRP Loading": 43,
         "Spring TP FWMC": 0.23,
-        "Spring DRP FWMC": 0.05
+        "Spring SRP FWMC": 0.05
     },
     "Cuyahoga River": {
         "Annual TP Loading": 271,
@@ -128,8 +128,8 @@ BA_Charts.prototype.init = function(filename){
             unit: 'Metric Tons',
             series: []
         },
-        DRPloading: {
-            name: 'Annual DRP Loading',
+        SRPloading: {
+            name: 'Annual SRP Loading',
             unit: 'Metric Tons',
             series: []
         },
@@ -138,8 +138,8 @@ BA_Charts.prototype.init = function(filename){
             unit: 'mg/L',
             series: []
         },
-        DRPFWMC: {
-            name: 'Annual DRP FWMC',
+        SRPFWMC: {
+            name: 'Annual SRP FWMC',
             unit: 'mg/L',
             series: []
         },
@@ -153,8 +153,8 @@ BA_Charts.prototype.init = function(filename){
             unit: 'Metric Tons',
             series: []
         },
-        DRPloading_S: {
-            name: 'Spring DRP Loading',
+        SRPloading_S: {
+            name: 'Spring SRP Loading',
             unit: 'Metric Tons',
             series: []
         },
@@ -163,8 +163,8 @@ BA_Charts.prototype.init = function(filename){
             unit: 'mg/L',
             series: []
         },
-        DRPFWMC_S: {
-            name: 'Spring DRP FWMC',
+        SRPFWMC_S: {
+            name: 'Spring SRP FWMC',
             unit: 'mg/L',
             series: []
         },
@@ -178,14 +178,14 @@ BA_Charts.prototype.init = function(filename){
                 case this.TPloading.name:
                     this.TPloading.series.splice(year - 2008, 0, (val));
                     break;
-                case this.DRPloading.name:
-                    this.DRPloading.series.splice(year - 2008, 0, (val));
+                case this.SRPloading.name:
+                    this.SRPloading.series.splice(year - 2008, 0, (val));
                     break;
                 case this.TPFWMC.name:
                     this.TPFWMC.series.splice(year - 2008, 0, (val));
                     break;
-                case this.DRPFWMC.name:
-                    this.DRPFWMC.series.splice(year - 2008, 0, (val));
+                case this.SRPFWMC.name:
+                    this.SRPFWMC.series.splice(year - 2008, 0, (val));
                     break;
                 case this.discharge.name:
                     this.discharge.series.splice(year - 2008, 0, (val));
@@ -193,14 +193,14 @@ BA_Charts.prototype.init = function(filename){
                 case this.TPloading_S.name:
                     this.TPloading_S.series.splice(year - 2008, 0, val);
                     break;
-                case this.DRPloading_S.name:
-                    this.DRPloading_S.series.splice(year - 2008, 0, val);
+                case this.SRPloading_S.name:
+                    this.SRPloading_S.series.splice(year - 2008, 0, val);
                     break;
                 case this.TPFWMC_S.name:
                     this.TPFWMC_S.series.splice(year - 2008, 0, val);
                     break;
-                case this.DRPFWMC_S.name:
-                    this.DRPFWMC_S.series.splice(year - 2008, 0, val);
+                case this.SRPFWMC_S.name:
+                    this.SRPFWMC_S.series.splice(year - 2008, 0, val);
                     break;
                 case this.discharge_S.name:
                     this.discharge_S.series.splice(year - 2008, 0, val);
@@ -258,7 +258,7 @@ function loadWatershedsData(filename){
 
 function getWatershedMetric(in_data, w_name, metric){
     var vals = $(in_data).filter(function(i, n){
-        return w_name.includes(n.River)&& n.Fraction===metric // n.River===w_name
+        return n.River.includes(w_name)&& n.Fraction===metric // n.River===w_name
     })
     vals.sort(function(a, b){
         return (a.Year > b.Year) ? 1 : ((a.Year < b.Year) ? -1 : 0);
@@ -321,8 +321,12 @@ function createOptions(type, series_name, data, color, title, unit, isBgImg, wid
                         // size = this.chartWidth / 10;
                     }
                     var w = this.chartWidth - this.title.alignAttr.x;
-                    // this.renderer.image("img/BlueAcctg-Logo-square.png", logoX, 0, size, size).add();
-                    this.renderer.image("img/BlueAcctg-Logo.png", logoX, 0, size / 660*2640, size).add();
+                    // Blue Accounting Cube logo
+                    // this.renderer.image("https://c1.staticflickr.com/1/868/40969378165_8bd2c065b9_o.png", logoX, 0, size, size).add();
+                    // Blue Accouting Logo
+                    // this.renderer.image("https://c1.staticflickr.com/1/826/26966705327_f80fcd7af1_o.png", logoX, 0, size, size * 660 / 2640).add();
+                    // Blue Accounting ErieStat Logo
+                    this.renderer.image("https://c1.staticflickr.com/1/956/27966542108_a46fd4fa96_o.png", logoX, 0, size*3 , size).add();
 
                     // this.renderer.image("https://c1.staticflickr.com/5/4382/36578347693_3c6032000b_o.png", 0, 0, chart_width, chart_height).add();   //red watermark
                     if (isBgImg) {
@@ -568,8 +572,8 @@ function buildChart(data, tag, name, metric, unit, width=null, height=null){
 
         //get the watershed name
     var w_name = watershedNames[name];//feature.properties.Name;
-    // var m = metrics.DRP_L_S;
-    // var u = units.DRP_L_S;
+    // var m = metrics.SRP_L_S;
+    // var u = units.SRP_L_S;
     var w_data = getWatershedMetric(data, w_name, metric);
     if(w_data.length > 0){
         var t = undefined;
