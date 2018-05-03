@@ -74,7 +74,7 @@
   {
     "River": "Maumee River",
     "Year": 2008,
-    "Fraction": "Annual DRP Loading",
+    "Fraction": "Annual SRP Loading",
     "Unit": "Metric Tons",
     "Value": 835,
     "": ""
@@ -82,7 +82,7 @@
   {
     "River": "Maumee River",
     "Year": 2009,
-    "Fraction": "Annual DRP Loading",
+    "Fraction": "Annual SRP Loading",
     "Unit": "Metric Tons",
     "Value": 346,
     "": ""
@@ -90,7 +90,7 @@
   {
     "River": "Maumee River",
     "Year": 2010,
-    "Fraction": "Annual DRP Loading",
+    "Fraction": "Annual SRP Loading",
     "Unit": "Metric Tons",
     "Value": 404,
     "": ""
@@ -98,7 +98,7 @@
   {
     "River": "Maumee River",
     "Year": 2011,
-    "Fraction": "Annual DRP Loading",
+    "Fraction": "Annual SRP Loading",
     "Unit": "Metric Tons",
     "Value": 570,
     "": ""
@@ -106,7 +106,7 @@
   {
     "River": "Maumee River",
     "Year": 2012,
-    "Fraction": "Annual DRP Loading",
+    "Fraction": "Annual SRP Loading",
     "Unit": "Metric Tons",
     "Value": 614,
     "": ""
@@ -114,7 +114,7 @@
   {
     "River": "Maumee River",
     "Year": 2013,
-    "Fraction": "Annual DRP Loading",
+    "Fraction": "Annual SRP Loading",
     "Unit": "Metric Tons",
     "Value": 468,
     "": ""
@@ -122,7 +122,7 @@
   {
     "River": "Maumee River",
     "Year": 2014,
-    "Fraction": "Annual DRP Loading",
+    "Fraction": "Annual SRP Loading",
     "Unit": "Metric Tons",
     "Value": 577,
     "": ""
@@ -130,7 +130,7 @@
   {
     "River": "Maumee River",
     "Year": 2015,
-    "Fraction": "Annual DRP Loading",
+    "Fraction": "Annual SRP Loading",
     "Unit": "Metric Tons",
     "Value": 752,
     "": ""
@@ -138,7 +138,7 @@
   {
     "River": "Maumee River",
     "Year": 2016,
-    "Fraction": "Annual DRP Loading",
+    "Fraction": "Annual SRP Loading",
     "Unit": "Metric Tons",
     "Value": 253,
     "": ""
@@ -218,7 +218,7 @@
   {
     "River": "Maumee River",
     "Year": 2008,
-    "Fraction": "Annual DRP FWMC",
+    "Fraction": "Annual SRP FWMC",
     "Unit": "milligrams / liter",
     "Value": 0.104,
     "": ""
@@ -226,7 +226,7 @@
   {
     "River": "Maumee River",
     "Year": 2009,
-    "Fraction": "Annual DRP FWMC",
+    "Fraction": "Annual SRP FWMC",
     "Unit": "milligrams / liter",
     "Value": 0.068,
     "": ""
@@ -234,7 +234,7 @@
   {
     "River": "Maumee River",
     "Year": 2010,
-    "Fraction": "Annual DRP FWMC",
+    "Fraction": "Annual SRP FWMC",
     "Unit": "milligrams / liter",
     "Value": 0.087,
     "": ""
@@ -242,7 +242,7 @@
   {
     "River": "Maumee River",
     "Year": 2011,
-    "Fraction": "Annual DRP FWMC",
+    "Fraction": "Annual SRP FWMC",
     "Unit": "milligrams / liter",
     "Value": 0.091,
     "": ""
@@ -250,7 +250,7 @@
   {
     "River": "Maumee River",
     "Year": 2012,
-    "Fraction": "Annual DRP FWMC",
+    "Fraction": "Annual SRP FWMC",
     "Unit": "milligrams / liter",
     "Value": 0.103,
     "": ""
@@ -258,7 +258,7 @@
   {
     "River": "Maumee River",
     "Year": 2013,
-    "Fraction": "Annual DRP FWMC",
+    "Fraction": "Annual SRP FWMC",
     "Unit": "milligrams / liter",
     "Value": 0.093,
     "": ""
@@ -266,7 +266,7 @@
   {
     "River": "Maumee River",
     "Year": 2014,
-    "Fraction": "Annual DRP FWMC",
+    "Fraction": "Annual SRP FWMC",
     "Unit": "milligrams / liter",
     "Value": 0.099,
     "": ""
@@ -274,7 +274,7 @@
   {
     "River": "Maumee River",
     "Year": 2015,
-    "Fraction": "Annual DRP FWMC",
+    "Fraction": "Annual SRP FWMC",
     "Unit": "milligrams / liter",
     "Value": 0.113,
     "": ""
@@ -282,7 +282,7 @@
   {
     "River": "Maumee River",
     "Year": 2016,
-    "Fraction": "Annual DRP FWMC",
+    "Fraction": "Annual SRP FWMC",
     "Unit": "milligrams / liter",
     "Value": 0.06,
     "": ""
@@ -434,7 +434,7 @@
   {
     "River": "Maumee River",
     "Year": 2008,
-    "Fraction": "Spring DRP Loading",
+    "Fraction": "Spring SRP Loading",
     "Unit": "Metric Tons",
     "Value": 302,
     "": 186
@@ -442,7 +442,7 @@
   {
     "River": "Maumee River",
     "Year": 2009,
-    "Fraction": "Spring DRP Loading",
+    "Fraction": "Spring SRP Loading",
     "Unit": "Metric Tons",
     "Value": 211,
     "": 186
@@ -450,7 +450,7 @@
   {
     "River": "Maumee River",
     "Year": 2010,
-    "Fraction": "Spring DRP Loading",
+    "Fraction": "Spring SRP Loading",
     "Unit": "Metric Tons",
     "Value": 324,
     "": 186
@@ -458,7 +458,7 @@
   {
     "River": "Maumee River",
     "Year": 2011,
-    "Fraction": "Spring DRP Loading",
+    "Fraction": "Spring SRP Loading",
     "Unit": "Metric Tons",
     "Value": 430,
     "": ""
@@ -466,7 +466,7 @@
   {
     "River": "Maumee River",
     "Year": 2012,
-    "Fraction": "Spring DRP Loading",
+    "Fraction": "Spring SRP Loading",
     "Unit": "Metric Tons",
     "Value": 64,
     "": ""
@@ -474,7 +474,7 @@
   {
     "River": "Maumee River",
     "Year": 2013,
-    "Fraction": "Spring DRP Loading",
+    "Fraction": "Spring SRP Loading",
     "Unit": "Metric Tons",
     "Value": 289,
     "": ""
@@ -482,7 +482,7 @@
   {
     "River": "Maumee River",
     "Year": 2014,
-    "Fraction": "Spring DRP Loading",
+    "Fraction": "Spring SRP Loading",
     "Unit": "Metric Tons",
     "Value": 306,
     "": ""
@@ -490,7 +490,7 @@
   {
     "River": "Maumee River",
     "Year": 2015,
-    "Fraction": "Spring DRP Loading",
+    "Fraction": "Spring SRP Loading",
     "Unit": "Metric Tons",
     "Value": 422,
     "": ""
@@ -498,7 +498,7 @@
   {
     "River": "Maumee River",
     "Year": 2016,
-    "Fraction": "Spring DRP Loading",
+    "Fraction": "Spring SRP Loading",
     "Unit": "Metric Tons",
     "Value": 144,
     "": ""
@@ -578,7 +578,7 @@
   {
     "River": "Maumee River",
     "Year": 2008,
-    "Fraction": "Spring DRP FWMC",
+    "Fraction": "Spring SRP FWMC",
     "Unit": "milligrams / liter",
     "Value": 0.08,
     "": ""
@@ -586,7 +586,7 @@
   {
     "River": "Maumee River",
     "Year": 2009,
-    "Fraction": "Spring DRP FWMC",
+    "Fraction": "Spring SRP FWMC",
     "Unit": "milligrams / liter",
     "Value": 0.063,
     "": ""
@@ -594,7 +594,7 @@
   {
     "River": "Maumee River",
     "Year": 2010,
-    "Fraction": "Spring DRP FWMC",
+    "Fraction": "Spring SRP FWMC",
     "Unit": "milligrams / liter",
     "Value": 0.09,
     "": ""
@@ -602,7 +602,7 @@
   {
     "River": "Maumee River",
     "Year": 2011,
-    "Fraction": "Spring DRP FWMC",
+    "Fraction": "Spring SRP FWMC",
     "Unit": "milligrams / liter",
     "Value": 0.084,
     "": ""
@@ -610,7 +610,7 @@
   {
     "River": "Maumee River",
     "Year": 2012,
-    "Fraction": "Spring DRP FWMC",
+    "Fraction": "Spring SRP FWMC",
     "Unit": "milligrams / liter",
     "Value": 0.061,
     "": ""
@@ -618,7 +618,7 @@
   {
     "River": "Maumee River",
     "Year": 2013,
-    "Fraction": "Spring DRP FWMC",
+    "Fraction": "Spring SRP FWMC",
     "Unit": "milligrams / liter",
     "Value": 0.086,
     "": ""
@@ -626,7 +626,7 @@
   {
     "River": "Maumee River",
     "Year": 2014,
-    "Fraction": "Spring DRP FWMC",
+    "Fraction": "Spring SRP FWMC",
     "Unit": "milligrams / liter",
     "Value": 0.088,
     "": ""
@@ -634,7 +634,7 @@
   {
     "River": "Maumee River",
     "Year": 2015,
-    "Fraction": "Spring DRP FWMC",
+    "Fraction": "Spring SRP FWMC",
     "Unit": "milligrams / liter",
     "Value": 0.103,
     "": ""
@@ -642,7 +642,7 @@
   {
     "River": "Maumee River",
     "Year": 2016,
-    "Fraction": "Spring DRP FWMC",
+    "Fraction": "Spring SRP FWMC",
     "Unit": "milligrams / liter",
     "Value": 0.058,
     "": ""
@@ -794,7 +794,7 @@
   {
     "River": "Portage River",
     "Year": 2008,
-    "Fraction": "Annual DRP Loading",
+    "Fraction": "Annual SRP Loading",
     "Unit": "Metric Tons",
     "Value": "",
     "": ""
@@ -802,7 +802,7 @@
   {
     "River": "Portage River",
     "Year": 2009,
-    "Fraction": "Annual DRP Loading",
+    "Fraction": "Annual SRP Loading",
     "Unit": "Metric Tons",
     "Value": "",
     "": ""
@@ -810,7 +810,7 @@
   {
     "River": "Portage River",
     "Year": 2010,
-    "Fraction": "Annual DRP Loading",
+    "Fraction": "Annual SRP Loading",
     "Unit": "Metric Tons",
     "Value": "",
     "": ""
@@ -818,7 +818,7 @@
   {
     "River": "Portage River",
     "Year": 2011,
-    "Fraction": "Annual DRP Loading",
+    "Fraction": "Annual SRP Loading",
     "Unit": "Metric Tons",
     "Value": 51,
     "": ""
@@ -826,7 +826,7 @@
   {
     "River": "Portage River",
     "Year": 2012,
-    "Fraction": "Annual DRP Loading",
+    "Fraction": "Annual SRP Loading",
     "Unit": "Metric Tons",
     "Value": 58.6,
     "": ""
@@ -834,7 +834,7 @@
   {
     "River": "Portage River",
     "Year": 2013,
-    "Fraction": "Annual DRP Loading",
+    "Fraction": "Annual SRP Loading",
     "Unit": "Metric Tons",
     "Value": 35.2,
     "": ""
@@ -842,7 +842,7 @@
   {
     "River": "Portage River",
     "Year": 2014,
-    "Fraction": "Annual DRP Loading",
+    "Fraction": "Annual SRP Loading",
     "Unit": "Metric Tons",
     "Value": 50.1,
     "": ""
@@ -850,7 +850,7 @@
   {
     "River": "Portage River",
     "Year": 2015,
-    "Fraction": "Annual DRP Loading",
+    "Fraction": "Annual SRP Loading",
     "Unit": "Metric Tons",
     "Value": 45.1,
     "": ""
@@ -858,7 +858,7 @@
   {
     "River": "Portage River",
     "Year": 2016,
-    "Fraction": "Annual DRP Loading",
+    "Fraction": "Annual SRP Loading",
     "Unit": "Metric Tons",
     "Value": 20.2,
     "": ""
@@ -938,7 +938,7 @@
   {
     "River": "Portage River",
     "Year": 2008,
-    "Fraction": "Annual DRP FWMC",
+    "Fraction": "Annual SRP FWMC",
     "Unit": "milligrams / liter",
     "Value": "",
     "": ""
@@ -946,7 +946,7 @@
   {
     "River": "Portage River",
     "Year": 2009,
-    "Fraction": "Annual DRP FWMC",
+    "Fraction": "Annual SRP FWMC",
     "Unit": "milligrams / liter",
     "Value": "",
     "": ""
@@ -954,7 +954,7 @@
   {
     "River": "Portage River",
     "Year": 2010,
-    "Fraction": "Annual DRP FWMC",
+    "Fraction": "Annual SRP FWMC",
     "Unit": "milligrams / liter",
     "Value": "",
     "": ""
@@ -962,7 +962,7 @@
   {
     "River": "Portage River",
     "Year": 2011,
-    "Fraction": "Annual DRP FWMC",
+    "Fraction": "Annual SRP FWMC",
     "Unit": "milligrams / liter",
     "Value": 0.088,
     "": ""
@@ -970,7 +970,7 @@
   {
     "River": "Portage River",
     "Year": 2012,
-    "Fraction": "Annual DRP FWMC",
+    "Fraction": "Annual SRP FWMC",
     "Unit": "milligrams / liter",
     "Value": 0.116,
     "": ""
@@ -978,7 +978,7 @@
   {
     "River": "Portage River",
     "Year": 2013,
-    "Fraction": "Annual DRP FWMC",
+    "Fraction": "Annual SRP FWMC",
     "Unit": "milligrams / liter",
     "Value": 0.094,
     "": ""
@@ -986,7 +986,7 @@
   {
     "River": "Portage River",
     "Year": 2014,
-    "Fraction": "Annual DRP FWMC",
+    "Fraction": "Annual SRP FWMC",
     "Unit": "milligrams / liter",
     "Value": 0.114,
     "": ""
@@ -994,7 +994,7 @@
   {
     "River": "Portage River",
     "Year": 2015,
-    "Fraction": "Annual DRP FWMC",
+    "Fraction": "Annual SRP FWMC",
     "Unit": "milligrams / liter",
     "Value": 0.103,
     "": ""
@@ -1002,7 +1002,7 @@
   {
     "River": "Portage River",
     "Year": 2016,
-    "Fraction": "Annual DRP FWMC",
+    "Fraction": "Annual SRP FWMC",
     "Unit": "milligrams / liter",
     "Value": 0.043,
     "": ""
@@ -1154,7 +1154,7 @@
   {
     "River": "Portage River",
     "Year": 2008,
-    "Fraction": "Spring DRP Loading",
+    "Fraction": "Spring SRP Loading",
     "Unit": "Metric Tons",
     "Value": "",
     "": ""
@@ -1162,7 +1162,7 @@
   {
     "River": "Portage River",
     "Year": 2009,
-    "Fraction": "Spring DRP Loading",
+    "Fraction": "Spring SRP Loading",
     "Unit": "Metric Tons",
     "Value": "",
     "": ""
@@ -1170,7 +1170,7 @@
   {
     "River": "Portage River",
     "Year": 2010,
-    "Fraction": "Spring DRP Loading",
+    "Fraction": "Spring SRP Loading",
     "Unit": "Metric Tons",
     "Value": "",
     "": ""
@@ -1178,7 +1178,7 @@
   {
     "River": "Portage River",
     "Year": 2011,
-    "Fraction": "Spring DRP Loading",
+    "Fraction": "Spring SRP Loading",
     "Unit": "Metric Tons",
     "Value": 35.53,
     "": ""
@@ -1186,7 +1186,7 @@
   {
     "River": "Portage River",
     "Year": 2012,
-    "Fraction": "Spring DRP Loading",
+    "Fraction": "Spring SRP Loading",
     "Unit": "Metric Tons",
     "Value": 7.11,
     "": ""
@@ -1194,7 +1194,7 @@
   {
     "River": "Portage River",
     "Year": 2013,
-    "Fraction": "Spring DRP Loading",
+    "Fraction": "Spring SRP Loading",
     "Unit": "Metric Tons",
     "Value": 22.14,
     "": ""
@@ -1202,7 +1202,7 @@
   {
     "River": "Portage River",
     "Year": 2014,
-    "Fraction": "Spring DRP Loading",
+    "Fraction": "Spring SRP Loading",
     "Unit": "Metric Tons",
     "Value": 14.23,
     "": ""
@@ -1210,7 +1210,7 @@
   {
     "River": "Portage River",
     "Year": 2015,
-    "Fraction": "Spring DRP Loading",
+    "Fraction": "Spring SRP Loading",
     "Unit": "Metric Tons",
     "Value": 40.1,
     "": ""
@@ -1218,7 +1218,7 @@
   {
     "River": "Portage River",
     "Year": 2016,
-    "Fraction": "Spring DRP Loading",
+    "Fraction": "Spring SRP Loading",
     "Unit": "Metric Tons",
     "Value": 10.9,
     "": ""
@@ -1298,7 +1298,7 @@
   {
     "River": "Portage River",
     "Year": 2008,
-    "Fraction": "Spring DRP FWMC",
+    "Fraction": "Spring SRP FWMC",
     "Unit": "milligrams / liter",
     "Value": "",
     "": ""
@@ -1306,7 +1306,7 @@
   {
     "River": "Portage River",
     "Year": 2009,
-    "Fraction": "Spring DRP FWMC",
+    "Fraction": "Spring SRP FWMC",
     "Unit": "milligrams / liter",
     "Value": "",
     "": ""
@@ -1314,7 +1314,7 @@
   {
     "River": "Portage River",
     "Year": 2010,
-    "Fraction": "Spring DRP FWMC",
+    "Fraction": "Spring SRP FWMC",
     "Unit": "milligrams / liter",
     "Value": "",
     "": ""
@@ -1322,7 +1322,7 @@
   {
     "River": "Portage River",
     "Year": 2011,
-    "Fraction": "Spring DRP FWMC",
+    "Fraction": "Spring SRP FWMC",
     "Unit": "milligrams / liter",
     "Value": 0.081,
     "": ""
@@ -1330,7 +1330,7 @@
   {
     "River": "Portage River",
     "Year": 2012,
-    "Fraction": "Spring DRP FWMC",
+    "Fraction": "Spring SRP FWMC",
     "Unit": "milligrams / liter",
     "Value": 0.072,
     "": ""
@@ -1338,7 +1338,7 @@
   {
     "River": "Portage River",
     "Year": 2013,
-    "Fraction": "Spring DRP FWMC",
+    "Fraction": "Spring SRP FWMC",
     "Unit": "milligrams / liter",
     "Value": 0.098,
     "": ""
@@ -1346,7 +1346,7 @@
   {
     "River": "Portage River",
     "Year": 2014,
-    "Fraction": "Spring DRP FWMC",
+    "Fraction": "Spring SRP FWMC",
     "Unit": "milligrams / liter",
     "Value": 0.076,
     "": ""
@@ -1354,7 +1354,7 @@
   {
     "River": "Portage River",
     "Year": 2015,
-    "Fraction": "Spring DRP FWMC",
+    "Fraction": "Spring SRP FWMC",
     "Unit": "milligrams / liter",
     "Value": 0.103,
     "": ""
@@ -1362,7 +1362,7 @@
   {
     "River": "Portage River",
     "Year": 2016,
-    "Fraction": "Spring DRP FWMC",
+    "Fraction": "Spring SRP FWMC",
     "Unit": "milligrams / liter",
     "Value": 0.056,
     "": ""
@@ -1514,7 +1514,7 @@
   {
     "River": "River Raisin",
     "Year": 2008,
-    "Fraction": "Annual DRP Loading",
+    "Fraction": "Annual SRP Loading",
     "Unit": "Metric Tons",
     "Value": 42,
     "": ""
@@ -1522,7 +1522,7 @@
   {
     "River": "River Raisin",
     "Year": 2009,
-    "Fraction": "Annual DRP Loading",
+    "Fraction": "Annual SRP Loading",
     "Unit": "Metric Tons",
     "Value": 26.3,
     "": ""
@@ -1530,7 +1530,7 @@
   {
     "River": "River Raisin",
     "Year": 2010,
-    "Fraction": "Annual DRP Loading",
+    "Fraction": "Annual SRP Loading",
     "Unit": "Metric Tons",
     "Value": 20.2,
     "": ""
@@ -1538,7 +1538,7 @@
   {
     "River": "River Raisin",
     "Year": 2011,
-    "Fraction": "Annual DRP Loading",
+    "Fraction": "Annual SRP Loading",
     "Unit": "Metric Tons",
     "Value": 34.6,
     "": ""
@@ -1546,7 +1546,7 @@
   {
     "River": "River Raisin",
     "Year": 2012,
-    "Fraction": "Annual DRP Loading",
+    "Fraction": "Annual SRP Loading",
     "Unit": "Metric Tons",
     "Value": 37.8,
     "": ""
@@ -1554,7 +1554,7 @@
   {
     "River": "River Raisin",
     "Year": 2013,
-    "Fraction": "Annual DRP Loading",
+    "Fraction": "Annual SRP Loading",
     "Unit": "Metric Tons",
     "Value": 17.3,
     "": ""
@@ -1562,7 +1562,7 @@
   {
     "River": "River Raisin",
     "Year": 2014,
-    "Fraction": "Annual DRP Loading",
+    "Fraction": "Annual SRP Loading",
     "Unit": "Metric Tons",
     "Value": 24.5,
     "": ""
@@ -1570,7 +1570,7 @@
   {
     "River": "River Raisin",
     "Year": 2015,
-    "Fraction": "Annual DRP Loading",
+    "Fraction": "Annual SRP Loading",
     "Unit": "Metric Tons",
     "Value": 37.5,
     "": ""
@@ -1578,7 +1578,7 @@
   {
     "River": "River Raisin",
     "Year": 2016,
-    "Fraction": "Annual DRP Loading",
+    "Fraction": "Annual SRP Loading",
     "Unit": "Metric Tons",
     "Value": 16,
     "": ""
@@ -1658,7 +1658,7 @@
   {
     "River": "River Raisin",
     "Year": 2008,
-    "Fraction": "Annual DRP FWMC",
+    "Fraction": "Annual SRP FWMC",
     "Unit": "milligrams / liter",
     "Value": "",
     "": ""
@@ -1666,7 +1666,7 @@
   {
     "River": "River Raisin",
     "Year": 2009,
-    "Fraction": "Annual DRP FWMC",
+    "Fraction": "Annual SRP FWMC",
     "Unit": "milligrams / liter",
     "Value": 0.027684211,
     "": ""
@@ -1674,7 +1674,7 @@
   {
     "River": "River Raisin",
     "Year": 2010,
-    "Fraction": "Annual DRP FWMC",
+    "Fraction": "Annual SRP FWMC",
     "Unit": "milligrams / liter",
     "Value": "",
     "": ""
@@ -1682,7 +1682,7 @@
   {
     "River": "River Raisin",
     "Year": 2011,
-    "Fraction": "Annual DRP FWMC",
+    "Fraction": "Annual SRP FWMC",
     "Unit": "milligrams / liter",
     "Value": 0.039007892,
     "": ""
@@ -1690,7 +1690,7 @@
   {
     "River": "River Raisin",
     "Year": 2012,
-    "Fraction": "Annual DRP FWMC",
+    "Fraction": "Annual SRP FWMC",
     "Unit": "milligrams / liter",
     "Value": "",
     "": ""
@@ -1698,7 +1698,7 @@
   {
     "River": "River Raisin",
     "Year": 2013,
-    "Fraction": "Annual DRP FWMC",
+    "Fraction": "Annual SRP FWMC",
     "Unit": "milligrams / liter",
     "Value": "",
     "": ""
@@ -1706,7 +1706,7 @@
   {
     "River": "River Raisin",
     "Year": 2014,
-    "Fraction": "Annual DRP FWMC",
+    "Fraction": "Annual SRP FWMC",
     "Unit": "milligrams / liter",
     "Value": 0.037234043,
     "": ""
@@ -1714,7 +1714,7 @@
   {
     "River": "River Raisin",
     "Year": 2015,
-    "Fraction": "Annual DRP FWMC",
+    "Fraction": "Annual SRP FWMC",
     "Unit": "milligrams / liter",
     "Value": 0.057077626,
     "": ""
@@ -1722,7 +1722,7 @@
   {
     "River": "River Raisin",
     "Year": 2016,
-    "Fraction": "Annual DRP FWMC",
+    "Fraction": "Annual SRP FWMC",
     "Unit": "milligrams / liter",
     "Value": 0.03047619,
     "": ""
@@ -1874,7 +1874,7 @@
   {
     "River": "River Raisin",
     "Year": 2008,
-    "Fraction": "Spring DRP Loading",
+    "Fraction": "Spring SRP Loading",
     "Unit": "Metric Tons",
     "Value": 19.59,
     "": ""
@@ -1882,7 +1882,7 @@
   {
     "River": "River Raisin",
     "Year": 2009,
-    "Fraction": "Spring DRP Loading",
+    "Fraction": "Spring SRP Loading",
     "Unit": "Metric Tons",
     "Value": 16.67,
     "": ""
@@ -1890,7 +1890,7 @@
   {
     "River": "River Raisin",
     "Year": 2010,
-    "Fraction": "Spring DRP Loading",
+    "Fraction": "Spring SRP Loading",
     "Unit": "Metric Tons",
     "Value": 16.75,
     "": ""
@@ -1898,7 +1898,7 @@
   {
     "River": "River Raisin",
     "Year": 2011,
-    "Fraction": "Spring DRP Loading",
+    "Fraction": "Spring SRP Loading",
     "Unit": "Metric Tons",
     "Value": 29.44,
     "": ""
@@ -1906,7 +1906,7 @@
   {
     "River": "River Raisin",
     "Year": 2012,
-    "Fraction": "Spring DRP Loading",
+    "Fraction": "Spring SRP Loading",
     "Unit": "Metric Tons",
     "Value": 6.37,
     "": ""
@@ -1914,7 +1914,7 @@
   {
     "River": "River Raisin",
     "Year": 2013,
-    "Fraction": "Spring DRP Loading",
+    "Fraction": "Spring SRP Loading",
     "Unit": "Metric Tons",
     "Value": 14.34,
     "": ""
@@ -1922,7 +1922,7 @@
   {
     "River": "River Raisin",
     "Year": 2014,
-    "Fraction": "Spring DRP Loading",
+    "Fraction": "Spring SRP Loading",
     "Unit": "Metric Tons",
     "Value": 17.83,
     "": ""
@@ -1930,7 +1930,7 @@
   {
     "River": "River Raisin",
     "Year": 2015,
-    "Fraction": "Spring DRP Loading",
+    "Fraction": "Spring SRP Loading",
     "Unit": "Metric Tons",
     "Value": 33.11,
     "": ""
@@ -1938,7 +1938,7 @@
   {
     "River": "River Raisin",
     "Year": 2016,
-    "Fraction": "Spring DRP Loading",
+    "Fraction": "Spring SRP Loading",
     "Unit": "Metric Tons",
     "Value": 9.14,
     "": ""
@@ -2018,7 +2018,7 @@
   {
     "River": "River Raisin",
     "Year": 2008,
-    "Fraction": "Spring DRP FWMC",
+    "Fraction": "Spring SRP FWMC",
     "Unit": "milligrams / liter",
     "Value": 0.035,
     "": ""
@@ -2026,7 +2026,7 @@
   {
     "River": "River Raisin",
     "Year": 2009,
-    "Fraction": "Spring DRP FWMC",
+    "Fraction": "Spring SRP FWMC",
     "Unit": "milligrams / liter",
     "Value": 0.029,
     "": ""
@@ -2034,7 +2034,7 @@
   {
     "River": "River Raisin",
     "Year": 2010,
-    "Fraction": "Spring DRP FWMC",
+    "Fraction": "Spring SRP FWMC",
     "Unit": "milligrams / liter",
     "Value": 0.031,
     "": ""
@@ -2042,7 +2042,7 @@
   {
     "River": "River Raisin",
     "Year": 2011,
-    "Fraction": "Spring DRP FWMC",
+    "Fraction": "Spring SRP FWMC",
     "Unit": "milligrams / liter",
     "Value": 0.043,
     "": ""
@@ -2050,7 +2050,7 @@
   {
     "River": "River Raisin",
     "Year": 2012,
-    "Fraction": "Spring DRP FWMC",
+    "Fraction": "Spring SRP FWMC",
     "Unit": "milligrams / liter",
     "Value": 0.025,
     "": ""
@@ -2058,7 +2058,7 @@
   {
     "River": "River Raisin",
     "Year": 2013,
-    "Fraction": "Spring DRP FWMC",
+    "Fraction": "Spring SRP FWMC",
     "Unit": "milligrams / liter",
     "Value": 0.032,
     "": ""
@@ -2066,7 +2066,7 @@
   {
     "River": "River Raisin",
     "Year": 2014,
-    "Fraction": "Spring DRP FWMC",
+    "Fraction": "Spring SRP FWMC",
     "Unit": "milligrams / liter",
     "Value": 0.039,
     "": ""
@@ -2074,7 +2074,7 @@
   {
     "River": "River Raisin",
     "Year": 2015,
-    "Fraction": "Spring DRP FWMC",
+    "Fraction": "Spring SRP FWMC",
     "Unit": "milligrams / liter",
     "Value": 0.065,
     "": ""
@@ -2082,7 +2082,7 @@
   {
     "River": "River Raisin",
     "Year": 2016,
-    "Fraction": "Spring DRP FWMC",
+    "Fraction": "Spring SRP FWMC",
     "Unit": "milligrams / liter",
     "Value": 0.027,
     "": ""
@@ -2234,7 +2234,7 @@
   {
     "River": "Sandusky River",
     "Year": 2008,
-    "Fraction": "Annual DRP Loading",
+    "Fraction": "Annual SRP Loading",
     "Unit": "Metric Tons",
     "Value": 187,
     "": ""
@@ -2242,7 +2242,7 @@
   {
     "River": "Sandusky River",
     "Year": 2009,
-    "Fraction": "Annual DRP Loading",
+    "Fraction": "Annual SRP Loading",
     "Unit": "Metric Tons",
     "Value": 70.7,
     "": ""
@@ -2250,7 +2250,7 @@
   {
     "River": "Sandusky River",
     "Year": 2010,
-    "Fraction": "Annual DRP Loading",
+    "Fraction": "Annual SRP Loading",
     "Unit": "Metric Tons",
     "Value": 74,
     "": ""
@@ -2258,7 +2258,7 @@
   {
     "River": "Sandusky River",
     "Year": 2011,
-    "Fraction": "Annual DRP Loading",
+    "Fraction": "Annual SRP Loading",
     "Unit": "Metric Tons",
     "Value": 194,
     "": ""
@@ -2266,7 +2266,7 @@
   {
     "River": "Sandusky River",
     "Year": 2012,
-    "Fraction": "Annual DRP Loading",
+    "Fraction": "Annual SRP Loading",
     "Unit": "Metric Tons",
     "Value": 181,
     "": ""
@@ -2274,7 +2274,7 @@
   {
     "River": "Sandusky River",
     "Year": 2013,
-    "Fraction": "Annual DRP Loading",
+    "Fraction": "Annual SRP Loading",
     "Unit": "Metric Tons",
     "Value": 153,
     "": ""
@@ -2282,7 +2282,7 @@
   {
     "River": "Sandusky River",
     "Year": 2014,
-    "Fraction": "Annual DRP Loading",
+    "Fraction": "Annual SRP Loading",
     "Unit": "Metric Tons",
     "Value": 160,
     "": ""
@@ -2290,7 +2290,7 @@
   {
     "River": "Sandusky River",
     "Year": 2015,
-    "Fraction": "Annual DRP Loading",
+    "Fraction": "Annual SRP Loading",
     "Unit": "Metric Tons",
     "Value": 98.7,
     "": ""
@@ -2298,7 +2298,7 @@
   {
     "River": "Sandusky River",
     "Year": 2016,
-    "Fraction": "Annual DRP Loading",
+    "Fraction": "Annual SRP Loading",
     "Unit": "Metric Tons",
     "Value": 63.8,
     "": ""
@@ -2378,7 +2378,7 @@
   {
     "River": "Sandusky River",
     "Year": 2008,
-    "Fraction": "Annual DRP FWMC",
+    "Fraction": "Annual SRP FWMC",
     "Unit": "milligrams / liter",
     "Value": 0.098,
     "": ""
@@ -2386,7 +2386,7 @@
   {
     "River": "Sandusky River",
     "Year": 2009,
-    "Fraction": "Annual DRP FWMC",
+    "Fraction": "Annual SRP FWMC",
     "Unit": "milligrams / liter",
     "Value": 0.075,
     "": ""
@@ -2394,7 +2394,7 @@
   {
     "River": "Sandusky River",
     "Year": 2010,
-    "Fraction": "Annual DRP FWMC",
+    "Fraction": "Annual SRP FWMC",
     "Unit": "milligrams / liter",
     "Value": 0.084,
     "": ""
@@ -2402,7 +2402,7 @@
   {
     "River": "Sandusky River",
     "Year": 2011,
-    "Fraction": "Annual DRP FWMC",
+    "Fraction": "Annual SRP FWMC",
     "Unit": "milligrams / liter",
     "Value": 0.102,
     "": ""
@@ -2410,7 +2410,7 @@
   {
     "River": "Sandusky River",
     "Year": 2012,
-    "Fraction": "Annual DRP FWMC",
+    "Fraction": "Annual SRP FWMC",
     "Unit": "milligrams / liter",
     "Value": 0.119,
     "": ""
@@ -2418,7 +2418,7 @@
   {
     "River": "Sandusky River",
     "Year": 2013,
-    "Fraction": "Annual DRP FWMC",
+    "Fraction": "Annual SRP FWMC",
     "Unit": "milligrams / liter",
     "Value": 0.103,
     "": ""
@@ -2426,7 +2426,7 @@
   {
     "River": "Sandusky River",
     "Year": 2014,
-    "Fraction": "Annual DRP FWMC",
+    "Fraction": "Annual SRP FWMC",
     "Unit": "milligrams / liter",
     "Value": 0.113,
     "": ""
@@ -2434,7 +2434,7 @@
   {
     "River": "Sandusky River",
     "Year": 2015,
-    "Fraction": "Annual DRP FWMC",
+    "Fraction": "Annual SRP FWMC",
     "Unit": "milligrams / liter",
     "Value": 0.093,
     "": ""
@@ -2442,7 +2442,7 @@
   {
     "River": "Sandusky River",
     "Year": 2016,
-    "Fraction": "Annual DRP FWMC",
+    "Fraction": "Annual SRP FWMC",
     "Unit": "milligrams / liter",
     "Value": 0.074,
     "": ""
@@ -2594,7 +2594,7 @@
   {
     "River": "Sandusky River",
     "Year": 2008,
-    "Fraction": "Spring DRP Loading",
+    "Fraction": "Spring SRP Loading",
     "Unit": "Metric Tons",
     "Value": 69.1,
     "": ""
@@ -2602,7 +2602,7 @@
   {
     "River": "Sandusky River",
     "Year": 2009,
-    "Fraction": "Spring DRP Loading",
+    "Fraction": "Spring SRP Loading",
     "Unit": "Metric Tons",
     "Value": 29.8,
     "": ""
@@ -2610,7 +2610,7 @@
   {
     "River": "Sandusky River",
     "Year": 2010,
-    "Fraction": "Spring DRP Loading",
+    "Fraction": "Spring SRP Loading",
     "Unit": "Metric Tons",
     "Value": 65.9,
     "": ""
@@ -2618,7 +2618,7 @@
   {
     "River": "Sandusky River",
     "Year": 2011,
-    "Fraction": "Spring DRP Loading",
+    "Fraction": "Spring SRP Loading",
     "Unit": "Metric Tons",
     "Value": 137.3,
     "": ""
@@ -2626,7 +2626,7 @@
   {
     "River": "Sandusky River",
     "Year": 2012,
-    "Fraction": "Spring DRP Loading",
+    "Fraction": "Spring SRP Loading",
     "Unit": "Metric Tons",
     "Value": 16,
     "": ""
@@ -2634,7 +2634,7 @@
   {
     "River": "Sandusky River",
     "Year": 2013,
-    "Fraction": "Spring DRP Loading",
+    "Fraction": "Spring SRP Loading",
     "Unit": "Metric Tons",
     "Value": 89.2,
     "": ""
@@ -2642,7 +2642,7 @@
   {
     "River": "Sandusky River",
     "Year": 2014,
-    "Fraction": "Spring DRP Loading",
+    "Fraction": "Spring SRP Loading",
     "Unit": "Metric Tons",
     "Value": 60.2,
     "": ""
@@ -2650,7 +2650,7 @@
   {
     "River": "Sandusky River",
     "Year": 2015,
-    "Fraction": "Spring DRP Loading",
+    "Fraction": "Spring SRP Loading",
     "Unit": "Metric Tons",
     "Value": 91.9,
     "": ""
@@ -2658,7 +2658,7 @@
   {
     "River": "Sandusky River",
     "Year": 2016,
-    "Fraction": "Spring DRP Loading",
+    "Fraction": "Spring SRP Loading",
     "Unit": "Metric Tons",
     "Value": 31,
     "": ""
@@ -2738,7 +2738,7 @@
   {
     "River": "Sandusky River",
     "Year": 2008,
-    "Fraction": "Spring DRP FWMC",
+    "Fraction": "Spring SRP FWMC",
     "Unit": "milligrams / liter",
     "Value": 0.072,
     "": ""
@@ -2746,7 +2746,7 @@
   {
     "River": "Sandusky River",
     "Year": 2009,
-    "Fraction": "Spring DRP FWMC",
+    "Fraction": "Spring SRP FWMC",
     "Unit": "milligrams / liter",
     "Value": 0.067,
     "": ""
@@ -2754,7 +2754,7 @@
   {
     "River": "Sandusky River",
     "Year": 2010,
-    "Fraction": "Spring DRP FWMC",
+    "Fraction": "Spring SRP FWMC",
     "Unit": "milligrams / liter",
     "Value": 0.09,
     "": ""
@@ -2762,7 +2762,7 @@
   {
     "River": "Sandusky River",
     "Year": 2011,
-    "Fraction": "Spring DRP FWMC",
+    "Fraction": "Spring SRP FWMC",
     "Unit": "milligrams / liter",
     "Value": 0.101,
     "": ""
@@ -2770,7 +2770,7 @@
   {
     "River": "Sandusky River",
     "Year": 2012,
-    "Fraction": "Spring DRP FWMC",
+    "Fraction": "Spring SRP FWMC",
     "Unit": "milligrams / liter",
     "Value": 0.057,
     "": ""
@@ -2778,7 +2778,7 @@
   {
     "River": "Sandusky River",
     "Year": 2013,
-    "Fraction": "Spring DRP FWMC",
+    "Fraction": "Spring SRP FWMC",
     "Unit": "milligrams / liter",
     "Value": 0.101,
     "": ""
@@ -2786,7 +2786,7 @@
   {
     "River": "Sandusky River",
     "Year": 2014,
-    "Fraction": "Spring DRP FWMC",
+    "Fraction": "Spring SRP FWMC",
     "Unit": "milligrams / liter",
     "Value": 0.092,
     "": ""
@@ -2794,7 +2794,7 @@
   {
     "River": "Sandusky River",
     "Year": 2015,
-    "Fraction": "Spring DRP FWMC",
+    "Fraction": "Spring SRP FWMC",
     "Unit": "milligrams / liter",
     "Value": 0.101,
     "": ""
@@ -2802,7 +2802,7 @@
   {
     "River": "Sandusky River",
     "Year": 2016,
-    "Fraction": "Spring DRP FWMC",
+    "Fraction": "Spring SRP FWMC",
     "Unit": "milligrams / liter",
     "Value": 0.062,
     "": ""
@@ -3010,7 +3010,7 @@
   {
     "River": "Cuyahoga River",
     "Year": 2008,
-    "Fraction": "Annual DRP Loading",
+    "Fraction": "Annual SRP Loading",
     "Unit": "Metric Tons",
     "Value": 44.8,
     "": ""
@@ -3018,7 +3018,7 @@
   {
     "River": "Cuyahoga River",
     "Year": 2009,
-    "Fraction": "Annual DRP Loading",
+    "Fraction": "Annual SRP Loading",
     "Unit": "Metric Tons",
     "Value": 30.5,
     "": ""
@@ -3026,7 +3026,7 @@
   {
     "River": "Cuyahoga River",
     "Year": 2010,
-    "Fraction": "Annual DRP Loading",
+    "Fraction": "Annual SRP Loading",
     "Unit": "Metric Tons",
     "Value": 31,
     "": ""
@@ -3034,7 +3034,7 @@
   {
     "River": "Cuyahoga River",
     "Year": 2011,
-    "Fraction": "Annual DRP Loading",
+    "Fraction": "Annual SRP Loading",
     "Unit": "Metric Tons",
     "Value": 29,
     "": ""
@@ -3042,7 +3042,7 @@
   {
     "River": "Cuyahoga River",
     "Year": 2012,
-    "Fraction": "Annual DRP Loading",
+    "Fraction": "Annual SRP Loading",
     "Unit": "Metric Tons",
     "Value": 27.8,
     "": ""
@@ -3050,7 +3050,7 @@
   {
     "River": "Cuyahoga River",
     "Year": 2013,
-    "Fraction": "Annual DRP Loading",
+    "Fraction": "Annual SRP Loading",
     "Unit": "Metric Tons",
     "Value": 38,
     "": ""
@@ -3058,7 +3058,7 @@
   {
     "River": "Cuyahoga River",
     "Year": 2014,
-    "Fraction": "Annual DRP Loading",
+    "Fraction": "Annual SRP Loading",
     "Unit": "Metric Tons",
     "Value": 25.5,
     "": ""
@@ -3066,7 +3066,7 @@
   {
     "River": "Cuyahoga River",
     "Year": 2015,
-    "Fraction": "Annual DRP Loading",
+    "Fraction": "Annual SRP Loading",
     "Unit": "Metric Tons",
     "Value": 23.8,
     "": ""
@@ -3138,7 +3138,7 @@
   {
     "River": "Cuyahoga River",
     "Year": 2008,
-    "Fraction": "Annual DRP FWMC",
+    "Fraction": "Annual SRP FWMC",
     "Unit": "milligrams / liter",
     "Value": 0.038,
     "": ""
@@ -3146,7 +3146,7 @@
   {
     "River": "Cuyahoga River",
     "Year": 2009,
-    "Fraction": "Annual DRP FWMC",
+    "Fraction": "Annual SRP FWMC",
     "Unit": "milligrams / liter",
     "Value": 0.035,
     "": ""
@@ -3154,7 +3154,7 @@
   {
     "River": "Cuyahoga River",
     "Year": 2010,
-    "Fraction": "Annual DRP FWMC",
+    "Fraction": "Annual SRP FWMC",
     "Unit": "milligrams / liter",
     "Value": 0.044,
     "": ""
@@ -3162,7 +3162,7 @@
   {
     "River": "Cuyahoga River",
     "Year": 2011,
-    "Fraction": "Annual DRP FWMC",
+    "Fraction": "Annual SRP FWMC",
     "Unit": "milligrams / liter",
     "Value": 0.021,
     "": ""
@@ -3170,7 +3170,7 @@
   {
     "River": "Cuyahoga River",
     "Year": 2012,
-    "Fraction": "Annual DRP FWMC",
+    "Fraction": "Annual SRP FWMC",
     "Unit": "milligrams / liter",
     "Value": 0.026,
     "": ""
@@ -3178,7 +3178,7 @@
   {
     "River": "Cuyahoga River",
     "Year": 2013,
-    "Fraction": "Annual DRP FWMC",
+    "Fraction": "Annual SRP FWMC",
     "Unit": "milligrams / liter",
     "Value": 0.038,
     "": ""
@@ -3186,7 +3186,7 @@
   {
     "River": "Cuyahoga River",
     "Year": 2014,
-    "Fraction": "Annual DRP FWMC",
+    "Fraction": "Annual SRP FWMC",
     "Unit": "milligrams / liter",
     "Value": 0.025,
     "": ""
@@ -3194,7 +3194,7 @@
   {
     "River": "Cuyahoga River",
     "Year": 2015,
-    "Fraction": "Annual DRP FWMC",
+    "Fraction": "Annual SRP FWMC",
     "Unit": "milligrams / liter",
     "Value": 0.025,
     "": ""

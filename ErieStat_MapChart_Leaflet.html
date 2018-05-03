@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Spring DRP Loading in ErieStat Watersheds</title>
+    <title>Spring SRP Loading in ErieStat Watersheds</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css">
     <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
     <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"></script>
@@ -68,8 +68,8 @@
 
 <script>
     var data;
-    var serviceURL = "https://gis.glc.org/server/rest/services/ErieStat/PriorityWatersheds/MapServer";
-    $.getJSON("data/all_data.json", function(d){
+    var serviceURL = "https://gis.glc.org/server/rest/services/ErieStat/SpringSRP/MapServer";
+    $.getJSON("data/all_data2.json", function(d){
         data = d;
     });
 
@@ -77,20 +77,20 @@
     L.esri.basemapLayer("Topographic").addTo(map);
 
     var watersheds = L.esri.dynamicMapLayer({
-        url: "https://gis.glc.org/server/rest/services/ErieStat/PriorityWatersheds/MapServer",
+        url: "https://gis.glc.org/server/rest/services/ErieStat/SpringSRP/MapServer",
         layers:[0, 1, 2],
         f: "image"
     }).addTo(map);
 
     var boundary_query = L.esri.query({
-        url: "https://gis.glc.org/server/rest/services/ErieStat/PriorityWatersheds/MapServer/0"
+        url: "https://gis.glc.org/server/rest/services/ErieStat/SpringSRP/MapServer/0"
     });
     boundary_query.bounds(function(error, latlngbounds){
         map.fitBounds(latlngbounds);
     });
 
     var query = L.esri.query({
-        url: 'https://gis.glc.org/server/rest/services/ErieStat/PriorityWatersheds/MapServer/1'
+        url: 'https://gis.glc.org/server/rest/services/ErieStat/SpringSRP/MapServer/1'
     });
 
     var selectedFeature;
@@ -141,7 +141,7 @@
 
     var labels = {};
     var pilotWatersheds = L.esri.featureLayer({
-        url: 'https://gis.glc.org/server/rest/services/ErieStat/PriorityWatersheds/MapServer/1',
+        url: 'https://gis.glc.org/server/rest/services/ErieStat/SpringSRP/MapServer/1',
         style: function(feature){
             return {
                 opacity: 0,
@@ -209,16 +209,16 @@
 
             //get the watershed name
         var w_name = name;//feature.properties.Name;
-        var m = metrics.DRP_L_S;
-        var u = units.DRP_L_S;
-//        var t = targets[w_name].DRP_L_S;
+        var m = metrics.SRP_L_S;
+        var u = units.SRP_L_S;
+//        var t = targets[w_name].SRP_L_S;
         if(!targets[w_name]){
 
 
             $("#upperChart").html("<p style='text-transform: uppercase;font-style: italic'>*DATA UNAVAILABLE FOR " + w_name + " WATERSHED</p>");
         }
         else{
-            var t = targets[w_name].DRP_L_S;
+            var t = targets[w_name].SRP_L_S;
             var w_data = getWatershedMetric(data, w_name, m);
             var data_series = [];
             for (var i = 0; i < w_data.length; i++){

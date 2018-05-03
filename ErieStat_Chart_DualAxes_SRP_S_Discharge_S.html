@@ -36,11 +36,11 @@
 
 <script>
     var data;
-    $.getJSON("data/all_data.json", function(d){
+    $.getJSON("data/all_data2.json", function(d){
         data = d;
     }).then(function(data){
         var w_name = "Maumee";
-        var series1 = metrics.DRP_L_S;
+        var series1 = metrics.SRP_L_S;
         var series2 = metrics.Discharge_S;
         var s1_data = $.map(getWatershedMetric(data, w_name, series1), function(el){
             return el.Value;
@@ -49,7 +49,7 @@
             return el.Value;
         });
 
-//        createDualAxesChart_column_line("chart1", w_name + " River " + metrics.DRP_L_S + " and " + metrics.Discharge_S, xAxis,
+//        createDualAxesChart_column_line("chart1", w_name + " River " + metrics.SRP_L_S + " and " + metrics.Discharge_S, xAxis,
 //            series1, s1_data, ColorPicker.blue7,
 //            series2, s2_data, ColorPicker.blue2);
 

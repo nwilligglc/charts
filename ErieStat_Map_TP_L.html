@@ -20,17 +20,20 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
     <script src="js/ba_chart2.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="js/export-csv_glc.js"></script>
+    <!--<script src="https://code.highcharts.com/modules/offline-exporting.js"></script>-->
+
     <link rel="stylesheet" href="css/BA_Style.css">
     <style>
-        .label div {
-            color: black;
-            position: relative;
-            left: -70%;
-            font-size: 12px;
-            font-style: italic;
-            /*text-shadow: 0px 2px 1px rgba(255,255,255,0.85);*/
-        }
+        /*.label div {*/
+            /*color: black;*/
+            /*position: relative;*/
+            /*left: -70%;*/
+            /*font-size: 12px;*/
+            /*font-style: italic;*/
+            /*!*text-shadow: 0px 2px 1px rgba(255,255,255,0.85);*!*/
+        /*}*/
     </style>
 
 
@@ -56,7 +59,7 @@
 
 <script>
     var data;
-    var serviceURL = "https://gis.glc.org/server/rest/services/ErieStat/PriorityWatersheds/MapServer";
+//    var serviceURL = "https://gis.glc.org/server/rest/services/ErieStat/PriorityWatersheds/MapServer";
     var metric = metrics.TP_L;
 
     $.getJSON("data/all_data2.json", function(d){
@@ -67,22 +70,22 @@
     L.esri.basemapLayer("Topographic").addTo(map);
 
     var watersheds = L.esri.dynamicMapLayer({
-        url: "https://gis.glc.org/server/rest/services/ErieStat/PriorityWatersheds/MapServer",
+        url: "https://gis.glc.org/server/rest/services/ErieStat/AnnualTP/MapServer",
         layers:[0, 1, 2],
         f: "image",
         opacity: 0.7
     }).addTo(map);
 
     var boundary_query = L.esri.query({
-        url: "https://gis.glc.org/server/rest/services/ErieStat/PriorityWatersheds/MapServer/0"
+        url: "https://gis.glc.org/server/rest/services/ErieStat/AnnualTP/MapServer/0"
     });
     boundary_query.bounds(function(error, latlngbounds){
         map.fitBounds(latlngbounds);
     });
 
-    var query = L.esri.query({
-        url: 'https://gis.glc.org/server/rest/services/ErieStat/PriorityWatersheds/MapServer/1'
-    });
+//    var query = L.esri.query({
+//        url: 'https://gis.glc.org/server/rest/services/ErieStat/PriorityWatersheds/MapServer/1'
+//    });
 
     var selectedFeature;
     map.on("click", function (e){
@@ -136,7 +139,7 @@
 
     var labels = {};
     var pilotWatersheds = L.esri.featureLayer({
-        url: 'https://gis.glc.org/server/rest/services/ErieStat/PriorityWatersheds/MapServer/1',
+        url: 'https://gis.glc.org/server/rest/services/ErieStat/AnnualTP/MapServer/1',
         style: function(feature){
             return {
                 opacity: 0,
@@ -144,19 +147,19 @@
             }
         }
     }).addTo(map);
-    pilotWatersheds.on('createfeature', function(e){
-        var id = e.feature.id;
-        var feature = pilotWatersheds.getFeature(id);
-        var center = feature.getBounds().getCenter();
-        var label = L.marker(center, {
-            icon: L.divIcon({
-                iconSize: null,
-                className: 'label',
-                html: '<div>' + e.feature.properties.MergeNm + '</div>'
-            })
-        }).addTo(map);
-        labels[id] = label;
-    });
+//    pilotWatersheds.on('createfeature', function(e){
+//        var id = e.feature.id;
+//        var feature = pilotWatersheds.getFeature(id);
+//        var center = feature.getBounds().getCenter();
+//        var label = L.marker(center, {
+//            icon: L.divIcon({
+//                iconSize: null,
+//                className: 'label',
+//                html: '<div>' + e.feature.properties.MergeNm + '</div>'
+//            })
+//        }).addTo(map);
+//        labels[id] = label;
+//    });
 
     pilotWatersheds.on('addfeature', function(e){
         var label = labels[e.feature.id];
