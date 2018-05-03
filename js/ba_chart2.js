@@ -313,20 +313,33 @@ function createOptions(type, series_name, data, color, title, unit, isBgImg, wid
                 load: function () {
                     var logoX = 15;
                     // var size = this.chartWidth / 10;
-                    var size = this.plotBox.x < this.plotBox.y ? this.plotBox.x : this.plotBox.y;
+                    // var size = this.plotBox.x < this.plotBox.y ? this.plotBox.x : this.plotBox.y;
+                    var size = this.plotBox.y;
                     size -= 5;
 
                     if(this.chartWidth < 500){
                         logoX = 10;
                         // size = this.chartWidth / 10;
                     }
-                    var w = this.chartWidth - this.title.alignAttr.x;
+                    var img_width = (this.chartWidth - 350)/2 - logoX;
+                    var img_height = size;
+                    // var img_url = "";
+                    if(img_width >= img_height*4){
+                        // wide logo
+                        this.renderer.image("https://c1.staticflickr.com/1/826/26966705327_f80fcd7af1_o.png", logoX, 0, size * 4, size ).add();
+                        // ErieStat logo. Change factor to 3
+                        // this.renderer.image("https://c1.staticflickr.com/1/956/27966542108_a46fd4fa96_o.png", logoX, 0, size*3 , size).add();
+                    }else{
+                        // cube logo
+                        this.renderer.image("https://c1.staticflickr.com/1/868/40969378165_8bd2c065b9_o.png", logoX, 0, size, size).add();
+                    }
+                    // var w = this.chartWidth - this.title.alignAttr.x;
                     // Blue Accounting Cube logo
                     // this.renderer.image("https://c1.staticflickr.com/1/868/40969378165_8bd2c065b9_o.png", logoX, 0, size, size).add();
                     // Blue Accouting Logo
-                    // this.renderer.image("https://c1.staticflickr.com/1/826/26966705327_f80fcd7af1_o.png", logoX, 0, size, size * 660 / 2640).add();
+                    // this.renderer.image("https://c1.staticflickr.com/1/826/26966705327_f80fcd7af1_o.png", logoX, 0, size * 4, size ).add();
                     // Blue Accounting ErieStat Logo
-                    this.renderer.image("https://c1.staticflickr.com/1/956/27966542108_a46fd4fa96_o.png", logoX, 0, size*3 , size).add();
+                    // this.renderer.image("https://c1.staticflickr.com/1/956/27966542108_a46fd4fa96_o.png", logoX, 0, size*3 , size).add();
 
                     // this.renderer.image("https://c1.staticflickr.com/5/4382/36578347693_3c6032000b_o.png", 0, 0, chart_width, chart_height).add();   //red watermark
                     if (isBgImg) {
@@ -588,7 +601,7 @@ function buildChart(data, tag, name, metric, unit, width=null, height=null){
         for (var i = 0; i < w_data.length; i++){
             data_series.push(w_data[i].Value);
         }
-        createChart(tag, "column", metric, data_series, ColorPicker.blue7, w_name + " " + metric, unit, false, t, width=width, height=height);
+        return createChart(tag, "column", metric, data_series, ColorPicker.blue7, w_name + " " + metric, unit, false, t, width=width, height=height);
     }else{
         $("#"+tag).html("<p style='text-transform: uppercase;font-style: italic'>*DATA UNAVAILABLE FOR " + w_name + " WATERSHED</p>");
     }
