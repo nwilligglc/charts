@@ -101,8 +101,8 @@
         if(selectedFeature){
             map.removeLayer(selectedFeature);
         }
-        watersheds.identify().on(map).at(e.latlng).run(function (error, featureCollection){
-            if(featureCollection.features.length >1){
+        watersheds.identify().on(map).at(e.latlng).layers("visible:1").simplify(map, 0.5).run(function (error, featureCollection){
+            if(featureCollection.features.length >0){
                 for(var i = 0; i < featureCollection.features.length; i++){
                     if (featureCollection.features[i].layerId == 1){
                         selectedFeature = L.geoJSON(featureCollection.features[i]);
@@ -112,6 +112,7 @@
 //                            color: "#07fcf0"
                             color: "#F3A51E"
                         });
+//                        map
                         selectedFeature.addTo(map);
                         var name = featureCollection.features[i].properties["Watershed Name"];
                         buildNarratives(name);

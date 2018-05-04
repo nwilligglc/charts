@@ -92,7 +92,7 @@
         if(selectedFeature){
             map.removeLayer(selectedFeature);
         }
-        watersheds.identify().on(map).at(e.latlng).run(function (error, featureCollection){
+        watersheds.identify().on(map).at(e.latlng).layers("visible:1").simplify(map, 0.5).run(function (error, featureCollection){
             if(featureCollection.features.length >1){
                 for(var i = 0; i < featureCollection.features.length; i++){
                     if (featureCollection.features[i].layerId == 1){
