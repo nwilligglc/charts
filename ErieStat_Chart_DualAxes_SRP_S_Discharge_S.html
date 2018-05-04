@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Annual TP Loading in ErieStat Watersheds</title>
+    <title>Dual Axes Charts</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css">
     <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
     <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"></script>
@@ -20,6 +20,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
     <script src="js/ba_chart2.js"></script>
+    <script src="js/export-csv_glc.js"></script>
     <link rel="stylesheet" href="css/BA_Style.css">
     <script>
 
@@ -39,7 +40,7 @@
     $.getJSON("data/all_data2.json", function(d){
         data = d;
     }).then(function(data){
-        var w_name = "Maumee";
+        var w_name = "Sandusky";
         var series1 = metrics.SRP_L_S;
         var series2 = metrics.Discharge_S;
         var s1_data = $.map(getWatershedMetric(data, w_name, series1), function(el){
@@ -58,6 +59,7 @@
             w_name + " River " + series1 + " and " + series2, xAxis,
             series1, s1_data, units[series1], ColorPicker.blue7,
             series2, s2_data, units[series2], ColorPicker.blue2));
+        addTargetLine(chart1, targets[watershedNames[w_name]][series1], series1);
 
 //        var chart2 = Highcharts.chart("chart2", createDualAxesOptions_column_area(
 //            w_name + " River " + series1 + " and " + series2, xAxis,
