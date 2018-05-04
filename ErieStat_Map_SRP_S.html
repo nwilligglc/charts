@@ -68,7 +68,7 @@
 
 <script>
     var data;
-//    var serviceURL = "https://gis.glc.org/server/rest/services/ErieStat/PriorityWatersheds/MapServer";
+    var serviceURL = "https://gis.glc.org/server/rest/services/ErieStat/SpringSRP/MapServer";
     var metric = metrics.SRP_L_S;
 
     $.getJSON("data/all_data2.json", function(d){
@@ -79,14 +79,14 @@
     L.esri.basemapLayer("Topographic").addTo(map);
 
     var watersheds = L.esri.dynamicMapLayer({
-        url: "https://gis.glc.org/server/rest/services/ErieStat/SpringDRP/MapServer",
+        url: serviceURL,
         layers:[0, 1, 2],
         f: "image",
         opacity: 0.7
     }).addTo(map);
 
     var boundary_query = L.esri.query({
-        url: "https://gis.glc.org/server/rest/services/ErieStat/SpringDRP/MapServer/0"
+        url: serviceURL + "/0"
     });
     boundary_query.bounds(function(error, latlngbounds){
         map.fitBounds(latlngbounds);
@@ -104,26 +104,23 @@
         watersheds.identify().on(map).at(e.latlng).layers("visible:1").simplify(map, 0.5).run(function (error, featureCollection){
             if(featureCollection.features.length >0){
                 for(var i = 0; i < featureCollection.features.length; i++){
-                    if (featureCollection.features[i].layerId == 1){
-                        selectedFeature = L.geoJSON(featureCollection.features[i]);
-                        selectedFeature.setStyle({
-                            fill: false,
-                            weight: 4,
+                    selectedFeature = L.geoJSON(featureCollection.features[i]);
+                    selectedFeature.setStyle({
+                        fill: false,
+                        weight: 4,
 //                            color: "#07fcf0"
-                            color: "#F3A51E"
-                        });
-//                        map
-                        selectedFeature.addTo(map);
-                        var name = featureCollection.features[i].properties["Watershed Name"];
-                        buildNarratives(name);
-                        var temp = window.innerHeight  - $("#narrative-section").height() - 300;
-                        buildChart(data, "upperChart", name, metric, units[metric], null, (window.innerHeight  - $("#narrative-section").height()) * 0.8);
+                        color: "#F3A51E"
+                    });
+                    selectedFeature.addTo(map);
+                    var name = featureCollection.features[i].properties["Watershed Name"];
+                    buildNarratives(name);
+                    var temp = window.innerHeight  - $("#narrative-section").height() - 300;
+                    buildChart(data, "upperChart", name, metric, units[metric], null, (window.innerHeight  - $("#narrative-section").height()) * 0.8);
 
 //                        query.where("MergeNm='"+ name +"'").bounds(function(error, latLngBounds, response){
 //                            map.fitBounds(latLngBounds);
 //                        });
-                        break;
-                    }
+                    break;
                 }
             }
         })
@@ -147,16 +144,16 @@
      * Section added for labels
      */
 
-    var labels = {};
-    var pilotWatersheds = L.esri.featureLayer({
-        url: 'https://gis.glc.org/server/rest/services/ErieStat/PriorityWatersheds/MapServer/1',
-        style: function(feature){
-            return {
-                opacity: 0,
-                fill: false
-            }
-        }
-    }).addTo(map);
+//    var labels = {};
+//    var pilotWatersheds = L.esri.featureLayer({
+//        url: 'https://gis.glc.org/server/rest/services/ErieStat/PriorityWatersheds/MapServer/1',
+//        style: function(feature){
+//            return {
+//                opacity: 0,
+//                fill: false
+//            }
+//        }
+//    }).addTo(map);
 //    pilotWatersheds.on('createfeature', function(e){
 //        var id = e.feature.id;
 //        var feature = pilotWatersheds.getFeature(id);
@@ -171,19 +168,19 @@
 //        labels[id] = label;
 //    });
 
-    pilotWatersheds.on('addfeature', function(e){
-        var label = labels[e.feature.id];
-        if(label){
-            label.addTo(map);
-        }
-    });
-
-    pilotWatersheds.on('removefeature', function(e){
-        var label = labels[e.feature.id];
-        if(label){
-            map.removeLayer(label);
-        }
-    });
+//    pilotWatersheds.on('addfeature', function(e){
+//        var label = labels[e.feature.id];
+//        if(label){
+//            label.addTo(map);
+//        }
+//    });
+//
+//    pilotWatersheds.on('removefeature', function(e){
+//        var label = labels[e.feature.id];
+//        if(label){
+//            map.removeLayer(label);
+//        }
+//    });
     /***
      * End of section
      * */
