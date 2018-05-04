@@ -406,6 +406,44 @@ function createDualAxesOptions_column_line(title, x_axis, s1_name, s1_data, s1_u
                 // fontFamily: 'Lato Regular, sans-serif',
                 color: ColorPicker.body
             },
+            events: {
+                load: function () {
+                    var logoX = 15;
+                    // var size = this.chartWidth / 10;
+                    // var size = this.plotBox.x < this.plotBox.y ? this.plotBox.x : this.plotBox.y;
+                    var size = this.plotBox.y;
+                    size -= 5;
+
+                    if(this.chartWidth < 500){
+                        logoX = 10;
+                        // size = this.chartWidth / 10;
+                    }
+                    var img_width = (this.chartWidth - 350)/2 - logoX;
+                    var img_height = size;
+                    // var img_url = "";
+                    if(img_width >= img_height*4){
+                        // wide logo
+                        this.renderer.image("https://c1.staticflickr.com/1/826/26966705327_f80fcd7af1_o.png", logoX, 0, size * 4, size ).add();
+                        // ErieStat logo. Change factor to 3
+                        // this.renderer.image("https://c1.staticflickr.com/1/956/27966542108_a46fd4fa96_o.png", logoX, 0, size*3 , size).add();
+                    }else{
+                        // cube logo
+                        this.renderer.image("https://c1.staticflickr.com/1/868/40969378165_8bd2c065b9_o.png", logoX, 0, size, size).add();
+                    }
+                    // var w = this.chartWidth - this.title.alignAttr.x;
+                    // Blue Accounting Cube logo
+                    // this.renderer.image("https://c1.staticflickr.com/1/868/40969378165_8bd2c065b9_o.png", logoX, 0, size, size).add();
+                    // Blue Accouting Logo
+                    // this.renderer.image("https://c1.staticflickr.com/1/826/26966705327_f80fcd7af1_o.png", logoX, 0, size * 4, size ).add();
+                    // Blue Accounting ErieStat Logo
+                    // this.renderer.image("https://c1.staticflickr.com/1/956/27966542108_a46fd4fa96_o.png", logoX, 0, size*3 , size).add();
+
+                    // this.renderer.image("https://c1.staticflickr.com/5/4382/36578347693_3c6032000b_o.png", 0, 0, chart_width, chart_height).add();   //red watermark
+//                if (isBgImg) {
+//                    this.renderer.image("img/background_draft.png", this.plotLeft, this.plotTop, this.plotWidth, this.plotHeight).add(); //grey watermark
+//                }
+                }
+            }
         },
         title: {
             text: title,
@@ -454,7 +492,8 @@ function createDualAxesOptions_column_line(title, x_axis, s1_name, s1_data, s1_u
             yAxis: 1,
             unit: s2_unit,
             data: s2_data,
-            color: s2_color
+            color: s2_color,
+            visible: false
             // tooltip: {
             //     valueSuffix: '°C'
             // }
@@ -544,11 +583,11 @@ function createDualAxesOptions_column_area(title, x_axis, s1_name, s1_data, s1_u
 
 }
 
-function addTargetLine(chart, target) {
+function addTargetLine(chart, target, title) {
     chart.addSeries({
         type: 'line',
         data: createTargetSeries(target, xAxis),
-        name: 'Target',
+        name: buildTargetTitle(title) ,
         color: ColorPicker.target_red,
         lineWidth: 3,
         marker: {
@@ -563,6 +602,14 @@ function createTargetSeries(val, xAxis) {
         s.push(val)
     });
     return s;
+};
+
+function buildTargetTitle(title){
+    if(title){
+        return title + " Target";
+    }else{
+        return 'Target';
+    }
 };
 
 function getStandardWatershedName(w_name){
