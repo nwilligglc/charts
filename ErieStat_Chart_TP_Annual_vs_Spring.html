@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dual Axes Charts</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"></script>
+    <!-- Load Esri Leaflet from CDN -->
+    <script src="https://unpkg.com/esri-leaflet@2.1.3/dist/esri-leaflet.js"></script>
+    <script src="//code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!--&lt;!&ndash; Optional theme &ndash;&gt;-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!--&lt;!&ndash; Latest compiled and minified JavaScript &ndash;&gt;-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script src="js/ba_chart2.js"></script>
+    <script src="js/export-csv_glc.js"></script>
+    <link rel="stylesheet" href="css/BA_Style.css">
+    <script>
+
+    </script>
+</head>
+<body>
+<div>
+    <div id="chart-canvas" style="margin-right: 20px">
+        <div id="chart1"></div>
+        <div id="chart2"></div>
+        <div id="chart3"></div>
+    </div>
+</div>
+
+<script>
+    var data;
+    $.getJSON("data/all_data2.json", function(d){
+        data = d;
+    }).then(function(data){
+        var w_name = "Maumee";
+        var series1 = metrics.TP_L;
+        var series2 = metrics.TP_L_S;
+        var s1_data = $.map(getWatershedMetric(data, w_name, series1), function(el){
+            return el.Value;
+        });
+        var s2_data = $.map(getWatershedMetric(data, w_name, series2), function(el){
+            return el.Value;
+        });
+
+//        createDualAxesChart_column_line("chart1", w_name + " River " + metrics.SRP_L_S + " and " + metrics.Discharge_S, xAxis,
+//            series1, s1_data, ColorPicker.blue7,
+//            series2, s2_data, ColorPicker.blue2);
+
+        //var o = createDualAxesOptions_column_area(title, x_axis, s1_name, s1_data, s1_color, s2_name, s2_data, s2_color);
+        var chart1 = Highcharts.chart("chart1", createDualAxesOptions_column_column(
+            w_name + " River " + series1 + " and " + series2, xAxis,
+            series1, s1_data, units[series1], ColorPicker.blue7,
+            series2, s2_data, units[series2], ColorPicker.blue6));
+        addTargetLine(chart1, targets[watershedNames[w_name]][series1], series1);
+        addTargetLine_Second(chart1,targets[watershedNames[w_name]][series2], series2);
+
+//       var chart2 = Highcharts.chart("chart2", createDualAxesOptions_column_area(
+//           w_name + " River " + series1 + " and " + series2, xAxis,
+//           series1, s1_data, units[series1], ColorPicker.blue7,
+//           series2, s2_data, units[series2], ColorPicker.blue2));
+//        addTargetLine(chart2, targets[watershedNames[w_name]][series1], series1);
+
+        //return chart;
+    });
+
+</script>
+</body>
+</html>
