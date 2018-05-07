@@ -1,10 +1,12 @@
 var mapID = "918102a3bff04636924faa2d1915cae1";
 
+var introText = "Click the watershed of interest to see available data.";
+
 var narratives = {
-    "River Raisin": "The River Raisin is a river in southeastern Michigan that flows into Lake Erie. The area today is an agricultural and industrial center of Michigan. The river flows for almost 150 miles (241 km), draining an area of 1,072 square miles (2,780 km<sup>2</sup>) in the Michigan counties of Lenawee, Washtenaw, Jackson, Hillsdale, a portion of Fulton County, Ohio. The mouth of the river is located in Monroe County, Michigan <a href=\"https://www.riverraisin.org/watershed-facts\">(River Raisin Watershed Council)</a>.",
-    "Maumee River": "The Maumee River watershed is located in northwestern Ohio and drains a total of 5,024 square miles in Ohio, flowing through all or part of 18 counties. Major municipalities in the watershed include Toledo, Defiance, Findlay, Lima, Van Wert, Napoleon and Perrysburg. The watershed is predominantly comprised of cultivated crops with some urban development, hay and pasture lands, and forest <a href=\"http://epa.ohio.gov/dsw/tmdl/PortageToussaintRivers.aspx\">(Ohio EPA)</a>.",
-    "Portage River": "The Portage River is located in northwestern Ohio. The Portage River flows into Lake Erie at Port Clinton in Ottawa County. The watershed is distributed across Ottawa, Sandusky, Hancock and Wood counties with a small portion in Seneca County. Land use in the watershed is comprised predominantly of 78 percent cultivated cropland, 11 percent developed land and 5 percent forest. The city of McComb obtains its drinking water from Rader Creek, North Baltimore from Rocky Ford Creek and Fostoria from the East Branch of the Portage River <a href=\"http://epa.ohio.gov/dsw/tmdl/PortageToussaintRivers.aspx\">(Ohio EPA)</a>.",
-    "Sandusky River": "The Sandusky River and Sandusky Bay watersheds are located in northwestern Ohio. They drain a total of 1,828 square miles and flow through all or part of 12 counties. Major municipalities in the watershed include Sandusky, Fremont, Tiffin, Bucyrus and Upper Sandusky. The watersheds are predominantly comprised of cultivated crops with some areas of urban development and pasture and hay lands. Wetlands are located in the northern portion of the watersheds <a href=\"http://epa.ohio.gov/dsw/tmdl/PortageToussaintRivers.aspx\">(Ohio EPA)</a>.",
+    "River Raisin": "The River Raisin is a river in southeastern Michigan that flows into Lake Erie. The area today is an agricultural and industrial center of Michigan. The river flows for almost 150 miles (241 km), draining an area of 1,072 square miles (2,780 km<sup>2</sup>) in the Michigan counties of Lenawee, Washtenaw, Jackson, Hillsdale, a portion of Fulton County, Ohio. The mouth of the river is located in Monroe County, Michigan <a href=\"https://www.riverraisin.org/watershed-facts\" target='_blank'>(River Raisin Watershed Council)</a>.",
+    "Maumee River": "The Maumee River watershed is located in northwestern Ohio and drains a total of 5,024 square miles in Ohio, flowing through all or part of 18 counties. Major municipalities in the watershed include Toledo, Defiance, Findlay, Lima, Van Wert, Napoleon and Perrysburg. The watershed is predominantly comprised of cultivated crops with some urban development, hay and pasture lands, and forest <a href=\"http://epa.ohio.gov/dsw/tmdl/MaumeeRiver.aspx\" target='_blank'>(Ohio EPA)</a>.",
+    "Portage River": "The Portage River is located in northwestern Ohio. The Portage River flows into Lake Erie at Port Clinton in Ottawa County. The watershed is distributed across Ottawa, Sandusky, Hancock and Wood counties with a small portion in Seneca County. Land use in the watershed is comprised predominantly of 78 percent cultivated cropland, 11 percent developed land and 5 percent forest. The city of McComb obtains its drinking water from Rader Creek, North Baltimore from Rocky Ford Creek and Fostoria from the East Branch of the Portage River <a href=\"http://epa.ohio.gov/dsw/tmdl/PortageToussaintRivers.aspx\" target='_blank'>(Ohio EPA)</a>.",
+    "Sandusky River": "The Sandusky River and Sandusky Bay watersheds are located in northwestern Ohio. They drain a total of 1,828 square miles and flow through all or part of 12 counties. Major municipalities in the watershed include Sandusky, Fremont, Tiffin, Bucyrus and Upper Sandusky. The watersheds are predominantly comprised of cultivated crops with some areas of urban development and pasture and hay lands. Wetlands are located in the northern portion of the watersheds <a href=\"http://epa.ohio.gov/dsw/tmdl/SanduskyRiver.aspx\" target='_blank'>(Ohio EPA)</a>.",
     "Thames River": "The Thames River is 280 km long, draining approximately 5,800 km2 of Southwestern Ontario to Lake St. Clair. The watershed is primarily (approximately 80%) agricultural, but also contains cities and towns such as London, Woodstock, Chatham, as well as numerous smaller urban areas, with a total population of approximately 600,000 people."
 };
 
@@ -67,7 +69,7 @@ var metrics = {
     "TP_FWMS_S": "Spring TP FWMC",
     "SRP_FWMC_S": "Spring SRP FWMC",
     "Discharge_S": "Spring Discharge"
-}
+};
 
 var units = {
     "Annual TP Loading": "Metric Tons",
@@ -80,7 +82,7 @@ var units = {
     "Spring TP FWMC": "milligrams / liter",
     "Spring SRP FWMC": "milligrams / liter",
     "Spring Discharge": "million cubic meters"
-}
+};
 
 var targets = {
     "Maumee River": {
@@ -115,7 +117,7 @@ var targets = {
     "Cuyahoga River": {
         "Annual TP Loading": 271,
     }
-}
+};
 
 function BA_Charts(){}
 // BA_Charts.prototype.data;
@@ -266,7 +268,7 @@ function getWatershedMetric(in_data, w_name, metric){
     return vals;
 }
 
-function createChart(div, type, series_name, data, color, title, unit, isBgImg=1, target=0, width=null, height = null){
+function createChart(div, type, series_name, data, color, title, unit, isBgImg, target, width, height){
     var o = createOptions(type, series_name, data, color, title, unit, isBgImg, width, height);
     var chart = Highcharts.chart(div, o);
     if(target){
@@ -398,7 +400,7 @@ function createOptions(type, series_name, data, color, title, unit, isBgImg, wid
     };
 }
 
-function createDualAxesOptions_column_line(title, x_axis, s1_name, s1_data, s1_unit, s1_color, s2_name, s2_data, s2_unit, s2_color){
+function createDualAxesOptions_column_line(title, x_axis, s1_name, s1_data, s1_unit, s1_color, s2_name, s2_data, s2_unit, s2_color, s2_visible){
     return {
         chart: {
             height: window.innerHeight * 0.65, //chart_height,
@@ -493,7 +495,122 @@ function createDualAxesOptions_column_line(title, x_axis, s1_name, s1_data, s1_u
             unit: s2_unit,
             data: s2_data,
             color: s2_color,
-            visible: false
+            visible: isSeriesVisible(s2_visible)
+            // tooltip: {
+            //     valueSuffix: '°C'
+            // }
+        }]
+    }
+
+}
+
+function isSeriesVisible(isVisible) {
+    if(isVisible != false){
+        return true;
+    }else{
+        return false;
+    }
+}
+
+function createDualAxesOptions_column_column(title, x_axis, s1_name, s1_data, s1_unit, s1_color, s2_name, s2_data, s2_unit, s2_color){
+    return {
+        chart: {
+            type: "column",
+            height: window.innerHeight * 0.65, //chart_height,
+            style: {
+                // fontFamily: 'Lato Regular, sans-serif',
+                color: ColorPicker.body
+            },
+            events: {
+                load: function () {
+                    var logoX = 15;
+                    // var size = this.chartWidth / 10;
+                    // var size = this.plotBox.x < this.plotBox.y ? this.plotBox.x : this.plotBox.y;
+                    var size = this.plotBox.y;
+                    size -= 5;
+
+                    if(this.chartWidth < 500){
+                        logoX = 10;
+                        // size = this.chartWidth / 10;
+                    }
+                    var img_width = (this.chartWidth - 350)/2 - logoX;
+                    var img_height = size;
+                    // var img_url = "";
+                    if(img_width >= img_height*4){
+                        // wide logo
+                        this.renderer.image("https://c1.staticflickr.com/1/826/26966705327_f80fcd7af1_o.png", logoX, 0, size * 4, size ).add();
+                        // ErieStat logo. Change factor to 3
+                        // this.renderer.image("https://c1.staticflickr.com/1/956/27966542108_a46fd4fa96_o.png", logoX, 0, size*3 , size).add();
+                    }else{
+                        // cube logo
+                        this.renderer.image("https://c1.staticflickr.com/1/868/40969378165_8bd2c065b9_o.png", logoX, 0, size, size).add();
+                    }
+                    // var w = this.chartWidth - this.title.alignAttr.x;
+                    // Blue Accounting Cube logo
+                    // this.renderer.image("https://c1.staticflickr.com/1/868/40969378165_8bd2c065b9_o.png", logoX, 0, size, size).add();
+                    // Blue Accouting Logo
+                    // this.renderer.image("https://c1.staticflickr.com/1/826/26966705327_f80fcd7af1_o.png", logoX, 0, size * 4, size ).add();
+                    // Blue Accounting ErieStat Logo
+                    // this.renderer.image("https://c1.staticflickr.com/1/956/27966542108_a46fd4fa96_o.png", logoX, 0, size*3 , size).add();
+
+                    // this.renderer.image("https://c1.staticflickr.com/5/4382/36578347693_3c6032000b_o.png", 0, 0, chart_width, chart_height).add();   //red watermark
+//                if (isBgImg) {
+//                    this.renderer.image("img/background_draft.png", this.plotLeft, this.plotTop, this.plotWidth, this.plotHeight).add(); //grey watermark
+//                }
+                }
+            }
+        },
+        title: {
+            text: title,
+            style: {
+                color: ColorPicker.body
+            }
+        },
+        credits: {
+            enabled: false,
+            // href: "http://www.glc.org",
+            // text: "Great Lakes Commission"
+        },
+        xAxis: [{
+            categories: x_axis,
+            crosshair: true
+        }],
+        yAxis: [{ // Primary yAxis
+            title: {
+                text: s1_unit,
+                style: {
+                    color: s1_color
+                }
+            }
+        // }, { // Secondary yAxis
+        //     title: {
+        //         text: s2_name + "<br>(" + s2_unit + ")",
+        //         style: {
+        //             color: s2_color
+        //         }
+        //     },
+        //     opposite: true
+        }],
+        plotOptions:{
+
+        },
+        series: [{
+            name: s1_name,
+            // type: "column",
+            unit: s1_unit,
+            data: s1_data,
+            color: s1_color
+            // tooltip: {
+            //     valueSuffix: ' mm'
+            // }
+
+        }, {
+            name: s2_name,
+            // type: "column",
+            // yAxis: 1,
+            unit: s2_unit,
+            data: s2_data,
+            color: s2_color,
             // tooltip: {
             //     valueSuffix: '°C'
             // }
@@ -593,6 +710,20 @@ function addTargetLine(chart, target, title) {
         marker: {
             radius: 0
         },
+    })
+};
+
+function addTargetLine_Second(chart, target, title) {
+    chart.addSeries({
+        type: 'line',
+        data: createTargetSeries(target, xAxis),
+        name: buildTargetTitle(title) ,
+        color: ColorPicker.target_red,
+        lineWidth: 3,
+        marker: {
+            radius: 0
+        },
+        dashStyle: 'shortdot'
     })
 };
 
