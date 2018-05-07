@@ -61,10 +61,11 @@
             series2, s2_data, units[series2], ColorPicker.blue2));
         addTargetLine(chart1, targets[watershedNames[w_name]][series1], series1);
 
-//        var chart2 = Highcharts.chart("chart2", createDualAxesOptions_column_area(
-//            w_name + " River " + series1 + " and " + series2, xAxis,
-//            series1, s1_data, units[series1], ColorPicker.blue7,
-//            series2, s2_data, units[series2], ColorPicker.blue2));
+       var chart2 = Highcharts.chart("chart2", createDualAxesOptions_column_area(
+           w_name + " River " + series1 + " and " + series2, xAxis,
+           series1, s1_data, units[series1], ColorPicker.blue7,
+           series2, s2_data, units[series2], ColorPicker.blue2));
+        addTargetLine(chart2, targets[watershedNames[w_name]][series1], series1);
 
         //return chart;
     });
