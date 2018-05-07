@@ -46,12 +46,14 @@
         /*background: rgba(255, 255, 255, 0.8);*/
         /*color: black;*/
     /*}*/
+
 </style>
 <div>
     <div id="map"></div>
     <!--<div id="legend">Legend here</div>-->
     <div class="vl"></div>
     <div id="right-panel">
+        <div id="intro"></div>
         <div id="narrative-section">
             <p id="narrative-caption"></p>
             <p id="narrative-content"></p>
@@ -70,6 +72,9 @@
     var data;
     var serviceURL = "https://gis.glc.org/server/rest/services/ErieStat/SpringSRP/MapServer";
     var metric = metrics.SRP_L_S;
+
+    $("#intro").html(intro_SRP);
+
 
     $.getJSON("data/all_data2.json", function(d){
         data = d;
@@ -103,6 +108,7 @@
         }
         watersheds.identify().on(map).at(e.latlng).layers("visible:1").simplify(map, 0.5).run(function (error, featureCollection){
             if(featureCollection.features.length >0){
+                $("#intro").css("visibility", "hidden");
                 for(var i = 0; i < featureCollection.features.length; i++){
                     selectedFeature = L.geoJSON(featureCollection.features[i]);
                     selectedFeature.setStyle({
@@ -120,6 +126,8 @@
 //                        query.where("MergeNm='"+ name +"'").bounds(function(error, latLngBounds, response){
 //                            map.fitBounds(latLngBounds);
 //                        });
+
+
                     break;
                 }
             }

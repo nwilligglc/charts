@@ -43,6 +43,7 @@
     <div id="map"></div>
     <div class="vl"></div>
     <div id="right-panel">
+        <div id="intro"></div>
         <div id="narrative-section">
             <p id="narrative-caption"></p>
             <p id="narrative-content"></p>
@@ -61,6 +62,8 @@
     var data;
     var serviceURL = "https://gis.glc.org/server/rest/services/ErieStat/AnnualTP/MapServer";
     var metric = metrics.TP_L;
+
+    $("#intro").html(intro_TP);
 
     $.getJSON("data/all_data2.json", function(d){
         data = d;
@@ -94,6 +97,7 @@
         }
         watersheds.identify().on(map).at(e.latlng).layers("visible:1").simplify(map, 0.5).run(function (error, featureCollection){
             if(featureCollection.features.length > 0){
+                $("#intro").css("visibility", "hidden");
                 for(var i = 0; i < featureCollection.features.length; i++){
                     selectedFeature = L.geoJSON(featureCollection.features[i]);
                     selectedFeature.setStyle({

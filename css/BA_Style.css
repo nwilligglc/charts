@@ -24,9 +24,10 @@ body{
     font-style: italic;
     position: absolute;
     top:50%;
-    left: 60%;
+    left: 52%;
+    margin-right: 2%;
     text-align: center;
-    text-transform: capitalize;
+    /*text-transform: capitalize;*/
 }
 #narrative-section{
     height: 20%;
