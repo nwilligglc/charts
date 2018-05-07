@@ -20,6 +20,14 @@ body{
     padding-left: 6px;
     margin-right: 10px;
 }
+#intro{
+    font-style: italic;
+    position: absolute;
+    top:50%;
+    left: 60%;
+    text-align: center;
+    text-transform: capitalize;
+}
 #narrative-section{
     height: 20%;
 }
