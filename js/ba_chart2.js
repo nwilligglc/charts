@@ -404,10 +404,10 @@ function createOptions(type, series_name, data, color, title, unit, isBgImg, wid
     };
 }
 
-function createDualAxesOptions_column_line(title, x_axis, s1_name, s1_data, s1_unit, s1_color, s2_name, s2_data, s2_unit, s2_color, s2_visible){
+function createDualAxesOptions_column_line(title, x_axis, s1_name, s1_data, s1_unit, s1_color, s2_name, s2_data, s2_unit, s2_color, s2_visible, height){
     return {
         chart: {
-            height: window.innerHeight * 0.65, //chart_height,
+            height: height,//window.innerHeight * 0.65, //chart_height,
             style: {
                 // fontFamily: 'Lato Regular, sans-serif',
                 color: ColorPicker.body
