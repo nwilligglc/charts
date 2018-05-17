@@ -794,6 +794,6 @@ function buildChart(data, tag, name, metric, unit, width=null, height=null){
         }
         return createChart(tag, "column", metric, data_series, ColorPicker.blue7, w_name + " " + metric, unit, false, t, width=width, height=height);
     }else{
-        $("#"+tag).html("<p style='text-transform: uppercase;font-style: italic'>*DATA UNAVAILABLE FOR " + watershedNames[w_name] + " WATERSHED</p>");
+        $("#"+tag).html("<p style='text-transform: uppercase;font-style: italic'>*DATA UNAVAILABLE FOR " + w_name + " WATERSHED</p>");
     }
 }
