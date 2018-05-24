@@ -99,19 +99,19 @@ var units = {
 
 var targets = {
     "Maumee River": {
-        "Annual TP Loading": 2288,
+        "Annual TP Loading": 2287,
         "Spring TP Loading": 860,
         "Spring SRP Loading": 186,
         "Spring TP FWMC": 0.23,
         "Spring SRP FWMC": 0.05
     },
-    // "Portage River": {
-    //     "Annual TP Loading": 0,
-    //     "Spring TP Loading": 0,
-    //     "Spring SRP Loading": 0,
-    //     "Spring TP FWMC": 0,
-    //     "Spring SRP FWMC": 0
-    // },
+    "Portage River": {
+        "Annual TP Loading": 215,
+        // "Spring TP Loading": 0,
+        // "Spring SRP Loading": 0,
+        // "Spring TP FWMC": 0,
+        // "Spring SRP FWMC": 0
+    },
     // "River Raisin": {
     //     "Annual TP Loading": 0,
     //     "Spring TP Loading": 0,
@@ -121,7 +121,7 @@ var targets = {
     // },
 
     "Sandusky River": {
-        "Annual TP Loading": 661,
+        "Annual TP Loading": 660,
         "Spring TP Loading": 230,
         "Spring SRP Loading": 43,
         "Spring TP FWMC": 0.23,
@@ -393,6 +393,7 @@ function createOptions(type, series_name, data, color, title, unit, isBgImg, wid
                 // margin: 50,
                 // rotation: 0,
             },
+            min: 0,
             // lineColor: '#ff0000',
             // lineWidth: 2
         },
@@ -489,6 +490,7 @@ function createDualAxesOptions_column_line(title, x_axis, s1_name, s1_data, s1_u
                     color: s2_color
                 }
             },
+            min: 0,
             opposite: true
         }],
         series: [{
@@ -793,6 +795,35 @@ function buildChart(data, tag, name, metric, unit, width=null, height=null){
             data_series.push(w_data[i].Value);
         }
         return createChart(tag, "column", metric, data_series, ColorPicker.blue7, w_name + " " + metric, unit, false, t, width=width, height=height);
+    }else{
+        $("#"+tag).html("<p style='text-transform: uppercase;font-style: italic'>*DATA UNAVAILABLE FOR " + w_name + " WATERSHED</p>");
+    }
+}
+
+function buildChart_line(data, tag, name, metric, unit, width=null, height=null){
+    /**
+     * Build two charts for each watershed, using the BA library
+     */
+
+        //get the watershed name
+    var w_name = watershedNames[name];//feature.properties.Name;
+    // var m = metrics.SRP_L_S;
+    // var u = units.SRP_L_S;
+    var w_data = getWatershedMetric(data, w_name, metric);
+    if(w_data.length > 0){
+        var t = undefined;
+        if(targets[w_name] && targets[w_name][metric]){
+
+            t = targets[w_name][metric];
+
+        }
+
+        // var t = targets[w_name][metric];
+        var data_series = [];
+        for (var i = 0; i < w_data.length; i++){
+            data_series.push(w_data[i].Value);
+        }
+        return createChart(tag, "line", metric, data_series, ColorPicker.blue7, w_name + " " + metric, unit, false, t, width=width, height=height);
     }else{
         $("#"+tag).html("<p style='text-transform: uppercase;font-style: italic'>*DATA UNAVAILABLE FOR " + w_name + " WATERSHED</p>");
     }
