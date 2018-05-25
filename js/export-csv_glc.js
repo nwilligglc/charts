@@ -6,7 +6,7 @@
  * Version:  1.4.7
  * 
  * Forked by Siyu Fan @ The Great Lakes Commission
- * Allow the user to hide data table
+ * Disabled CSV export and data table
  */
 /*global Highcharts, window, document, Blob */
 (function (factory) {
