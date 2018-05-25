@@ -1,15 +1,4 @@
-/**
-    Color definition copied over from the JS file.
-    blue1: '#1c2d5a';
-    blue2: '#afdfe4';
-    blue3: '#7eb4d2';
-    blue4: '#7ed3f7';
-    blue5: '#188ccc';
-    blue6: '#00b0e6';
-    blue7: '#1b75ba';
- */
 body{
-    /*font-family: Lato, sans-serif;*/
     font-family: "Montserrat", sans-serif;
     margin: 0;
     padding: 0;
@@ -62,6 +51,7 @@ body{
     cursor: pointer;
     padding: 14px 16px;
     transition: 0.3s;
+    font-family: "Montserrat", sans-serif;
 }
 
 /* Change background color of buttons on hover */
@@ -124,14 +114,6 @@ body{
     font-weight: bold;
     font-size: 18px;
 }
-/*.svg.highcharts-root text{*/
-    /*font-family: 'Lato', sans-serif;*/
-/*}*/
-/*.highcharts-axis text{*/
-    /*font-family: 'Lato', sans-serif;*/
-    /*font-size: large;*/
-/*}*/
-
 .highcharts-legend-item text{
     font-family: "Montserrat", sans-serif;
     font-size: 12px;

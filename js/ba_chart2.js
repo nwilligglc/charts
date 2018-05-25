@@ -1,7 +1,5 @@
 var mapID = "918102a3bff04636924faa2d1915cae1";
 
-var introText = "Click the watershed of interest to see available data.";
-
 var intro_SRP = "Models have indicated that Maumee River spring (March 1 – July 31) phosphorus loads drive the algal blooms in the WLEB, but other tributary loads also contribute to the bloom. Spring phosphorus reduction targets (40 percent of 2008 loads) were established for eight priority watersheds in the WLEB for both total and soluble reactive phosphorus (SRP). SRP refers to phosphorus that is in a dissolved state and is of particular interest because it is the easiest form of phosphorus for algae to use to fuel growth. Click on the watershed of interest to see available data.";
 var intro_TP = "The annual phosphorus loads drive of Central Basin hypoxia (i.e., low oxygen conditions that can cause dead zones), based on modeling. Therefore, targets to address hypoxia focus on annual loads from all tributaries. Twelve priority watersheds were identified and assigned with a target to reduce annual total phosphorus (TP) load by 40 percent of the 2008 load. Click on the watershed of interest to see available data.";
 var intro_FWMC = "The flow-weighted mean concentration (FWMC) adjusts phosphorus loads to normalize for tributary flow, which enables year-by-year comparisons that are not confounded by changes in flow. Click on the watershed of interest to see available data.";
@@ -20,7 +18,7 @@ var narratives = {
     "Sandusky River": "The Sandusky River and Sandusky Bay watersheds are located in northwestern Ohio. They drain a total of 1,828 square miles (4,734 km<sup>2</sup>) and flow through all or part of 12 counties. Major municipalities in the watershed include Sandusky, Fremont, Tiffin, Bucyrus and Upper Sandusky. The watersheds are predominantly comprised of cultivated crops with some areas of urban development and pasture and hay lands. Wetlands are located in the northern portion of the watersheds.",
     "Thames River": "The Thames River is 280 km (174 miles) long, draining approximately 5,800 km<sup>2</sup> (2,239 sq. mi.) of Southwestern Ontario to Lake St. Clair. The watershed is primarily (approximately 80%) agricultural, but also contains cities and towns such as London, Woodstock, Chatham, as well as numerous smaller urban areas, with a total population of approximately 600,000 people.",
     "Toussaint Creek": "",
-    "Vermillion River": "The Vermilion River watershed is located in northern Ohio, west of Cleveland.  It drains 269 square miles (697 km<sup>2</sup>) and flows through part of five counties.  Land use in the watershed is predominantly comprised of cultivated crops with pockets of pasture and hay lands, urban development and forest.  Municipalities include Vermilion, New London, Greenwich and Wakeman."
+    "Vermilion River": "The Vermilion River watershed is located in northern Ohio, west of Cleveland.  It drains 269 square miles (697 km<sup>2</sup>) and flows through part of five counties.  Land use in the watershed is predominantly comprised of cultivated crops with pockets of pasture and hay lands, urban development and forest.  Municipalities include Vermilion, New London, Greenwich and Wakeman."
 };
 
 var watershedNames = {
@@ -37,7 +35,7 @@ var watershedNames = {
     "Sandusky": "Sandusky River",
     "Thames": "Thames River",
     "Toussaint Creek": "Toussaint Creek",
-    "Vermillion": "Vermillion River"
+    "Vermilion": "Vermilion River"
 };
 
 var ColorPicker = {
@@ -263,7 +261,6 @@ BA_Charts.prototype.init = function(filename){
 function loadWatershedsData(filename){
     var data;
 
-    /// NEED TO CHANGE THE DATASET. COMBINE ALL FOUR WATERSHED DATA THEN CONVERT TO A JSON
     $.getJSON("data/all_data2.json", function(d){
        data = d;
     });
@@ -771,15 +768,13 @@ function buildNarratives(w_name){
     $("#narrative-content").html(n);
 }
 
-function buildChart(data, tag, name, metric, unit, width=null, height=null){
+function buildChart(data, tag, name, metric, unit, width, height){
     /**
      * Build two charts for each watershed, using the BA library
      */
 
         //get the watershed name
     var w_name = watershedNames[name];//feature.properties.Name;
-    // var m = metrics.SRP_L_S;
-    // var u = units.SRP_L_S;
     var w_data = getWatershedMetric(data, w_name, metric);
     if(w_data.length > 0){
         var t = undefined;
@@ -788,8 +783,6 @@ function buildChart(data, tag, name, metric, unit, width=null, height=null){
                 t = targets[w_name][metric];
 
         }
-
-        // var t = targets[w_name][metric];
         var data_series = [];
         for (var i = 0; i < w_data.length; i++){
             data_series.push(w_data[i].Value);
@@ -800,15 +793,14 @@ function buildChart(data, tag, name, metric, unit, width=null, height=null){
     }
 }
 
-function buildChart_line(data, tag, name, metric, unit, width=null, height=null){
+function buildChart_line(data, tag, name, metric, unit, width, height){
     /**
      * Build two charts for each watershed, using the BA library
      */
 
         //get the watershed name
     var w_name = watershedNames[name];//feature.properties.Name;
-    // var m = metrics.SRP_L_S;
-    // var u = units.SRP_L_S;
+
     var w_data = getWatershedMetric(data, w_name, metric);
     if(w_data.length > 0){
         var t = undefined;
@@ -817,8 +809,6 @@ function buildChart_line(data, tag, name, metric, unit, width=null, height=null)
             t = targets[w_name][metric];
 
         }
-
-        // var t = targets[w_name][metric];
         var data_series = [];
         for (var i = 0; i < w_data.length; i++){
             data_series.push(w_data[i].Value);
