@@ -110,7 +110,7 @@
                     var s2_data = $.map(getWatershedMetric(data, watershedNames[name], metric2), function(el){
                         return el.Value;
                     });
-                    if(s1_data.length > 0 || s2_data.length > 0) {
+                    if(s1_data.length > 0 && s2_data.length > 0) {
                         var chart1 = Highcharts.chart("chart1", createDualAxesOptions_column_line(watershedNames[name] + " " + metric1 + " and " + metric2,
                             xAxis,
                             metric1, s1_data, units[metric1], ColorPicker.blue7,
@@ -123,7 +123,12 @@
                                 addTargetLine(chart1, targets[watershedNames[name]][metric1], metric1);
                             }
                         }
+                        $("#defaultOpen").text("Annual TP Loading and Annual Discharge");
+                    }else if(s1_data.length > 0 && s2_data.length == 0){
+                        buildChart(data, "chart1", name, metric1, units[metric1], null, (window.innerHeight  - $("#narrative-section").height()) * 0.75);
+                        $("#defaultOpen").text("Annual TP Loading");
                     }else{
+                        $("#defaultOpen").text("Annual TP Loading and Annual Discharge");
                         $("#chart1").html("<p style='text-transform: uppercase;font-style: italic'>* Content under development for " + watershedNames[name] + " WATERSHED</p>");
                     }
 
@@ -145,6 +150,13 @@
         // Show intro
         $("#intro").html(intro_TP);
 
+        Highcharts.setOptions({
+            lang: {
+                numericSymbols: null,
+                thousandsSep: ','
+            }
+
+        });
     };
 
     function openFractionChart(evt, fraction) {
