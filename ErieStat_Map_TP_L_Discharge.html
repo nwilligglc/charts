@@ -112,10 +112,10 @@
                     buildNarratives(name);
                     var temp = window.innerHeight  - $("#narrative-section").height() - 300;
 
-                    var s1_data = $.map(getWatershedMetric(data, name, metric1), function(el){
+                    var s1_data = $.map(getWatershedMetric(data, watershedNames[name], metric1), function(el){
                         return el.Value;
                     });
-                    var s2_data = $.map(getWatershedMetric(data, name, metric2), function(el){
+                    var s2_data = $.map(getWatershedMetric(data, watershedNames[name], metric2), function(el){
                         return el.Value;
                     });
                     var temp = window.innerHeight  - $("#narrative-section").height() - 300;

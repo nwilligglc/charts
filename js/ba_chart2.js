@@ -270,7 +270,7 @@ function loadWatershedsData(filename){
 
 function getWatershedMetric(in_data, w_name, metric){
     var vals = $(in_data).filter(function(i, n){
-        return n.River.includes(w_name)&& n.Fraction===metric // n.River===w_name
+        return n.River===(w_name)&& n.Fraction===metric && n.Value !== "" // n.River===w_name
     })
     vals.sort(function(a, b){
         return (a.Year > b.Year) ? 1 : ((a.Year < b.Year) ? -1 : 0);
@@ -412,6 +412,7 @@ function createOptions(type, series_name, data, color, title, unit, isBgImg, wid
 }
 
 function createDualAxesOptions_column_line(title, x_axis, s1_name, s1_data, s1_unit, s1_color, s2_name, s2_data, s2_unit, s2_color, s2_visible, height){
+
     return {
         chart: {
             height: height,//window.innerHeight * 0.65, //chart_height,
@@ -789,7 +790,7 @@ function buildChart(data, tag, name, metric, unit, width, height){
         }
         return createChart(tag, "column", metric, data_series, ColorPicker.blue7, w_name + " " + metric, unit, false, t, width=width, height=height);
     }else{
-        $("#"+tag).html("<p style='text-transform: uppercase;font-style: italic'>*DATA UNAVAILABLE FOR " + w_name + " WATERSHED</p>");
+        $("#"+tag).html("<p style='text-transform: uppercase;font-style: italic'>* Content under development for " + w_name + " WATERSHED</p>");
     }
 }
 
@@ -815,6 +816,6 @@ function buildChart_line(data, tag, name, metric, unit, width, height){
         }
         return createChart(tag, "line", metric, data_series, ColorPicker.blue7, w_name + " " + metric, unit, false, t, width=width, height=height);
     }else{
-        $("#"+tag).html("<p style='text-transform: uppercase;font-style: italic'>*DATA UNAVAILABLE FOR " + w_name + " WATERSHED</p>");
+        $("#"+tag).html("<p style='text-transform: uppercase;font-style: italic'>* Content under development for " + w_name + " WATERSHED</p>");
     }
 }

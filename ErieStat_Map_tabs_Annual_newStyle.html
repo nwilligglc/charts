@@ -38,8 +38,9 @@
 
     /* Change background color of buttons on hover */
     .tab button:hover {
-        background-color: #eee;
-        font-style: italic;
+        background-color: #aaa;
+        color: #1b75ba;
+        /*font-weight: bold;*/
     }
 
     /* Create an active/current tablink class */
@@ -106,6 +107,7 @@
         data = d;
     });
 
+
     var map = L.map("map").setView([42.1, -83.1], 8);
     L.esri.basemapLayer("Topographic").addTo(map);
 
@@ -146,10 +148,10 @@
                     buildNarratives(name);
                     var temp = window.innerHeight  - $("#narrative-section").height() - 300;
 
-                    var s1_data = $.map(getWatershedMetric(data, name, metric1), function(el){
+                    var s1_data = $.map(getWatershedMetric(data, watershedNames[name], metric1), function(el){
                         return el.Value;
                     });
-                    var s2_data = $.map(getWatershedMetric(data, name, metric2), function(el){
+                    var s2_data = $.map(getWatershedMetric(data, watershedNames[name], metric2), function(el){
                         return el.Value;
                     });
                     if(s1_data.length > 0 || s2_data.length > 0) {
@@ -185,7 +187,15 @@
             tabs[i].style.display = "none";
         }
         // Show intro
-        $("#intro").html(intro_SRP);
+        $("#intro").html(intro_TP);
+
+        Highcharts.setOptions({
+            lang: {
+                numericSymbols: null,
+                thousandsSep: ','
+            }
+
+        });
 
     };
 

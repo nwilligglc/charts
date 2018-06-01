@@ -98,10 +98,10 @@
                     var name = featureCollection.features[i].properties["Watershed Name"];
                     buildNarratives(name);
 
-                    var s1_data = $.map(getWatershedMetric(data, name, metric1), function(el){
+                    var s1_data = $.map(getWatershedMetric(data, watershedNames[name], metric1), function(el){
                         return el.Value;
                     });
-                    var s2_data = $.map(getWatershedMetric(data, name, metric2), function(el){
+                    var s2_data = $.map(getWatershedMetric(data, watershedNames[name], metric2), function(el){
                         return el.Value;
                     });
 
