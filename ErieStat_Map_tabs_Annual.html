@@ -123,12 +123,18 @@
                                 addTargetLine(chart1, targets[watershedNames[name]][metric1], metric1);
                             }
                         }
-                        $("#defaultOpen").text("Annual TP Loading and Annual Discharge");
+                        if ($("#defaultOpen").text() != "Annual TP FWMC"){
+                            $("#defaultOpen").text("Annual TP Loading and Annual Discharge");
+                        };
                     }else if(s1_data.length > 0 && s2_data.length == 0){
                         buildChart(data, "chart1", name, metric1, units[metric1], null, (window.innerHeight  - $("#narrative-section").height()) * 0.75);
-                        $("#defaultOpen").text("Annual TP Loading");
+                        if ($("#defaultOpen").text() != "Annual TP FWMC"){
+                            $("#defaultOpen").text("Annual TP Loading");
+                        }
                     }else{
-                        $("#defaultOpen").text("Annual TP Loading and Annual Discharge");
+                        if ($("#defaultOpen").text() != "Annual TP FWMC") {
+                            $("#defaultOpen").text("Annual TP Loading and Annual Discharge");
+                        }
                         $("#chart1").html("<p style='text-transform: uppercase;font-style: italic'>* Content under development for " + watershedNames[name] + " WATERSHED</p>");
                     }
 
