@@ -1,0 +1,1316 @@
+[
+  {
+    "River": "Cuyahoga River",
+    "Year": 2008,
+    "Fraction": "Annual TP Loading",
+    "Value": 452
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2009,
+    "Fraction": "Annual TP Loading",
+    "Value": 398
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2010,
+    "Fraction": "Annual TP Loading",
+    "Value": 269.4745286
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2011,
+    "Fraction": "Annual TP Loading",
+    "Value": 468
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2012,
+    "Fraction": "Annual TP Loading",
+    "Value": 299
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2013,
+    "Fraction": "Annual TP Loading",
+    "Value": 388.8598176
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2014,
+    "Fraction": "Annual TP Loading",
+    "Value": 369
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2015,
+    "Fraction": "Annual TP Loading",
+    "Value": 304
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2016,
+    "Fraction": "Annual TP Loading",
+    "Value": 213
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2008,
+    "Fraction": "Spring Discharge",
+    "Value": 3756.45
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2009,
+    "Fraction": "Spring Discharge",
+    "Value": 3335.14
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2010,
+    "Fraction": "Spring Discharge",
+    "Value": 3612.8
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2011,
+    "Fraction": "Spring Discharge",
+    "Value": 5097.13
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2012,
+    "Fraction": "Spring Discharge",
+    "Value": 1038.78
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2013,
+    "Fraction": "Spring Discharge",
+    "Value": 3341.66
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2014,
+    "Fraction": "Spring Discharge",
+    "Value": 3474.71
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2015,
+    "Fraction": "Spring Discharge",
+    "Value": 5546.94
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2016,
+    "Fraction": "Spring Discharge",
+    "Value": 2490.47
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2008,
+    "Fraction": "Spring TP Loading",
+    "Value": 1414.1
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2009,
+    "Fraction": "Spring TP Loading",
+    "Value": 1369.7
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2010,
+    "Fraction": "Spring TP Loading",
+    "Value": 1307.4
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2011,
+    "Fraction": "Spring TP Loading",
+    "Value": 2318
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2012,
+    "Fraction": "Spring TP Loading",
+    "Value": 393.1
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2013,
+    "Fraction": "Spring TP Loading",
+    "Value": 1249.5
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2014,
+    "Fraction": "Spring TP Loading",
+    "Value": 1155.2
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2015,
+    "Fraction": "Spring TP Loading",
+    "Value": 2059.6
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2016,
+    "Fraction": "Spring TP Loading",
+    "Value": 755.3
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2008,
+    "Fraction": "Spring SRP Loading",
+    "Value": 302.3
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2009,
+    "Fraction": "Spring SRP Loading",
+    "Value": 211.2
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2010,
+    "Fraction": "Spring SRP Loading",
+    "Value": 323.8
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2011,
+    "Fraction": "Spring SRP Loading",
+    "Value": 430
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2012,
+    "Fraction": "Spring SRP Loading",
+    "Value": 63.8
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2013,
+    "Fraction": "Spring SRP Loading",
+    "Value": 288.9
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2014,
+    "Fraction": "Spring SRP Loading",
+    "Value": 306.5
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2015,
+    "Fraction": "Spring SRP Loading",
+    "Value": 609
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2016,
+    "Fraction": "Spring SRP Loading",
+    "Value": 144
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2008,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.376
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2009,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.411
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2010,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.362
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2011,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.455
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2012,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.378
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2013,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.374
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2014,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.332
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2015,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.371
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2016,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.303
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2008,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.08
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2009,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.063
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2010,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.09
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2011,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.084
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2012,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.061
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2013,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.086
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2014,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.088
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2015,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.11
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2016,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.058
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2008,
+    "Fraction": "Annual TP Loading",
+    "Value": 3812
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2009,
+    "Fraction": "Annual TP Loading",
+    "Value": 2329
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2010,
+    "Fraction": "Annual TP Loading",
+    "Value": 1679.450676
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2011,
+    "Fraction": "Annual TP Loading",
+    "Value": 3007
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2012,
+    "Fraction": "Annual TP Loading",
+    "Value": 2411
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2013,
+    "Fraction": "Annual TP Loading",
+    "Value": 2286.61192
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2014,
+    "Fraction": "Annual TP Loading",
+    "Value": 2213
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2015,
+    "Fraction": "Annual TP Loading",
+    "Value": 2467
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2016,
+    "Fraction": "Annual TP Loading",
+    "Value": 1309
+  },
+  {
+    "River": "Portage River",
+    "Year": 2008,
+    "Fraction": "Spring Discharge",
+    "Value": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2009,
+    "Fraction": "Spring Discharge",
+    "Value": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2010,
+    "Fraction": "Spring Discharge",
+    "Value": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2011,
+    "Fraction": "Spring Discharge",
+    "Value": 415.75
+  },
+  {
+    "River": "Portage River",
+    "Year": 2012,
+    "Fraction": "Spring Discharge",
+    "Value": 94.36
+  },
+  {
+    "River": "Portage River",
+    "Year": 2013,
+    "Fraction": "Spring Discharge",
+    "Value": 218.64
+  },
+  {
+    "River": "Portage River",
+    "Year": 2014,
+    "Fraction": "Spring Discharge",
+    "Value": 186.73
+  },
+  {
+    "River": "Portage River",
+    "Year": 2015,
+    "Fraction": "Spring Discharge",
+    "Value": 388.79
+  },
+  {
+    "River": "Portage River",
+    "Year": 2016,
+    "Fraction": "Spring Discharge",
+    "Value": 193.6
+  },
+  {
+    "River": "Portage River",
+    "Year": 2008,
+    "Fraction": "Spring TP Loading",
+    "Value": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2009,
+    "Fraction": "Spring TP Loading",
+    "Value": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2010,
+    "Fraction": "Spring TP Loading",
+    "Value": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2011,
+    "Fraction": "Spring TP Loading",
+    "Value": 171.4
+  },
+  {
+    "River": "Portage River",
+    "Year": 2012,
+    "Fraction": "Spring TP Loading",
+    "Value": 32
+  },
+  {
+    "River": "Portage River",
+    "Year": 2013,
+    "Fraction": "Spring TP Loading",
+    "Value": 71.9
+  },
+  {
+    "River": "Portage River",
+    "Year": 2014,
+    "Fraction": "Spring TP Loading",
+    "Value": 62.4
+  },
+  {
+    "River": "Portage River",
+    "Year": 2015,
+    "Fraction": "Spring TP Loading",
+    "Value": 111.4
+  },
+  {
+    "River": "Portage River",
+    "Year": 2016,
+    "Fraction": "Spring TP Loading",
+    "Value": 67.3
+  },
+  {
+    "River": "Portage River",
+    "Year": 2008,
+    "Fraction": "Spring SRP Loading",
+    "Value": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2009,
+    "Fraction": "Spring SRP Loading",
+    "Value": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2010,
+    "Fraction": "Spring SRP Loading",
+    "Value": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2011,
+    "Fraction": "Spring SRP Loading",
+    "Value": 32.6
+  },
+  {
+    "River": "Portage River",
+    "Year": 2012,
+    "Fraction": "Spring SRP Loading",
+    "Value": 6.6
+  },
+  {
+    "River": "Portage River",
+    "Year": 2013,
+    "Fraction": "Spring SRP Loading",
+    "Value": 21.9
+  },
+  {
+    "River": "Portage River",
+    "Year": 2014,
+    "Fraction": "Spring SRP Loading",
+    "Value": 14.1
+  },
+  {
+    "River": "Portage River",
+    "Year": 2015,
+    "Fraction": "Spring SRP Loading",
+    "Value": 40.1
+  },
+  {
+    "River": "Portage River",
+    "Year": 2016,
+    "Fraction": "Spring SRP Loading",
+    "Value": 11
+  },
+  {
+    "River": "Portage River",
+    "Year": 2008,
+    "Fraction": "Spring TP FWMC",
+    "Value": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2009,
+    "Fraction": "Spring TP FWMC",
+    "Value": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2010,
+    "Fraction": "Spring TP FWMC",
+    "Value": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2011,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.412
+  },
+  {
+    "River": "Portage River",
+    "Year": 2012,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.339
+  },
+  {
+    "River": "Portage River",
+    "Year": 2013,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.329
+  },
+  {
+    "River": "Portage River",
+    "Year": 2014,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.334
+  },
+  {
+    "River": "Portage River",
+    "Year": 2015,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.287
+  },
+  {
+    "River": "Portage River",
+    "Year": 2016,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.348
+  },
+  {
+    "River": "Portage River",
+    "Year": 2008,
+    "Fraction": "Spring SRP FWMC",
+    "Value": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2009,
+    "Fraction": "Spring SRP FWMC",
+    "Value": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2010,
+    "Fraction": "Spring SRP FWMC",
+    "Value": ""
+  },
+  {
+    "River": "Portage River",
+    "Year": 2011,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.078
+  },
+  {
+    "River": "Portage River",
+    "Year": 2012,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.07
+  },
+  {
+    "River": "Portage River",
+    "Year": 2013,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.1
+  },
+  {
+    "River": "Portage River",
+    "Year": 2014,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.076
+  },
+  {
+    "River": "Portage River",
+    "Year": 2015,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.103
+  },
+  {
+    "River": "Portage River",
+    "Year": 2016,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.057
+  },
+  {
+    "River": "Portage River",
+    "Year": 2008,
+    "Fraction": "Annual TP Loading",
+    "Value": 359
+  },
+  {
+    "River": "Portage River",
+    "Year": 2009,
+    "Fraction": "Annual TP Loading",
+    "Value": 255
+  },
+  {
+    "River": "Portage River",
+    "Year": 2010,
+    "Fraction": "Annual TP Loading",
+    "Value": 131.4347922
+  },
+  {
+    "River": "Portage River",
+    "Year": 2011,
+    "Fraction": "Annual TP Loading",
+    "Value": 544
+  },
+  {
+    "River": "Portage River",
+    "Year": 2012,
+    "Fraction": "Annual TP Loading",
+    "Value": 452
+  },
+  {
+    "River": "Portage River",
+    "Year": 2013,
+    "Fraction": "Annual TP Loading",
+    "Value": 304.962889
+  },
+  {
+    "River": "Portage River",
+    "Year": 2014,
+    "Fraction": "Annual TP Loading",
+    "Value": 235
+  },
+  {
+    "River": "Portage River",
+    "Year": 2015,
+    "Fraction": "Annual TP Loading",
+    "Value": 178
+  },
+  {
+    "River": "Portage River",
+    "Year": 2016,
+    "Fraction": "Annual TP Loading",
+    "Value": 235
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2008,
+    "Fraction": "Spring Discharge",
+    "Value": 561.85
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2009,
+    "Fraction": "Spring Discharge",
+    "Value": 574.69
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2010,
+    "Fraction": "Spring Discharge",
+    "Value": 536.7
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2011,
+    "Fraction": "Spring Discharge",
+    "Value": 691.09
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2012,
+    "Fraction": "Spring Discharge",
+    "Value": 249.95
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2013,
+    "Fraction": "Spring Discharge",
+    "Value": 444.88
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2014,
+    "Fraction": "Spring Discharge",
+    "Value": 455.3
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2015,
+    "Fraction": "Spring Discharge",
+    "Value": 511.22
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2016,
+    "Fraction": "Spring Discharge",
+    "Value": 333.19
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2008,
+    "Fraction": "Spring TP Loading",
+    "Value": 83.5
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2009,
+    "Fraction": "Spring TP Loading",
+    "Value": 92
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2010,
+    "Fraction": "Spring TP Loading",
+    "Value": 68.2
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2011,
+    "Fraction": "Spring TP Loading",
+    "Value": 133
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2012,
+    "Fraction": "Spring TP Loading",
+    "Value": 27.1
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2013,
+    "Fraction": "Spring TP Loading",
+    "Value": 56.9
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2014,
+    "Fraction": "Spring TP Loading",
+    "Value": 58.8
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2015,
+    "Fraction": "Spring TP Loading",
+    "Value": 84.2
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2016,
+    "Fraction": "Spring TP Loading",
+    "Value": 40.2
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2008,
+    "Fraction": "Spring SRP Loading",
+    "Value": 19.6
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2009,
+    "Fraction": "Spring SRP Loading",
+    "Value": 16.7
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2010,
+    "Fraction": "Spring SRP Loading",
+    "Value": 16.7
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2011,
+    "Fraction": "Spring SRP Loading",
+    "Value": 29.4
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2012,
+    "Fraction": "Spring SRP Loading",
+    "Value": 6.4
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2013,
+    "Fraction": "Spring SRP Loading",
+    "Value": 14.3
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2014,
+    "Fraction": "Spring SRP Loading",
+    "Value": 17.8
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2015,
+    "Fraction": "Spring SRP Loading",
+    "Value": 33.1
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2016,
+    "Fraction": "Spring SRP Loading",
+    "Value": 9.1
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2008,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.149
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2009,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.16
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2010,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.127
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2011,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.192
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2012,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.108
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2013,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.128
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2014,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.129
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2015,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.165
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2016,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.121
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2008,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.035
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2009,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.029
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2010,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.031
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2011,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.043
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2012,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.025
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2013,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.032
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2014,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.039
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2015,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.065
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2016,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.027
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2008,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.197845756
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2009,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.150076414
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2010,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.17753563
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2011,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.172402302
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2012,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.178978244
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2013,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.124600968
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2008,
+    "Fraction": "Spring Discharge",
+    "Value": 962.07
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2009,
+    "Fraction": "Spring Discharge",
+    "Value": 437.34
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2010,
+    "Fraction": "Spring Discharge",
+    "Value": 731.45
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2011,
+    "Fraction": "Spring Discharge",
+    "Value": 1293.68
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2012,
+    "Fraction": "Spring Discharge",
+    "Value": 270.61
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2013,
+    "Fraction": "Spring Discharge",
+    "Value": 871.69
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2014,
+    "Fraction": "Spring Discharge",
+    "Value": 650.95
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2015,
+    "Fraction": "Spring Discharge",
+    "Value": 911.14
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2016,
+    "Fraction": "Spring Discharge",
+    "Value": 494.83
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2008,
+    "Fraction": "Spring TP Loading",
+    "Value": 366.9
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2009,
+    "Fraction": "Spring TP Loading",
+    "Value": 201.6
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2010,
+    "Fraction": "Spring TP Loading",
+    "Value": 311.6
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2011,
+    "Fraction": "Spring TP Loading",
+    "Value": 700.8
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2012,
+    "Fraction": "Spring TP Loading",
+    "Value": 142.7
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2013,
+    "Fraction": "Spring TP Loading",
+    "Value": 364.4
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2014,
+    "Fraction": "Spring TP Loading",
+    "Value": 269.8
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2015,
+    "Fraction": "Spring TP Loading",
+    "Value": 328.9
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2016,
+    "Fraction": "Spring TP Loading",
+    "Value": 160.1
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2008,
+    "Fraction": "Spring SRP Loading",
+    "Value": 69
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2009,
+    "Fraction": "Spring SRP Loading",
+    "Value": 29.5
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2010,
+    "Fraction": "Spring SRP Loading",
+    "Value": 66
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2011,
+    "Fraction": "Spring SRP Loading",
+    "Value": 126.7
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2012,
+    "Fraction": "Spring SRP Loading",
+    "Value": 15.5
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2013,
+    "Fraction": "Spring SRP Loading",
+    "Value": 87.8
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2014,
+    "Fraction": "Spring SRP Loading",
+    "Value": 59.6
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2015,
+    "Fraction": "Spring SRP Loading",
+    "Value": 91.9
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2016,
+    "Fraction": "Spring SRP Loading",
+    "Value": 30.6
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2008,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.381
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2009,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.461
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2010,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.426
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2011,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.542
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2012,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.527
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2013,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.418
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2014,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.414
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2015,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.361
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2016,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.323
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2008,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.072
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2009,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.067
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2010,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.09
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2011,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.098
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2012,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.057
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2013,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.101
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2014,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.092
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2015,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.101
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2016,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.062
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2008,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.472805958
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2009,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.44124554
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2010,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.397040894
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2011,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.500175761
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2012,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.4257791
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2013,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.423000367
+  }
+]

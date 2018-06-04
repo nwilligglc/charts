@@ -32,7 +32,7 @@
         <!-- Tab links -->
         <div class="tab">
             <button class="tablinks" onclick="openFractionChart(event, 'TP')" id="defaultOpen">Annual TP Loading and Annual Discharge</button>
-            <button class="tablinks" onclick="openFractionChart(event, 'FWMC')">Annual TP FWMC</button>
+            <!--<button class="tablinks" onclick="openFractionChart(event, 'FWMC')">Annual TP FWMC</button>-->
         </div>
 
         <!-- Tab content -->
@@ -41,12 +41,12 @@
             <div id="chart1"></div>
         </div>
 
-        <div id="FWMC" class="tabcontent">
-            <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
-            <div>
-                <div id="chart2"></div>
-            </div>
-        </div>
+        <!--<div id="FWMC" class="tabcontent">-->
+            <!--<span onclick="this.parentElement.style.display='none'" class="topright">&times</span>-->
+            <!--<div>-->
+                <!--<div id="chart2"></div>-->
+            <!--</div>-->
+        <!--</div>-->
     </div>
 </div>
 
@@ -60,7 +60,7 @@
     init();
 
 
-    $.getJSON("data/all_data2.json", function(d){
+    $.getJSON("data/data.json", function(d){
         data = d;
     });
 
@@ -110,7 +110,7 @@
                     var s2_data = $.map(getWatershedMetric(data, watershedNames[name], metric2), function(el){
                         return el.Value;
                     });
-                    if(s1_data.length > 0 && s2_data.length > 0) {
+                    if(s1_data.length > 0 /*&& s2_data.length > 0*/) {
                         var chart1 = Highcharts.chart("chart1", createDualAxesOptions_column_line(watershedNames[name] + " " + metric1 + " and " + metric2,
                             xAxis,
                             metric1, s1_data, units[metric1], ColorPicker.blue7,
@@ -123,22 +123,23 @@
                                 addTargetLine(chart1, targets[watershedNames[name]][metric1], metric1);
                             }
                         }
-                        if ($("#defaultOpen").text() != "Annual TP FWMC"){
-                            $("#defaultOpen").text("Annual TP Loading and Annual Discharge");
-                        };
+//                        if ($("#defaultOpen").text() != "Annual TP FWMC"){
+//                            $("#defaultOpen").text("Annual TP Loading and Annual Discharge");
+//                        };
                     }else if(s1_data.length > 0 && s2_data.length == 0){
                         buildChart(data, "chart1", name, metric1, units[metric1], null, (window.innerHeight  - $("#narrative-section").height()) * 0.75);
-                        if ($("#defaultOpen").text() != "Annual TP FWMC"){
-                            $("#defaultOpen").text("Annual TP Loading");
-                        }
+//                        if ($("#defaultOpen").text() != "Annual TP FWMC"){
+//                            $("#defaultOpen").text("Annual TP Loading");
+//                        }
                     }else{
-                        if ($("#defaultOpen").text() != "Annual TP FWMC") {
-                            $("#defaultOpen").text("Annual TP Loading and Annual Discharge");
-                        }
-                        $("#chart1").html("<p style='text-transform: uppercase;font-style: italic'>* Content under development for " + watershedNames[name] + " WATERSHED</p>");
+//                        if ($("#defaultOpen").text() != "Annual TP FWMC") {
+//                            $("#defaultOpen").text("Annual TP Loading and Annual Discharge");
+//                        }
+                        $("#chart1").html("");
+//                        $("#chart1").html("<p style='font-style: italic'>* Content under development for " + watershedNames[name] + " watershed.</p>");
                     }
 
-                    buildChart_line(data, "chart2", name, metrics.TP_FWMC, units[metrics.TP_FWMC], null, (window.innerHeight  - $("#narrative-section").height()) * 0.75);
+//                    buildChart_line(data, "chart2", name, metrics.TP_FWMC, units[metrics.TP_FWMC], null, (window.innerHeight  - $("#narrative-section").height()) * 0.75);
 
                     break;
                 }
