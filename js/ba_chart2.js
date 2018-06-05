@@ -1,13 +1,24 @@
 var mapID = "918102a3bff04636924faa2d1915cae1";
 
-var intro_SRP = "Models have indicated that Maumee River spring (March 1 – July 31) phosphorus loads drive the algal blooms in the Western Lake Erie Basin (WLEB), but other tributary loads also contribute to the bloom. Spring phosphorus reduction targets (40 percent of 2008 loads) were established for eight priority watersheds in the WLEB for both total and soluble reactive phosphorus (SRP). SRP refers to phosphorus that is in a dissolved state and is of particular interest because it is the easiest form of phosphorus for algae to use to fuel growth. Click on the watershed of interest to see available data.";
-var intro_TP = "The annual phosphorus loads drive central basin hypoxia (i.e., low oxygen conditions that can cause dead zones), based on modeling. Therefore, targets to address hypoxia focus on annual loads from all tributaries. Twelve priority watersheds were identified and assigned with a target to reduce annual total phosphorus load by 40 percent of the 2008 load. Click on the watershed of interest to see available data.";
+var intro_SRP = "<p>The U.S. and Canada set phosphorus reduction goals (40 percent of 2008 loads) for eight priority tributary watersheds for both total and soluble reactive phosphorus (SRP) during March-July. SRP refers to phosphorus that is in a dissolved state and is of particular interest because it is the easiest form of phosphorus for algae to use to fuel growth.</p>"
+    +
+    "<p>The targets for these tributaries are expressed in terms of the flow weighted mean concentration (FWMC) – which is a way to normalize the load for flow. This is important because much of the load is delivered during storm events. It means that efforts to reduce the load must also include efforts to reduce the amount of flow (runoff). FWMC also provides an important backstop and relative measure of whether phosphorus control efforts are actually having an impact. For example, in a dry year the load may be low due to less runoff, but the FWMC will still be high if the proportion of phosphorus in that runoff is high.</p>"
+    +
+    "<p>The calculation of spring load requires high frequency flow and water quality monitoring, which is now in place for all nearshore priority tributaries. Not all tributaries had monitoring in place going back to 2008.</p>"
+    +
+    "<p>Click on the watershed of interest to see available data.</p>";
+
+var intro_TP = "<p>The U.S. and Canada agreed to limit the total phosphorus (TP) load to Lake Erie’s central basin, which includes inputs from the St. Clair-Detroit River corridor, to 6,000 Metric Tons per year (MTA) annually. This was based on modeling of the hypoxic (low oxygen) zone in the lake. The modeling indicated that 6,000 MTA is the maximum load that would result in an acceptable dissolved oxygen concentration of at least 2 milligrams per liter in the bottom waters during the summer stratified period. This means that during the warmest months of the year, oxygen in Lake Erie’s water would be high enough to reduce the “dead zone” that has been cause for concern in recent years.</p>"
+    +
+    "<p>Twelve priority watersheds were identified and assigned a target to reduce annual total phosphorus loads to 40 percent of the 2008 load, by water year (October-September). With the exception of the Detroit River connecting channel, these loads are estimated at the mouth of the tributary, using three pieces of information: 1) water quality monitoring data collected at the most downstream stream gage for the river; 2) reported data for point source dischargers beyond this point; an 3) an estimate for the unmonitored area beyond the gage, using a simple ratio for unit-area load. The Detroit River is not monitored directly; instead the load is computed as a sum of upstream tributary loadings and point source dischargers.</p>"
+    +
+    "<p>Click on the watershed of interest to see available data.</p>";
 var intro_FWMC = "The flow-weighted mean concentration (FWMC) adjusts phosphorus loads to normalize for tributary flow, which enables year-by-year comparisons that are not confounded by changes in flow. Click on the watershed of interest to see available data.";
 
 var narratives = {
     "Cattaraugus River": "<i>*CONTENT UNDER DEVELOPMENT.</i>",
     "Cuyahoga River": "The Cuyahoga River watershed is located in northeastern Ohio. It drains a total of 812 square miles (2,103 km<sup>2</sup>) and flows through all or part of six counties. Major municipalities partially or fully in the watershed include Cleveland and some of its suburbs, Akron, Kent and Cuyahoga Falls. ",
-    "Detroit River": "The Detroit River flows for 32 miles (52 km) from Lake St. Clair to Lake Erie as a strait in the Great Lakes system and forms part of the border between Canada and the United States (U.S EPA).",
+    "Detroit River": "The Detroit River flows for 32 miles (52 km) from Lake St. Clair to Lake Erie as a strait in the Great Lakes system and forms part of the border between Canada and the U.S.",
     "Grand River": "The Grand River watershed is located in northeastern Ohio. It drains a total of 707 square miles (1,831 km<sup>2</sup>) and flows through all or part of five counties. Major municipalities partially or fully in the watershed include Orwell, Roaming Shores, Jefferson, West Farmington, Chardon and Painesville. The watershed is a mixture of forest, agricultural land uses such as cultivated crops and pasture and hay lands, and urban land uses. ",
     "Grand (Ontario) River": "",
     "Huron River": "The Huron River watershed is located on the south shore of Lake Erie between Toledo and Cleveland, in Huron, Erie, Seneca, Richland and Crawford counties.  The Huron River is 59.7 miles (96 km) long and the watershed covers 403 square miles (1,044 km<sup>2</sup>).  Land use is primarily dedicated to agricultural activities with approximately 74 percent cropland, 15 percent woodland, and 3 to 11 percent urban and other land uses.",
@@ -24,7 +35,7 @@ var narratives = {
 var watershedNames = {
     "Cattaraugus": "Cattaraugus River",
     "Cuyahoga": "Cuyahoga River",
-    "Detroit": "Detroit River",
+    "Detroit River": "Detroit River",
     "Grand": "Grand River",
     "Grand (Ontario)": "Grand (Ontario) River",
     "Huron": "Huron River",
@@ -256,16 +267,6 @@ BA_Charts.prototype.init = function(filename){
         }
     });
     return watershed;
-}
-
-function loadWatershedsData(filename){
-    var data;
-
-    $.getJSON("data/all_data2.json", function(d){
-       data = d;
-    });
-
-    return data;
 }
 
 function getWatershedMetric(in_data, w_name, metric){

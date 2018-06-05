@@ -1312,5 +1312,275 @@
     "Year": 2013,
     "Fraction": "Annual TP FWMC",
     "Value": 0.423000367
+  },
+  {
+    "River": "Grand River",
+    "Year": 2014,
+    "Fraction": "Annual TP Loading",
+    "Value": 36
+  },
+  {
+    "River": "Grand River",
+    "Year": 2015,
+    "Fraction": "Annual TP Loading",
+    "Value": 65
+  },
+  {
+    "River": "Grand River",
+    "Year": 2016,
+    "Fraction": "Annual TP Loading",
+    "Value": 32
+  },
+  {
+    "River": "Grand River",
+    "Year": 2008,
+    "Fraction": "Annual TP Loading",
+    "Value": 165
+  },
+  {
+    "River": "Grand River",
+    "Year": 2009,
+    "Fraction": "Annual TP Loading",
+    "Value": 66
+  },
+  {
+    "River": "Grand River",
+    "Year": 2010,
+    "Fraction": "Annual TP Loading",
+    "Value": 55.47292356
+  },
+  {
+    "River": "Grand River",
+    "Year": 2011,
+    "Fraction": "Annual TP Loading",
+    "Value": 108
+  },
+  {
+    "River": "Grand River",
+    "Year": 2012,
+    "Fraction": "Annual TP Loading",
+    "Value": 52
+  },
+  {
+    "River": "Grand River",
+    "Year": 2013,
+    "Fraction": "Annual TP Loading",
+    "Value": 54.18582571
+  },
+  {
+    "River": "Huron River",
+    "Year": 2014,
+    "Fraction": "Annual TP Loading",
+    "Value": 63
+  },
+  {
+    "River": "Huron River",
+    "Year": 2015,
+    "Fraction": "Annual TP Loading",
+    "Value": 106
+  },
+  {
+    "River": "Huron River",
+    "Year": 2016,
+    "Fraction": "Annual TP Loading",
+    "Value": 77
+  },
+  {
+    "River": "Huron River",
+    "Year": 2008,
+    "Fraction": "Annual TP Loading",
+    "Value": 205
+  },
+  {
+    "River": "Huron River",
+    "Year": 2009,
+    "Fraction": "Annual TP Loading",
+    "Value": 32
+  },
+  {
+    "River": "Huron River",
+    "Year": 2010,
+    "Fraction": "Annual TP Loading",
+    "Value": 68.84425621
+  },
+  {
+    "River": "Huron River",
+    "Year": 2011,
+    "Fraction": "Annual TP Loading",
+    "Value": 70
+  },
+  {
+    "River": "Huron River",
+    "Year": 2012,
+    "Fraction": "Annual TP Loading",
+    "Value": 48
+  },
+  {
+    "River": "Huron River",
+    "Year": 2013,
+    "Fraction": "Annual TP Loading",
+    "Value": 156.8180206
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2008,
+    "Fraction": "Annual TP Loading",
+    "Value": 262
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2009,
+    "Fraction": "Annual TP Loading",
+    "Value": 172
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2010,
+    "Fraction": "Annual TP Loading",
+    "Value": 160.7405036
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2011,
+    "Fraction": "Annual TP Loading",
+    "Value": 185
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2012,
+    "Fraction": "Annual TP Loading",
+    "Value": 201
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2013,
+    "Fraction": "Annual TP Loading",
+    "Value": 87.74386229
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2014,
+    "Fraction": "Annual TP Loading",
+    "Value": 95
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2015,
+    "Fraction": "Annual TP Loading",
+    "Value": 116
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2016,
+    "Fraction": "Annual TP Loading",
+    "Value": 80
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2008,
+    "Fraction": "Annual TP Loading",
+    "Value": 1101
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2009,
+    "Fraction": "Annual TP Loading",
+    "Value": 511
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2010,
+    "Fraction": "Annual TP Loading",
+    "Value": 429.0974676
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2011,
+    "Fraction": "Annual TP Loading",
+    "Value": 1165
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2012,
+    "Fraction": "Annual TP Loading",
+    "Value": 793
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2013,
+    "Fraction": "Annual TP Loading",
+    "Value": 773.1713065
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2014,
+    "Fraction": "Annual TP Loading",
+    "Value": 698
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2015,
+    "Fraction": "Annual TP Loading",
+    "Value": 456
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2016,
+    "Fraction": "Annual TP Loading",
+    "Value": 389
+  },
+  {
+    "River": "Vermilion River",
+    "Year": 2008,
+    "Fraction": "Annual TP Loading",
+    "Value": 202
+  },
+  {
+    "River": "Vermilion River",
+    "Year": 2009,
+    "Fraction": "Annual TP Loading",
+    "Value": 21
+  },
+  {
+    "River": "Vermilion River",
+    "Year": 2010,
+    "Fraction": "Annual TP Loading",
+    "Value": 46.97642878
+  },
+  {
+    "River": "Vermilion River",
+    "Year": 2011,
+    "Fraction": "Annual TP Loading",
+    "Value": 142
+  },
+  {
+    "River": "Vermilion River",
+    "Year": 2012,
+    "Fraction": "Annual TP Loading",
+    "Value": 113
+  },
+  {
+    "River": "Vermilion River",
+    "Year": 2013,
+    "Fraction": "Annual TP Loading",
+    "Value": 215.1182105
+  },
+  {
+    "River": "Vermilion River",
+    "Year": 2014,
+    "Fraction": "Annual TP Loading",
+    "Value": 140
+  },
+  {
+    "River": "Vermilion River",
+    "Year": 2015,
+    "Fraction": "Annual TP Loading",
+    "Value": 19
+  },
+  {
+    "River": "Vermilion River",
+    "Year": 2016,
+    "Fraction": "Annual TP Loading",
+    "Value": 92
   }
 ]
