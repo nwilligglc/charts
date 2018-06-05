@@ -27,31 +27,31 @@
         </div>
         <!-- Tab links -->
         <div class="tab">
-            <button class="tablinks" onclick="openFractionChart(event, 'SRP_S')" id="defaultOpen">Spring SRP Loading and Spring Discharge</button>
+            <button class="tablinks" onclick="openFractionChart(event, 'SRP_S')" id="defaultOpen">Spring SRP Loading and<br> Spring Discharge</button>
             <button class="tablinks" onclick="openFractionChart(event, 'SRP_FWMC')">Spring SRP FWMC</button>
-            <button class="tablinks" onclick="openFractionChart(event, 'TP_S')" >Spring TP Loading and Spring Discharge</button>
+            <button class="tablinks" onclick="openFractionChart(event, 'TP_S')" >Spring TP Loading and<br> Spring Discharge</button>
             <button class="tablinks" onclick="openFractionChart(event, 'TP_FWMC_S')">Spring TP FWMC</button>
         </div>
 
         <!-- Tab content -->
         <div id="SRP_S" class="tabcontent">
             <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
-            <div id="chart1"></div>
+            <div id="chart1" class="charts"></div>
         </div>
 
         <div id="SRP_FWMC" class="tabcontent">
             <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
             <div>
-                <div id="chart2"></div>
+                <div id="chart2" class="charts"></div>
             </div>
         </div>
         <div id="TP_S" class="tabcontent">
             <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
-            <div id="chart3"></div>
+            <div id="chart3" class="charts"></div>
         </div>
         <div id="TP_FWMC_S" class="tabcontent">
             <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
-            <div id="chart4"></div>
+            <div id="chart4" class="charts"></div>
         </div>
     </div>
 </div>
@@ -109,85 +109,98 @@
                     });
                     selectedFeature.addTo(map);
                     var name = featureCollection.features[i].properties["Watershed Name"];
-                    buildNarratives(name);
+                    if(buildNarratives(name)){
+                        var s1_data = $.map(getWatershedMetric(data, watershedNames[name], metric1), function(el){
+                            return el.Value;
+                        });
+                        var s2_data = $.map(getWatershedMetric(data, watershedNames[name], metric2), function(el){
+                            return el.Value;
+                        });
+                        var s3_data = $.map(getWatershedMetric(data, watershedNames[name], metric3), function(el){
+                            return el.Value;
+                        });
+                        var s4_data = $.map(getWatershedMetric(data, watershedNames[name], metric4), function(el){
+                            return el.Value;
+                        });
+                        var discharge_data = $.map(getWatershedMetric(data, watershedNames[name], metric_discharge), function(el){
+                            return el.Value;
+                        });
 
-                    var s1_data = $.map(getWatershedMetric(data, watershedNames[name], metric1), function(el){
-                        return el.Value;
-                    });
-//                    var s2_data = $.map(getWatershedMetric(data, watershedNames[name], metric2), function(el){
-//                        return el.Value;
-//                    });
-                    var s3_data = $.map(getWatershedMetric(data, watershedNames[name], metric3), function(el){
-                        return el.Value;
-                    });
-//                    var s4_data = $.map(getWatershedMetric(data, watershedNames[name], metric4), function(el){
-//                        return el.Value;
-//                    });
-                    var discharge_data = $.map(getWatershedMetric(data, watershedNames[name], metric_discharge), function(el){
-                        return el.Value;
-                    });
-
-                    if(s1_data.length > 0 /*&& discharge_data.length > 0*/){
-                        var chart1 = Highcharts.chart("chart1", createDualAxesOptions_column_line(watershedNames[name] + " " + metric1 + " and " + metric_discharge,
-                            xAxis,
-                            metric1, s1_data, units[metric1], ColorPicker.blue7,
-                            metric_discharge, discharge_data, units[metric_discharge], ColorPicker.blue6,
-                            null,
-                            (window.innerHeight  - $("#narrative-section").height()) * 0.7)
-                        );
-                        if(targets[watershedNames[name]]){
-                            if(targets[watershedNames[name]][metric1]){
-                                addTargetLine(chart1, targets[watershedNames[name]][metric1], metric1);
+                        if(s1_data.length > 0 /*&& discharge_data.length > 0*/){
+                            var chart1 = Highcharts.chart("chart1", createDualAxesOptions_column_line(watershedNames[name] + " " + metric1 + " and " + metric_discharge,
+                                xAxis,
+                                metric1, s1_data, units[metric1], ColorPicker.blue7,
+                                metric_discharge, discharge_data, units[metric_discharge], ColorPicker.blue6,
+                                null,
+                                (window.innerHeight  - $("#narrative-section").height()) * 0.7)
+                            );
+                            if(targets[watershedNames[name]]){
+                                if(targets[watershedNames[name]][metric1]){
+                                    addTargetLine(chart1, targets[watershedNames[name]][metric1], metric1);
+                                }
                             }
+                            chart1.update({
+                                subtitle:{
+                                    text: "<i>*SRP: Soluble reactive phosphorus</i>",
+                                }
+                            });
+                        }else{
+                            $("#chart1").html("<i>* Data under development.</i>");
                         }
-//                        if ($("#defaultOpen").text() != "Spring SRP FWMC"){
-//                            $("#defaultOpen").text("Spring SRP Loading and Spring Discharge");
-//                        }
-                    }else if(s1_data.length > 0 /*&& discharge_data.length == 0*/){
-                        buildChart(data, "chart1", name, metric1, units[metric1], null, (window.innerHeight  - $("#narrative-section").height()) * 0.7);
-//                        if ($("#defaultOpen").text() != "Spring SRP FWMC"){
-//                            $("#defaultOpen").text("Spring SRP Loading");
-//                        }
+
+
+                        if(s2_data.length > 0){
+                            var chart2 = buildChart_line(s2_data, "chart2", watershedNames[name], metric2, units[metric2], null, (window.innerHeight  - $("#narrative-section").height()) * 0.7);
+                            chart2.update({
+                                subtitle:{
+                                    text: "<i>*SRP: Soluble reactive phosphorus</i><br><i>*FWMC: Flow-weighted mean concentration</i>",
+                                }
+                            });
+                        }
+                        else {
+                            $("#chart2").html("<i>* Data under development.</i>");
+                        }
+
+                        if(s3_data.length > 0){
+                            var chart3 = Highcharts.chart("chart3", createDualAxesOptions_column_line(watershedNames[name] + " " + metric3 + " and " + metric_discharge,
+                                xAxis,
+                                metric3, s3_data, units[metric3], ColorPicker.blue7,
+                                metric_discharge, discharge_data, units[metric_discharge], ColorPicker.blue6,
+                                null,
+                                (window.innerHeight  - $("#narrative-section").height()) * 0.7)
+                            );
+                            if(targets[watershedNames[name]]){
+                                if(targets[watershedNames[name]][metric3]){
+                                    addTargetLine(chart3, targets[watershedNames[name]][metric3], metric3);
+                                }
+                            }
+                            chart3.update({
+                                subtitle:{
+                                    text: "<i>*TP: Total phosphorus</i>",
+                                }
+                            });
+                        }else{
+                            $("#chart3").html("<i>* Data under development.</i>");
+                        }
+
+
+                        if(s4_data.length > 0){
+                            var chart4 = buildChart_line(s4_data, "chart4", watershedNames[name], metric4, units[metric4], null, (window.innerHeight  - $("#narrative-section").height()) * 0.75);
+                            chart4.update({
+                                subtitle:{
+                                    text: "<i>*TP: Total phosphorus</i><br><i>*FWMC: Flow-weighted mean concentration</i>",
+                                }
+                            })
+                        }else{
+                            $("#chart4").html("<i>* Data under development.</i>");
+                        }
                     }else{
-//                        if ($("#defaultOpen").text() != "Spring SRP FWMC") {
-//                            $("#defaultOpen").text("Spring SRP Loading and Spring Discharge");
-//                        }
-                        $("#chart1").html("");
-//                        $("#chart1").html("<p style='font-style: italic'>* Content under development for " + watershedNames[name] + " watershed.</p>");
+                        $(".charts").html("");
                     }
 
-                    buildChart_line(data, "chart2", name, metric2, units[metric2], null, (window.innerHeight  - $("#narrative-section").height()) * 0.7);
 
-                    if(s3_data.length > 0 && discharge_data.length > 0){
-                        var chart3 = Highcharts.chart("chart3", createDualAxesOptions_column_line(watershedNames[name] + " " + metric3 + " and " + metric_discharge,
-                            xAxis,
-                            metric3, s3_data, units[metric3], ColorPicker.blue7,
-                            metric_discharge, discharge_data, units[metric_discharge], ColorPicker.blue6,
-                            null,
-                            (window.innerHeight  - $("#narrative-section").height()) * 0.7)
-                        );
-                        if(targets[watershedNames[name]]){
-                            if(targets[watershedNames[name]][metric3]){
-                                addTargetLine(chart3, targets[watershedNames[name]][metric3], metric3);
-                            }
-                        }
-//                        if ($("#defaultOpen").text() != "Spring SRP FWMC"){
-//                            $("#defaultOpen").text("Spring SRP Loading and Spring Discharge");
-//                        }
-                    }else if(s3_data.length > 0 && discharge_data.length == 0){
-                        buildChart(data, "chart3", name, metric3, units[metric3], null, (window.innerHeight  - $("#narrative-section").height()) * 0.7);
-//                        if ($("#defaultOpen").text() != "Spring SRP FWMC"){
-//                            $("#defaultOpen").text("Spring SRP Loading");
-//                        }
-                    }else{
-//                        if ($("#defaultOpen").text() != "Spring SRP FWMC") {
-//                            $("#defaultOpen").text("Spring SRP Loading and Spring Discharge");
-//                        }
-                        $("#chart3").html("");
-//                        $("#chart3").html("<p style='font-style: italic'>* Content under development for " + watershedNames[name] + " watershed.</p>");
-                    }
 
-                    buildChart_line(data, "chart4", name, metric4, units[metric4], null, (window.innerHeight  - $("#narrative-section").height()) * 0.75);
+
 
                     break;
                 }
@@ -205,6 +218,13 @@
         // Show intro
         $("#intro").html(intro_SRP);
 
+        Highcharts.setOptions({
+            lang: {
+                numericSymbols: null,
+                thousandsSep: ','
+            }
+
+        });
     };
 
     function openFractionChart(evt, fraction) {

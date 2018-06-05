@@ -9,15 +9,15 @@ var narratives = {
     "Cuyahoga River": "The Cuyahoga River watershed is located in northeastern Ohio. It drains a total of 812 square miles (2,103 km<sup>2</sup>) and flows through all or part of six counties. Major municipalities partially or fully in the watershed include Cleveland and some of its suburbs, Akron, Kent and Cuyahoga Falls. ",
     "Detroit River": "The Detroit River flows for 32 miles (52 km) from Lake St. Clair to Lake Erie as a strait in the Great Lakes system and forms part of the border between Canada and the United States (U.S EPA).",
     "Grand River": "The Grand River watershed is located in northeastern Ohio. It drains a total of 707 square miles (1,831 km<sup>2</sup>) and flows through all or part of five counties. Major municipalities partially or fully in the watershed include Orwell, Roaming Shores, Jefferson, West Farmington, Chardon and Painesville. The watershed is a mixture of forest, agricultural land uses such as cultivated crops and pasture and hay lands, and urban land uses. ",
-    "Grand (Ontario) River": "<i>* Content under development.</i>",
+    "Grand (Ontario) River": "",
     "Huron River": "The Huron River watershed is located on the south shore of Lake Erie between Toledo and Cleveland, in Huron, Erie, Seneca, Richland and Crawford counties.  The Huron River is 59.7 miles (96 km) long and the watershed covers 403 square miles (1,044 km<sup>2</sup>).  Land use is primarily dedicated to agricultural activities with approximately 74 percent cropland, 15 percent woodland, and 3 to 11 percent urban and other land uses.",
-    "Leamington Tributaries": "<i>* Content under development.</i>",//"The Leamington Tributaries are located in the southeastern area of the Essex Region in the municipalities of Leamington and Kingsville and drain directly to Lake Erie. Collectively the tributaries drain an area of approximately 70 km<sup>2</sup> (43 sq. mi), which is characterized by a high density of greenhouses, as well as row crop agriculture, specialty crops and residential areas.",
+    "Leamington Tributaries": "",//"The Leamington Tributaries are located in the southeastern area of the Essex Region in the municipalities of Leamington and Kingsville and drain directly to Lake Erie. Collectively the tributaries drain an area of approximately 70 km<sup>2</sup> (43 sq. mi), which is characterized by a high density of greenhouses, as well as row crop agriculture, specialty crops and residential areas.",
     "Maumee River": "The Maumee River watershed is located primarily in northwestern Ohio, with the western and northern boundaries extending into portions of Indiana and Michigan. The Maumee River watershed drains a total of 6,568 square miles (17,011 km<sup>2</sup>), 5,024 (13,012) of which are in Ohio. Major municipalities in the watershed include Toledo, Fort Wayne, Defiance, Findlay, Lima, Van Wert, Napoleon and Perrysburg. The watershed is predominantly comprised of cultivated crops with some urban development, hay and pasture lands, and forest.",
     "River Raisin": "The River Raisin is a river in southeastern Michigan that flows into Lake Erie. The area is an agricultural and industrial center. The river flows for almost 150 miles (241 km), draining an area of 1,072 square miles (2,780 km<sup>2</sup>) in the Michigan counties of Lenawee, Washtenaw, Jackson, Hillsdale, a portion of Fulton County, Ohio. The mouth of the river is located in Monroe County, Michigan.",
     "Portage River": "The Portage River is located in northwestern Ohio and drains 585 square miles (1515 km<sup>2</sup>). The Portage River flows into Lake Erie at Port Clinton in Ottawa County. The watershed is distributed across Ottawa, Sandusky, Hancock and Wood counties with a small portion in Seneca County. Land use in the watershed is comprised predominantly of 78 percent cultivated cropland, 11 percent developed land and 5 percent forest.",
     "Sandusky River": "The Sandusky River and Sandusky Bay watersheds are located in northwestern Ohio. They drain a total of 1,828 square miles (4,734 km<sup>2</sup>) and flow through all or part of 12 counties. Major municipalities in the watershed include Sandusky, Fremont, Tiffin, Bucyrus and Upper Sandusky. The watersheds are predominantly comprised of cultivated crops with some areas of urban development and pasture and hay lands. Wetlands are located in the northern portion of the watersheds.",
-    "Thames River": "<i>* Content under development.</i>",//"The Thames River is 280 km (174 miles) long, draining approximately 5,800 km<sup>2</sup> (2,239 sq. mi.) of Southwestern Ontario to Lake St. Clair. The watershed is primarily (approximately 80 percent) agricultural, but also contains cities and towns such as London, Woodstock, Chatham, as well as numerous smaller urban areas, with a total population of approximately 600,000 people.",
-    "Cedar-Toussaint": "<i>* Content under development.</i>",
+    "Thames River": "",//"The Thames River is 280 km (174 miles) long, draining approximately 5,800 km<sup>2</sup> (2,239 sq. mi.) of Southwestern Ontario to Lake St. Clair. The watershed is primarily (approximately 80 percent) agricultural, but also contains cities and towns such as London, Woodstock, Chatham, as well as numerous smaller urban areas, with a total population of approximately 600,000 people.",
+    "Cedar-Toussaint": "",
     "Vermilion River": "The Vermilion River watershed is located in northern Ohio, west of Cleveland.  It drains 269 square miles (697 km<sup>2</sup>) and flows through parts of five counties.  Land use in the watershed is predominantly comprised of cultivated crops with pockets of pasture and hay lands, urban development and forest.  Municipalities include Vermilion, New London, Greenwich and Wakeman."
 };
 
@@ -83,13 +83,13 @@ var metrics = {
 };
 
 var units = {
-    "Annual TP Loading": "Metric Tons",
-    "Annual SRP Loading": "Metric Tons",
+    "Annual TP Loading": "metric tons",
+    "Annual SRP Loading": "metric tons",
     "Annual TP FWMC": "milligrams / liter",
     "Annual SRP FWMC": "milligrams / liter",
     "Annual Discharge": "million cubic meters",
-    "Spring TP Loading": "Metric Tons",
-    "Spring SRP Loading": "Metric Tons",
+    "Spring TP Loading": "metric tons",
+    "Spring SRP Loading": "metric tons",
     "Spring TP FWMC": "milligrams / liter",
     "Spring SRP FWMC": "milligrams / liter",
     "Spring Discharge": "million cubic meters"
@@ -763,20 +763,23 @@ function getStandardWatershedName(w_name){
 function buildNarratives(w_name){
     $("#narrative-caption").text(watershedNames[w_name] + " Watershed");
     var n = narratives[watershedNames[w_name]];
-    if(!n){
-        n = "<p style='text-transform: uppercase;font-style: italic'>*Watershed Description unavailable.</p>"
+    if(n != ""){
+        $("#narrative-content").html(n);
+        return true;
+    }else{
+        $("#narrative-content").html("<p style='font-style: italic'>* Content under development for " + watershedNames[w_name] + " watershed.</p>");
+        return false;
     }
-    $("#narrative-content").html(n);
 }
 
-function buildChart(data, tag, name, metric, unit, width, height){
+function buildChart(w_data, tag, w_name, metric, unit, width, height){
     /**
      * Build two charts for each watershed, using the BA library
      */
 
         //get the watershed name
-    var w_name = watershedNames[name];//feature.properties.Name;
-    var w_data = getWatershedMetric(data, w_name, metric);
+    // var w_name = watershedNames[name];//feature.properties.Name;
+    // var w_data = getWatershedMetric(data, w_name, metric);
     if(w_data.length > 0){
         var t = undefined;
         if(targets[w_name] && targets[w_name][metric]){
@@ -786,7 +789,7 @@ function buildChart(data, tag, name, metric, unit, width, height){
         }
         var data_series = [];
         for (var i = 0; i < w_data.length; i++){
-            data_series.push(w_data[i].Value);
+            data_series.push(w_data[i]);
         }
         return createChart(tag, "column", metric, data_series, ColorPicker.blue7, w_name + " " + metric, unit, false, t, width=width, height=height);
     }else{
@@ -795,15 +798,15 @@ function buildChart(data, tag, name, metric, unit, width, height){
     }
 }
 
-function buildChart_line(data, tag, name, metric, unit, width, height){
+function buildChart_line(w_data, tag, w_name, metric, unit, width, height){
     /**
      * Build two charts for each watershed, using the BA library
      */
 
         //get the watershed name
-    var w_name = watershedNames[name];//feature.properties.Name;
-
-    var w_data = getWatershedMetric(data, w_name, metric);
+    // var w_name = watershedNames[name];//feature.properties.Name;
+    //
+    // var w_data = getWatershedMetric(data, w_name, metric);
     if(w_data.length > 0){
         var t = undefined;
         if(targets[w_name] && targets[w_name][metric]){
@@ -813,7 +816,7 @@ function buildChart_line(data, tag, name, metric, unit, width, height){
         }
         var data_series = [];
         for (var i = 0; i < w_data.length; i++){
-            data_series.push(w_data[i].Value);
+            data_series.push(w_data[i]);
         }
         return createChart(tag, "line", metric, data_series, ColorPicker.blue7, w_name + " " + metric, unit, false, t, width=width, height=height);
     }else{
