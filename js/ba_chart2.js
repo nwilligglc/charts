@@ -35,7 +35,7 @@ var narratives = {
 var watershedNames = {
     "Cattaraugus": "Cattaraugus River",
     "Cuyahoga": "Cuyahoga River",
-    "Detroit River": "Detroit River",
+    "Detroit": "Detroit River",
     "Grand": "Grand River",
     "Grand (Ontario)": "Grand (Ontario) River",
     "Huron": "Huron River",
