@@ -1,5 +1,659 @@
 [
   {
+    "River": "Cattaraugus Creek",
+    "Year": 2008,
+    "Fraction": "Annual TP Loading",
+    "Value": ""
+  },
+  {
+    "River": "Cattaraugus Creek",
+    "Year": 2009,
+    "Fraction": "Annual TP Loading",
+    "Value": 44
+  },
+  {
+    "River": "Cattaraugus Creek",
+    "Year": 2010,
+    "Fraction": "Annual TP Loading",
+    "Value": 36.31370434
+  },
+  {
+    "River": "Cattaraugus Creek",
+    "Year": 2011,
+    "Fraction": "Annual TP Loading",
+    "Value": 476
+  },
+  {
+    "River": "Cattaraugus Creek",
+    "Year": 2012,
+    "Fraction": "Annual TP Loading",
+    "Value": 559
+  },
+  {
+    "River": "Cattaraugus Creek",
+    "Year": 2013,
+    "Fraction": "Annual TP Loading",
+    "Value": 254.1332575
+  },
+  {
+    "River": "Cattaraugus Creek",
+    "Year": 2014,
+    "Fraction": "Annual TP Loading",
+    "Value": 371
+  },
+  {
+    "River": "Cattaraugus Creek",
+    "Year": 2015,
+    "Fraction": "Annual TP Loading",
+    "Value": 20
+  },
+  {
+    "River": "Cattaraugus Creek",
+    "Year": 2016,
+    "Fraction": "Annual TP Loading",
+    "Value": 274
+  },
+  {
+    "River": "Cattaraugus Creek",
+    "Year": 2009,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.039287586
+  },
+  {
+    "River": "Cattaraugus Creek",
+    "Year": 2010,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.05177608
+  },
+  {
+    "River": "Cattaraugus Creek",
+    "Year": 2011,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.324819146
+  },
+  {
+    "River": "Cattaraugus Creek",
+    "Year": 2012,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.675095901
+  },
+  {
+    "River": "Cattaraugus Creek",
+    "Year": 2013,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.299907433
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2014,
+    "Fraction": "Annual TP Loading",
+    "Value": 126
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2015,
+    "Fraction": "Annual TP Loading",
+    "Value": 96
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2016,
+    "Fraction": "Annual TP Loading",
+    "Value": 129
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2008,
+    "Fraction": "Spring Discharge",
+    "Value": ""
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2009,
+    "Fraction": "Spring Discharge",
+    "Value": ""
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2010,
+    "Fraction": "Spring Discharge",
+    "Value": ""
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2011,
+    "Fraction": "Spring Discharge",
+    "Value": ""
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2012,
+    "Fraction": "Spring Discharge",
+    "Value": ""
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2013,
+    "Fraction": "Spring Discharge",
+    "Value": ""
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2014,
+    "Fraction": "Spring Discharge",
+    "Value": ""
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2015,
+    "Fraction": "Spring Discharge",
+    "Value": ""
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2016,
+    "Fraction": "Spring Discharge",
+    "Value": ""
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2008,
+    "Fraction": "Spring TP Loading",
+    "Value": ""
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2009,
+    "Fraction": "Spring TP Loading",
+    "Value": ""
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2010,
+    "Fraction": "Spring TP Loading",
+    "Value": ""
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2011,
+    "Fraction": "Spring TP Loading",
+    "Value": ""
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2012,
+    "Fraction": "Spring TP Loading",
+    "Value": ""
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2013,
+    "Fraction": "Spring TP Loading",
+    "Value": ""
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2014,
+    "Fraction": "Spring TP Loading",
+    "Value": 48.7
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2015,
+    "Fraction": "Spring TP Loading",
+    "Value": 88.8
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2016,
+    "Fraction": "Spring TP Loading",
+    "Value": 52.7
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2008,
+    "Fraction": "Spring SRP Loading",
+    "Value": ""
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2009,
+    "Fraction": "Spring SRP Loading",
+    "Value": ""
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2010,
+    "Fraction": "Spring SRP Loading",
+    "Value": ""
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2011,
+    "Fraction": "Spring SRP Loading",
+    "Value": ""
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2012,
+    "Fraction": "Spring SRP Loading",
+    "Value": ""
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2013,
+    "Fraction": "Spring SRP Loading",
+    "Value": ""
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2014,
+    "Fraction": "Spring SRP Loading",
+    "Value": ""
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2015,
+    "Fraction": "Spring SRP Loading",
+    "Value": ""
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2016,
+    "Fraction": "Spring SRP Loading",
+    "Value": ""
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2008,
+    "Fraction": "Spring TP FWMC",
+    "Value": ""
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2009,
+    "Fraction": "Spring TP FWMC",
+    "Value": ""
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2010,
+    "Fraction": "Spring TP FWMC",
+    "Value": ""
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2011,
+    "Fraction": "Spring TP FWMC",
+    "Value": ""
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2012,
+    "Fraction": "Spring TP FWMC",
+    "Value": ""
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2013,
+    "Fraction": "Spring TP FWMC",
+    "Value": ""
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2014,
+    "Fraction": "Spring TP FWMC",
+    "Value": ""
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2015,
+    "Fraction": "Spring TP FWMC",
+    "Value": ""
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2016,
+    "Fraction": "Spring TP FWMC",
+    "Value": ""
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2008,
+    "Fraction": "Spring SRP FWMC",
+    "Value": ""
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2009,
+    "Fraction": "Spring SRP FWMC",
+    "Value": ""
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2010,
+    "Fraction": "Spring SRP FWMC",
+    "Value": ""
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2011,
+    "Fraction": "Spring SRP FWMC",
+    "Value": ""
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2012,
+    "Fraction": "Spring SRP FWMC",
+    "Value": ""
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2013,
+    "Fraction": "Spring SRP FWMC",
+    "Value": ""
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2014,
+    "Fraction": "Spring SRP FWMC",
+    "Value": ""
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2015,
+    "Fraction": "Spring SRP FWMC",
+    "Value": ""
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2016,
+    "Fraction": "Spring SRP FWMC",
+    "Value": ""
+  },
+  {
+    "River": "Chagrin River",
+    "Year": 2014,
+    "Fraction": "Annual TP Loading",
+    "Value": 14
+  },
+  {
+    "River": "Chagrin River",
+    "Year": 2015,
+    "Fraction": "Annual TP Loading",
+    "Value": 23
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2008,
+    "Fraction": "Spring Discharge",
+    "Value": 560.23
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2009,
+    "Fraction": "Spring Discharge",
+    "Value": 371.3
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2010,
+    "Fraction": "Spring Discharge",
+    "Value": 374
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2011,
+    "Fraction": "Spring Discharge",
+    "Value": 856.44
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2012,
+    "Fraction": "Spring Discharge",
+    "Value": 273.87
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2013,
+    "Fraction": "Spring Discharge",
+    "Value": 432.34
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2014,
+    "Fraction": "Spring Discharge",
+    "Value": 556.99
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2015,
+    "Fraction": "Spring Discharge",
+    "Value": 631.89
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2016,
+    "Fraction": "Spring Discharge",
+    "Value": 359.77
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2008,
+    "Fraction": "Spring TP Loading",
+    "Value": 138.9
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2009,
+    "Fraction": "Spring TP Loading",
+    "Value": 154.1
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2010,
+    "Fraction": "Spring TP Loading",
+    "Value": 98.2
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2011,
+    "Fraction": "Spring TP Loading",
+    "Value": 190.5
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2012,
+    "Fraction": "Spring TP Loading",
+    "Value": 51.8
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2013,
+    "Fraction": "Spring TP Loading",
+    "Value": 111.4
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2014,
+    "Fraction": "Spring TP Loading",
+    "Value": 170
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2015,
+    "Fraction": "Spring TP Loading",
+    "Value": 145
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2016,
+    "Fraction": "Spring TP Loading",
+    "Value": 48.4
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2008,
+    "Fraction": "Spring SRP Loading",
+    "Value": 14.3
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2009,
+    "Fraction": "Spring SRP Loading",
+    "Value": 11
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2010,
+    "Fraction": "Spring SRP Loading",
+    "Value": 13
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2011,
+    "Fraction": "Spring SRP Loading",
+    "Value": 12.7
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2012,
+    "Fraction": "Spring SRP Loading",
+    "Value": 7.6
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2013,
+    "Fraction": "Spring SRP Loading",
+    "Value": 10.6
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2014,
+    "Fraction": "Spring SRP Loading",
+    "Value": 7.5
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2015,
+    "Fraction": "Spring SRP Loading",
+    "Value": 9.7
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2016,
+    "Fraction": "Spring SRP Loading",
+    "Value": 8.7
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2008,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.248
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2009,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.415
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2010,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.263
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2011,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.222
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2012,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.189
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2013,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.258
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2014,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.305
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2015,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.229
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2016,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.135
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2008,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.026
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2009,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.03
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2010,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.035
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2011,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.015
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2012,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.028
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2013,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.024
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2014,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.014
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2015,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.015
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2016,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.024
+  },
+  {
     "River": "Cuyahoga River",
     "Year": 2008,
     "Fraction": "Annual TP Loading",
@@ -52,6 +706,762 @@
     "Year": 2016,
     "Fraction": "Annual TP Loading",
     "Value": 213
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2008,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.301977222
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2009,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.357797964
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2010,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.299718739
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2011,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.267023455
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2012,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.216860636
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2013,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.30742119
+  },
+  {
+    "River": "Grand River",
+    "Year": 2014,
+    "Fraction": "Annual TP Loading",
+    "Value": 36
+  },
+  {
+    "River": "Grand River",
+    "Year": 2015,
+    "Fraction": "Annual TP Loading",
+    "Value": 65
+  },
+  {
+    "River": "Grand River",
+    "Year": 2016,
+    "Fraction": "Annual TP Loading",
+    "Value": 32
+  },
+  {
+    "River": "Grand River",
+    "Year": 2008,
+    "Fraction": "Annual TP Loading",
+    "Value": 165
+  },
+  {
+    "River": "Grand River",
+    "Year": 2009,
+    "Fraction": "Annual TP Loading",
+    "Value": 66
+  },
+  {
+    "River": "Grand River",
+    "Year": 2010,
+    "Fraction": "Annual TP Loading",
+    "Value": 55.47292356
+  },
+  {
+    "River": "Grand River",
+    "Year": 2011,
+    "Fraction": "Annual TP Loading",
+    "Value": 108
+  },
+  {
+    "River": "Grand River",
+    "Year": 2012,
+    "Fraction": "Annual TP Loading",
+    "Value": 52
+  },
+  {
+    "River": "Grand River",
+    "Year": 2013,
+    "Fraction": "Annual TP Loading",
+    "Value": 54.18582571
+  },
+  {
+    "River": "Grand River",
+    "Year": 2008,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.135839371
+  },
+  {
+    "River": "Grand River",
+    "Year": 2009,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.081662635
+  },
+  {
+    "River": "Grand River",
+    "Year": 2010,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.081968074
+  },
+  {
+    "River": "Grand River",
+    "Year": 2011,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.085383106
+  },
+  {
+    "River": "Grand River",
+    "Year": 2012,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.053293104
+  },
+  {
+    "River": "Grand River",
+    "Year": 2013,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.052083094
+  },
+  {
+    "River": "Huron River",
+    "Year": 2014,
+    "Fraction": "Annual TP Loading",
+    "Value": 63
+  },
+  {
+    "River": "Huron River",
+    "Year": 2015,
+    "Fraction": "Annual TP Loading",
+    "Value": 20
+  },
+  {
+    "River": "Huron River",
+    "Year": 2016,
+    "Fraction": "Annual TP Loading",
+    "Value": 79
+  },
+  {
+    "River": "Huron River",
+    "Year": 2008,
+    "Fraction": "Annual TP Loading",
+    "Value": 205
+  },
+  {
+    "River": "Huron River",
+    "Year": 2009,
+    "Fraction": "Annual TP Loading",
+    "Value": 32
+  },
+  {
+    "River": "Huron River",
+    "Year": 2010,
+    "Fraction": "Annual TP Loading",
+    "Value": 68.84425621
+  },
+  {
+    "River": "Huron River",
+    "Year": 2011,
+    "Fraction": "Annual TP Loading",
+    "Value": 70
+  },
+  {
+    "River": "Huron River",
+    "Year": 2012,
+    "Fraction": "Annual TP Loading",
+    "Value": 48
+  },
+  {
+    "River": "Huron River",
+    "Year": 2013,
+    "Fraction": "Annual TP Loading",
+    "Value": 156.8180206
+  },
+  {
+    "River": "Huron River",
+    "Year": 2008,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.314785001
+  },
+  {
+    "River": "Huron River",
+    "Year": 2009,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.08196612
+  },
+  {
+    "River": "Huron River",
+    "Year": 2010,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.329266522
+  },
+  {
+    "River": "Huron River",
+    "Year": 2011,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.120277279
+  },
+  {
+    "River": "Huron River",
+    "Year": 2012,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.112806944
+  },
+  {
+    "River": "Huron River",
+    "Year": 2013,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.325223467
+  },
+  {
+    "River": "Huron River",
+    "Year": 2008,
+    "Fraction": "Spring Discharge",
+    "Value": ""
+  },
+  {
+    "River": "Huron River",
+    "Year": 2009,
+    "Fraction": "Spring Discharge",
+    "Value": ""
+  },
+  {
+    "River": "Huron River",
+    "Year": 2010,
+    "Fraction": "Spring Discharge",
+    "Value": ""
+  },
+  {
+    "River": "Huron River",
+    "Year": 2011,
+    "Fraction": "Spring Discharge",
+    "Value": ""
+  },
+  {
+    "River": "Huron River",
+    "Year": 2012,
+    "Fraction": "Spring Discharge",
+    "Value": ""
+  },
+  {
+    "River": "Huron River",
+    "Year": 2013,
+    "Fraction": "Spring Discharge",
+    "Value": ""
+  },
+  {
+    "River": "Huron River",
+    "Year": 2014,
+    "Fraction": "Spring Discharge",
+    "Value": ""
+  },
+  {
+    "River": "Huron River",
+    "Year": 2015,
+    "Fraction": "Spring Discharge",
+    "Value": ""
+  },
+  {
+    "River": "Huron River",
+    "Year": 2016,
+    "Fraction": "Spring Discharge",
+    "Value": ""
+  },
+  {
+    "River": "Huron River",
+    "Year": 2008,
+    "Fraction": "Spring TP Loading",
+    "Value": ""
+  },
+  {
+    "River": "Huron River",
+    "Year": 2009,
+    "Fraction": "Spring TP Loading",
+    "Value": 10
+  },
+  {
+    "River": "Huron River",
+    "Year": 2010,
+    "Fraction": "Spring TP Loading",
+    "Value": 29.9
+  },
+  {
+    "River": "Huron River",
+    "Year": 2011,
+    "Fraction": "Spring TP Loading",
+    "Value": 20.8
+  },
+  {
+    "River": "Huron River",
+    "Year": 2012,
+    "Fraction": "Spring TP Loading",
+    "Value": 3
+  },
+  {
+    "River": "Huron River",
+    "Year": 2013,
+    "Fraction": "Spring TP Loading",
+    "Value": 37.4
+  },
+  {
+    "River": "Huron River",
+    "Year": 2014,
+    "Fraction": "Spring TP Loading",
+    "Value": 17.9
+  },
+  {
+    "River": "Huron River",
+    "Year": 2015,
+    "Fraction": "Spring TP Loading",
+    "Value": 10
+  },
+  {
+    "River": "Huron River",
+    "Year": 2016,
+    "Fraction": "Spring TP Loading",
+    "Value": 25.9
+  },
+  {
+    "River": "Huron River",
+    "Year": 2008,
+    "Fraction": "Spring SRP Loading",
+    "Value": ""
+  },
+  {
+    "River": "Huron River",
+    "Year": 2009,
+    "Fraction": "Spring SRP Loading",
+    "Value": ""
+  },
+  {
+    "River": "Huron River",
+    "Year": 2010,
+    "Fraction": "Spring SRP Loading",
+    "Value": 7.6
+  },
+  {
+    "River": "Huron River",
+    "Year": 2011,
+    "Fraction": "Spring SRP Loading",
+    "Value": 14.3
+  },
+  {
+    "River": "Huron River",
+    "Year": 2012,
+    "Fraction": "Spring SRP Loading",
+    "Value": 1.1
+  },
+  {
+    "River": "Huron River",
+    "Year": 2013,
+    "Fraction": "Spring SRP Loading",
+    "Value": 10.3
+  },
+  {
+    "River": "Huron River",
+    "Year": 2014,
+    "Fraction": "Spring SRP Loading",
+    "Value": ""
+  },
+  {
+    "River": "Huron River",
+    "Year": 2015,
+    "Fraction": "Spring SRP Loading",
+    "Value": ""
+  },
+  {
+    "River": "Huron River",
+    "Year": 2016,
+    "Fraction": "Spring SRP Loading",
+    "Value": ""
+  },
+  {
+    "River": "Huron River",
+    "Year": 2008,
+    "Fraction": "Spring TP FWMC",
+    "Value": ""
+  },
+  {
+    "River": "Huron River",
+    "Year": 2009,
+    "Fraction": "Spring TP FWMC",
+    "Value": ""
+  },
+  {
+    "River": "Huron River",
+    "Year": 2010,
+    "Fraction": "Spring TP FWMC",
+    "Value": ""
+  },
+  {
+    "River": "Huron River",
+    "Year": 2011,
+    "Fraction": "Spring TP FWMC",
+    "Value": ""
+  },
+  {
+    "River": "Huron River",
+    "Year": 2012,
+    "Fraction": "Spring TP FWMC",
+    "Value": ""
+  },
+  {
+    "River": "Huron River",
+    "Year": 2013,
+    "Fraction": "Spring TP FWMC",
+    "Value": ""
+  },
+  {
+    "River": "Huron River",
+    "Year": 2014,
+    "Fraction": "Spring TP FWMC",
+    "Value": ""
+  },
+  {
+    "River": "Huron River",
+    "Year": 2015,
+    "Fraction": "Spring TP FWMC",
+    "Value": ""
+  },
+  {
+    "River": "Huron River",
+    "Year": 2016,
+    "Fraction": "Spring TP FWMC",
+    "Value": ""
+  },
+  {
+    "River": "Huron River",
+    "Year": 2008,
+    "Fraction": "Spring SRP FWMC",
+    "Value": ""
+  },
+  {
+    "River": "Huron River",
+    "Year": 2009,
+    "Fraction": "Spring SRP FWMC",
+    "Value": ""
+  },
+  {
+    "River": "Huron River",
+    "Year": 2010,
+    "Fraction": "Spring SRP FWMC",
+    "Value": ""
+  },
+  {
+    "River": "Huron River",
+    "Year": 2011,
+    "Fraction": "Spring SRP FWMC",
+    "Value": ""
+  },
+  {
+    "River": "Huron River",
+    "Year": 2012,
+    "Fraction": "Spring SRP FWMC",
+    "Value": ""
+  },
+  {
+    "River": "Huron River",
+    "Year": 2013,
+    "Fraction": "Spring SRP FWMC",
+    "Value": ""
+  },
+  {
+    "River": "Huron River",
+    "Year": 2014,
+    "Fraction": "Spring SRP FWMC",
+    "Value": ""
+  },
+  {
+    "River": "Huron River",
+    "Year": 2015,
+    "Fraction": "Spring SRP FWMC",
+    "Value": ""
+  },
+  {
+    "River": "Huron River",
+    "Year": 2016,
+    "Fraction": "Spring SRP FWMC",
+    "Value": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2008,
+    "Fraction": "Spring Discharge",
+    "Value": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2009,
+    "Fraction": "Spring Discharge",
+    "Value": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2010,
+    "Fraction": "Spring Discharge",
+    "Value": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2011,
+    "Fraction": "Spring Discharge",
+    "Value": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2012,
+    "Fraction": "Spring Discharge",
+    "Value": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2013,
+    "Fraction": "Spring Discharge",
+    "Value": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2014,
+    "Fraction": "Spring Discharge",
+    "Value": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2015,
+    "Fraction": "Spring Discharge",
+    "Value": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2016,
+    "Fraction": "Spring Discharge",
+    "Value": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2008,
+    "Fraction": "Spring TP Loading",
+    "Value": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2009,
+    "Fraction": "Spring TP Loading",
+    "Value": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2010,
+    "Fraction": "Spring TP Loading",
+    "Value": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2011,
+    "Fraction": "Spring TP Loading",
+    "Value": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2012,
+    "Fraction": "Spring TP Loading",
+    "Value": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2013,
+    "Fraction": "Spring TP Loading",
+    "Value": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2014,
+    "Fraction": "Spring TP Loading",
+    "Value": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2015,
+    "Fraction": "Spring TP Loading",
+    "Value": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2016,
+    "Fraction": "Spring TP Loading",
+    "Value": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2008,
+    "Fraction": "Spring SRP Loading",
+    "Value": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2009,
+    "Fraction": "Spring SRP Loading",
+    "Value": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2010,
+    "Fraction": "Spring SRP Loading",
+    "Value": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2011,
+    "Fraction": "Spring SRP Loading",
+    "Value": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2012,
+    "Fraction": "Spring SRP Loading",
+    "Value": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2013,
+    "Fraction": "Spring SRP Loading",
+    "Value": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2014,
+    "Fraction": "Spring SRP Loading",
+    "Value": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2015,
+    "Fraction": "Spring SRP Loading",
+    "Value": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2016,
+    "Fraction": "Spring SRP Loading",
+    "Value": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2008,
+    "Fraction": "Spring TP FWMC",
+    "Value": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2009,
+    "Fraction": "Spring TP FWMC",
+    "Value": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2010,
+    "Fraction": "Spring TP FWMC",
+    "Value": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2011,
+    "Fraction": "Spring TP FWMC",
+    "Value": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2012,
+    "Fraction": "Spring TP FWMC",
+    "Value": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2013,
+    "Fraction": "Spring TP FWMC",
+    "Value": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2014,
+    "Fraction": "Spring TP FWMC",
+    "Value": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2015,
+    "Fraction": "Spring TP FWMC",
+    "Value": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2016,
+    "Fraction": "Spring TP FWMC",
+    "Value": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2008,
+    "Fraction": "Spring SRP FWMC",
+    "Value": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2009,
+    "Fraction": "Spring SRP FWMC",
+    "Value": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2010,
+    "Fraction": "Spring SRP FWMC",
+    "Value": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2011,
+    "Fraction": "Spring SRP FWMC",
+    "Value": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2012,
+    "Fraction": "Spring SRP FWMC",
+    "Value": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2013,
+    "Fraction": "Spring SRP FWMC",
+    "Value": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2014,
+    "Fraction": "Spring SRP FWMC",
+    "Value": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2015,
+    "Fraction": "Spring SRP FWMC",
+    "Value": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2016,
+    "Fraction": "Spring SRP FWMC",
+    "Value": ""
   },
   {
     "River": "Maumee River",
@@ -378,6 +1788,42 @@
     "Value": 1309
   },
   {
+    "River": "Maumee River",
+    "Year": 2008,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.456447108
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2009,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.439831621
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2010,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.346261584
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2011,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.452990225
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2012,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.388362502
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2013,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.435902298
+  },
+  {
     "River": "Portage River",
     "Year": 2008,
     "Fraction": "Spring Discharge",
@@ -702,6 +2148,42 @@
     "Value": 235
   },
   {
+    "River": "Portage River",
+    "Year": 2008,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.55414874
+  },
+  {
+    "River": "Portage River",
+    "Year": 2009,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.723349792
+  },
+  {
+    "River": "Portage River",
+    "Year": 2010,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.523589186
+  },
+  {
+    "River": "Portage River",
+    "Year": 2011,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.935957175
+  },
+  {
+    "River": "Portage River",
+    "Year": 2012,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.893687606
+  },
+  {
+    "River": "Portage River",
+    "Year": 2013,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.813314531
+  },
+  {
     "River": "River Raisin",
     "Year": 2008,
     "Fraction": "Spring Discharge",
@@ -970,6 +2452,60 @@
     "Year": 2016,
     "Fraction": "Spring SRP FWMC",
     "Value": 0.027
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2008,
+    "Fraction": "Annual TP Loading",
+    "Value": 262
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2009,
+    "Fraction": "Annual TP Loading",
+    "Value": 172
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2010,
+    "Fraction": "Annual TP Loading",
+    "Value": 160.7405036
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2011,
+    "Fraction": "Annual TP Loading",
+    "Value": 185
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2012,
+    "Fraction": "Annual TP Loading",
+    "Value": 201
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2013,
+    "Fraction": "Annual TP Loading",
+    "Value": 87.74386229
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2014,
+    "Fraction": "Annual TP Loading",
+    "Value": 95
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2015,
+    "Fraction": "Annual TP Loading",
+    "Value": 116
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2016,
+    "Fraction": "Annual TP Loading",
+    "Value": 80
   },
   {
     "River": "River Raisin",
@@ -1280,204 +2816,6 @@
   {
     "River": "Sandusky River",
     "Year": 2008,
-    "Fraction": "Annual TP FWMC",
-    "Value": 0.472805958
-  },
-  {
-    "River": "Sandusky River",
-    "Year": 2009,
-    "Fraction": "Annual TP FWMC",
-    "Value": 0.44124554
-  },
-  {
-    "River": "Sandusky River",
-    "Year": 2010,
-    "Fraction": "Annual TP FWMC",
-    "Value": 0.397040894
-  },
-  {
-    "River": "Sandusky River",
-    "Year": 2011,
-    "Fraction": "Annual TP FWMC",
-    "Value": 0.500175761
-  },
-  {
-    "River": "Sandusky River",
-    "Year": 2012,
-    "Fraction": "Annual TP FWMC",
-    "Value": 0.4257791
-  },
-  {
-    "River": "Sandusky River",
-    "Year": 2013,
-    "Fraction": "Annual TP FWMC",
-    "Value": 0.423000367
-  },
-  {
-    "River": "Grand River",
-    "Year": 2014,
-    "Fraction": "Annual TP Loading",
-    "Value": 36
-  },
-  {
-    "River": "Grand River",
-    "Year": 2015,
-    "Fraction": "Annual TP Loading",
-    "Value": 65
-  },
-  {
-    "River": "Grand River",
-    "Year": 2016,
-    "Fraction": "Annual TP Loading",
-    "Value": 32
-  },
-  {
-    "River": "Grand River",
-    "Year": 2008,
-    "Fraction": "Annual TP Loading",
-    "Value": 165
-  },
-  {
-    "River": "Grand River",
-    "Year": 2009,
-    "Fraction": "Annual TP Loading",
-    "Value": 66
-  },
-  {
-    "River": "Grand River",
-    "Year": 2010,
-    "Fraction": "Annual TP Loading",
-    "Value": 55.47292356
-  },
-  {
-    "River": "Grand River",
-    "Year": 2011,
-    "Fraction": "Annual TP Loading",
-    "Value": 108
-  },
-  {
-    "River": "Grand River",
-    "Year": 2012,
-    "Fraction": "Annual TP Loading",
-    "Value": 52
-  },
-  {
-    "River": "Grand River",
-    "Year": 2013,
-    "Fraction": "Annual TP Loading",
-    "Value": 54.18582571
-  },
-  {
-    "River": "Huron River",
-    "Year": 2014,
-    "Fraction": "Annual TP Loading",
-    "Value": 63
-  },
-  {
-    "River": "Huron River",
-    "Year": 2015,
-    "Fraction": "Annual TP Loading",
-    "Value": 106
-  },
-  {
-    "River": "Huron River",
-    "Year": 2016,
-    "Fraction": "Annual TP Loading",
-    "Value": 77
-  },
-  {
-    "River": "Huron River",
-    "Year": 2008,
-    "Fraction": "Annual TP Loading",
-    "Value": 205
-  },
-  {
-    "River": "Huron River",
-    "Year": 2009,
-    "Fraction": "Annual TP Loading",
-    "Value": 32
-  },
-  {
-    "River": "Huron River",
-    "Year": 2010,
-    "Fraction": "Annual TP Loading",
-    "Value": 68.84425621
-  },
-  {
-    "River": "Huron River",
-    "Year": 2011,
-    "Fraction": "Annual TP Loading",
-    "Value": 70
-  },
-  {
-    "River": "Huron River",
-    "Year": 2012,
-    "Fraction": "Annual TP Loading",
-    "Value": 48
-  },
-  {
-    "River": "Huron River",
-    "Year": 2013,
-    "Fraction": "Annual TP Loading",
-    "Value": 156.8180206
-  },
-  {
-    "River": "River Raisin",
-    "Year": 2008,
-    "Fraction": "Annual TP Loading",
-    "Value": 262
-  },
-  {
-    "River": "River Raisin",
-    "Year": 2009,
-    "Fraction": "Annual TP Loading",
-    "Value": 172
-  },
-  {
-    "River": "River Raisin",
-    "Year": 2010,
-    "Fraction": "Annual TP Loading",
-    "Value": 160.7405036
-  },
-  {
-    "River": "River Raisin",
-    "Year": 2011,
-    "Fraction": "Annual TP Loading",
-    "Value": 185
-  },
-  {
-    "River": "River Raisin",
-    "Year": 2012,
-    "Fraction": "Annual TP Loading",
-    "Value": 201
-  },
-  {
-    "River": "River Raisin",
-    "Year": 2013,
-    "Fraction": "Annual TP Loading",
-    "Value": 87.74386229
-  },
-  {
-    "River": "River Raisin",
-    "Year": 2014,
-    "Fraction": "Annual TP Loading",
-    "Value": 95
-  },
-  {
-    "River": "River Raisin",
-    "Year": 2015,
-    "Fraction": "Annual TP Loading",
-    "Value": 116
-  },
-  {
-    "River": "River Raisin",
-    "Year": 2016,
-    "Fraction": "Annual TP Loading",
-    "Value": 80
-  },
-  {
-    "River": "Sandusky River",
-    "Year": 2008,
     "Fraction": "Annual TP Loading",
     "Value": 1101
   },
@@ -1528,6 +2866,384 @@
     "Year": 2016,
     "Fraction": "Annual TP Loading",
     "Value": 389
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2008,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.472805958
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2009,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.44124554
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2010,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.397040894
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2011,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.500175761
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2012,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.4257791
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2013,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.423000367
+  },
+  {
+    "River": "Thames River",
+    "Year": 2008,
+    "Fraction": "Annual TP Loading",
+    "Value": 235
+  },
+  {
+    "River": "Thames River",
+    "Year": 2009,
+    "Fraction": "Annual TP Loading",
+    "Value": 431
+  },
+  {
+    "River": "Thames River",
+    "Year": 2010,
+    "Fraction": "Annual TP Loading",
+    "Value": 115.5018167
+  },
+  {
+    "River": "Thames River",
+    "Year": 2011,
+    "Fraction": "Annual TP Loading",
+    "Value": 835
+  },
+  {
+    "River": "Thames River",
+    "Year": 2012,
+    "Fraction": "Annual TP Loading",
+    "Value": 169
+  },
+  {
+    "River": "Thames River",
+    "Year": 2013,
+    "Fraction": "Annual TP Loading",
+    "Value": 367
+  },
+  {
+    "River": "Thames River",
+    "Year": 2008,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.087728158
+  },
+  {
+    "River": "Thames River",
+    "Year": 2009,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.110099424
+  },
+  {
+    "River": "Thames River",
+    "Year": 2010,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.073530186
+  },
+  {
+    "River": "Thames River",
+    "Year": 2011,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.249673056
+  },
+  {
+    "River": "Thames River",
+    "Year": 2012,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.066631788
+  },
+  {
+    "River": "Thames River",
+    "Year": 2013,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.125153109
+  },
+  {
+    "River": "Thames River",
+    "Year": 2008,
+    "Fraction": "Spring Discharge",
+    "Value": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2009,
+    "Fraction": "Spring Discharge",
+    "Value": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2010,
+    "Fraction": "Spring Discharge",
+    "Value": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2011,
+    "Fraction": "Spring Discharge",
+    "Value": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2012,
+    "Fraction": "Spring Discharge",
+    "Value": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2013,
+    "Fraction": "Spring Discharge",
+    "Value": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2014,
+    "Fraction": "Spring Discharge",
+    "Value": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2015,
+    "Fraction": "Spring Discharge",
+    "Value": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2016,
+    "Fraction": "Spring Discharge",
+    "Value": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2008,
+    "Fraction": "Spring TP Loading",
+    "Value": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2009,
+    "Fraction": "Spring TP Loading",
+    "Value": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2010,
+    "Fraction": "Spring TP Loading",
+    "Value": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2011,
+    "Fraction": "Spring TP Loading",
+    "Value": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2012,
+    "Fraction": "Spring TP Loading",
+    "Value": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2013,
+    "Fraction": "Spring TP Loading",
+    "Value": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2014,
+    "Fraction": "Spring TP Loading",
+    "Value": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2015,
+    "Fraction": "Spring TP Loading",
+    "Value": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2016,
+    "Fraction": "Spring TP Loading",
+    "Value": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2008,
+    "Fraction": "Spring SRP Loading",
+    "Value": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2009,
+    "Fraction": "Spring SRP Loading",
+    "Value": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2010,
+    "Fraction": "Spring SRP Loading",
+    "Value": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2011,
+    "Fraction": "Spring SRP Loading",
+    "Value": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2012,
+    "Fraction": "Spring SRP Loading",
+    "Value": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2013,
+    "Fraction": "Spring SRP Loading",
+    "Value": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2014,
+    "Fraction": "Spring SRP Loading",
+    "Value": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2015,
+    "Fraction": "Spring SRP Loading",
+    "Value": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2016,
+    "Fraction": "Spring SRP Loading",
+    "Value": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2008,
+    "Fraction": "Spring TP FWMC",
+    "Value": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2009,
+    "Fraction": "Spring TP FWMC",
+    "Value": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2010,
+    "Fraction": "Spring TP FWMC",
+    "Value": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2011,
+    "Fraction": "Spring TP FWMC",
+    "Value": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2012,
+    "Fraction": "Spring TP FWMC",
+    "Value": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2013,
+    "Fraction": "Spring TP FWMC",
+    "Value": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2014,
+    "Fraction": "Spring TP FWMC",
+    "Value": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2015,
+    "Fraction": "Spring TP FWMC",
+    "Value": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2016,
+    "Fraction": "Spring TP FWMC",
+    "Value": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2008,
+    "Fraction": "Spring SRP FWMC",
+    "Value": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2009,
+    "Fraction": "Spring SRP FWMC",
+    "Value": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2010,
+    "Fraction": "Spring SRP FWMC",
+    "Value": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2011,
+    "Fraction": "Spring SRP FWMC",
+    "Value": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2012,
+    "Fraction": "Spring SRP FWMC",
+    "Value": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2013,
+    "Fraction": "Spring SRP FWMC",
+    "Value": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2014,
+    "Fraction": "Spring SRP FWMC",
+    "Value": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2015,
+    "Fraction": "Spring SRP FWMC",
+    "Value": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2016,
+    "Fraction": "Spring SRP FWMC",
+    "Value": ""
   },
   {
     "River": "Vermilion River",
@@ -1582,5 +3298,95 @@
     "Year": 2016,
     "Fraction": "Annual TP Loading",
     "Value": 92
+  },
+  {
+    "River": "Vermilion River",
+    "Year": 2008,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.445048267
+  },
+  {
+    "River": "Vermilion River",
+    "Year": 2009,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.092179736
+  },
+  {
+    "River": "Vermilion River",
+    "Year": 2010,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.269369401
+  },
+  {
+    "River": "Vermilion River",
+    "Year": 2011,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.376533409
+  },
+  {
+    "River": "Vermilion River",
+    "Year": 2012,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.404885848
+  },
+  {
+    "River": "Vermilion River",
+    "Year": 2013,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.73112044
+  },
+  {
+    "River": "Detroit River",
+    "Year": 2008,
+    "Fraction": "Annual TP Loading",
+    "Value": 1261
+  },
+  {
+    "River": "Detroit River",
+    "Year": 2009,
+    "Fraction": "Annual TP Loading",
+    "Value": 1242
+  },
+  {
+    "River": "Detroit River",
+    "Year": 2010,
+    "Fraction": "Annual TP Loading",
+    "Value": 1241
+  },
+  {
+    "River": "Detroit River",
+    "Year": 2011,
+    "Fraction": "Annual TP Loading",
+    "Value": 1216
+  },
+  {
+    "River": "Detroit River",
+    "Year": 2012,
+    "Fraction": "Annual TP Loading",
+    "Value": 1014
+  },
+  {
+    "River": "Detroit River",
+    "Year": 2013,
+    "Fraction": "Annual TP Loading",
+    "Value": 958
+  },
+  {
+    "River": "Detroit River",
+    "Year": 2014,
+    "Fraction": "Annual TP Loading",
+    "Value": 625
+  },
+  {
+    "River": "Detroit River",
+    "Year": 2015,
+    "Fraction": "Annual TP Loading",
+    "Value": 750
+  },
+  {
+    "River": "Detroit River",
+    "Year": 2016,
+    "Fraction": "Annual TP Loading",
+    "Value": 704
   }
 ]
