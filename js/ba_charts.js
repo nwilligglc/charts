@@ -503,7 +503,7 @@ function createWatershedChart(eleID, name, filename, fraction, chartType, target
             unit: 'Metric Tons',
             series: []
         },
-        DRPloading: {
+        SRPloading: {
             name: 'Annual DRP Loading',
             unit: 'Metric Tons',
             series: []
@@ -513,7 +513,7 @@ function createWatershedChart(eleID, name, filename, fraction, chartType, target
             unit: 'mg/L',
             series: []
         },
-        DRPFWMC: {
+        SRPFWMC: {
             name: 'Annual DRP FWMC',
             unit: 'mg/L',
             series: []
@@ -528,7 +528,7 @@ function createWatershedChart(eleID, name, filename, fraction, chartType, target
             unit: 'Metric Tons',
             series: []
         },
-        DRPloading_S: {
+        SRPloading_S: {
             name: 'Spring DRP Loading',
             unit: 'Metric Tons',
             series: []
@@ -538,7 +538,7 @@ function createWatershedChart(eleID, name, filename, fraction, chartType, target
             unit: 'mg/L',
             series: []
         },
-        DRPFWMC_S: {
+        SRPFWMC_S: {
             name: 'Spring DRP FWMC',
             unit: 'mg/L',
             series: []
@@ -553,14 +553,14 @@ function createWatershedChart(eleID, name, filename, fraction, chartType, target
             case this.TPloading.name:
                 this.TPloading.series.splice(year - 2008, 0, (val));
                 break;
-            case this.DRPloading.name:
-                this.DRPloading.series.splice(year - 2008, 0, (val));
+            case this.SRPloading.name:
+                this.SRPloading.series.splice(year - 2008, 0, (val));
                 break;
             case this.TPFWMC.name:
                 this.TPFWMC.series.splice(year - 2008, 0, (val));
                 break;
-            case this.DRPFWMC.name:
-                this.DRPFWMC.series.splice(year - 2008, 0, (val));
+            case this.SRPFWMC.name:
+                this.SRPFWMC.series.splice(year - 2008, 0, (val));
                 break;
             case this.discharge.name:
                 this.discharge.series.splice(year - 2008, 0, (val));
@@ -568,14 +568,14 @@ function createWatershedChart(eleID, name, filename, fraction, chartType, target
             case this.TPloading_S.name:
                 this.TPloading_S.series.splice(year - 2008, 0, val);
                 break;
-            case this.DRPloading_S.name:
-                this.DRPloading_S.series.splice(year - 2008, 0, val);
+            case this.SRPloading_S.name:
+                this.SRPloading_S.series.splice(year - 2008, 0, val);
                 break;
             case this.TPFWMC_S.name:
                 this.TPFWMC_S.series.splice(year - 2008, 0, val);
                 break;
-            case this.DRPFWMC_S.name:
-                this.DRPFWMC_S.series.splice(year - 2008, 0, val);
+            case this.SRPFWMC_S.name:
+                this.SRPFWMC_S.series.splice(year - 2008, 0, val);
                 break;
             case this.discharge_S.name:
                 this.discharge_S.series.splice(year - 2008, 0, val);
@@ -652,7 +652,7 @@ function createDualAxesChart(eleID, chartName, filename, fraction1, fraction2, s
             unit: 'Metric Tons',
             series: []
         },
-        DRPloading: {
+        SRPloading: {
             name: 'Annual DRP Loading',
             unit: 'Metric Tons',
             series: []
@@ -662,7 +662,7 @@ function createDualAxesChart(eleID, chartName, filename, fraction1, fraction2, s
             unit: 'mg/L',
             series: []
         },
-        DRPFWMC: {
+        SRPFWMC: {
             name: 'Annual DRP FWMC',
             unit: 'mg/L',
             series: []
@@ -677,7 +677,7 @@ function createDualAxesChart(eleID, chartName, filename, fraction1, fraction2, s
             unit: 'Metric Tons',
             series: []
         },
-        DRPloading_S: {
+        SRPloading_S: {
             name: 'Spring DRP Loading',
             unit: 'Metric Tons',
             series: []
@@ -687,7 +687,7 @@ function createDualAxesChart(eleID, chartName, filename, fraction1, fraction2, s
             unit: 'mg/L',
             series: []
         },
-        DRPFWMC_S: {
+        SRPFWMC_S: {
             name: 'Spring DRP FWMC',
             unit: 'mg/L',
             series: []
@@ -702,14 +702,14 @@ function createDualAxesChart(eleID, chartName, filename, fraction1, fraction2, s
             case this.TPloading.name:
                 this.TPloading.series.splice(year - 2008, 0, (val));
                 break;
-            case this.DRPloading.name:
-                this.DRPloading.series.splice(year - 2008, 0, (val));
+            case this.SRPloading.name:
+                this.SRPloading.series.splice(year - 2008, 0, (val));
                 break;
             case this.TPFWMC.name:
                 this.TPFWMC.series.splice(year - 2008, 0, (val));
                 break;
-            case this.DRPFWMC.name:
-                this.DRPFWMC.series.splice(year - 2008, 0, (val));
+            case this.SRPFWMC.name:
+                this.SRPFWMC.series.splice(year - 2008, 0, (val));
                 break;
             case this.discharge.name:
                 this.discharge.series.splice(year - 2008, 0, (val));
@@ -717,14 +717,14 @@ function createDualAxesChart(eleID, chartName, filename, fraction1, fraction2, s
             case this.TPloading_S.name:
                 this.TPloading_S.series.splice(year - 2008, 0, val);
                 break;
-            case this.DRPloading_S.name:
-                this.DRPloading_S.series.splice(year - 2008, 0, val);
+            case this.SRPloading_S.name:
+                this.SRPloading_S.series.splice(year - 2008, 0, val);
                 break;
             case this.TPFWMC_S.name:
                 this.TPFWMC_S.series.splice(year - 2008, 0, val);
                 break;
-            case this.DRPFWMC_S.name:
-                this.DRPFWMC_S.series.splice(year - 2008, 0, val);
+            case this.SRPFWMC_S.name:
+                this.SRPFWMC_S.series.splice(year - 2008, 0, val);
                 break;
             case this.discharge_S.name:
                 this.discharge_S.series.splice(year - 2008, 0, val);
@@ -749,7 +749,7 @@ function createDualAxesChart(eleID, chartName, filename, fraction1, fraction2, s
         var chart = Highcharts.chart(eleID, {
             chart: {
                 width: undefined, //chart_width,
-                height: chart_height, //undefined,//chart_height,
+                // height: chart_height, //undefined,//chart_height,
                 style: {
                     fontFamily: 'Montserrat, sans-serif',
                     color: ColorPicker.body

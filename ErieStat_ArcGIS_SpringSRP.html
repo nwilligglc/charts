@@ -99,11 +99,11 @@
             domConstruct
         ) {
             var data;
-            $.getJSON("data/all_data2.json", function(d){
+            $.getJSON("data/data.json", function(d){
                 data = d;
             });
             var identifyTask, params;
-            var serviceURL = "https://gis.glc.org/server/rest/services/ErieStat/PriorityWatersheds/MapServer";
+            var serviceURL = "https://gis.glc.org/server/rest/services/ErieStat/SpringSRP/MapServer";
             var metric = metrics.SRP_L_S;
 //            var unit = units.SRP_L_S;
             var geometry;
@@ -114,7 +114,7 @@
             };
 
             var erieStatLayer = new MapImageLayer({
-                url: "https://gis.glc.org/server/rest/services/ErieStat/PriorityWatersheds/MapServer",
+                url: "https://gis.glc.org/server/rest/services/ErieStat/SpringSRP/MapServer",
                 id: "esLayer",
                 sublayers: [{
                     id: 0
@@ -126,7 +126,7 @@
                         labelPlacement: "always-horizontal",
                         symbol: {
                             type: "text",  // autocasts as new TextSymbol()
-                            color: [255, 0, 0],
+                            color: ColorPicker.body,
                             family: "Montserrat, sans-serif",
                             font: {
                                 size: 12,
@@ -159,7 +159,7 @@
             });
 
             var pilotWatershedLayer = new FeatureLayer({
-               url:  "https://gis.glc.org/server/rest/services/ErieStat/PriorityWatersheds/MapServer/1",
+               url:  "https://gis.glc.org/server/rest/services/ErieStat/SpringSRP/MapServer/1",
             });
 
             // Create the Map
@@ -326,9 +326,11 @@
 
 
 
-                        var w_data = getWatershedMetric(data, watershedNames[w_name], metric);
+                        var w_data = $.map(getWatershedMetric(data, watershedNames[w_name], metric), function(el){
+                            return el.Value;
+                        });
                         var chart_size = [window.innerWidth*0.45, window.innerHeight*0.45];
-                        buildChart(data, "chart", w_name, metric, units[metric],chart_size[0], chart_size[1]);
+                        buildChart(w_data, "chart", watershedNames[w_name], metric, units[metric],chart_size[0], chart_size[1]);
 //                        var data_series = [];
 //                        for (var i = 0; i < w_data.length; i++){
 //                            data_series.push(w_data[i].Value);

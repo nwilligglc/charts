@@ -43,10 +43,10 @@
         var w_name = "Maumee";
         var series1 = metrics.TP_L;
         var series2 = metrics.TP_L_S;
-        var s1_data = $.map(getWatershedMetric(data, w_name, series1), function(el){
+        var s1_data = $.map(getWatershedMetric(data, watershedNames[w_name], series1), function(el){
             return el.Value;
         });
-        var s2_data = $.map(getWatershedMetric(data, w_name, series2), function(el){
+        var s2_data = $.map(getWatershedMetric(data, watershedNames[w_name], series2), function(el){
             return el.Value;
         });
 
