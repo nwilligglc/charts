@@ -1,0 +1,233 @@
+[
+  {
+    "RID": 1,
+    "ActivityStartDate": "5/27/2015",
+    "MonitoringLocationIdentifier": "USGS-04182867",
+    "ResultMeasureValue": 1.6,
+    "ActivityStartTime.Time": "15:20:00"
+  },
+  {
+    "RID": 2,
+    "ActivityStartDate": "5/27/2015",
+    "MonitoringLocationIdentifier": "USGS-04182867",
+    "ResultMeasureValue": 7.1,
+    "ActivityStartTime.Time": "15:20:00"
+  },
+  {
+    "RID": 3,
+    "ActivityStartDate": "4/14/2015",
+    "MonitoringLocationIdentifier": "USGS-04182867",
+    "ResultMeasureValue": 4.88,
+    "ActivityStartTime.Time": "16:55:00"
+  },
+  {
+    "RID": 4,
+    "ActivityStartDate": "4/14/2015",
+    "MonitoringLocationIdentifier": "USGS-04182867",
+    "ResultMeasureValue": 21.6,
+    "ActivityStartTime.Time": "16:55:00"
+  },
+  {
+    "RID": 5,
+    "ActivityStartDate": "11/12/2015",
+    "MonitoringLocationIdentifier": "USGS-04182867",
+    "ResultMeasureValue": 2.95,
+    "ActivityStartTime.Time": "11:45:00"
+  },
+  {
+    "RID": 6,
+    "ActivityStartDate": "7/13/2015",
+    "MonitoringLocationIdentifier": "USGS-04182867",
+    "ResultMeasureValue": 9.02,
+    "ActivityStartTime.Time": "14:15:00"
+  },
+  {
+    "RID": 7,
+    "ActivityStartDate": "7/13/2015",
+    "MonitoringLocationIdentifier": "USGS-04182867",
+    "ResultMeasureValue": 2.04,
+    "ActivityStartTime.Time": "14:15:00"
+  },
+  {
+    "RID": 8,
+    "ActivityStartDate": "6/24/2015",
+    "MonitoringLocationIdentifier": "USGS-04182867",
+    "ResultMeasureValue": 9.85,
+    "ActivityStartTime.Time": "13:25:00"
+  },
+  {
+    "RID": 9,
+    "ActivityStartDate": "6/24/2015",
+    "MonitoringLocationIdentifier": "USGS-04182867",
+    "ResultMeasureValue": 2.22,
+    "ActivityStartTime.Time": "13:25:00"
+  },
+  {
+    "RID": 10,
+    "ActivityStartDate": "8/10/2015",
+    "MonitoringLocationIdentifier": "USGS-04182867",
+    "ResultMeasureValue": 0.097,
+    "ActivityStartTime.Time": "13:45:00"
+  },
+  {
+    "RID": 11,
+    "ActivityStartDate": "8/10/2015",
+    "MonitoringLocationIdentifier": "USGS-04182867",
+    "ResultMeasureValue": 0.429,
+    "ActivityStartTime.Time": "13:45:00"
+  },
+  {
+    "RID": 12,
+    "ActivityStartDate": "8/27/2015",
+    "MonitoringLocationIdentifier": "USGS-04182867",
+    "ResultMeasureValue": 0.634,
+    "ActivityStartTime.Time": "12:30:00"
+  },
+  {
+    "RID": 13,
+    "ActivityStartDate": "8/27/2015",
+    "MonitoringLocationIdentifier": "USGS-04182867",
+    "ResultMeasureValue": 0.143,
+    "ActivityStartTime.Time": "12:30:00"
+  },
+  {
+    "RID": 14,
+    "ActivityStartDate": "10/13/2015",
+    "MonitoringLocationIdentifier": "USGS-04182867",
+    "ResultMeasureValue": 0.096,
+    "ActivityStartTime.Time": "13:30:00"
+  },
+  {
+    "RID": 15,
+    "ActivityStartDate": "10/13/2015",
+    "MonitoringLocationIdentifier": "USGS-04182867",
+    "ResultMeasureValue": 0.423,
+    "ActivityStartTime.Time": "13:30:00"
+  },
+  {
+    "RID": 16,
+    "ActivityStartDate": "3/18/2015",
+    "MonitoringLocationIdentifier": "USGS-04182867",
+    "ResultMeasureValue": 3.72,
+    "ActivityStartTime.Time": "16:45:00"
+  },
+  {
+    "RID": 17,
+    "ActivityStartDate": "3/18/2015",
+    "MonitoringLocationIdentifier": "USGS-04182867",
+    "ResultMeasureValue": 16.5,
+    "ActivityStartTime.Time": "16:45:00"
+  },
+  {
+    "RID": 18,
+    "ActivityStartDate": "5/14/2015",
+    "MonitoringLocationIdentifier": "USGS-04182867",
+    "ResultMeasureValue": 11.4,
+    "ActivityStartTime.Time": "17:20:00"
+  },
+  {
+    "RID": 19,
+    "ActivityStartDate": "5/14/2015",
+    "MonitoringLocationIdentifier": "USGS-04182867",
+    "ResultMeasureValue": 2.58,
+    "ActivityStartTime.Time": "17:20:00"
+  },
+  {
+    "RID": 20,
+    "ActivityStartDate": "6/8/2015",
+    "MonitoringLocationIdentifier": "USGS-04182867",
+    "ResultMeasureValue": 10.9,
+    "ActivityStartTime.Time": "14:00:00"
+  },
+  {
+    "RID": 21,
+    "ActivityStartDate": "6/8/2015",
+    "MonitoringLocationIdentifier": "USGS-04182867",
+    "ResultMeasureValue": 48.4,
+    "ActivityStartTime.Time": "14:00:00"
+  },
+  {
+    "RID": 22,
+    "ActivityStartDate": "9/21/2015",
+    "MonitoringLocationIdentifier": "USGS-04182867",
+    "ResultMeasureValue": 1.23,
+    "ActivityStartTime.Time": "14:15:00"
+  },
+  {
+    "RID": 23,
+    "ActivityStartDate": "9/21/2015",
+    "MonitoringLocationIdentifier": "USGS-04182867",
+    "ResultMeasureValue": 5.44,
+    "ActivityStartTime.Time": "14:15:00"
+  },
+  {
+    "RID": 24,
+    "ActivityStartDate": "7/27/2015",
+    "MonitoringLocationIdentifier": "USGS-04182867",
+    "ResultMeasureValue": 1.12,
+    "ActivityStartTime.Time": "12:00:00"
+  },
+  {
+    "RID": 25,
+    "ActivityStartDate": "7/27/2015",
+    "MonitoringLocationIdentifier": "USGS-04182867",
+    "ResultMeasureValue": 4.97,
+    "ActivityStartTime.Time": "12:00:00"
+  },
+  {
+    "RID": 26,
+    "ActivityStartDate": "4/27/2015",
+    "MonitoringLocationIdentifier": "USGS-04182867",
+    "ResultMeasureValue": 15.4,
+    "ActivityStartTime.Time": "15:40:00"
+  },
+  {
+    "RID": 27,
+    "ActivityStartDate": "4/27/2015",
+    "MonitoringLocationIdentifier": "USGS-04182867",
+    "ResultMeasureValue": 3.47,
+    "ActivityStartTime.Time": "15:40:00"
+  },
+  {
+    "RID": 28,
+    "ActivityStartDate": "9/8/2015",
+    "MonitoringLocationIdentifier": "USGS-04182867",
+    "ResultMeasureValue": 0.436,
+    "ActivityStartTime.Time": "13:35:00"
+  },
+  {
+    "RID": 29,
+    "ActivityStartDate": "9/8/2015",
+    "MonitoringLocationIdentifier": "USGS-04182867",
+    "ResultMeasureValue": 1.93,
+    "ActivityStartTime.Time": "13:35:00"
+  },
+  {
+    "RID": 30,
+    "ActivityStartDate": "11/12/2015",
+    "MonitoringLocationIdentifier": "USGS-04182867",
+    "ResultMeasureValue": 0.667,
+    "ActivityStartTime.Time": "11:45:00"
+  },
+  {
+    "RID": 31,
+    "ActivityStartDate": "9/21/2004",
+    "MonitoringLocationIdentifier": "USGS-410823084551101",
+    "ResultMeasureValue": 0.544,
+    "ActivityStartTime.Time": "09:30:00"
+  },
+  {
+    "RID": 32,
+    "ActivityStartDate": "9/21/2004",
+    "MonitoringLocationIdentifier": "USGS-410823084551101",
+    "ResultMeasureValue": 0.123,
+    "ActivityStartTime.Time": "09:30:00"
+  },
+  {
+    "RID": 33,
+    "ActivityStartDate": "9/8/2004",
+    "MonitoringLocationIdentifier": "NARS_WQX-OWW04440-0608",
+    "ResultMeasureValue": 531.6,
+    "ActivityStartTime.Time": "12:00:00"
+  }
+]
