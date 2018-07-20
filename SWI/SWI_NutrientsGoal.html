@@ -47,6 +47,7 @@
         var data;
         var BA = new BlueAccounting();
         var SWI = new SWI();
+        var chart;
 
         $.getJSON("../data/Sample_Nitrate_data.json", function(d){
             data = d;
@@ -253,7 +254,7 @@
                 });
 
                 if (data_series.length > 0){
-                    var chart = BA.buildStockChart("chart-canvas",
+                    chart = BA.buildStockChart("chart-canvas",
                         "Nitrate Level at " + watershed.properties["name"] + " Watershed, HUC 8:" + watershed.properties["huc8"],
                         "Date",
                         "Nitrate",
