@@ -446,6 +446,75 @@ function BlueAccounting(){
     //     })
     // }
 
+    this.buildStockChart = function (tag, title, xTitle, yTitle, data_series, height, width){
+        return Highcharts.stockChart(tag, {
+            chart:{
+                height: height,
+                width: width,
+                events: {
+                    load: function () {
+                        var logoX = 15;
+                        var size = this.plotBox.y - 5;
+
+                        if(this.chartWidth < 500){
+                            logoX = 10;
+                        }
+                        var img_width = (this.chartWidth - 350)/2 - logoX;
+                        var img_height = size - 35;
+                        if(img_width >= img_height*4){
+                            // wide logo. local resource
+                            this.renderer.image("../img/BlueAcctg-Logo.png", logoX, 0, img_height * 4, img_height ).add();
+                            // ErieStat logo. Change factor to 3
+                            // this.renderer.image("https://c1.staticflickr.com/1/956/27966542108_a46fd4fa96_o.png", logoX, 0, size*3 , size).add();
+                        }else{
+                            // cube logo
+                            this.renderer.image("../img/BlueAcctg-Logo-square.png", logoX, 0, img_height, img_height).add();
+                        }
+                        // var w = this.chartWidth - this.title.alignAttr.x;
+                        // Blue Accounting Cube logo
+                        // this.renderer.image("https://c1.staticflickr.com/1/868/40969378165_8bd2c065b9_o.png", logoX, 0, size, size).add();
+                        // Blue Accouting Logo
+                        // this.renderer.image("https://c1.staticflickr.com/1/826/26966705327_f80fcd7af1_o.png", logoX, 0, size * 4, size ).add();
+                        // Blue Accounting ErieStat Logo
+                        // this.renderer.image("https://c1.staticflickr.com/1/956/27966542108_a46fd4fa96_o.png", logoX, 0, size*3 , size).add();
+
+                        // this.renderer.image("https://c1.staticflickr.com/5/4382/36578347693_3c6032000b_o.png", 0, 0, chart_width, chart_height).add();   //red watermark
+                        // if (isBgImg) {
+                        //     this.renderer.image("img/background_draft.png", this.plotLeft, this.plotTop, this.plotWidth, this.plotHeight).add(); //grey watermark
+                        // }
+                    }
+                }
+            },
+            rangeSelector: {
+                selected: 1
+            },
+            credits: {
+                enabled:false
+            },
+            legend: {
+                enabled: true
+            },
+            title: {
+                text: title
+            },
+
+            xAxis: {
+                title: {
+                    enabled: true,
+                    text: xTitle
+                },
+                startOnTick: true,
+                endOnTick: true,
+                showLastLabel: true
+            },
+            yAxis: {
+                title: {
+                    text: yTitle
+                }
+            },
+            series: data_series
+        })
+    }
 }
 
 

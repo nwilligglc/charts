@@ -1,6 +1,8 @@
 function SWI(){
     this.swi_data;
 
+    this.showcaseWatershed = ["04050003", "04040003", "04050006", "04090004", "04110002", "04100011", "04100009"];
+
     this.init = function(data){
         this.swi_data = data.map(function (d){
             d.timestamp = Date.parse(d.ActivityStartDate + " " + d["ActivityStartTime.Time"]);
@@ -39,7 +41,7 @@ function SWI(){
             set: []
         };
         var vals = $(this.swi_data).filter(function(i, n) {
-            return n.MonitoringLocationIdentifier == locationID;
+            return n.LocID == locationID;
             // n.River===(watershedName)&& n.Fraction===metricName /*&& n.Value !== ""*/ // n.River===w_name
         });
         vals.sort(function(a, b){
@@ -55,4 +57,13 @@ function SWI(){
 
         return result;
     };
+
+    this.buildPopupContent = function (){
+        return '<p><i><b>Watershed Name</b></i>: {HUC8Name}</p><br>' +
+            '<p><i><b>HUC 8 Code</b></i>: {HUC8}</p><br>' +
+            '<p><i><b>Monitoring Location ID</b></i>: {LocID}</p><br>' +
+            '<p><i><b>Monitoring Location Name</b></i>: {LocName}</p>'
+    }
+
+
 }
