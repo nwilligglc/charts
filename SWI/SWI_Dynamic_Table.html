@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Binational Conistency Table</title>
+    <style>
+        table {
+            table-layout: auto;
+            width: 100%;
+            border: 1px solid;
+        }
+        th {
+            border: 1px solid;
+        }
+        .federal{
+            border: 1px solid;
+        }
+        .state{
+            border: 1px solid;
+        }
+        .local{
+            border: 1px solid;
+        }
+        table thead th {
+            text-align: center;
+        }
+    </style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"></script>
+    <script>
+        function tableContentUpdater(element) {
+            var ele = document.getElementsByClassName(element.value);
+            for (var i = 0; i < ele.length; i++) {
+                element.checked ? ele[i].style.display = "" : ele[i].style.display = "none";
+            }
+            if(element.name == "row_group"){
+                var colChbxs = document.getElementsByName("col_group");
+                for (var j = 0; j < colChbxs.length; j++) {
+                    if(!colChbxs[j].checked){
+                        cellSwitch(colChbxs[j]);
+                    }
+                }
+            }else if(element.name == "col_group"){
+                var rowChbxs = document.getElementsByName("row_group");
+                for (var j = 0; j < rowChbxs.length; j++) {
+                    if(!rowChbxs[j].checked){
+                        cellSwitch(rowChbxs[j]);
+                    }
+                }
+                adjustImgHeader();
+            }
+        }
+
+        function cellSwitch(element) {
+            var ele = document.getElementsByClassName(element.value);
+            for( var i = 0; i < ele.length; i++){
+                element.checked ? ele[i].style.display = "" : ele[i].style.display = "none";
+            }
+        }
+
+        function adjustImgHeader(){
+            var ele = document.getElementsByClassName("img_header");
+            var chbxs = document.getElementsByName("col_group");
+            var count = 0;
+            for (var i = 0; i < chbxs.length; i++){
+                if (chbxs[i].checked){
+                    count ++;
+                }
+            }
+            for (var j = 0; j < ele.length; j++){
+                ele[j].colSpan = count;
+            }
+        }
+
+    </script>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg">
+            <fieldset>
+                <legend>Row selector</legend>
+                <ul class="row_chb">
+                    <input id="row1" name="row_group" type="checkbox" value="row1" onchange = "tableContentUpdater(this)" checked>Row 1<br>
+                    <input id="row2" name="row_group" type="checkbox" value="row2" onchange = "tableContentUpdater(this)" checked>Row 2<br>
+                    <input id="row3" name="row_group" type="checkbox" value="row3" onchange = "tableContentUpdater(this)" checked>Row 3
+                </ul>
+            </fieldset>
+        </div>
+        <div class="col-lg">
+            <fieldset>
+                <legend>Column selector</legend>
+                <ul class="col_chb">
+                    <input id="chbFederal" name="col_group" type="checkbox" value="federal" onchange = "tableContentUpdater(this)" checked>Federal<br>
+                    <input id="chbState" name="col_group" type="checkbox" value="state" onchange = "tableContentUpdater(this)" checked>State<br>
+                    <input id="chbLocal" name="col_group" type="checkbox" value="local" onchange = "tableContentUpdater(this)" checked>Local
+                </ul>
+            </fieldset>
+        </div>
+    </div>
+
+
+    <!--<div class="table-responsive">-->
+    <div>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th colspan="3" class="img_header">image</th>
+                    <th colspan="3" class="img_header">image</th>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th class="federal">Federal</th>
+                    <th class="state">State</th>
+                    <th class="local">Local</th>
+                    <th class="federal">Federal</th>
+                    <th class="state">State</th>
+                    <th class="local">Local</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th class="row1">1st Row</th>
+                    <td class="federal row1">
+                        <div class="row">
+                            <div class="col-sm">left image</div>
+                            <div class="col-sm">
+                                <div>
+                                    <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                        Click for More Info
+                                    </a>
+                                </div>
+                                <div>
+                                    <div class="collapse" id="collapseExample1">
+                                        <div class="card card-body">
+                                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="state row1">
+                        <div class="row">
+                            <div class="col-sm">left image</div>
+                            <div class="col-sm">
+                                <div>
+                                    <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                        Click for More Info
+                                    </a>
+                                </div>
+                                <div>
+                                    <div class="collapse" id="collapseExample2">
+                                        <div class="card card-body">
+                                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="local row1">
+                        <div class="row">
+                            <div class="col-sm">left image</div>
+                            <div class="col-sm">
+                                <div>
+                                    <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                        Click for More Info
+                                    </a>
+                                </div>
+                                <div>
+                                    <div class="collapse" id="collapseExample3">
+                                        <div class="card card-body">
+                                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="federal row1">
+                        <div class="row">
+                            <div class="col-sm">left image</div>
+                            <div class="col-sm">
+                                <div>
+                                    <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample4" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                        Click for More Info
+                                    </a>
+                                </div>
+                                <div>
+                                    <div class="collapse" id="collapseExample4">
+                                        <div class="card card-body">
+                                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="state row1">
+                        <div class="row">
+                            <div class="col-sm">left image</div>
+                            <div class="col-sm">
+                                <div>
+                                    <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample5" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                        Click for More Info
+                                    </a>
+                                </div>
+                                <div>
+                                    <div class="collapse" id="collapseExample5">
+                                        <div class="card card-body">
+                                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="local row1">
+                        <div class="row">
+                            <div class="col-sm">left image</div>
+                            <div class="col-sm">
+                                <div>
+                                    <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample6" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                        Click for More Info
+                                    </a>
+                                </div>
+                                <div>
+                                    <div class="collapse" id="collapseExample6">
+                                        <div class="card card-body">
+                                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="row2">2nd Row</th>
+                    <td class="federal row2">F</td>
+                    <td class="state row2">S</td>
+                    <td class="local row2">L</td>
+                    <td class="federal row2">F</td>
+                    <td class="state row2">S</td>
+                    <td class="local row2">L</td>
+                </tr>
+                <tr>
+                    <th class="row3">3rd Row</th>
+                    <td class="federal row3">F</td>
+                    <td class="state row3">S</td>
+                    <td class="local row3">L</td>
+                    <td class="federal row3">F</td>
+                    <td class="state row3">S</td>
+                    <td class="local row3">L</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+</body>
+</html>
