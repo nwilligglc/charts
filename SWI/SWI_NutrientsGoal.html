@@ -90,7 +90,13 @@
 ////            opacity: 0.7
 //        }).addTo(map);
 
-
+        var highlightStyle = {
+            color: '#2262CC',
+            weight: 3,
+            opacity: 0.6,
+            fillOpacity: 0.65,
+            fillColor: '#2262CC'
+        };
 
         var watershed_lyr = L.esri.featureLayer({
             url: "https://services7.arcgis.com/Tk0IbKIKhaoYn5sa/arcgis/rest/services/HUC08/FeatureServer/0",
@@ -116,6 +122,10 @@
             },
 //        opacity: 0.7
         }).addTo(map);
+        watershed_lyr.bindTooltip("Watershed layer");
+//        watershed.on("mouseover", function (e){
+//
+//        })
 
         var points = L.esri.featureLayer({
             url: 'https://services7.arcgis.com/Tk0IbKIKhaoYn5sa/arcgis/rest/services/SWI_Test_GDB/FeatureServer/1',
