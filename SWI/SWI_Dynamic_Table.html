@@ -4,28 +4,29 @@
     <meta charset="UTF-8">
     <title>Binational Conistency Table</title>
     <style>
-        table {
-            table-layout: auto;
-            width: 100%;
-            border: 1px solid;
-        }
-        th {
-            border: 1px solid;
-        }
-        .federal{
-            border: 1px solid;
-        }
-        .state{
-            border: 1px solid;
-        }
-        .local{
-            border: 1px solid;
-        }
-        table thead th {
-            text-align: center;
-        }
+        /*table {*/
+            /*table-layout: auto;*/
+            /*width: 100%;*/
+            /*border: 1px solid;*/
+        /*}*/
+        /*th {*/
+            /*border: 1px solid;*/
+        /*}*/
+        /*.federal{*/
+            /*border: 1px solid;*/
+        /*}*/
+        /*.state{*/
+            /*border: 1px solid;*/
+        /*}*/
+        /*.local{*/
+            /*border: 1px solid;*/
+        /*}*/
+        /*table thead th {*/
+            /*text-align: center;*/
+        /*}*/
     </style>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/BA_Style.css">
     <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"></script>
@@ -78,6 +79,7 @@
 </head>
 <body>
 <div class="container-fluid">
+    <table>
     <div class="row">
         <div class="col-lg">
             <fieldset>
@@ -100,138 +102,160 @@
             </fieldset>
         </div>
     </div>
+    </table>
 
 
     <!--<div class="table-responsive">-->
     <div>
-        <table class="table table-hover">
+        <table class="table SWI-DT-table">
             <thead>
-                <tr>
-                    <th></th>
-                    <th colspan="3" class="img_header">image</th>
-                    <th colspan="3" class="img_header">image</th>
+                <tr class="row">
+                    <th class="col col-sm-2"></th>
+                    <th colspan="3" class="img_header col">
+                        <img class="img-fluid" src="../img/US_Flag.png" alt="US">
+                        <p>U.S.</p>
+                    </th>
+                    <th colspan="3" class="img_header col">
+                        <img class="img-fluid" src="../img/Canadian_Flag.png" alt="Canada">
+                        <p>Canada</p>
+                    </th>
                 </tr>
-                <tr>
-                    <th></th>
-                    <th class="federal">Federal</th>
-                    <th class="state">State</th>
-                    <th class="local">Local</th>
-                    <th class="federal">Federal</th>
-                    <th class="state">State</th>
-                    <th class="local">Local</th>
+                <tr class="row">
+                    <th class="col col-sm-2" style="text-align: left">Issue</th>
+                    <th class="federal col">Federal</th>
+                    <th class="state col" >State</th>
+                    <th class="local col">Local</th>
+                    <th class="federal col">Federal</th>
+                    <th class="state col">State</th>
+                    <th class="local col">Local</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <th class="row1">1st Row</th>
-                    <td class="federal row1">
+                <tr class="row">
+                    <th class="row1 col col-sm-2" style="text-align: left">
+                        <p>SURFACE WATER ASSESSMENT</p>
+                        <p>Consistency Analysis:<br>
+                            <span style="font-weight: normal">Within all parties in the Great Lakes region, state/provincial and local governments have developed SWAPs for all drinking water sources.
+                                There is less consistency at the federal level, as the Canadian government grants authority to the provinces to develop SWAPs but does not require them to do so.</span>
+                        </p>
+                    </th>
+                    <td class="federal row1 col">
                         <div class="row">
-                            <div class="col-sm">left image</div>
+                            <div class="col-sm"><img src="../img/double_check.png"></div>
+                            <div class="w-100"></div>
                             <div class="col-sm">
                                 <div>
                                     <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample">
-                                        Click for More Info
+                                        Click for More
                                     </a>
                                 </div>
                                 <div>
                                     <div class="collapse" id="collapseExample1">
                                         <div class="card card-body">
-                                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                                            The <a href="https://www.congress.gov/104/plaws/publ182/PLAW-104publ182.pdf" target="_blank">1996 amendments</a>  to the Safe Drinking Water Act require the EPA to monitor, assess, and report potential threats to every public drinking water supply through <a href="https://www3.epa.gov/region1/eco/drinkwater/pc_sourcewater_assessment.html" target="_blank">Source Water Assessment Programs</a> (SWAPs). These plans are developed regionally and are subject to EPA approval. EPA provides <a href="https://www.epa.gov/sourcewaterprotection/conducting-source-water-assessments" target="_blank">resources</a> to assist states in developing their plans.
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </td>
-                    <td class="state row1">
+                    <td class="state row1 col">
                         <div class="row">
-                            <div class="col-sm">left image</div>
+                            <div class="col-sm"><img src="../img/double_check.png"></div>
+                            <div class="w-100"></div>
                             <div class="col-sm">
                                 <div>
                                     <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample">
-                                        Click for More Info
+                                        Click for More
                                     </a>
                                 </div>
                                 <div>
                                     <div class="collapse" id="collapseExample2">
                                         <div class="card card-body">
-                                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                                            EPA delegates the responsibility to develop SWAPs to the state regulatory agencies who work with municipalities and local governments to create the plans. State agencies then consult with EPA to gain approval for locally developed SWAPs. The <a href="https://www.glc.org/wp-content/uploads/SWI-Compendium-08182017.pdf" target="_blank"> Blue Accounting Source Water Compendium </a>contains links to the SWAP websites for all Great Lakes States.
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </td>
-                    <td class="local row1">
+                    <td class="local row1 col">
                         <div class="row">
-                            <div class="col-sm">left image</div>
+                            <div class="col-sm"><img src="../img/double_check.png"></div>
+                            <div class="w-100"></div>
                             <div class="col-sm">
                                 <div>
                                     <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample">
-                                        Click for More Info
+                                        Click for More
                                     </a>
                                 </div>
                                 <div>
                                     <div class="collapse" id="collapseExample3">
                                         <div class="card card-body">
-                                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                                            Municipalities develop and carry out EPA-approved SWAPs in conjunction with state and regional governments. As of 2002, SWAPs have been approved and completed for all public water systems in the United States. Information on how to obtain regional SWAP data is contained in the <a href="https://www.epa.gov/ccr" target="_blank"> Consumer Confidence Reports </a>for each region.
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </td>
-                    <td class="federal row1">
+                    <td class="federal row1 col">
                         <div class="row">
-                            <div class="col-sm">left image</div>
+                            <div class="col-sm"><img src="../img/yellow_circle.png"></div>
+                            <div class="w-100"></div>
                             <div class="col-sm">
                                 <div>
                                     <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample4" role="button" aria-expanded="false" aria-controls="collapseExample">
-                                        Click for More Info
+                                        Click for More
                                     </a>
                                 </div>
                                 <div>
                                     <div class="collapse" id="collapseExample4">
                                         <div class="card card-body">
-                                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                                            The <a href="http://laws-lois.justice.gc.ca/eng/acts/c-11/index.html" target="_blank"> Canada Water Act </a>grants authority to the provinces to develop water resource protection plans, including source water assessment plans, though they are not required. The Minister of Environment and Climate Change (MECC) may approve provincially developed plans.  The <a href="https://www.aadnc-aandc.gc.ca/eng/1100100034998/1100100035000" target="_blank"> Protocol for Centralized Drinking Water Systems in First Nations Communities </a>does require First Nations to prepare SWAPs for on-reserve threats to raw water sources. The federal government <a href="http://www.aadnc-aandc.gc.ca/eng/1398369474357/1398369572276" target="_blank"> provides resources </a>for First Nations to use in developing these assessments.
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </td>
-                    <td class="state row1">
+                    <td class="state row1 col">
                         <div class="row">
-                            <div class="col-sm">left image</div>
+                            <div class="col-sm"><img src="../img/double_check.png"></div>
+                            <div class="w-100"></div>
                             <div class="col-sm">
                                 <div>
                                     <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample5" role="button" aria-expanded="false" aria-controls="collapseExample">
-                                        Click for More Info
+                                        Click for More
                                     </a>
                                 </div>
                                 <div>
                                     <div class="collapse" id="collapseExample5">
                                         <div class="card card-body">
-                                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                                            <b>Ontario:</b> The Ontario Clean Water Act requires source water assessments for all major watersheds in the province as part of the <a href="https://www.ontario.ca/page/source-protection" target="_blank"> Drinking Water Source Protection Program</a>. Ontario has designated 19 regional committees to develop assessments, representing each major watershed.<br>
+                                            <b>Quebec: </b>The 2009 Quebec Water Act enhances the power of the province to implement SWAPs, designating <a href="http://www.mddelcc.gouv.qc.ca/eau/bassinversant/gire-bassins-versants.htm" target="_blank"> 40 water management zones </a>(OBVs). Each OBV is required to complete a <a href="https://robvq.qc.ca/eau/giebv" target="_blank"> Water Master Plan </a>(PDE), which assesses threats to drinking water sources.
+
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </td>
-                    <td class="local row1">
+                    <td class="local row1 col">
                         <div class="row">
-                            <div class="col-sm">left image</div>
+                            <div class="col-sm"><img src="../img/double_check.png"></div>
+                            <div class="w-100"></div>
                             <div class="col-sm">
                                 <div>
                                     <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample6" role="button" aria-expanded="false" aria-controls="collapseExample">
-                                        Click for More Info
+                                        Click for More
                                     </a>
                                 </div>
                                 <div>
                                     <div class="collapse" id="collapseExample6">
                                         <div class="card card-body">
-                                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                                            <b>Ontario: </b>Representatives from local governments and municipalities make up regional source protection committees and work with the province to complete assessments. The 19 regional committees have developed <a href="https://www.ontario.ca/page/source-protection" target="_blank"> 22 federally approved Source Water Protection Plans</a>, which require assessment of threats to water quality.<br>
+                                            <b>Quebec: </b>Representatives from each OBV work with stakeholders from local governments and municipalities to develop PDEs. PDEs (In French) for all 40 regions can be obtained through the website of each OBV, accessible through the <a href="https://robvq.qc.ca/obv/reseau?tri=alphabetique" target="_blank"> Quebec Watershed Organization website</a>.
                                         </div>
                                     </div>
                                 </div>
@@ -239,23 +263,271 @@
                         </div>
                     </td>
                 </tr>
-                <tr>
-                    <th class="row2">2nd Row</th>
-                    <td class="federal row2">F</td>
-                    <td class="state row2">S</td>
-                    <td class="local row2">L</td>
-                    <td class="federal row2">F</td>
-                    <td class="state row2">S</td>
-                    <td class="local row2">L</td>
+
+                <tr class="row">
+                    <th class="row2  col col-sm-2" style="text-align: left">
+                        <p>SURFACE WATER PROTECTION</p>
+                        <p>Consistency Analysis:<br>
+                            <span style="font-weight: normal">Both countries have no federal requirement to develop SWPPs. While Ontario requires SWPPs for all municipalities, no U.S. states have similar requirements. Quebec has developed a draft strategy for a province-wide SWPP, but it has yet to be implemented.</span>
+                        </p>
+                    </th>
+                    <td class="federal row2 col">
+                        <div class="row">
+                            <div class="col-sm"><img src="../img/yellow_circle.png"></div>
+                            <div class="w-100"></div>
+                            <div class="col-sm">
+                                <div>
+                                    <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample7" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                        Click for More
+                                    </a>
+                                </div>
+                                <div>
+                                    <div class="collapse" id="collapseExample7">
+                                        <div class="card card-body">
+                                            The U.S. EPA heavily encourages local and state governments to use data from SWAPs to develop their own Source Water Protection Plans (SWPPs), though there is no requirement to do so. EPA provides <a href="https://www.epa.gov/sourcewaterprotection/conducting-source-water-assessments" target="_blank"> resources</a>, including <a href="https://www.epa.gov/sourcewaterprotection/funding-source-water-protection" target="_blank">possible federal funding sources</a>, to state and local governments to help them develop SWPPs.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="state row2 col">
+                        <div class="row">
+                            <div class="col-sm"><img src="../img/yellow_circle.png"></div>
+                            <div class="w-100"></div>
+                            <div class="col-sm">
+                                <div>
+                                    <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample8" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                        Click for More
+                                    </a>
+                                </div>
+                                <div>
+                                    <div class="collapse" id="collapseExample8">
+                                        <div class="card card-body">
+                                            Governments of several states encourage local governments to use data from SWAPs to develop their own SWPPs and a state regulatory agency may choose to approve a locally developed plan. Ohio has emerged as a leader in SWPPs among the Great Lakes states, with a growing <a href="http://www.epa.state.oh.us/ddagw/swap" target="_blank"> list of municipalities</a> that have an OEPA-endorsed plan.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="local row2 col">
+                        <div class="row">
+                            <div class="col-sm"><img src="../img/single_check.png"></div>
+                            <div class="w-100"></div>
+                            <div class="col-sm">
+                                <div>
+                                    <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample9" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                        Click for More
+                                    </a>
+                                </div>
+                                <div>
+                                    <div class="collapse" id="collapseExample9">
+                                        <div class="card card-body">
+                                            <p>Several local governments have voluntarily developed their own SWPPs, many of which have been approved by the state regulatory agency.  The <a href="https://www.glc.org/wp-content/uploads/SWI-Compendium-08182017.pdf" target="_blank"> Blue Accounting Source Water Compendium </a>contains information on which local governments in the Great Lakes region have SWPPs.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="federal row2 col">
+                        <div class="row">
+                            <div class="col-sm"><img src="../img/yellow_circle.png"></div>
+                            <div class="w-100"></div>
+                            <div class="col-sm">
+                                <div>
+                                    <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample10" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                        Click for More
+                                    </a>
+                                </div>
+                                <div>
+                                    <div class="collapse" id="collapseExample10">
+                                        <div class="card card-body">
+                                            <p>The <a href="http://laws-lois.justice.gc.ca/eng/acts/c-11/index.html" target="_blank"> Canada Water </a>Act grants authority to the provinces to develop water resource protection plans, including SWPPs, though they are not required.  The Minister of Environment and Climate Change (MECC) may approve provincially developed plans. The <a href="https://www.aadnc-aandc.gc.ca/eng/1100100034998/1100100035000" target="_blank"> Protocol for Centralized Drinking Water Systems in First Nations Communities</a> does require First Nations to prepare SWPPs for on-reserve threats to raw water sources. The federal government <a href="http://www.aadnc-aandc.gc.ca/eng/1398369474357/1398369572276" target="_blank"> provides resources</a> for First Nations to use in developing these plans.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="state row2 col">
+                        <div class="row">
+                            <div class="col-sm"><img src="../img/single_check.png"></div>
+                            <div class="w-100"></div>
+                            <div class="col-sm">
+                                <div>
+                                    <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample11" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                        Click for More
+                                    </a>
+                                </div>
+                                <div>
+                                    <div class="collapse" id="collapseExample11">
+                                        <div class="card card-body">
+                                            <b>Ontario: </b>The <a href="https://www.ontario.ca/laws/statute/06c22" target="_blank"> Ontario Clean Water Act</a> requires development of SWPPs for all major watersheds in the province. Ontario has designated 19 regional committees to develop plans, representing each major watershed. Provincial agencies work with MECC to gain approval for regionally developed plans.
+                                            <b>Quebec: </b>In 2012, Quebec completed its <a href="http://www.mddep.gouv.qc.ca/eau/potable/strategie/index.htm" target="_blank"> Draft Strategy for the Protection and Conservation of Drinking Water Sources</a>; however, this plan has yet to be implemented. Each OBV has developed a Water Action Plan as a component of its PDE, which outlines voluntary strategies each region hopes to implement to protect source water bodies.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="local row2 col">
+                        <div class="row">
+                            <div class="col-sm"><img src="../img/single_check.png"></div>
+                            <div class="w-100"></div>
+                            <div class="col-sm">
+                                <div>
+                                    <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample12" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                        Click for More
+                                    </a>
+                                </div>
+                                <div>
+                                    <div class="collapse" id="collapseExample12">
+                                        <div class="card card-body">
+                                            <b>Ontario: </b>Representatives from local governments and municipalities make up regional source protection committees and work with the province of Ontario to design SWPPs. The 19 regional committees have developed <a href="https://www.ontario.ca/page/source-protection" target="_blank"> 22 federally approved SWPPs</a>, which include regionally-based policies to protect against specific contaminants.
+                                            <b>Quebec: </b>Water Action Plans developed by each OBV outline strategies the region hopes to implement to protect source water bodies, but these actions are not enforceable by any specific policy at this time.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
                 </tr>
-                <tr>
-                    <th class="row3">3rd Row</th>
-                    <td class="federal row3">F</td>
-                    <td class="state row3">S</td>
-                    <td class="local row3">L</td>
-                    <td class="federal row3">F</td>
-                    <td class="state row3">S</td>
-                    <td class="local row3">L</td>
+
+                <tr class="row">
+                    <th class="row3 col col-sm-2" style="text-align: left">
+                        <p>WELLHEAD PROTECTION</p>
+                        <p>Consistency Analysis:<br>
+                            <span style="font-weight: normal"></span>
+                        </p>
+                    </th>
+                    <td class="federal row3 col">
+                        <div class="row">
+                            <div class="col-sm"><img src="../img/red_x.png"></div>
+                            <div class="w-100"></div>
+                            <div class="col-sm">
+                                <div>
+                                    <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample13" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                        Click for More
+                                    </a>
+                                </div>
+                                <div>
+                                    <div class="collapse" id="collapseExample13">
+                                        <div class="card card-body">
+                                            <b>Ontario: </b>Representatives from local governments and municipalities make up regional source protection committees and work with the province of Ontario to design SWPPs. The 19 regional committees have developed <a href="https://www.ontario.ca/page/source-protection" target="_blank"> 22 federally approved SWPPs</a>, which include regionally-based policies to protect against specific contaminants.
+                                            <b>Quebec: </b>Water Action Plans developed by each OBV outline strategies the region hopes to implement to protect source water bodies, but these actions are not enforceable by any specific policy at this time.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="state row3 col">
+                        <div class="row">
+                            <div class="col-sm"><img src="../img/red_x.png"></div>
+                            <div class="w-100"></div>
+                            <div class="col-sm">
+                                <div>
+                                    <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample14" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                        Click for More
+                                    </a>
+                                </div>
+                                <div>
+                                    <div class="collapse" id="collapseExample14">
+                                        <div class="card card-body">
+                                            <b>Ontario: </b>Representatives from local governments and municipalities make up regional source protection committees and work with the province of Ontario to design SWPPs. The 19 regional committees have developed <a href="https://www.ontario.ca/page/source-protection" target="_blank"> 22 federally approved SWPPs</a>, which include regionally-based policies to protect against specific contaminants.
+                                            <b>Quebec: </b>Water Action Plans developed by each OBV outline strategies the region hopes to implement to protect source water bodies, but these actions are not enforceable by any specific policy at this time.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="local row3 col">
+                        <div class="row">
+                            <div class="col-sm"><img src="../img/red_x.png"></div>
+                            <div class="w-100"></div>
+                            <div class="col-sm">
+                                <div>
+                                    <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample15" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                        Click for More
+                                    </a>
+                                </div>
+                                <div>
+                                    <div class="collapse" id="collapseExample15">
+                                        <div class="card card-body">
+                                            <b>Ontario: </b>Representatives from local governments and municipalities make up regional source protection committees and work with the province of Ontario to design SWPPs. The 19 regional committees have developed <a href="https://www.ontario.ca/page/source-protection" target="_blank"> 22 federally approved SWPPs</a>, which include regionally-based policies to protect against specific contaminants.
+                                            <b>Quebec: </b>Water Action Plans developed by each OBV outline strategies the region hopes to implement to protect source water bodies, but these actions are not enforceable by any specific policy at this time.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="federal row3 col">
+                        <div class="row">
+                            <div class="col-sm"><img src="../img/red_x.png"></div>
+                            <div class="w-100"></div>
+                            <div class="col-sm">
+                                <div>
+                                    <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample16" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                        Click for More
+                                    </a>
+                                </div>
+                                <div>
+                                    <div class="collapse" id="collapseExample16">
+                                        <div class="card card-body">
+                                            <b>Ontario: </b>Representatives from local governments and municipalities make up regional source protection committees and work with the province of Ontario to design SWPPs. The 19 regional committees have developed <a href="https://www.ontario.ca/page/source-protection" target="_blank"> 22 federally approved SWPPs</a>, which include regionally-based policies to protect against specific contaminants.
+                                            <b>Quebec: </b>Water Action Plans developed by each OBV outline strategies the region hopes to implement to protect source water bodies, but these actions are not enforceable by any specific policy at this time.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="state row3 col">
+                        <div class="row">
+                            <div class="col-sm"><img src="../img/red_x.png"></div>
+                            <div class="w-100"></div>
+                            <div class="col-sm">
+                                <div>
+                                    <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample17" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                        Click for More
+                                    </a>
+                                </div>
+                                <div>
+                                    <div class="collapse" id="collapseExample17">
+                                        <div class="card card-body">
+                                            <b>Ontario: </b>Representatives from local governments and municipalities make up regional source protection committees and work with the province of Ontario to design SWPPs. The 19 regional committees have developed <a href="https://www.ontario.ca/page/source-protection" target="_blank"> 22 federally approved SWPPs</a>, which include regionally-based policies to protect against specific contaminants.
+                                            <b>Quebec: </b>Water Action Plans developed by each OBV outline strategies the region hopes to implement to protect source water bodies, but these actions are not enforceable by any specific policy at this time.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="local row3 col">
+                        <div class="row">
+                            <div class="col-sm"><img src="../img/red_x.png"></div>
+                            <div class="w-100"></div>
+                            <div class="col-sm">
+                                <div>
+                                    <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample18" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                        Click for More
+                                    </a>
+                                </div>
+                                <div>
+                                    <div class="collapse" id="collapseExample18">
+                                        <div class="card card-body">
+                                            <b>Ontario: </b>Representatives from local governments and municipalities make up regional source protection committees and work with the province of Ontario to design SWPPs. The 19 regional committees have developed <a href="https://www.ontario.ca/page/source-protection" target="_blank"> 22 federally approved SWPPs</a>, which include regionally-based policies to protect against specific contaminants.
+                                            <b>Quebec: </b>Water Action Plans developed by each OBV outline strategies the region hopes to implement to protect source water bodies, but these actions are not enforceable by any specific policy at this time.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
                 </tr>
             </tbody>
         </table>
