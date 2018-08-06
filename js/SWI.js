@@ -63,7 +63,271 @@ function SWI(){
             '<p><i><b>HUC 8 Code</b></i>: {HUC8}</p><br>' +
             '<p><i><b>Monitoring Location ID</b></i>: {LocID}</p><br>' +
             '<p><i><b>Monitoring Location Name</b></i>: {LocName}</p>'
-    }
+    };
 
 
+
+
+    /**********************************************************************************************/
+    // Section for UCMR functions
+    /**********************************************************************************************/
+    // this.createCounty = function(geoid, name, state){
+    //     return {
+    //         geoid: geoid,
+    //         name: name,
+    //         state: state,
+    //         waterSystems: [],
+    //
+    //         addContaminantToWaterSys: function (cont) {
+    //             // get watersys
+    //             waterSys.addContaminant(cont);
+    //         }
+    //
+    //
+    //     };
+    // };
+
+    // var WaterSystem = {
+    //
+    // }
+    //PWSID	Contaminant	max	count	mean	PWS_NAME	PWS_TYPE_CODE	POPULATION_SERVED_COUNT	PRIMARY_SOURCE_CODE	CITY_NAME	ZIP_CODE	COUNTRY_CODE	SOURCE_WATER_PROTECTION_CODE	costate	state	county	fips
+
+
+    this.contaminantNames = {
+        "chromium": "chromium"
+    };
+
+    this.UCMR_data;
+    // = function(){
+    //     return {
+    //         counties: [],
+    //             hasCounty: function (c) {
+    //         for(var i in this.counties){
+    //             if (this.counties[i].fips == c.fips){
+    //                 return this.counties[i];
+    //             }
+    //         }
+    //         return false;
+    //     },
+    //         addCounty: function (c) {
+    //             this.counties.push(c)
+    //         },
+    //         // addContaminant: function (ctmt) {
+    //         //
+    //         //
+    //         // }
+    //     }
+    // };
+
+    this.UCMR_init = function (data) {
+        SWI.UCMR_data = {
+            counties: [],
+            hasCounty: function (c_fips) {
+                for(var i in this.counties){
+                    if (this.counties[i].fips == c_fips){
+                        return this.counties[i];
+                    }
+                }
+                return false;
+            },
+            addCounty: function (c) {
+                this.counties.push(c)
+            },
+            // addContaminant: function (ctmt) {
+            //
+            //
+            // }
+        };
+        data.map(function (d){
+            var county_fips = d.fips;
+            var county = SWI.UCMR_data.hasCounty(d.fips);
+
+            if (!county){
+                // create a county and add to this.UCMR_data
+                county = new SWI.county(d.fips, d.county, d.state);
+                SWI.UCMR_data.counties.push(county);
+            }
+            var waterSys = county.hasWaterSys(d.PWSID);
+            if(!waterSys){
+                // create a watersys and add to county
+                waterSys = new SWI.waterSystem(d.PWSID, d.PWS_NAME);
+                county.waterSystems.push(waterSys);
+            }
+            waterSys.addContaminant(new SWI.contaminant(d));
+        });
+    };
+
+
+
+
+    this.county = function (fips, name, state) {
+        return {
+            fips: fips,
+            name: name,
+            state: state,
+            waterSystems: [],
+            hasWaterSys: function (w_PWSID){
+                for(var i in this.waterSystems){
+                    if (this.waterSystems[i].PWSID == w_PWSID){
+                        return this.waterSystems[i];
+                    }
+                }
+                return false;
+            },
+            addWaterSys: function (w) {
+                this.waterSystems.push(w);
+            }
+            // addContaminant: function (cont) {
+            //     for (var w in this.waterSystems){
+            //         if (this.waterSystems[w].pwsid == count.pwsid){
+            //             addContaminentToWaterSys()
+            //         }
+            //     }
+            // }
+
+        }
+    };
+
+    this.waterSystem = function (pwsid, name) {
+        return {
+            PWSID: pwsid,
+            PWS_NAME: name,
+            contaminants: [],
+            addContaminant: function (c) {
+                this.contaminants.push(c);
+
+            }
+        }
+    };
+
+    this.contaminant = function (d) {
+        return {
+            PWSID: d.PWSID,
+            name: d.Contaminant,
+            value_max: d.max,
+            value_count: d.count,
+            value_mean: d.mean,
+            PWS_NAME: d.PWS_NAME,
+            PWS_TYPE: d.PWS_TYPE_CODE,
+            pop: d.POPULATION_SERVED_COUNT,
+            pri_source: d.PRIMARY_SOURCE_CODE,
+            city: d.CITY_NAME,
+            zip: d.ZIP_CODE,
+            protect_code: d.SOURCE_WATER_PROTECTION_CODE,
+            costate: d.costate,
+            state: d.state,
+            county: d.county,
+            fips: d.fips
+        }
+    };
+
+    // this.hasCounty = function (c_id){
+    //     for (c in this.UCMR_data){
+    //         if (this.UCMR_data[c].geoid == c_id){
+    //             return true;
+    //         }
+    //     }
+    //     return false;
+    // };
+    //
+    // this.addToCounty = function (c_id, contaminant){
+    //     var county = this.getCountyData(c_id);
+    //     county
+    // }
+
+
+    /**
+     *
+     * @param cnty_id
+     */
+
+    this.buildUCMRTable = function (c_fips) {
+        // build the HTML content using data from getWaterSysAndContaminant
+        var county = SWI.UCMR_data.hasCounty(c_fips);
+        var parentNode = document.createElement("div");
+        parentNode.innerHTML += "<h2>" + county.name + " County, " + county.state + "</h2>";
+        if (county){
+            var ws_list = county.waterSystems;
+            for (var i in ws_list){
+                var content = "<h3>Water System: " + ws_list[i].PWS_NAME + " (" + ws_list[i].PWSID+ ")</h3>" +
+                    "<table class='table table-striped table-hover'>" +
+                    "<thead class='SWI-table-header'><tr><th>Contaminant</th><th>Maximum</th></tr></thead>";
+
+                for (var c in ws_list[i].contaminants){
+                    content += "<tr><td>" + ws_list[i].contaminants[c].name + "</td>" +
+                        "<td>" + ws_list[i].contaminants[c].value_max + "</td></tr>";
+                }
+                content += "</table>";
+                parentNode.innerHTML += content;
+            }
+        }
+        return parentNode;
+    };
+
+    // this.getWaterSysByCounty = function (cnty_id) {
+    //     /* return a object like:
+    //     [
+    //         watersys1: {
+    //             id:
+    //             name:
+    //             contaminents: [
+    //                 {
+    //                     name:
+    //                     type:
+    //                     value:
+    //                 },
+    //                 {
+    //                     name:
+    //                     type:
+    //                     value:
+    //                 },
+    //                 {
+    //                     name:
+    //                     type:
+    //                     value:
+    //                 }
+    //             ]
+    //         },
+    //         watersys2: {
+    //             id:
+    //             name:
+    //             contaminents: [
+    //                 {
+    //                     name:
+    //                     type:
+    //                     value:
+    //                 },
+    //                 {
+    //                     name:
+    //                     type:
+    //                     value:
+    //                 },
+    //                 {
+    //                     name:
+    //                     type:
+    //                     value:
+    //                 }
+    //             ]
+    //         }
+    //     ]
+    //
+    //      */
+    //
+    //
+    //
+    //
+    //
+    //
+    //     var watersys = [];
+    //     // find the watersys by county id
+    //     var w = this.waterSys()
+    //     // for each watersys, get its contaminent and value, add this contanement obj to watersys
+    // };
+
+    // this.addContaminentToWaterSys = function (w, c){
+    //     w.contaminents.push({
+    //         name: c.name,
+    //         value: c.value
+    //     })
+    // }
 }

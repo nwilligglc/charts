@@ -88,6 +88,42 @@ body{
     cursor: pointer;
     font-size: 28px;
 }
+
+/**/
+.SWI-table-header {
+    background-color: #7eb4d2;
+}
+.SWI-DT-table {
+    align-content: center;
+    text-align: center;
+    /*padding: 2px;*/
+
+}
+.SWI-DT-table th{
+    align-content: flex-start;
+}
+.SWI-DT-table td{
+    padding: 5px;
+}
+.table img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.card-body{
+    text-align: left;
+    display: inline-block;
+}
+.col-sm img{
+    height: 50px;
+}
+.row{
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+
+
 #lower-canvas{
     margin-top: 50%;
 }
