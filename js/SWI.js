@@ -1,7 +1,7 @@
 function SWI(){
     this.swi_data;
 
-    this.showcaseWatershed = ["04050003", "04040003", "04050006", "04090004", "04110002", "04100011", "04100009"];
+    this.showcaseWatershed = ["04040003", "04050006", "04110002", "04100009", "04080206", "04030204"];
 
     this.stateLookup = {
         17: "Illinois",
@@ -256,11 +256,11 @@ function SWI(){
         // build the HTML content using data from getWaterSysAndContaminant
         var county = SWI.UCMR_data.hasCounty(c_fips);
         var parentNode = document.createElement("div");
-        parentNode.innerHTML += "<h3>" + county.name + " County, " + county.state + "</h3>";
+        parentNode.innerHTML += "<h4>" + county.name + " County, " + county.state + "</h4>";
         if (county){
             var ws_list = county.waterSystems;
             for (var i in ws_list){
-                var content = "<h4>Water System: " + ws_list[i].PWS_NAME + " (" + ws_list[i].PWSID+ ")</h4>" +
+                var content = "<h6>Water System: " + ws_list[i].PWS_NAME + " (" + ws_list[i].PWSID+ ")</h6>" +
                     "<table class='table table-striped table-hover'>" +
                     "<thead class='SWI-table-header'><tr><th>Contaminant</th><th>Maximum</th></tr></thead>";
 

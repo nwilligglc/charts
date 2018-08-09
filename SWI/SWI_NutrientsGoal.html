@@ -49,7 +49,7 @@
         var SWI = new SWI();
         var chart;
 
-        $.getJSON("../data/Sample_Nitrate_data.json", function(d){
+        $.getJSON("../data/Nitrate_data.json", function(d){
             data = d;
         }).done(function () {
             SWI.init(data);
@@ -128,16 +128,16 @@
 //        })
 
         var points = L.esri.featureLayer({
-            url: 'https://services7.arcgis.com/Tk0IbKIKhaoYn5sa/arcgis/rest/services/SWI_Test_GDB/FeatureServer/1',
+            url: 'https://services7.arcgis.com/Tk0IbKIKhaoYn5sa/arcgis/rest/services/Nutrients_Goal_Layers/FeatureServer/0',
 //            pointToLayer: function (geojson, latlng) {
 //                return L.circleMarker(latlng);
 //            },
-            style:{
-                color: 'blue',
-                weight: 1,
-                opacity: 0.85,
-                fillOpacity: 0.5
-            }
+//            style:{
+//                color: 'blue',
+//                weight: 1,
+//                opacity: 0.85,
+//                fillOpacity: 0.5
+//            }
         }).addTo(map);
 
         var query = L.esri.query({
