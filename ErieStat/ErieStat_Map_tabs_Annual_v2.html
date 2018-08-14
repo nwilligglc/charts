@@ -10,8 +10,8 @@
     <script src="https://unpkg.com/esri-leaflet@2.1.3/dist/esri-leaflet.js"></script>
     <script src="//code.highcharts.com/highcharts.js"></script>
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
-    <script src="js/BlueAccounting.js"></script>
-    <script src="js/ErieStat.js"></script>
+    <script src="../js/BlueAccounting.js"></script>
+    <script src="../js/ErieStat.js"></script>
     <link rel="stylesheet" href="../css/BA_Style.css">
 
 </head>
@@ -64,7 +64,7 @@
     init();
 
 
-    $.getJSON("data/data.json", function(d){
+    $.getJSON("../data/data.json", function(d){
         data = d;
     }).done(function () {
         ES.init(data);
