@@ -67,7 +67,7 @@
 
     //        var webmap = L.esri.webMap(webmapId, { map: L.map("map") });
 
-    var map = L.map("map").setView([42.1, -83.1], 6);
+    var map = L.map("map").setView([45.1, -83.1], 6);
     L.esri.basemapLayer("Topographic").addTo(map);
 
     var county_layer = L.esri.dynamicMapLayer({
@@ -78,6 +78,10 @@
 //            weight: 2
 //        },
         opacity: 0.7
+    }).addTo(map);
+
+    var boundaryLayer = L.esri.featureLayer({
+        url: "https://services7.arcgis.com/Tk0IbKIKhaoYn5sa/arcgis/rest/services/GreatLakesCommissionBasinBoundary/FeatureServer/0"
     }).addTo(map);
 
     var popup = L.popup({
