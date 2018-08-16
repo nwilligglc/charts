@@ -488,6 +488,17 @@ function BlueAccounting(){
             rangeSelector: {
                 selected: 1
             },
+            tooltip: {
+                dateTimeLabelFormats: {
+                    // second: '%Y-%m-%d<br/>%H:%M:%S',
+                    minute: '%Y-%m-%d<br/>%H:%M',
+                    hour: '%Y-%m-%d<br/>%H:%M',
+                    day: '%Y<br/>%m-%d',
+                    week: '%Y<br/>%m-%d',
+                    month: '%Y-%m',
+                    year: '%Y'
+                }
+            },
             credits: {
                 enabled:false
             },

@@ -55,13 +55,136 @@
             SWI.init(data);
         });
 
+        function getPointData(){
+            return {"type": "FeatureCollection","features":[{"type": "Feature","properties": {"LocID": "USGS-04157000","HUC8": "04080206","Org": "USGS-MI","LocName": "SAGINAW RIVER AT SAGINAW, MI","isglri": "Null"},"geometry": {"type": "Point","coordinates": [-83.9630294, 43.4128034]}},{"type": "Feature","properties": {"LocID": "USGS-04157065","HUC8": "04080206","Org": "USGS-MI","LocName": "SAGINAW RIVER AT WEADOCK ROAD AT ESSEXVILLE, MI","isglri": "Null"},"geometry": {"type": "Point","coordinates": [-83.8366418, 43.628078]}},{"type": "Feature","properties": {"LocID": "USGS-414111083223200","HUC8": "04120200","Org": "USGS-OH","LocName": "Maumee Bay at Maumee Bay State Park Cove 3 OH","isglri": "Null"},"geometry": {"type": "Point","coordinates": [-83.3754859, 41.6864363]}},{"type": "Feature","properties": {"LocID": "USGS-04072050","HUC8": "04030204","Org": "USGS-WI","LocName": "DUCK CREEK AT SEMINARY ROAD NEAR ONEIDA, WI","isglri": "Null"},"geometry": {"type": "Point","coordinates": [-88.2189923, 44.4658225]}},{"type": "Feature","properties": {"LocID": "USGS-04072150","HUC8": "04030204","Org": "USGS-WI","LocName": "DUCK CREEK NEAR HOWARD, WI","isglri": "Null"},"geometry": {"type": "Point","coordinates": [-88.1296944, 44.5333889]}},{"type": "Feature","properties": {"LocID": "USGS-04072185","HUC8": "04030204","Org": "USGS-WI","LocName": "TROUT CREEK NEAR HOWARD, WI","isglri": "Null"},"geometry": {"type": "Point","coordinates": [-88.1301034, 44.5361022]}},{"type": "Feature","properties": {"LocID": "USGS-04072233","HUC8": "04030204","Org": "USGS-WI","LocName": "LANCASTER BROOK AT SHAWANO AVENUE AT HOWARD, WI","isglri": "Null"},"geometry": {"type": "Point","coordinates": [-88.1028813, 44.5580472]}},{"type": "Feature","properties": {"LocID": "USGS-040851385","HUC8": "04030204","Org": "USGS-WI","LocName": "FOX RIVER AT OIL TANK DEPOT AT GREEN BAY, WI","isglri": "Null"},"geometry": {"type": "Point","coordinates": [-88.01, 44.5286111]}},{"type": "Feature","properties": {"LocID": "USGS-040869415","HUC8": "04040003","Org": "USGS-WI","LocName": "LINCOLN CREEK AT 47TH STREET AT MILWAUKEE, WI","isglri": "Null"},"geometry": {"type": "Point","coordinates": [-87.9723094, 43.0969559]}},{"type": "Feature","properties": {"LocID": "USGS-04087000","HUC8": "04040003","Org": "USGS-WI","LocName": "MILWAUKEE RIVER AT MILWAUKEE, WI","isglri": "Null"},"geometry": {"type": "Point","coordinates": [-87.9089745, 43.1000116]}},{"type": "Feature","properties": {"LocID": "21MICH_WQX-090177","HUC8": "04080206","Org": "21MICH_WQX","LocName": "SAGINAW RIVER AT MAIN ST-ESSEXVILLE; BANGOR TOWNSHIP SECTION 14","isglri": "Null"},"geometry": {"type": "Point","coordinates": [-83.842781, 43.617505]}},{"type": "Feature","properties": {"LocID": "21MICH_WQX-700123","HUC8": "04050006","Org": "21MICH_WQX","LocName": "GRAND RIVER AT RIVERSIDE PARK; ROBINSON TOWNSHIP, SECTION 1","isglri": "Null"},"geometry": {"type": "Point","coordinates": [-86.03584, 43.02842]}},{"type": "Feature","properties": {"LocID": "USGS-04092750","HUC8": "04040001","Org": "USGS-IN","LocName": "GLRI Site: INDIANA HARBOR CANAL AT EAST CHICAGO, IN","isglri": "GLRI_Site"},"geometry": {"type": "Point","coordinates": [-87.4686529, 41.6492023]}},{"type": "Feature","properties": {"LocID": "USGS-04040000","HUC8": "04020102","Org": "USGS-MI","LocName": "GLRI Site: ONTONAGON RIVER NEAR ROCKLAND, MI","isglri": "GLRI_Site"},"geometry": {"type": "Point","coordinates": [-89.207086, 46.7207742]}},{"type": "Feature","properties": {"LocID": "USGS-04059500","HUC8": "04030109","Org": "USGS-MI","LocName": "GLRI Site: FORD RIVER NEAR HYDE, MI","isglri": "GLRI_Site"},"geometry": {"type": "Point","coordinates": [-87.2020793, 45.7549674]}},{"type": "Feature","properties": {"LocID": "USGS-04101500","HUC8": "04050001","Org": "USGS-MI","LocName": "GLRI Site: ST. JOSEPH RIVER AT NILES, MI","isglri": "GLRI_Site"},"geometry": {"type": "Point","coordinates": [-86.2597325, 41.8292138]}},{"type": "Feature","properties": {"LocID": "USGS-04108660","HUC8": "04050003","Org": "USGS-MI","LocName": "GLRI Site: KALAMAZOO RIVER AT NEW RICHMOND, MI","isglri": "GLRI_Site"},"geometry": {"type": "Point","coordinates": [-86.106703, 42.6508598]}},{"type": "Feature","properties": {"LocID": "USGS-04119400","HUC8": "04050006","Org": "USGS-MI","LocName": "GLRI Site: GRAND RIVER NEAR EASTMANVILLE, MI","isglri": "GLRI_Site"},"geometry": {"type": "Point","coordinates": [-86.0264354, 43.0241884]}},{"type": "Feature","properties": {"LocID": "USGS-04142000","HUC8": "04080101","Org": "USGS-MI","LocName": "GLRI Site: RIFLE RIVER NEAR STERLING, MI","isglri": "GLRI_Site"},"geometry": {"type": "Point","coordinates": [-84.0199939, 44.0725203]}},{"type": "Feature","properties": {"LocID": "USGS-04157005","HUC8": "04080206","Org": "USGS-MI","LocName": "GLRI Site: SAGINAW RIVER AT HOLLAND AVENUE AT SAGINAW, MI","isglri": "GLRI_Site"},"geometry": {"type": "Point","coordinates": [-83.951918, 43.4219699]}},{"type": "Feature","properties": {"LocID": "USGS-04165500","HUC8": "04090003","Org": "USGS-MI","LocName": "GLRI Site: CLINTON RIVER AT MORAVIAN DRIVE AT MT. CLEMENS, MI","isglri": "GLRI_Site"},"geometry": {"type": "Point","coordinates": [-82.90881, 42.5958674]}},{"type": "Feature","properties": {"LocID": "USGS-04166500","HUC8": "04090004","Org": "USGS-MI","LocName": "GLRI Site: RIVER ROUGE AT DETROIT, MI","isglri": "GLRI_Site"},"geometry": {"type": "Point","coordinates": [-83.2546513, 42.3730923]}},{"type": "Feature","properties": {"LocID": "USGS-04176500","HUC8": "04100002","Org": "USGS-MI","LocName": "GLRI Site: RIVER RAISIN NEAR MONROE, MI","isglri": "GLRI_Site"},"geometry": {"type": "Point","coordinates": [-83.5310462, 41.9606008]}},{"type": "Feature","properties": {"LocID": "USGS-04024000","HUC8": "04010201","Org": "USGS-MN","LocName": "GLRI Site: ST. LOUIS RIVER AT SCANLON, MN","isglri": "GLRI_Site"},"geometry": {"type": "Point","coordinates": [-92.4188018, 46.7032765]}},{"type": "Feature","properties": {"LocID": "USGS-04213500","HUC8": "04120102","Org": "USGS-NY","LocName": "GLRI Site: CATTARAUGUS CREEK AT GOWANDA NY","isglri": "GLRI_Site"},"geometry": {"type": "Point","coordinates": [-78.9341667, 42.4633333]}},{"type": "Feature","properties": {"LocID": "USGS-04231600","HUC8": "04130003","Org": "USGS-NY","LocName": "GLRI Site: GENESEE RIVER AT FORD STREET BRIDGE, ROCHESTER NY","isglri": "GLRI_Site"},"geometry": {"type": "Point","coordinates": [-77.6163056, 43.1417222]}},{"type": "Feature","properties": {"LocID": "USGS-04249000","HUC8": "04140203","Org": "USGS-NY","LocName": "GLRI Site: OSWEGO RIVER AT LOCK 7, OSWEGO NY","isglri": "GLRI_Site"},"geometry": {"type": "Point","coordinates": [-76.5052778, 43.4516667]}},{"type": "Feature","properties": {"LocID": "USGS-04193500","HUC8": "04100009","Org": "USGS-OH","LocName": "GLRI Site: Maumee River at Waterville OH","isglri": "GLRI_Site"},"geometry": {"type": "Point","coordinates": [-83.7127145, 41.5000526]}},{"type": "Feature","properties": {"LocID": "USGS-04199000","HUC8": "04100012","Org": "USGS-OH","LocName": "GLRI Site: Huron River at Milan OH","isglri": "GLRI_Site"},"geometry": {"type": "Point","coordinates": [-82.6082326, 41.3008852]}},{"type": "Feature","properties": {"LocID": "USGS-04199500","HUC8": "04100012","Org": "USGS-OH","LocName": "GLRI Site: Vermilion River near Vermilion OH","isglri": "GLRI_Site"},"geometry": {"type": "Point","coordinates": [-82.3168273, 41.38199]}},{"type": "Feature","properties": {"LocID": "USGS-04200500","HUC8": "04110001","Org": "USGS-OH","LocName": "GLRI Site: Black River at Elyria OH","isglri": "GLRI_Site"},"geometry": {"type": "Point","coordinates": [-82.1045928, 41.3803237]}},{"type": "Feature","properties": {"LocID": "USGS-04208000","HUC8": "04110002","Org": "USGS-OH","LocName": "GLRI Site: Cuyahoga River at Independence OH","isglri": "GLRI_Site"},"geometry": {"type": "Point","coordinates": [-81.6298478, 41.3953309]}},{"type": "Feature","properties": {"LocID": "USGS-04212100","HUC8": "04110004","Org": "USGS-OH","LocName": "GLRI Site: Grand River near Painesville OH","isglri": "GLRI_Site"},"geometry": {"type": "Point","coordinates": [-81.2278789, 41.7189339]}},{"type": "Feature","properties": {"LocID": "USGS-04027000","HUC8": "04010302","Org": "USGS-WI","LocName": "GLRI Site: BAD RIVER NEAR ODANAH, WI","isglri": "GLRI_Site"},"geometry": {"type": "Point","coordinates": [-90.696297, 46.4866144]}},{"type": "Feature","properties": {"LocID": "USGS-04067500","HUC8": "04030108","Org": "USGS-WI","LocName": "GLRI Site: MENOMINEE RIVER NEAR MC ALLISTER, WI","isglri": "GLRI_Site"},"geometry": {"type": "Point","coordinates": [-87.6633333, 45.3258333]}},{"type": "Feature","properties": {"LocID": "USGS-04085138","HUC8": "04030204","Org": "USGS-WI","LocName": "GLRI Site: EAST RIVER AT GREEN BAY, WI","isglri": "GLRI_Site"},"geometry": {"type": "Point","coordinates": [-87.9917702, 44.5091593]}},{"type": "Feature","properties": {"LocID": "USGS-04085427","HUC8": "04030101","Org": "USGS-WI","LocName": "GLRI Site: MANITOWOC RIVER AT MANITOWOC, WI","isglri": "GLRI_Site"},"geometry": {"type": "Point","coordinates": [-87.7160278, 44.1061667]}},{"type": "Feature","properties": {"LocID": "USGS-04087170","HUC8": "04040002","Org": "USGS-WI","LocName": "GLRI Site: MILWAUKEE RIVER AT MOUTH AT MILWAUKEE, WI","isglri": "GLRI_Site"},"geometry": {"type": "Point","coordinates": [-87.8983333, 43.0244444]}},{"type": "Feature","properties": {"LocID": "USGS-04213500","HUC8": "04120102","Org": "USGS-NY","LocName": "GLRI Site: CATTARAUGUS CREEK AT GOWANDA NY","isglri": "GLRI_Site"},"geometry": {"type": "Point","coordinates": [-78.9341667, 42.4633333]}},{"type": "Feature","properties": {"LocID": "USGS-04193500","HUC8": "04100009","Org": "USGS-OH","LocName": "GLRI Site: Maumee River at Waterville OH","isglri": "GLRI_Site"},"geometry": {"type": "Point","coordinates": [-83.7127145, 41.5000526]}},{"type": "Feature","properties": {"LocID": "USGS-04067500","HUC8": "04030108","Org": "USGS-WI","LocName": "GLRI Site: MENOMINEE RIVER NEAR MC ALLISTER, WI","isglri": "GLRI_Site"},"geometry": {"type": "Point","coordinates": [-87.6633333, 45.3258333]}},{"type": "Feature","properties": {"LocID": "WI_MMSD-RI-02S","HUC8": "04040003","Org": "WI_MMSD","LocName": "Milw. River - Brown Deer Road","isglri": "Null"},"geometry": {"type": "Point","coordinates": [-87.956, 43.178]}},{"type": "Feature","properties": {"LocID": "WI_MMSD-RI-05S","HUC8": "04040003","Org": "WI_MMSD","LocName": "Milw. River - North Avenue Dam","isglri": "Null"},"geometry": {"type": "Point","coordinates": [-87.894, 43.059]}},{"type": "Feature","properties": {"LocID": "MKE_INT","HUC8": "4040003","Org": "MKE_WW","LocName": "Milewaukee Intake","isglri": "Intake"},"geometry": {"type": "Point","coordinates": [-87.9064736, 43.0389025]}}]}
+        }
+
+
 //        var webmapId = '73298832d588414eb83ab171f406bc2c'; // Default WebMap ID
 //        getIdfromUrl();
 
 //        var webmap = L.esri.webMap(webmapId, { map: L.map("map") });
 
-        var map = L.map("map").setView([42.1, -83.1], 6);
+        var map = L.map("map").setView([45.1, -83.1], 6);
         L.esri.basemapLayer("Topographic").addTo(map);
+        map.createPane("watershed");
+
+
+        var watershed_lyr = L.esri.featureLayer({
+            url: "https://services7.arcgis.com/Tk0IbKIKhaoYn5sa/arcgis/rest/services/HUC08/FeatureServer/0",
+//                layers: [4],
+//                f: "image",
+//                where: "HUC8 LIKE '04%'",
+            pane: "watershed",
+            simplifyFactor: 0.7,
+            style: function (feature){
+                if ( -1 == $.inArray(feature.properties["huc8"], SWI.showcaseWatershed)){
+                    return {
+                        color: "blue",
+                        fill: false,
+                        weight: 2
+                    }
+                }else{
+                    return {
+                        color: "blue",
+                        fill: true,
+                        fillColor: "#ff7800",
+                        weight: 2
+                    }
+                }
+            }
+        }).addTo(map);
+
+        var tertiary_lyr = L.esri.featureLayer({
+            url: "https://services7.arcgis.com/Tk0IbKIKhaoYn5sa/arcgis/rest/services/NitrateLayers/FeatureServer/2",
+//                layers: [4],
+//                f: "image",
+//                where: "HUC8 LIKE '04%'",
+            pane: "watershed",
+            simplifyFactor: 0.7,
+            style: function (feature){
+                if ( -1 == $.inArray(feature.properties["OGF_ID"], SWI.tertiary)){
+                    return {
+                        color: "blue",
+                        fill: false,
+                        weight: 2
+                    }
+                }else{
+                    return {
+                        color: "blue",
+                        fill: true,
+                        fillColor: "orange",
+                        weight: 2
+                    }
+                }
+            },
+//        opacity: 0.7
+        }).addTo(map);
+//        watershed_lyr.bindTooltip("Watershed layer");
+
+        map.createPane("monitoringPoints");
+//        var nitrateSite = L.geoJSON(getPointData(), {
+//            pointToLayer: function (geojson, latlng) {
+//                return L.circleMarker(latlng);
+//            },
+//            pane: "monitoringPoints",
+//            style: {
+//                color: "#ff7800",
+//                weight: 3,
+//                fill: "#ff7800",
+//                fillOpacity: 0.5
+//            }
+//        }).addTo(map);
+        var nitrateSite = L.esri.featureLayer({
+            url: "https://services7.arcgis.com/Tk0IbKIKhaoYn5sa/arcgis/rest/services/NitrateLayers/FeatureServer/1",
+            pointToLayer: function (geojson, latlng) {
+                return L.circleMarker(latlng, {
+                    pane: "monitoringPoints",
+
+                });
+            },
+            style: function(feature) {
+                if(feature.properties.isglri == "Null"){
+                    return {
+                        color: "#44ff44",
+                        weight: 3,
+                        fill: "#44ff44",
+                        fillOpacity: 0.5
+                    }
+                }else if (feature.properties.isglri == "GLRI_Site"){
+                    return {
+                        color: "#002244",
+                        weight: 3,
+                        fill: "#002244",
+                        fillOpacity: 0.5
+                    }
+                }else{
+                    return {
+                        color: "#9977ff",
+                        weight: 1,
+                        fill: "#9977ff",
+                        fillOpacity: 0.5,
+                        radius: 5
+                    }
+                }
+
+            }
+        }).addTo(map);
+
+        var canadaSite = L.esri.featureLayer({
+            url: "https://services7.arcgis.com/Tk0IbKIKhaoYn5sa/arcgis/rest/services/NitrateLayers/FeatureServer/0",
+            pointToLayer: function (geojson, latlng) {
+                return L.circleMarker(latlng, {
+                    pane: "monitoringPoints",
+                });
+            },
+            style: {
+                color: "#ff7800",
+                weight: 3,
+                fill: "#ff7800",
+                fillOpacity: 0.5
+            }
+        }).addTo(map);
 
 //        webmap.on('load', function() {
 //            var overlayMaps = {};
@@ -98,51 +221,25 @@
             fillColor: '#2262CC'
         };
 
-        var watershed_lyr = L.esri.featureLayer({
-            url: "https://services7.arcgis.com/Tk0IbKIKhaoYn5sa/arcgis/rest/services/HUC08/FeatureServer/0",
-//                layers: [4],
-//                f: "image",
-//                where: "HUC8 LIKE '04%'",
-            simplifyFactor: 0.9,
-            style: function (feature){
-                if ( -1 == $.inArray(feature.properties["huc8"], SWI.showcaseWatershed)){
-                    return {
-                        color: "blue",
-                        fill: false,
-                        weight: 2
-                    }
-                }else{
-                    return {
-                        color: "blue",
-                        fill: true,
-                        fillColor: "orange",
-                        weight: 2
-                    }
-                }
-            },
-//        opacity: 0.7
-        }).addTo(map);
-        watershed_lyr.bindTooltip("Watershed layer");
+
 //        watershed.on("mouseover", function (e){
 //
 //        })
 
-        var points = L.esri.featureLayer({
-            url: 'https://services7.arcgis.com/Tk0IbKIKhaoYn5sa/arcgis/rest/services/Nutrients_Goal_Layers/FeatureServer/0',
-//            pointToLayer: function (geojson, latlng) {
-//                return L.circleMarker(latlng);
-//            },
-//            style:{
-//                color: 'blue',
-//                weight: 1,
-//                opacity: 0.85,
-//                fillOpacity: 0.5
-//            }
-        }).addTo(map);
+//        var points = L.esri.featureLayer({
+//            url: 'https://services7.arcgis.com/Tk0IbKIKhaoYn5sa/arcgis/rest/services/Nutrients_Goal_Layers/FeatureServer/0',
+////            pointToLayer: function (geojson, latlng) {
+////                return L.circleMarker(latlng);
+////            },
+////            style:{
+////                color: 'blue',
+////                weight: 1,
+////                opacity: 0.85,
+////                fillOpacity: 0.5
+////            }
+//        }).addTo(map);
 
-        var query = L.esri.query({
-            url: watershed_lyr.options.url
-        });
+
 
 //        var boundary_query = L.esri.query({
 //            url: "https://hydro.nationalmap.gov/arcgis/rest/services/wbd/MapServer/4"
@@ -222,19 +319,46 @@
                     color: "#F3A51E"
                 });
                 selectedWatershed.addTo(map);
+                var query = L.esri.query({
+                    url: watershed_lyr.options.url
+                });
                 query.where("huc8='" + watershed.properties["huc8"] +"'").bounds(function(error, latLngBounds, response){
                     map.fitBounds(latLngBounds);
                 });
 
+
+
                 var where = "HUC8=" + watershed.properties["huc8"];
 //                points.addTo(map);
-                points.setWhere(where);
+//                map.removeLayer(nitrateSite);
+
+//                nitrateSite =L.geoJSON(getPointData(), {
+//                    pointToLayer: function (geojson, latlng) {
+//                        return L.circleMarker(latlng);
+//                    },
+//                    pane: "monitoringPoints",
+//                    style: {
+//                        color: "#ff7800",
+//                        weight: 3,
+//                        fill: "#ff7800",
+//                        fillOpacity: 0.5
+//                    },
+//                    filter: function(feature){
+//                    return feature.properties.HUC8 == where;
+//                    }
+//                }).addTo(map);
+//                nitrateSite.setWhere(where);
 //                points.refresh();
                 labels = [];
 
 
                 var data_series = [];
-                points.eachFeature(function (layer){
+
+//                for(var n in nitrate){
+//
+//                }
+
+                nitrateSite.eachFeature(function (layer){
                     if(layer.feature.properties["HUC8"] == watershed.properties["huc8"]){
                         var monitorId = layer.feature.properties['LocID'];
 
@@ -259,7 +383,7 @@
                 });
 
 //                points.addTo(map);
-                points.bindPopup(function (layer) {
+                nitrateSite.bindPopup(function (layer) {
                     return L.Util.template(SWI.buildPopupContent(), layer.feature.properties);
                 });
 
@@ -267,7 +391,213 @@
                     chart = BA.buildStockChart("chart-canvas",
                         "Nitrate Level at " + watershed.properties["name"] + " Watershed, HUC 8:" + watershed.properties["huc8"],
                         "Date",
-                        "Nitrate",
+                        "Nitrate: mg/l as N",
+                        data_series,
+                        400, null);
+//                    Highcharts.stockChart("chart-canvas", {
+//                        rangeSelector: {
+//                            selected: 1
+//                        },
+//                        credits: {
+//                            enabled:false
+//                        },
+//                        legend: {
+//                            enabled: true
+//                        },
+//                        title: {
+//                            text: "Nitrate Level at " + watershed.properties["name"] + " Watershed, HUC 8:" + watershed.properties["huc8"]
+//                        },
+//
+//                        xAxis: {
+//                            title: {
+//                                enabled: true,
+//                                text: 'Date'
+//                            },
+//                            startOnTick: true,
+//                            endOnTick: true,
+//                            showLastLabel: true
+//                        },
+//                        yAxis: {
+//                            title: {
+//                                text: 'Nitrate'
+//                            }
+//                        },
+//                        series: data_series
+//                    })
+                }else{
+                    $("#chart-canvas").html("")
+                }
+
+
+
+//                points.query().within(watershed.geometry).run(function (error, pointCollection) {
+//                    if (!pointCollection.features.length) {
+//                        var parent = document.getElementById("chart-canvas");
+//                        var children = parent.childNodes;
+//                        while (children.length > 0){
+//                            parent.removeChild(children[0]);
+//                        }
+//                        return;
+//                    }
+//
+////                    selectedPts = L.geoJSON(pointCollection.features);
+//////                    , {
+//////                        style: function (feature) {
+//////                            return {
+//////                                color: '#BA454E',
+//////                                weight: 2,
+//////                                opacity: 0.85,
+//////                                fillOpacity: 0.5
+//////                            };
+//////                        }
+//////                    });
+////                    selectedPts.addTo(map);
+//
+////                    points.refresh();
+//
+//
+//
+//                    // Popup window
+//                    for (var i = 0; i < pointCollection.features.length; i++){
+//
+////                        var ptFeature = pointCollection.features[i];
+//
+////                        points.setFeatureStyle(pointCollection.features[i], {
+////                            color: '#BA454E',
+////                            weight: 2,
+////                            opacity: 0.85,
+////                            fillOpacity: 0.5
+////                        });
+//
+//
+//                        var monitorId = pointCollection.features[i].properties['LocID'];
+////                        var label = L.marker(L.latLng(pointCollection.features[i].geometry.coordinates), {
+////                            icon: L.divIcon({
+////                                iconSize: null,
+////                                className: "label",
+////                                html: "<div>" + monitorId + "</div>"
+////                            })
+////                        }).addTo(map);
+////                        labels[monitorId] = label;
+//
+//
+//
+//                        var chart_data = SWI.getMonitoringNitrateData(monitorId);
+//                        data_series.push({
+//                            name: monitorId,
+//                            data: chart_data.set
+//                        });
+//                    }
+////                    var chartTag = "chart" + i;
+////                    var node = document.createElement("div");
+////                    node.setAttribute("id", chartTag);
+////                    document.getElementById("chart-canvas").appendChild(node);
+//                    Highcharts.stockChart("chart-canvas", {
+//                        rangeSelector: {
+//                            selected: 1
+//                        },
+//                        credits: {
+//                            enabled:false
+//                        },
+//                        legend: {
+//                            enabled: true
+//                        },
+//                        title: {
+//                            text: "Nitrate Level at " + watershed.properties["name"] + " Watershed, HUC 8:" + watershed.properties["huc8"]
+//                        },
+//
+//                        xAxis: {
+//                            title: {
+//                                enabled: true,
+//                                text: 'Date'
+//                            },
+//                            startOnTick: true,
+//                            endOnTick: true,
+//                            showLastLabel: true
+//                        },
+//                        yAxis: {
+//                            title: {
+//                                text: 'Nitrate'
+//                            }
+//                        },
+//                        series: data_series
+//                    })
+//
+//
+//                });
+
+            });
+
+            tertiary_lyr.query().contains(e.latlng).run(function (error, featureCollection) {
+                var watershed;
+                if (featureCollection.features.length > 0) {
+                    watershed = featureCollection.features[0];
+                }else{
+                    return;
+                }
+                selectedWatershed = L.geoJSON(watershed);
+                selectedWatershed.setStyle({
+                    fill: false,
+                    weight: 4,
+                    color: "#F3A51E"
+                });
+                selectedWatershed.addTo(map);
+                var query = L.esri.query({
+                    url: tertiary_lyr.options.url
+                });
+                query.where("OGF_ID='" + watershed.properties["OGF_ID"] +"'").bounds(function(error, latLngBounds, response){
+                    map.fitBounds(latLngBounds);
+                });
+
+
+
+                var where = "Watershed=" + watershed.properties["NAME"];
+
+//                canadaSite.setWhere(where);
+
+                labels = [];
+
+
+                var data_series = [];
+
+//                for(var n in nitrate){
+//
+//                }
+
+                canadaSite.eachFeature(function (layer){
+                    if(layer.feature.properties["Watershed"] == watershed.properties["NAME"]){
+                        var monitorId = layer.feature.properties['LocID'];
+
+                        var chart_data = SWI.getMonitoringNitrateData(monitorId);
+                        data_series.push({
+                            name: monitorId,
+                            data: chart_data.set
+                        });
+
+//            var feature = points.getFeature(id);
+                        var center = L.latLng(layer.feature.geometry.coordinates[1], layer.feature.geometry.coordinates[0]);
+                        var label = L.marker(center, {
+                            icon: L.divIcon({
+                                iconSize: null,
+                                className: 'label',
+                                html: '<div><p><i><b>' + layer.feature.properties.LocID + '</b></i></p></div>'
+                            })
+                        }).addTo(map);
+                        labels.push(label);
+                    }
+
+                });
+
+//                points.addTo(map);
+                canadaSite.bindPopup(function (layer) {
+                    return L.Util.template(SWI.buildPopupContent("Canada"), layer.feature.properties);
+                });
+
+                if (data_series.length > 0){
+                    chart = BA.buildStockChart("chart-canvas",
+                        "Nitrate Level at " + watershed.properties["name"] + " Watershed, HUC 8:" + watershed.properties["huc8"],
+                        "Date",
+                        "Nitrate: mg/l as N",
                         data_series,
                         400, null);
 //                    Highcharts.stockChart("chart-canvas", {

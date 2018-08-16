@@ -2,6 +2,7 @@ function SWI(){
     this.swi_data;
 
     this.showcaseWatershed = ["04040003", "04050006", "04110002", "04100009", "04080206", "04030204"];
+    this.tertiary = [1384500050];
 
     this.stateLookup = {
         17: "Illinois",
@@ -22,25 +23,25 @@ function SWI(){
         Highcharts.setOptions({
             lang: {
                 numericSymbols: null,
-                thousandsSep: ',',
+                thousandsSep: ",",
                 // viewData: null
             }
         });
         Highcharts.Chart.prototype.viewData = function () {
             if (!this.insertedTable) {
-                var div = document.createElement('div');
-                div.className = 'highcharts-data-table';
+                var div = document.createElement("div");
+                div.className = "highcharts-data-table";
                 // Insert after the chart container
                 this.renderTo.parentNode.insertBefore(div, this.renderTo.nextSibling);
                 div.innerHTML = this.getTable();
                 this.insertedTable = true;
                 var date_str = new Date().getTime().toString();
                 var rand_str = Math.floor(Math.random() * (1000000)).toString();
-                this.insertedTableID = 'div_' + date_str + rand_str
+                this.insertedTableID = "div_" + date_str + rand_str
                 div.id = this.insertedTableID;
             }
             else {
-                $('#' + this.insertedTableID).toggle();
+                $("#" + this.insertedTableID).toggle();
             }
         };
     };
@@ -69,11 +70,20 @@ function SWI(){
         return result;
     };
 
-    this.buildPopupContent = function (){
-        return '<p><i><b>Watershed Name</b></i>: {HUC8Name}</p><br>' +
-            '<p><i><b>HUC 8 Code</b></i>: {HUC8}</p><br>' +
-            '<p><i><b>Monitoring Location ID</b></i>: {LocID}</p><br>' +
-            '<p><i><b>Monitoring Location Name</b></i>: {LocName}</p>'
+    this.buildPopupContent = function (location){
+        if (location == ""){
+            return '<p><i><b>HUC 8 Code</b></i>: {HUC8}</p><br>' +
+                '<p><i><b>Monitoring Location ID</b></i>: {LocID}</p><br>' +
+                '<p><i><b>Monitoring Location Name</b></i>: {LocName}</p>' +
+                '<p><i><b>Organization</b></i>: {Org}</p><br>';
+            // '<p><i><b>Watershed Name</b></i>: {HUC8}</p><br>' +
+        }
+        else {
+            return '<p><i><b>Monitoring Location ID</b></i>: {LocID}</p><br>' +
+                '<p><i><b>Monitoring Location Name</b></i>: {LocName}</p>' +
+                '<p><i><b>Organization</b></i>: {Org}</p><br>';
+        }
+
     };
 
 
