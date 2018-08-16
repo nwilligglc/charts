@@ -79,30 +79,7 @@
 </head>
 <body>
 <div class="container-fluid">
-    <table>
-    <div class="row">
-        <div class="col-lg">
-            <fieldset>
-                <legend>Row selector</legend>
-                <ul class="row_chb">
-                    <input id="row1" name="row_group" type="checkbox" value="row1" onchange = "tableContentUpdater(this)" checked>SOURCE WATER ASSESSMENT<br>
-                    <input id="row2" name="row_group" type="checkbox" value="row2" onchange = "tableContentUpdater(this)" checked>SURFACE WATER PROTECTION<br>
-                    <input id="row3" name="row_group" type="checkbox" value="row3" onchange = "tableContentUpdater(this)" checked>WELLHEAD PROTECTION
-                </ul>
-            </fieldset>
-        </div>
-        <div class="col-lg">
-            <fieldset>
-                <legend>Column selector</legend>
-                <ul class="col_chb">
-                    <input id="chbFederal" name="col_group" type="checkbox" value="federal" onchange = "tableContentUpdater(this)" checked>Federal<br>
-                    <input id="chbState" name="col_group" type="checkbox" value="state" onchange = "tableContentUpdater(this)" checked>State/Provincial<br>
-                    <input id="chbLocal" name="col_group" type="checkbox" value="local" onchange = "tableContentUpdater(this)" checked>Local
-                </ul>
-            </fieldset>
-        </div>
-    </div>
-    </table>
+
 
 
     <!--<div class="table-responsive">-->
@@ -110,7 +87,34 @@
         <table class="table SWI-DT-table">
             <thead>
                 <tr class="row">
-                    <th class="col col-sm-2"></th>
+                    <td class="col col-sm-2" style="text-align: left">
+                        <p style="font-size: small" class="tooltip">How to use this table?</p><!--<span class="tooltiptext">Put in a paragraph in here<img src="../img/double_check.png"> </span>-->
+                        <div class="col-sm">
+                            <fieldset>
+                                <p>Row selector</p>
+                                <ul class="row_chb">
+                                    <li><input id="row1" name="row_group" type="checkbox" value="row1" onchange = "tableContentUpdater(this)" checked>Source Water Assessment</li>
+                                    <li><input id="row2" name="row_group" type="checkbox" value="row2" onchange = "tableContentUpdater(this)" checked>Surface Water Protection</li>
+                                    <li><input id="row3" name="row_group" type="checkbox" value="row3" onchange = "tableContentUpdater(this)" checked>Wellhead Protection</li>
+                                </ul>
+                            </fieldset>
+                        </div>
+                        <div class="col-sm">
+                            <fieldset>
+                                <p>Column selector</p>
+                                <ul class="col_chb">
+                                    <li><input id="chbFederal" name="col_group" type="checkbox" value="federal" onchange = "tableContentUpdater(this)" checked>Federal</li>
+                                    <li><input id="chbState" name="col_group" type="checkbox" value="state" onchange = "tableContentUpdater(this)" checked>State/Provincial</li>
+                                    <li><input id="chbLocal" name="col_group" type="checkbox" value="local" onchange = "tableContentUpdater(this)" checked>Local</li>
+                                </ul>
+                            </fieldset>
+                        </div>
+                        <!--<table>-->
+                            <!--<div class="row">-->
+                                <!---->
+                            <!--</div>-->
+                        <!--</table>-->
+                    </td>
                     <th colspan="3" class="img_header col">
                         <img class="img-fluid" src="../img/US_Flag.png" alt="US">
                         <p>U.S.</p>
