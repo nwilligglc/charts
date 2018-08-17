@@ -1,7 +1,7 @@
 function SWI(){
     this.swi_data;
 
-    this.showcaseWatershed = ["04040003", "04050006", "04110002", "04100009", "04080206", "04030204"];
+    this.showcaseWatershed = ["04040003", "04050006", "04110002", "04100009", "04080206", "04030204", "04090004"];
     this.tertiary = [1384500050];
 
     this.stateLookup = {

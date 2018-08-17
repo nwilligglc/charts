@@ -486,7 +486,7 @@ function BlueAccounting(){
                 }
             },
             rangeSelector: {
-                selected: 1
+                selected: 5
             },
             tooltip: {
                 dateTimeLabelFormats: {

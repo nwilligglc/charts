@@ -28,6 +28,10 @@
     <!--&lt;!&ndash; Load L.esri.WebMap &ndash;&gt;-->
     <!--<script src="https://cdn.jsdelivr.net/leaflet.esri.webmap/0.4.0/esri-leaflet-webmap.js"></script>-->
 
+    <!--Legend-->
+    <!--<script src="//unpkg.com/esri-leaflet-renderers@2.0.4/dist/esri-leaflet-renderers-debug.js"></script>-->
+    <!--<script src="../js/esri-leaflet-legend-compat-src.js"></script>-->
+
     <!--GLC libraries-->
     <script src="../js/BlueAccounting.js"></script>
     <script src="../js/SWI.js"></script>
@@ -183,7 +187,8 @@
                 weight: 3,
                 fill: "#ff7800",
                 fillOpacity: 0.5
-            }
+            },
+            useCors: false
         }).addTo(map);
 
 //        webmap.on('load', function() {
@@ -353,10 +358,6 @@
 
 
                 var data_series = [];
-
-//                for(var n in nitrate){
-//
-//                }
 
                 nitrateSite.eachFeature(function (layer){
                     if(layer.feature.properties["HUC8"] == watershed.properties["huc8"]){
@@ -735,45 +736,19 @@
             });
 
         });
-        //            points.query().nearby(e.latlng, 500).run(function (error, featureCollection) {
-        //                if (featureCollection.features.length > 0) {
-        //                    var feature = featureCollection.features[0];
-        //                    var monitorId = feature.properties['MonitoringLocationIdentifier'];
-        //
-        //                    var chart_data = SWI.getMonitoringNitrateData(monitorId);
-        //
-        //                    var chart = Highcharts.stockChart("chart1", {
-        //                        rangeSelector: {
-        //                            selected: 1
-        //                        },
-        //
-        //                        title: {
-        //                            text: 'Nitrate Monitored at Location'
-        //                        },
-        //
-        //                        xAxis: {
-        //                            title: {
-        //                                enabled: true,
-        //                                text: 'Date'
-        //                            },
-        //                            startOnTick: true,
-        //                            endOnTick: true,
-        //                            showLastLabel: true
-        //                        },
-        //                        yAxis: {
-        //                            title: {
-        //                                text: 'Nitrate'
-        //                            },
-        //                        },
-        //                        series: [{
-        //                            name: "Nitrate",
-        //                            data: chart_data.set
-        //                        }]
-        //                    })
-        //                }
 
-        //        });
+        /*LEGEND
 
+        var layers = [];
+        layers.push(watershed_lyr);
+        layers.push(tertiary_lyr);
+        layers.push(canadaSite);
+        layers.push(nitrateSite);
+
+        var legend = L.esri.legendControl(layers, {
+            position: "topright"
+        }).addTo(map);
+*/
         function getIdfromUrl() {
             var urlParams = location.search.substring(1).split('&');
             for (var i=0; urlParams[i]; i++) {
