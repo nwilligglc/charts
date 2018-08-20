@@ -2,7 +2,7 @@ function ErieStat() {
     this.es_data = null;
     this.xAxis = [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016];
     this.watershedNames = {
-        "Cattaraugus": "Cattaraugus River",
+        "Cattaraugus": "Cattaraugus Creek",
         "Cuyahoga": "Cuyahoga River",
         "Detroit": "Detroit River",
         "Grand": "Grand River",
