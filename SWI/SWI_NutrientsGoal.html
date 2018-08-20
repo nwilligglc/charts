@@ -51,9 +51,9 @@
         <p>This tool tracks nitrate concentrations in raw water in major rivers near our partner
         communities using USGS and EPA water quality data. Communities’ watersheds are
         shaded yellow. The dots on the map are water monitoring locations, with black dots
-        green dots representing continuous monitoring locations funded by the Great Lakes
+        representing continuous monitoring locations funded by the Great Lakes
             Restoration Initiative in the US.</p>
-        <p>Click on yellow watersheds to see graphs of available nitrate data.</p>
+        <p>Click on orange watersheds to see graphs of available nitrate data.</p>
     </div>
     <div id="chart-canvas"></div>
 
@@ -104,11 +104,13 @@
                     return {
                         color: "blue",
                         fill: true,
-                        fillColor: "#ff7800",
-                        weight: 2
+                        fillColor: "orange",
+                        weight: 2,
+                        fillOpacity: 0.8
                     }
                 }
-            }
+            },
+            opacity: 1
         }).addTo(map);
 
         var tertiary_lyr = L.esri.featureLayer({
@@ -130,7 +132,8 @@
                         color: "blue",
                         fill: true,
                         fillColor: "orange",
-                        weight: 2
+                        weight: 2,
+                        fillOpacity: 0.8
                     }
                 }
             },
@@ -233,8 +236,8 @@
         var highlightStyle = {
             color: '#2262CC',
             weight: 3,
-            opacity: 0.4,
-            fillOpacity: 0.65,
+//            opacity: 0.4,
+//            fillOpacity: 0.65,
             fillColor: '#2262CC'
         };
 
