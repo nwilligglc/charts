@@ -272,7 +272,7 @@ function SWI(){
             for (var i in ws_list){
                 var content = "<h6>Water System: " + ws_list[i].PWS_NAME + " (" + ws_list[i].PWSID+ ")</h6>" +
                     "<table class='table table-striped table-hover'>" +
-                    "<thead class='SWI-table-header'><tr><th>Contaminant</th><th>Maximum</th></tr></thead>";
+                    "<thead class='SWI-table-header'><tr><th>Contaminant</th><th>Maximum Reported Concentration (in ug/l)</th></tr></thead>";
 
                 for (var c in ws_list[i].contaminants){
                     content += "<tr><td>" + ws_list[i].contaminants[c].name + "</td>" +
