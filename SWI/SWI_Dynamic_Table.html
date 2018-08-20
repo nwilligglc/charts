@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <title>Binational Conistency Table</title>
     <style>
+        #swi-tooltip {
+            width: 400px;
+        }
+        .tooltip {
+            width: 400px;
+        }
         /*table {*/
             /*table-layout: auto;*/
             /*width: 100%;*/
@@ -28,7 +34,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/BA_Style.css">
     <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <!--<script src="../js/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>-->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"></script>
     <script>
         function tableContentUpdater(element) {
@@ -79,16 +85,44 @@
 </head>
 <body>
 <div class="container-fluid">
-
-
-
-    <!--<div class="table-responsive">-->
+    <div style="text-align: center">
+        <a class="btn btn-primary" data-toggle="collapse" href="#collapseTooltip" role="button" aria-expanded="false" aria-controls="collapseExample">
+            How to use the site?
+        </a>
+    </div>
     <div>
+        <div class="collapse" id="collapseTooltip">
+            <div class="card card-body" style="font-weight: normal">
+                <p>Establishing binational consistency regarding source water policies in the U.S. and Canada is paramount to achieve comprehensive protection of drinking water sources in the Great Lakes region.  The symbols in the following table represent policy approaches taken by federal, state, and local governments in both nations toward three key source water protection components: Source water assessment, surface water intake protection, and wellhead protection. Comparing symbols in the table will allow you to assess the degree of consistency that exists in each nation across all levels of government. To make comparisons between a specific policy approach or level of government, use the row and column selectors to toggle on and off specific attributes. If you are interested in learning the reason a specific symbol was assigned, use the “click for more” more button to read details on the policy approach taken by a specific government unit. The following key will help you interpret each symbol:</p>
+                <ul>
+                    <li><img src='../img/double_check.png'>The component is directly addressed via a mandatory policy by all parties in the Great Lakes region at that rank of government</li>
+                    <li><img src="../img/single_check.png">The component is directly addressed via a mandatory policy by at least one but not all parties in the Great Lakes region at that rank of government</li>
+                    <li><img src="../img/yellow_circle.png">The component is acknowledged or encouraged to be addressed by all parties within that rank of government in the Great Lakes region via resources, tools, funding, or voluntary programs</li>
+                    <li><img src="../img/Question_mark.png">The component is not addressed or acknowledged by any party at that rank of government in the Great Lakes region</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div>
+        <!--<a id="swi-tooltip" href="#" data-toggle="tooltip">
+            &lt;!&ndash;title="Establishing binational consistency regarding source water policies in the U.S. and Canada is paramount to achieve comprehensive protection of drinking water sources in the Great Lakes region.  The symbols in the following table represent policy approaches taken by federal, state, and local governments in both nations toward three key source water protection components: Source water assessment, surface water intake protection, and wellhead protection. Comparing symbols in the table will allow you to assess the degree of consistency that exists in each nation across all levels of government. To make comparisons between a specific policy approach or level of government, use the row and column selectors to toggle on and off specific attributes. If you are interested in learning the reason a specific symbol was assigned, use the “click for more” more button to read details on the policy approach taken by a specific government unit. The following key will help you interpret each symbol:<br><ul><li>1</li></ul>">&ndash;&gt;
+
+            <span><em>How to?</em></span></a>
+        <script>
+            $("#swi-tooltip").tooltip({title: "Establishing binational consistency regarding source water policies in the U.S. and Canada is paramount to achieve comprehensive protection of drinking water sources in the Great Lakes region.  The symbols in the following table represent policy approaches taken by federal, state, and local governments in both nations toward three key source water protection components: Source water assessment, surface water intake protection, and wellhead protection. Comparing symbols in the table will allow you to assess the degree of consistency that exists in each nation across all levels of government. To make comparisons between a specific policy approach or level of government, use the row and column selectors to toggle on and off specific attributes. If you are interested in learning the reason a specific symbol was assigned, use the “click for more” more button to read details on the policy approach taken by a specific government unit. The following key will help you interpret each symbol:<br>" +
+            "<ul>" +
+            "<li><img src='../img/double_check.png'>The component is directly addressed via a mandatory policy by all parties in the Great Lakes region at that rank of government</li>" +
+
+            "</ul>",
+                html: true, placement: "right", boundary: "window"});
+
+        </script>-->
         <table class="table SWI-DT-table">
             <thead>
                 <tr class="row">
-                    <td class="col col-sm-2" style="text-align: left">
-                        <p style="font-size: small" class="tooltip">How to use this table?</p><!--<span class="tooltiptext">Put in a paragraph in here<img src="../img/double_check.png"> </span>-->
+                    <th class="col col-sm-2" style="text-align: left;font-weight: normal">
+
+                        <!--<p style="font-size: small" class="tooltip">How to use this table?</p>&lt;!&ndash;<span class="tooltiptext">Put in a paragraph in here<img src="../img/double_check.png"> </span>&ndash;&gt;-->
                         <div class="col-sm">
                             <fieldset>
                                 <p>Row selector</p>
@@ -114,7 +148,7 @@
                                 <!---->
                             <!--</div>-->
                         <!--</table>-->
-                    </td>
+                    </th>
                     <th colspan="3" class="img_header col">
                         <img class="img-fluid" src="../img/US_Flag.png" alt="US">
                         <p>U.S.</p>
@@ -429,7 +463,7 @@
                 <tr class="row">
                     <th class="row3 col col-sm-2" style="text-align: left">
                         <p>WELLHEAD PROTECTION</p>
-                        <p style="text-align: center">Consistency Grade: C</p>
+                        <p>Consistency Grade: C</p>
                         <div class="col-sm">
                             <div style="text-align: center">
                                 <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample3-1" role="button" aria-expanded="false" aria-controls="collapseExample">
