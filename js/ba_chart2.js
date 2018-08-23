@@ -36,7 +36,7 @@ var watershedNames = {
     "Cattaraugus": "Cattaraugus River",
     "Cuyahoga": "Cuyahoga River",
     "Detroit": "Detroit River",
-    "Grand": "Grand River",
+    "Grand": "Grand River-OH",
     "Grand (Ontario)": "Grand (Ontario) River",
     "Huron": "Huron River",
     "Leamington": "Leamington Tributaries",
@@ -270,12 +270,20 @@ BA_Charts.prototype.init = function(filename){
 }
 
 function getWatershedMetric(in_data, w_name, metric){
+    var flag = false;
     var vals = $(in_data).filter(function(i, n){
-        return n.River===(w_name)&& n.Fraction===metric /*&& n.Value !== ""*/ // n.River===w_name
-    })
+        if (n.River===(w_name) && n.Fraction===metric && n.Value !== ""){
+            flag = true;
+            // return n.River===(w_name)&& n.Fraction===metric;
+        }
+        return n.River===(w_name)&& n.Fraction===metric; /*&& n.Value !== ""*/ // n.River===w_name
+    });
     vals.sort(function(a, b){
         return (a.Year > b.Year) ? 1 : ((a.Year < b.Year) ? -1 : 0);
     });
+    if (!flag){
+        return [];
+    }
     return vals;
 }
 

@@ -69,7 +69,7 @@
     init();
 
 
-    $.getJSON("data/data.json", function(d){
+    $.getJSON("data/ErieStat_data.json", function(d){
         data = d;
     });
 
@@ -109,7 +109,8 @@
                     });
                     selectedFeature.addTo(map);
                     var name = featureCollection.features[i].properties["Watershed Name"];
-                    if(buildNarratives(name)){
+                    buildNarratives(name)
+//                    if(){
                         var s1_data = $.map(getWatershedMetric(data, watershedNames[name], metric1), function(el){
                             return el.Value;
                         });
@@ -194,9 +195,9 @@
                         }else{
                             $("#chart4").html("<i>* Data under development.</i>");
                         }
-                    }else{
-                        $(".charts").html("");
-                    }
+//                    }else{
+//                        $(".charts").html("");
+//                    }
 
 
 
