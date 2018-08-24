@@ -17,7 +17,7 @@
     "River": "Cattaraugus Creek",
     "Year": 2010,
     "Fraction": "Annual TP Loading",
-    "Value": 36.31370434,
+    "Value": 36,
     "Source": "Santina and Maccoux"
   },
   {
@@ -38,7 +38,7 @@
     "River": "Cattaraugus Creek",
     "Year": 2013,
     "Fraction": "Annual TP Loading",
-    "Value": 254.1332575,
+    "Value": 254,
     "Source": "Santina and Maccoux"
   },
   {
@@ -96,48 +96,6 @@
     "Fraction": "Annual TP FWMC",
     "Value": 0.299907433,
     "Source": "Santina and Maccoux"
-  },
-  {
-    "River": "Cedar-Toussaint",
-    "Year": 2008,
-    "Fraction": "Annual TP Loading",
-    "Value": "",
-    "Source": ""
-  },
-  {
-    "River": "Cedar-Toussaint",
-    "Year": 2009,
-    "Fraction": "Annual TP Loading",
-    "Value": "",
-    "Source": ""
-  },
-  {
-    "River": "Cedar-Toussaint",
-    "Year": 2010,
-    "Fraction": "Annual TP Loading",
-    "Value": "",
-    "Source": ""
-  },
-  {
-    "River": "Cedar-Toussaint",
-    "Year": 2011,
-    "Fraction": "Annual TP Loading",
-    "Value": "",
-    "Source": ""
-  },
-  {
-    "River": "Cedar-Toussaint",
-    "Year": 2012,
-    "Fraction": "Annual TP Loading",
-    "Value": "",
-    "Source": ""
-  },
-  {
-    "River": "Cedar-Toussaint",
-    "Year": 2013,
-    "Fraction": "Annual TP Loading",
-    "Value": "",
-    "Source": ""
   },
   {
     "River": "Cedar-Toussaint",
@@ -822,7 +780,7 @@
     "River": "Cuyahoga River",
     "Year": 2010,
     "Fraction": "Annual TP Loading",
-    "Value": 269.4745286,
+    "Value": 269,
     "Source": "Santina and Maccoux"
   },
   {
@@ -843,7 +801,7 @@
     "River": "Cuyahoga River",
     "Year": 2013,
     "Fraction": "Annual TP Loading",
-    "Value": 388.8598176,
+    "Value": 389,
     "Source": "Santina and Maccoux"
   },
   {
@@ -851,7 +809,7 @@
     "Year": 2014,
     "Fraction": "Annual TP Loading",
     "Value": 350,
-    "Source": "Santina and Maccoux"
+    "Source": "Santina August 2018"
   },
   {
     "River": "Cuyahoga River",
@@ -910,6 +868,69 @@
     "Source": "Santina and Maccoux"
   },
   {
+    "River": "Detroit River",
+    "Year": 2008,
+    "Fraction": "Annual TP Loading",
+    "Value": 1261,
+    "Source": "Santina August 2018"
+  },
+  {
+    "River": "Detroit River",
+    "Year": 2009,
+    "Fraction": "Annual TP Loading",
+    "Value": 1242,
+    "Source": "Santina August 2018"
+  },
+  {
+    "River": "Detroit River",
+    "Year": 2010,
+    "Fraction": "Annual TP Loading",
+    "Value": 1241,
+    "Source": "Santina August 2018"
+  },
+  {
+    "River": "Detroit River",
+    "Year": 2011,
+    "Fraction": "Annual TP Loading",
+    "Value": 1216,
+    "Source": "Santina August 2018"
+  },
+  {
+    "River": "Detroit River",
+    "Year": 2012,
+    "Fraction": "Annual TP Loading",
+    "Value": 1014,
+    "Source": "Santina August 2018"
+  },
+  {
+    "River": "Detroit River",
+    "Year": 2013,
+    "Fraction": "Annual TP Loading",
+    "Value": 958,
+    "Source": "Santina August 2018"
+  },
+  {
+    "River": "Detroit River",
+    "Year": 2014,
+    "Fraction": "Annual TP Loading",
+    "Value": 625,
+    "Source": "Santina August 2018"
+  },
+  {
+    "River": "Detroit River",
+    "Year": 2015,
+    "Fraction": "Annual TP Loading",
+    "Value": 738,
+    "Source": "Santina August 2018"
+  },
+  {
+    "River": "Detroit River",
+    "Year": 2016,
+    "Fraction": "Annual TP Loading",
+    "Value": 699,
+    "Source": "Santina August 2018"
+  },
+  {
     "River": "Grand River-OH",
     "Year": 2014,
     "Fraction": "Annual TP Loading",
@@ -948,7 +969,7 @@
     "River": "Grand River-OH",
     "Year": 2010,
     "Fraction": "Annual TP Loading",
-    "Value": 55.47292356,
+    "Value": 55,
     "Source": "Santina and Maccoux"
   },
   {
@@ -969,7 +990,7 @@
     "River": "Grand River-OH",
     "Year": 2013,
     "Fraction": "Annual TP Loading",
-    "Value": 54.18582571,
+    "Value": 54,
     "Source": "Santina and Maccoux"
   },
   {
@@ -1074,7 +1095,7 @@
     "River": "Huron River-OH",
     "Year": 2010,
     "Fraction": "Annual TP Loading",
-    "Value": 68.84425621,
+    "Value": 69,
     "Source": "Santina and Maccoux"
   },
   {
@@ -1095,7 +1116,7 @@
     "River": "Huron River-OH",
     "Year": 2013,
     "Fraction": "Annual TP Loading",
-    "Value": 156.8180206,
+    "Value": 157,
     "Source": "Santina and Maccoux"
   },
   {
@@ -2103,7 +2124,7 @@
     "River": "Maumee River",
     "Year": 2010,
     "Fraction": "Annual TP Loading",
-    "Value": 1679.450676,
+    "Value": 1679,
     "Source": "Santina and Maccoux"
   },
   {
@@ -2124,7 +2145,7 @@
     "River": "Maumee River",
     "Year": 2013,
     "Fraction": "Annual TP Loading",
-    "Value": 2286.61192,
+    "Value": 2287,
     "Source": "Santina and Maccoux"
   },
   {
@@ -2523,7 +2544,7 @@
     "River": "Portage River",
     "Year": 2010,
     "Fraction": "Annual TP Loading",
-    "Value": 131.4347922,
+    "Value": 131,
     "Source": "Santina and Maccoux"
   },
   {
@@ -2544,7 +2565,7 @@
     "River": "Portage River",
     "Year": 2013,
     "Fraction": "Annual TP Loading",
-    "Value": 304.962889,
+    "Value": 305,
     "Source": "Santina and Maccoux"
   },
   {
@@ -2552,7 +2573,7 @@
     "Year": 2014,
     "Fraction": "Annual TP Loading",
     "Value": 235,
-    "Source": "Santina and Maccoux"
+    "Source": "Santina August 2018"
   },
   {
     "River": "Portage River",
@@ -2565,7 +2586,7 @@
     "River": "Portage River",
     "Year": 2016,
     "Fraction": "Annual TP Loading",
-    "Value": 235,
+    "Value": 149,
     "Source": "Santina and Maccoux"
   },
   {
@@ -2943,7 +2964,7 @@
     "River": "River Raisin",
     "Year": 2010,
     "Fraction": "Annual TP Loading",
-    "Value": 160.7405036,
+    "Value": 161,
     "Source": "Santina and Maccoux"
   },
   {
@@ -2964,7 +2985,7 @@
     "River": "River Raisin",
     "Year": 2013,
     "Fraction": "Annual TP Loading",
-    "Value": 87.74386229,
+    "Value": 88,
     "Source": "Santina and Maccoux"
   },
   {
@@ -3285,63 +3306,63 @@
   {
     "River": "Sandusky River",
     "Year": 2008,
-    "Fraction": "Spring SRP FWMC",
+    "Fraction": "Spring SRP Loading",
     "Value": 0.072,
     "Source": "Greg Koltun"
   },
   {
     "River": "Sandusky River",
     "Year": 2009,
-    "Fraction": "Spring SRP FWMC",
+    "Fraction": "Spring SRP Loading",
     "Value": 0.067,
     "Source": "Greg Koltun"
   },
   {
     "River": "Sandusky River",
     "Year": 2010,
-    "Fraction": "Spring SRP FWMC",
+    "Fraction": "Spring SRP Loading",
     "Value": 0.09,
     "Source": "Greg Koltun"
   },
   {
     "River": "Sandusky River",
     "Year": 2011,
-    "Fraction": "Spring SRP FWMC",
+    "Fraction": "Spring SRP Loading",
     "Value": 0.098,
     "Source": "Greg Koltun"
   },
   {
     "River": "Sandusky River",
     "Year": 2012,
-    "Fraction": "Spring SRP FWMC",
+    "Fraction": "Spring SRP Loading",
     "Value": 0.057,
     "Source": "Greg Koltun"
   },
   {
     "River": "Sandusky River",
     "Year": 2013,
-    "Fraction": "Spring SRP FWMC",
+    "Fraction": "Spring SRP Loading",
     "Value": 0.101,
     "Source": "Greg Koltun"
   },
   {
     "River": "Sandusky River",
     "Year": 2014,
-    "Fraction": "Spring SRP FWMC",
+    "Fraction": "Spring SRP Loading",
     "Value": 0.092,
     "Source": "Greg Koltun"
   },
   {
     "River": "Sandusky River",
     "Year": 2015,
-    "Fraction": "Spring SRP FWMC",
+    "Fraction": "Spring SRP Loading",
     "Value": 0.101,
     "Source": "Greg Koltun"
   },
   {
     "River": "Sandusky River",
     "Year": 2016,
-    "Fraction": "Spring SRP FWMC",
+    "Fraction": "Spring SRP Loading",
     "Value": 0.062,
     "Source": "Greg Koltun"
   },
@@ -3363,7 +3384,7 @@
     "River": "Sandusky River",
     "Year": 2010,
     "Fraction": "Annual TP Loading",
-    "Value": 429.0974676,
+    "Value": 429,
     "Source": "Santina and Maccoux"
   },
   {
@@ -3384,7 +3405,7 @@
     "River": "Sandusky River",
     "Year": 2013,
     "Fraction": "Annual TP Loading",
-    "Value": 773.1713065,
+    "Value": 773,
     "Source": "Santina and Maccoux"
   },
   {
@@ -3455,42 +3476,42 @@
     "Year": 2008,
     "Fraction": "Annual TP Loading",
     "Value": "",
-    "Source": ""
+    "Source": "Santina and Maccoux"
   },
   {
     "River": "Thames River",
     "Year": 2009,
     "Fraction": "Annual TP Loading",
     "Value": "",
-    "Source": ""
+    "Source": "Santina and Maccoux"
   },
   {
     "River": "Thames River",
     "Year": 2010,
     "Fraction": "Annual TP Loading",
     "Value": "",
-    "Source": ""
+    "Source": "Santina and Maccoux"
   },
   {
     "River": "Thames River",
     "Year": 2011,
     "Fraction": "Annual TP Loading",
     "Value": "",
-    "Source": ""
+    "Source": "Santina and Maccoux"
   },
   {
     "River": "Thames River",
     "Year": 2012,
     "Fraction": "Annual TP Loading",
     "Value": "",
-    "Source": ""
+    "Source": "Santina and Maccoux"
   },
   {
     "River": "Thames River",
     "Year": 2013,
     "Fraction": "Annual TP Loading",
     "Value": "",
-    "Source": ""
+    "Source": "Santina and Maccoux"
   },
   {
     "River": "Thames River",
@@ -3888,7 +3909,7 @@
     "River": "Vermilion River",
     "Year": 2010,
     "Fraction": "Annual TP Loading",
-    "Value": 46.97642878,
+    "Value": 47,
     "Source": "Santina and Maccoux"
   },
   {
@@ -3909,7 +3930,7 @@
     "River": "Vermilion River",
     "Year": 2013,
     "Fraction": "Annual TP Loading",
-    "Value": 215.1182105,
+    "Value": 215,
     "Source": "Santina and Maccoux"
   },
   {
