@@ -228,12 +228,12 @@ function BlueAccounting(){
                         var img_height = size;
                         if(img_width >= img_height*4){
                             // wide logo. local resource
-                            this.renderer.image("img/BlueAcctg-Logo.png", logoX, 0, size * 4, size ).add();
+                            this.renderer.image("https://c1.staticflickr.com/1/826/26966705327_f80fcd7af1_o.png", logoX, 0, size * 4, size ).add();
                             // ErieStat logo. Change factor to 3
                             // this.renderer.image("https://c1.staticflickr.com/1/956/27966542108_a46fd4fa96_o.png", logoX, 0, size*3 , size).add();
                         }else{
                             // cube logo
-                            this.renderer.image("img/BlueAcctg-Logo-square.png", logoX, 0, size, size).add();
+                            this.renderer.image("https://c1.staticflickr.com/1/868/40969378165_8bd2c065b9_o.png", logoX, 0, size, size).add();
                         }
                         // var w = this.chartWidth - this.title.alignAttr.x;
                         // Blue Accounting Cube logo
@@ -282,7 +282,8 @@ function BlueAccounting(){
             series: [
                 {
                     name: seriesName,
-                    data: series
+                    data: series,
+                    color: color
                 }
             ]
         });
@@ -296,6 +297,7 @@ function BlueAccounting(){
     this.buildDualAxesChart = function (series1, seriesName1, seriesUnit1, color1, chartType1,
                                         series2, seriesName2, seriesUnit2, color2, chartType2,
                                         tag, title, subtitle, startingYear, target1, target2, height, width) {
+        var chart;
         if (!series1) {
             seriesName1 += " (not available)";
         }
@@ -303,7 +305,7 @@ function BlueAccounting(){
             seriesName2 += " (not available)";
         }
 
-        var chart = Highcharts.chart(tag, {
+        chart = Highcharts.chart(tag, {
             chart: {
                 height: height,
                 width: width,
@@ -398,6 +400,7 @@ function BlueAccounting(){
                 // visible: isSeriesVisible(s2_visible)
             }]
         });
+
         if (target1) {
             this.addTargetLine(chart, target1, seriesName1 + " Target");
         }
@@ -463,12 +466,12 @@ function BlueAccounting(){
                         var img_height = size - 35;
                         if(img_width >= img_height*4){
                             // wide logo. local resource
-                            this.renderer.image("../img/BlueAcctg-Logo.png", logoX, 0, img_height * 4, img_height ).add();
+                            this.renderer.image("https://c1.staticflickr.com/1/826/26966705327_f80fcd7af1_o.png", logoX, 0, img_height * 4, img_height ).add();
                             // ErieStat logo. Change factor to 3
                             // this.renderer.image("https://c1.staticflickr.com/1/956/27966542108_a46fd4fa96_o.png", logoX, 0, size*3 , size).add();
                         }else{
                             // cube logo
-                            this.renderer.image("../img/BlueAcctg-Logo-square.png", logoX, 0, img_height, img_height).add();
+                            this.renderer.image("https://c1.staticflickr.com/1/868/40969378165_8bd2c065b9_o.png", logoX, 0, img_height, img_height).add();
                         }
                         // var w = this.chartWidth - this.title.alignAttr.x;
                         // Blue Accounting Cube logo

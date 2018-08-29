@@ -3,8 +3,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
-    <script src="js/ba_chart2.js"></script>
+    <!--<script src="js/ba_chart2.js"></script>-->
     <!--<script src="js/export-csv_glc.js"></script>-->
+    <script src="js/BlueAccounting.js"></script>
+    <script src="js/ErieStat.js"></script>
     <link rel="stylesheet" href="css/BA_Style.css">
     <title>Annual TP Loading in Watersheds</title>
 
@@ -49,7 +51,7 @@
             /*left: 70%;*/
             right: 15px;
             /*padding: 5px;*/
-            /*margin-right: 25px;*/
+            margin-right: 25px;
             height: 400px;
             /*width: 500px;*/
             background: rgba(255, 255, 255, 0.8);
@@ -59,7 +61,7 @@
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://js.arcgis.com/4.7/esri/css/main.css">
-    <script src="https://js.arcgis.com/4.7/"></script>
+    <script src="https://js.arcgis.com/4.8/"></script>
     <script src="//code.highcharts.com/highcharts.js"></script>
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
 
@@ -98,22 +100,29 @@
             on,
             domConstruct
         ) {
+            var erieStatLayer;
+            var highlightSymbol;
             var data;
+            var BA = new BlueAccounting();
+            var ES = new ErieStat();
+
             $.getJSON("data/data.json", function(d){
                 data = d;
+            }).done(function () {
+                ES.init(data);
             });
             var identifyTask, params;
             var serviceURL = "https://gis.glc.org/server/rest/services/ErieStat/AnnualTP/MapServer";
-            var metric = metrics.TP_L;
+            var metric = ES.metrics.TP_L;
 //            var unit = units;
             var geometry;
-            var highlightSymbol = {
+            highlightSymbol = {
                 type: "simple-line",  // autocasts as SimpleLineSymbol()
                 color: "#F3A51E",//"#07fcf0",
                 width: 3
             };
 
-            var erieStatLayer = new MapImageLayer({
+            erieStatLayer = new MapImageLayer({
                 url: "https://gis.glc.org/server/rest/services/ErieStat/AnnualTP/MapServer",
                 id: "esLayer",
                 sublayers: [{
@@ -126,7 +135,7 @@
                         labelPlacement: "always-horizontal",
                         symbol: {
                             type: "text",  // autocasts as new TextSymbol()
-                            color: ColorPicker.body,
+                            color: BA.ColorPicker.body,
                             family: "Montserrat, sans-serif",
                             font: {
                                 size: 12,
@@ -314,8 +323,8 @@
                             feature.popupTemplate = {
                                 title: "{Watershed Name}" + " Watershed",
                                 content: function(value, key, data){
-                                    if(narratives[watershedNames[w_name]]){
-                                        return "<p style='font-size: 16px'>" + narratives[watershedNames[w_name]] + "</p>";
+                                    if(ES.narratives[ES.watershedNames[w_name]]){
+                                        return "<p style='font-size: 16px'>" + ES.narratives[ES.watershedNames[w_name]] + "</p>";
                                     }else{
                                         return "<p style='text-transform: uppercase;font-style: italic'>*Watershed Description unavailable.</p>"
                                     }
@@ -326,12 +335,12 @@
 
 
 
-                        var w_data = $.map(getWatershedMetric(data, watershedNames[w_name], metric), function(el){
-                            return el.Value;
-                        });
+                        var w_data = ES.getWatershedData(ES.watershedNames[w_name], metric.name);
 
                         var chart_size = [window.innerWidth*0.45, window.innerHeight*0.45];
-                        buildChart(w_data, "chart", watershedNames[w_name], metric, units[metric],chart_size[0], chart_size[1]);
+                        BA.buildSingleChart("column",w_data, metric.name,metric.unit,BA.ColorPicker.blue7,
+                            ES.xAxis[0], w_name + " " + metric.name, "<i>*TP: Total phosphorus</i>", null, "chart")
+//                        buildChart(w_data, "chart", watershedNames[w_name], metric, units[metric],chart_size[0], chart_size[1]);
 //                        var data_series = [];
 //                        for (var i = 0; i < w_data.length; i++){
 //                            data_series.push(w_data[i].Value);
@@ -391,7 +400,7 @@
 
                         view.popup.open({
                             features: response,
-//                            location: event.mapPoint
+                            location: event.mapPoint
                         });
                     }
                     dom.byId("viewDiv").style.cursor = "auto";
@@ -414,7 +423,7 @@
                 view.graphics.removeAll();
                 var aoi = result.features;
                 geometry = aoi[0].geometry;
-                var graphicGeometry = new Graphic({
+                graphicGeometry = new Graphic({
                     geometry: geometry,
                     symbol: highlightSymbol
                 });

@@ -790,7 +790,7 @@ function createDualAxesChart(eleID, chartName, filename, fraction1, fraction2, s
                     title: {
                         text: watershed[fraction1].name + '<br>(' + watershed[fraction1].unit + ')',
                         style: {
-                            color: ColorPicker.body
+                            color: ColorPicker.blue1
                         }
                     },
                     // ceiling: 2000,
@@ -801,7 +801,7 @@ function createDualAxesChart(eleID, chartName, filename, fraction1, fraction2, s
                     title: {
                         text: watershed[fraction2].name + '<br>(' + watershed[fraction2].unit + ')',
                         style: {
-                            color: ColorPicker.body
+                            color: ColorPicker.blue3
                         },
 
                     },
