@@ -107,6 +107,9 @@ var units = {
 };
 
 var targets = {
+    "Detroit River": {
+        "Annual TP Loading": 756,
+    },
     "Maumee River": {
         "Annual TP Loading": 2287,
         "Spring TP Loading": 860,
