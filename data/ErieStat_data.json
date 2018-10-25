@@ -3306,63 +3306,63 @@
   {
     "River": "Sandusky River",
     "Year": 2008,
-    "Fraction": "Spring SRP Loading",
+    "Fraction": "Spring SRP FWMC",
     "Value": 0.072,
     "Source": "Greg Koltun"
   },
   {
     "River": "Sandusky River",
     "Year": 2009,
-    "Fraction": "Spring SRP Loading",
+    "Fraction": "Spring SRP FWMC",
     "Value": 0.067,
     "Source": "Greg Koltun"
   },
   {
     "River": "Sandusky River",
     "Year": 2010,
-    "Fraction": "Spring SRP Loading",
+    "Fraction": "Spring SRP FWMC",
     "Value": 0.09,
     "Source": "Greg Koltun"
   },
   {
     "River": "Sandusky River",
     "Year": 2011,
-    "Fraction": "Spring SRP Loading",
+    "Fraction": "Spring SRP FWMC",
     "Value": 0.098,
     "Source": "Greg Koltun"
   },
   {
     "River": "Sandusky River",
     "Year": 2012,
-    "Fraction": "Spring SRP Loading",
+    "Fraction": "Spring SRP FWMC",
     "Value": 0.057,
     "Source": "Greg Koltun"
   },
   {
     "River": "Sandusky River",
     "Year": 2013,
-    "Fraction": "Spring SRP Loading",
+    "Fraction": "Spring SRP FWMC",
     "Value": 0.101,
     "Source": "Greg Koltun"
   },
   {
     "River": "Sandusky River",
     "Year": 2014,
-    "Fraction": "Spring SRP Loading",
+    "Fraction": "Spring SRP FWMC",
     "Value": 0.092,
     "Source": "Greg Koltun"
   },
   {
     "River": "Sandusky River",
     "Year": 2015,
-    "Fraction": "Spring SRP Loading",
+    "Fraction": "Spring SRP FWMC",
     "Value": 0.101,
     "Source": "Greg Koltun"
   },
   {
     "River": "Sandusky River",
     "Year": 2016,
-    "Fraction": "Spring SRP Loading",
+    "Fraction": "Spring SRP FWMC",
     "Value": 0.062,
     "Source": "Greg Koltun"
   },
@@ -3475,42 +3475,42 @@
     "River": "Thames River",
     "Year": 2008,
     "Fraction": "Annual TP Loading",
-    "Value": "",
+    "Value": 235,
     "Source": "Santina and Maccoux"
   },
   {
     "River": "Thames River",
     "Year": 2009,
     "Fraction": "Annual TP Loading",
-    "Value": "",
+    "Value": 431,
     "Source": "Santina and Maccoux"
   },
   {
     "River": "Thames River",
     "Year": 2010,
     "Fraction": "Annual TP Loading",
-    "Value": "",
+    "Value": 116,
     "Source": "Santina and Maccoux"
   },
   {
     "River": "Thames River",
     "Year": 2011,
     "Fraction": "Annual TP Loading",
-    "Value": "",
+    "Value": 835,
     "Source": "Santina and Maccoux"
   },
   {
     "River": "Thames River",
     "Year": 2012,
     "Fraction": "Annual TP Loading",
-    "Value": "",
+    "Value": 169,
     "Source": "Santina and Maccoux"
   },
   {
     "River": "Thames River",
     "Year": 2013,
     "Fraction": "Annual TP Loading",
-    "Value": "",
+    "Value": 367,
     "Source": "Santina and Maccoux"
   },
   {
