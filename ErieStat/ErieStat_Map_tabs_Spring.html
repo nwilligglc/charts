@@ -88,14 +88,12 @@
         opacity: 0.7
     }).addTo(map);
 
-    var monitoringLocLayer = L.esri.featureLayer({
+//    var monitoringLocLayer =
+    L.esri.featureLayer({
         url: "https://services7.arcgis.com/Tk0IbKIKhaoYn5sa/arcgis/rest/services/ErieStat_Monitoring/FeatureServer/0",
+        where: "SPRING = 'Y'",
         pointToLayer: function (geojson, latlng) {
-            var p;
-            if (geojson.properties.SPRING !== "Y") {
-                return;
-            }
-            p = L.circle(latlng, {
+            var p = L.circle(latlng, {
                 radius: 50,
                 color: "#A80084"
             });
