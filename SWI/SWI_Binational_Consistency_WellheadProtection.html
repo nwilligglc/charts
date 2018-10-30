@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Binational Consistency</title>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <!--<script src="js/ba_chart2.js"></script>-->
+    <!--<script src="../js/BlueAccounting.js"></script>-->
+
+    <!--<script src="../js/export-csv_glc.js"></script>-->
+    <link rel="stylesheet" href="../css/BA_Style.css">
+
+
+</head>
+<body>
+<div>
+    <div id="container"></div>
+</div>
+
+<script>
+    var chart = Highcharts.chart("container", {
+        chart: {
+            marginTop: 80,
+            marginBottom: 80,
+            marginLeft: 80,
+            marginRight: 80,
+            width: 800,
+            height: 800,
+            type: 'scatter',
+            plotBackgroundImage: "../img/bullseye.png"
+//            events: {
+//                load: function () {
+////                    var width = this.plotBox.width/* - this.plotLeft*/;
+//                    var height = this.plotBox.height;
+//                    var width = this.chartWidth - this.plotLeft;
+////                    var height = this.chartHeight;
+//                    this.update({
+//                        xAxis: {
+//                            offset: -200,
+//                        },
+//                        yAxis: {
+//                            offset: -200
+//                        }
+//
+//                    })
+//                    var logoX = 15;
+//                    var size = this.plotBox.y;
+//                    size -= 5;
+//
+//                    if(this.chartWidth < 500){
+//                        logoX = 10;
+//                    }
+//                    var img_width = (this.chartWidth - 350)/2 - logoX;
+//                    // var img_height = size;
+//                    if(img_width >= size * 4){
+//                        // wide logo
+//                        this.renderer.image("https://c1.staticflickr.com/1/826/26966705327_f80fcd7af1_o.png", logoX, 0, size * 4, size ).add();
+//                        // ErieStat logo. Change factor to 3
+//                        // this.renderer.image("https://c1.staticflickr.com/1/956/27966542108_a46fd4fa96_o.png", logoX, 0, size*3 , size).add();
+//                    }else{
+//                        // cube logo
+//                        this.renderer.image("https://c1.staticflickr.com/1/868/40969378165_8bd2c065b9_o.png", logoX, 0, size, size).add();
+//                    }
+//                    // var w = this.chartWidth - this.title.alignAttr.x;
+//                    // Blue Accounting Cube logo
+//                    // this.renderer.image("https://c1.staticflickr.com/1/868/40969378165_8bd2c065b9_o.png", logoX, 0, size, size).add();
+//                    // Blue Accouting Logo
+//                    // this.renderer.image("https://c1.staticflickr.com/1/826/26966705327_f80fcd7af1_o.png", logoX, 0, size * 4, size ).add();
+//                    // Blue Accounting ErieStat Logo
+//                    // this.renderer.image("https://c1.staticflickr.com/1/956/27966542108_a46fd4fa96_o.png", logoX, 0, size*3 , size).add();
+//
+//                    // this.renderer.image("https://c1.staticflickr.com/5/4382/36578347693_3c6032000b_o.png", 0, 0, chart_width, chart_height).add();   //red watermark
+////                if (isBgImg) {
+////                    this.renderer.image("img/background_draft.png", this.plotLeft, this.plotTop, this.plotWidth, this.plotHeight).add(); //grey watermark
+////                }
+//                }
+//            }
+        },
+        title: {
+            text: 'Wellhead Protection using Demo Data'
+        },
+        subtitle: {
+            text: '<i>Data for Illinois not available</i>'
+        },
+
+        xAxis: [{
+            max: 100,
+            min: -100,
+            title: {
+                enabled: true,
+                text: 'Mandatory',
+                align: 'high',
+                textAlign: "right",
+            },
+//            startOnTick: true,
+//            endOnTick: true,
+            showLastLabel: true,
+            offset: -320,
+            tickInterval: 20,
+            labels: {
+                enabled: false
+            },
+            lineWidth: 2,
+            lineColor: "#000000",
+//            gridLineWidth: 0,
+            lineColor: 'transparent',
+
+        }, {
+            max: 100,
+            min: -100,
+            title: {
+                enabled: true,
+                text: 'Voluntary',
+                align: 'low',
+                textAlign: "left",
+            },
+//            startOnTick: true,
+//            endOnTick: true,
+            showLastLabel: true,
+            offset: -320,
+            tickInterval: 20,
+            labels: {
+                enabled: false
+            },
+            lineWidth: 0,
+            gridLineWidth: 0,
+            lineColor: 'transparent',
+        }],
+        yAxis: [{
+            max: 100,
+            min: -100,
+            title: {
+                text: 'Watershed Focused',
+                align: 'high',
+                rotation: 0
+            },
+            offset: -320,
+            tickInterval: 20,
+            labels: {
+                enabled: false
+            },
+            lineWidth: 2,
+            lineColor: "#000000",
+            plotLines: [{
+                color: "#000000",
+                width: 2,
+                value: 0,
+                zIndex: 5
+            }],
+            gridLineColor: 'transparent',
+        },{
+            max: 100,
+            min: -100,
+            title: {
+                text: 'Water Supply Focused',
+                align: 'low',
+                rotation: 0,
+                textAlign: "right"
+            },
+            offset: -320,
+            tickInterval: 20,
+            labels: {
+                enabled: false
+            },
+            lineWidth: 0,
+            gridLineColor: 'transparent',
+        }],
+        credits: {
+            enabled: false
+        },
+        legend: {
+            enabled: true,
+//            layout: 'vertical',
+//            align: 'left',
+//            verticalAlign: 'top',
+//            x: 100,
+//            y: 70,
+//            floating: true,
+//            backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF',
+//            borderWidth: 1
+        },
+        plotOptions: {
+            scatter: {
+                marker: {
+                    radius: 5,
+                    states: {
+                        hover: {
+                            enabled: true,
+                            lineColor: 'rgb(100,100,100)'
+                        }
+                    }
+                },
+                states: {
+                    hover: {
+                        marker: {
+                            enabled: false
+                        }
+                    }
+                },
+            }
+        },
+        tooltip:{
+            useHTML: true,
+            style: {
+                pointerEvents: 'auto'
+            }
+        },
+
+
+
+        series: [{
+            name: 'IL',
+            color: '#ED7D31',
+            data: [],
+            tooltip: {
+                pointFormat: '<b>Policy approach</b>: Mandatory, water supply focused' +
+                '<b>Population covered</b>: 100%<br>' +
+                '<b>Lead agency:</b> Illinois Environmental Protection Agency'
+            }
+        }, {
+            name: 'IN',
+            color: '#FFC000',
+            data: [[1,-1]],
+            tooltip: {
+                pointFormat: '<b>Policy approach:</b> Mandatory, water supply focused<br/>' +
+                '<b>Population covered:</b> 100%<br>' +
+                '<b>Lead agency:</b> Indiana Department of Environmental Management'
+
+//                '<p>The <a href="https://www.in.gov/idem/cleanwater/2368.htm" target="_blank">Indiana Department of Environmental Management</a> (IDEM) is the lead agency for source water protection programs in the state. Indiana’s <a href="https://www.in.gov/idem/cleanwater/2456.htm" target="_blank">Wellhead Protection Program</a> requires all community water supplies to develop plans to protect groundwater sources. Public water suppliers are responsible for developing the plans and submitting them to IDEM for approval.</p>',
+            },
+            marker: {
+                symbol: "circle"
+            }
+        },{
+            name: 'MI',
+            color: '#203864',
+            data: [[-55,-55]],
+            tooltip: {
+                pointFormat: '<b>Policy approach:</b> Voluntary, water supply focused<br/>' +
+                '<b>Population covered:</b> 45%<br>' +
+                '<b>Lead agency:</b> Michigan Department of Environmental Quality'
+            },
+            marker: {
+                symbol: "diamond"
+            }
+        },{
+            name: 'MN',
+            color: '#A86ED4',
+            data: [[1,-1]],
+            tooltip: {
+                pointFormat: '<b>Policy approach:</b> Mandatory, water supply focused<br>' +
+                '<b>Population covered:</b> 100%<br>' +
+                '<b>Lead agency:</b> Minnesota Department of Health'
+            }
+        },{
+            name: 'NY',
+            color: '#0BFDFD',
+            data: [[100,100]],
+            tooltip: {
+                pointFormat: '<b>Policy approach:</b> Voluntary, water supply focused<br>' +
+                '<b>Population covered:</b> 0%<br>' +
+                '<b>Lead agency:</b> New York State Department of Health'
+            }
+        },{
+            name: 'OH',
+            color: '#FF0000',
+            data: [[-28,-28]],
+            tooltip: {
+                pointFormat: '<b>Policy approach:</b> Voluntary, water supply focused<br>' +
+                '<b>Population covered:</b> 62%<br>' +
+                '<b>Lead agency:</b> Ohio Environmental Protection Agency'
+            }
+        },{
+            name: 'PA',
+            color: '#548235',
+            data: [[-47,-47]],
+            tooltip: {
+                pointFormat: '<b>Policy approach:</b> Voluntary, water supply focused<br>' +
+                '<b>Population covered:</b> 53%<br>' +
+                '<b>Lead agency:</b> Pennsylvania Department of Environmental Protection'
+            }
+        },{
+            name: 'WI',
+            color: '#8FFB0D',
+            data: [[-51,-51]],
+            tooltip: {
+                pointFormat: '<b>Policy approach:</b> Voluntary, water supply focused<br>' +
+                '<b>Population covered:</b> 49%<br>' +
+                '<b>Lead agency:</b> Wisconsin Department of Natural Resources'
+            }
+        },{
+            name: 'ON',
+            color: '#FF66FF',
+            data: [[14,14]],
+            tooltip: {
+                pointFormat: '<b>Policy approach:</b> Mandatory, watershed focused<br>' +
+                '<b>Population covered:</b> 86%<br>' +
+                '<b>Lead agency:</b> Ministry of the Environment Conservation and Parks'
+            }
+        }]
+    });
+
+//    var width = chart.chartWidth;
+//    var height = chart.chartHeight;
+////    return {
+////        xAxis: {
+////            offset: width / 2
+////        },
+////        yAxis: {
+////            offset: height / 2
+////        }
+////    }
+//
+//    chart.update(function() {
+//        return {
+//            xAxis: {
+//            offset: width / 2
+//        },
+//        yAxis: {
+//            offset: height / 2
+//        }
+//        }
+//    });
+</script>
+</body>
+</html>
