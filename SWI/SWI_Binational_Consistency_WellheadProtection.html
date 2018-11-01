@@ -32,7 +32,7 @@
             width: 800,
             height: 800,
             type: 'scatter',
-            plotBackgroundImage: "../img/bullseye.png"
+            plotBackgroundImage: "../img/bullseye_BA-colors.png"
 //            events: {
 //                load: function () {
 ////                    var width = this.plotBox.width/* - this.plotLeft*/;
@@ -82,11 +82,11 @@
 //            }
         },
         title: {
-            text: 'Wellhead Protection using Demo Data'
+            text: "" //'Wellhead Protection using Demo Data'
         },
-        subtitle: {
+//        subtitle: {
             // text: '<i>Data for Illinois not available</i>'
-        },
+//        },
 
         xAxis: [{
             max: 100,
@@ -219,7 +219,7 @@
             data: [],
             tooltip: {
                 pointFormat: '<b>Policy approach</b>: Mandatory, water supply focused' +
-                '<b>Population covered</b>: 100%<br>' +
+                '<b>Population in basin covered by a protection plan</b>: 100%<br>' +
                 '<b>Lead agency:</b> Illinois Environmental Protection Agency'
             }
         }, {
@@ -228,7 +228,7 @@
             data: [[3,-2]],
             tooltip: {
                 pointFormat: '<b>Policy approach:</b> Mandatory, water supply focused<br/>' +
-                '<b>Population covered:</b> 100%<br>' +
+                '<b>Population in basin covered by a protection plan:</b> 100%<br>' +
                 '<b>Lead agency:</b> Indiana Department of Environmental Management'
 
                // '<p>The <a href="https://www.in.gov/idem/cleanwater/2368.htm" target="_blank">Indiana Department of Environmental Management</a> (IDEM) is the lead agency for source water protection programs in the state. Indiana’s <a href="https://www.in.gov/idem/cleanwater/2456.htm" target="_blank">Wellhead Protection Program</a> requires all community water supplies to develop plans to protect groundwater sources. Public water suppliers are responsible for developing the plans and submitting them to IDEM for approval.</p>',
@@ -242,7 +242,7 @@
             data: [[-55,-55]],
             tooltip: {
                 pointFormat: '<b>Policy approach:</b> Voluntary, water supply focused<br/>' +
-                '<b>Population covered:</b> 45%<br>' +
+                '<b>Population in basin covered by a protection plan:</b> 45%<br>' +
                 '<b>Lead agency:</b> Michigan Department of Environmental Quality'
             },
             marker: {
@@ -254,7 +254,7 @@
             data: [[3,-5]],
             tooltip: {
                 pointFormat: '<b>Policy approach:</b> Mandatory, water supply focused<br>' +
-                '<b>Population covered:</b> 100%<br>' +
+                '<b>Population in basin covered by a protection plan:</b> 100%<br>' +
                 '<b>Lead agency:</b> Minnesota Department of Health'
             }
         },{
@@ -263,7 +263,7 @@
             data: [[-100, -100]],
             tooltip: {
                 pointFormat: '<b>Policy approach:</b> Voluntary, water supply focused<br>' +
-                '<b>Population covered:</b> 0%<br>' +
+                '<b>Population in basin covered by a protection plan:</b> 0%<br>' +
                 '<b>Lead agency:</b> New York State Department of Health'
             }
         },{
@@ -272,16 +272,16 @@
             data: [[-28,-28]],
             tooltip: {
                 pointFormat: '<b>Policy approach:</b> Voluntary, water supply focused<br>' +
-                '<b>Population covered:</b> 62%<br>' +
+                '<b>Population in basin covered by a protection plan:</b> 62%<br>' +
                 '<b>Lead agency:</b> Ohio Environmental Protection Agency'
             }
         },{
             name: 'PA',
             color: '#548235',
-            data: [[-47,-47]],
+            data: [[-75,-75]],
             tooltip: {
                 pointFormat: '<b>Policy approach:</b> Voluntary, water supply focused<br>' +
-                '<b>Population covered:</b> 53%<br>' +
+                '<b>Population in basin covered by a protection plan:</b> 25%<br>' +
                 '<b>Lead agency:</b> Pennsylvania Department of Environmental Protection'
             }
         },{
@@ -290,7 +290,7 @@
             data: [[-51,-51]],
             tooltip: {
                 pointFormat: '<b>Policy approach:</b> Voluntary, water supply focused<br>' +
-                '<b>Population covered:</b> 49%<br>' +
+                '<b>Population in basin covered by a protection plan:</b> 49%<br>' +
                 '<b>Lead agency:</b> Wisconsin Department of Natural Resources'
             }
         },{
@@ -299,7 +299,7 @@
             data: [[14,14]],
             tooltip: {
                 pointFormat: '<b>Policy approach:</b> Mandatory, watershed focused<br>' +
-                '<b>Population covered:</b> 86%<br>' +
+                '<b>Population in basin covered by a protection plan:</b> 86%<br>' +
                 '<b>Lead agency:</b> Ministry of the Environment Conservation and Parks'
             }
         }]
