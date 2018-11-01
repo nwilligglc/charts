@@ -25,10 +25,10 @@
 <script>
     var chart = Highcharts.chart("container", {
         chart: {
-            marginTop: 80,
-            marginBottom: 80,
-            marginLeft: 80,
-            marginRight: 80,
+            marginTop: 50,
+            marginBottom: 50,
+            marginLeft: 50,
+            marginRight: 50,
             width: 800,
             height: 800,
             type: 'scatter',
@@ -85,7 +85,7 @@
             text: 'Wellhead Protection using Demo Data'
         },
         subtitle: {
-            text: '<i>Data for Illinois not available</i>'
+            // text: '<i>Data for Illinois not available</i>'
         },
 
         xAxis: [{
@@ -100,7 +100,7 @@
 //            startOnTick: true,
 //            endOnTick: true,
             showLastLabel: true,
-            offset: -320,
+            offset: -350,
             tickInterval: 20,
             labels: {
                 enabled: false
@@ -122,7 +122,7 @@
 //            startOnTick: true,
 //            endOnTick: true,
             showLastLabel: true,
-            offset: -320,
+            offset: -350,
             tickInterval: 20,
             labels: {
                 enabled: false
@@ -139,7 +139,7 @@
                 align: 'high',
                 rotation: 0
             },
-            offset: -320,
+            offset: -350,
             tickInterval: 20,
             labels: {
                 enabled: false
@@ -162,7 +162,7 @@
                 rotation: 0,
                 textAlign: "right"
             },
-            offset: -320,
+            offset: -350,
             tickInterval: 20,
             labels: {
                 enabled: false
@@ -225,13 +225,13 @@
         }, {
             name: 'IN',
             color: '#FFC000',
-            data: [[1,-1]],
+            data: [[3,-2]],
             tooltip: {
                 pointFormat: '<b>Policy approach:</b> Mandatory, water supply focused<br/>' +
                 '<b>Population covered:</b> 100%<br>' +
                 '<b>Lead agency:</b> Indiana Department of Environmental Management'
 
-//                '<p>The <a href="https://www.in.gov/idem/cleanwater/2368.htm" target="_blank">Indiana Department of Environmental Management</a> (IDEM) is the lead agency for source water protection programs in the state. Indiana’s <a href="https://www.in.gov/idem/cleanwater/2456.htm" target="_blank">Wellhead Protection Program</a> requires all community water supplies to develop plans to protect groundwater sources. Public water suppliers are responsible for developing the plans and submitting them to IDEM for approval.</p>',
+               // '<p>The <a href="https://www.in.gov/idem/cleanwater/2368.htm" target="_blank">Indiana Department of Environmental Management</a> (IDEM) is the lead agency for source water protection programs in the state. Indiana’s <a href="https://www.in.gov/idem/cleanwater/2456.htm" target="_blank">Wellhead Protection Program</a> requires all community water supplies to develop plans to protect groundwater sources. Public water suppliers are responsible for developing the plans and submitting them to IDEM for approval.</p>',
             },
             marker: {
                 symbol: "circle"
@@ -251,7 +251,7 @@
         },{
             name: 'MN',
             color: '#A86ED4',
-            data: [[1,-1]],
+            data: [[3,-5]],
             tooltip: {
                 pointFormat: '<b>Policy approach:</b> Mandatory, water supply focused<br>' +
                 '<b>Population covered:</b> 100%<br>' +
@@ -260,7 +260,7 @@
         },{
             name: 'NY',
             color: '#0BFDFD',
-            data: [[100,100]],
+            data: [[-100, -100]],
             tooltip: {
                 pointFormat: '<b>Policy approach:</b> Voluntary, water supply focused<br>' +
                 '<b>Population covered:</b> 0%<br>' +
