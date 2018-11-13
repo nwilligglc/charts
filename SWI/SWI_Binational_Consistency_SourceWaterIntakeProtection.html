@@ -19,7 +19,7 @@
 </head>
 <body>
 <div>
-    <div id="container"></div>
+    <div id="container" style="margin: auto;position: absolute; left: 50%; transform: translate(-50%, 0%);"></div>
 </div>
 
 <script>
@@ -32,16 +32,14 @@
             width: 800,
             height: 800,
             type: 'scatter',
-            plotBackgroundImage: "../img/SURFACE WATER_bullseye image.png"
+            plotBackgroundImage: "../img/bullseye_axis_titles.png"
         },
         title: {
             text: ""    //'Source Water Intake Protection using Demo Data'
         },
-        subtitle: {
-//            text: '<i>Data for Illinois not available</i>'
-        },
 
         xAxis: [{
+            visible: false,
             max: 100,
             min: -100,
             title: {
@@ -50,8 +48,6 @@
                 align: 'high',
                 textAlign: "right",
             },
-//            startOnTick: true,
-//            endOnTick: true,
             showLastLabel: true,
             offset: -350,
             tickInterval: 20,
@@ -64,6 +60,7 @@
             lineColor: 'transparent',
 
         }, {
+            visible: false,
             max: 100,
             min: -100,
             title: {
@@ -72,8 +69,6 @@
                 align: 'low',
                 textAlign: "left",
             },
-//            startOnTick: true,
-//            endOnTick: true,
             showLastLabel: true,
             offset: -350,
             tickInterval: 20,
@@ -85,6 +80,7 @@
             lineColor: 'transparent',
         }],
         yAxis: [{
+            visible: false,
             max: 100,
             min: -100,
             title: {
@@ -107,6 +103,7 @@
             }],
             gridLineColor: 'transparent',
         },{
+            visible: false,
             max: 100,
             min: -100,
             title: {
@@ -128,14 +125,6 @@
         },
         legend: {
             enabled: true,
-//            layout: 'vertical',
-//            align: 'left',
-//            verticalAlign: 'top',
-//            x: 100,
-//            y: 70,
-//            floating: true,
-//            backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF',
-//            borderWidth: 1
         },
         plotOptions: {
             scatter: {
@@ -250,27 +239,6 @@
         }]
     });
 
-//    var width = chart.chartWidth;
-//    var height = chart.chartHeight;
-////    return {
-////        xAxis: {
-////            offset: width / 2
-////        },
-////        yAxis: {
-////            offset: height / 2
-////        }
-////    }
-//
-//    chart.update(function() {
-//        return {
-//            xAxis: {
-//            offset: width / 2
-//        },
-//        yAxis: {
-//            offset: height / 2
-//        }
-//        }
-//    });
 </script>
 </body>
 </html>
