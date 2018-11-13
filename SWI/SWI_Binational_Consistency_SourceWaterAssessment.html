@@ -32,7 +32,7 @@
             width: 800,
             height: 800,
             type: 'scatter',
-            plotBackgroundImage: "../img/ASSESSMENT_bullseye image.png"
+            plotBackgroundImage: "../img/bullseye_axis_titles.png"
         },
         title: {
             text: ""    //'Source Water Assessment using Demo Data'
@@ -42,10 +42,11 @@
         },
 
         xAxis: [{
+            visible: false,
             max: 100,
             min: -100,
             title: {
-                enabled: true,
+                enabled: false,
                 text: 'Mandatory',
                 align: 'high',
                 textAlign: "right",
@@ -58,16 +59,17 @@
             labels: {
                 enabled: false
             },
-            lineWidth: 2,
+            lineWidth: 0,
             lineColor: "#000000",
 //            gridLineWidth: 0,
             lineColor: 'transparent',
 
         }, {
+            visible: false,
             max: 100,
             min: -100,
             title: {
-                enabled: true,
+                enabled: false,
                 text: 'Voluntary',
                 align: 'low',
                 textAlign: "left",
@@ -85,6 +87,7 @@
             lineColor: 'transparent',
         }],
         yAxis: [{
+            visible: false,
             max: 100,
             min: -100,
             title: {
@@ -107,6 +110,7 @@
             }],
             gridLineColor: 'transparent',
         },{
+            visible: false,
             max: 100,
             min: -100,
             title: {
