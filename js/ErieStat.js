@@ -134,9 +134,9 @@ function ErieStat() {
         },
         "River Raisin": {
             "Annual TP Loading": null,
-            "Spring TP Loading": null,
+            "Spring TP Loading": 50,
             "Spring SRP Loading": null,
-            "Spring TP FWMC": null,
+            "Spring TP FWMC": 0.09,
             "Spring SRP FWMC": null
         },
         "Sandusky River": {
