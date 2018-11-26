@@ -163,8 +163,8 @@
                         if(s3_data.length > 0){
                             var chart3 = BA.buildDualAxesChart(s3_data, metric3.name, metric3.unit, BA.ColorPicker.blue7, "column",
                                 discharge_data, metric_discharge.name, metric_discharge.unit, BA.ColorPicker.blue6, "line",
-                                "chart3", name + " " + metric1.name + " and " + metric_discharge.name, "<i>*TP: Total phosphorus</i>",
-                                ES.xAxis[0], ES.targets[name][metric1.name], null, //ES.targets[name][metric2.name],
+                                "chart3", name + " " + metric3.name + " and " + metric_discharge.name, "<i>*TP: Total phosphorus</i>",
+                                ES.xAxis[0], ES.targets[name][metric3.name], null, //ES.targets[name][metric2.name],
                                 (window.innerHeight  - $("#narrative-section").height()) * 0.7
                             );
                         }else{
