@@ -84,7 +84,7 @@ function ErieStat() {
             "Spring SRP FWMC": null
         },
         "Detroit River": {
-            "Annual TP Loading": null,
+            "Annual TP Loading": 756,
             "Spring TP Loading": null,
             "Spring SRP Loading": null,
             "Spring TP FWMC": null,

@@ -132,7 +132,7 @@
 
                         if (s1_data.length > 0) {
                             var chart1 = BA.buildSingleChart("column", s1_data, metric1.name, metric1.unit, BA.ColorPicker.blue7,
-                                ES.xAxis[0], name + " " + metric1.name, "<i>*TP: Total phosphorus</i>", null, "chart1",
+                                ES.xAxis[0], name + " " + metric1.name, "<i>*TP: Total phosphorus</i>", ES.targets[name][metric1.name], "chart1",
                                 (window.innerHeight - $("#narrative-section").height()) * 0.75
                             );
                         }else{
