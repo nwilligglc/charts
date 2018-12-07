@@ -14,7 +14,7 @@
 
 </head>
 <body>
-<div id="container" style="height: auto"></div>
+<div id="container" style="height: 250px"></div>
 <script>
     BA=new BlueAccounting();
     Highcharts.setOptions({
@@ -31,6 +31,9 @@
         title: {
             // text: "Blue Accounting Coastal Wetlands Database: Invasives Control Investment Project Funding"
             text: ""
+        },
+        credits: {
+            enabled: false
         },
         tooltip: {
             pointFormat: '{series.name}: <b>${point.y}</b>'
