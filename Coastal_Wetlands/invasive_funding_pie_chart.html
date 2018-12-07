@@ -11,10 +11,20 @@
 <link rel="stylesheet" href="../css/BA_styles.css">
 
 <script src="../js/BlueAccounting.js"></script>
+<style>
+    #container{
+        border: 0;
+        display: block;
+        height: auto !important;
+        max-width: 100%;
+        -ms-interpolation-mode: bicubic;
+        line-height: 0;
 
+    }
+</style>
 </head>
 <body>
-<div id="container" style="height: 250px"></div>
+<div id="container"></div>
 <script>
     BA=new BlueAccounting();
     Highcharts.setOptions({
