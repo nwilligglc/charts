@@ -60,6 +60,20 @@
         tooltip: {
             pointFormat: '{series.name}: <b>${point.y}</b>'
         },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: false
+                },
+                showInLegend: true
+            }
+        },
+        legend: {
+            align: 'right',
+            layout: 'vertical'
+        },
         series: [{
             name: "Funding",
             data: [{
