@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<head>
+
+	<script src="https://code.highcharts.com/highcharts.js"></script>
+
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+
+<link rel="stylesheet" href="https://blueaccounting.github.io/charts/css/BA_styles.css">
+
+<script src="https://blueaccounting.github.io/charts/js/BlueAccounting.js"></script>
+
+<style>
+    #container{
+        border: 0;
+        display: block;
+        height: auto !important;
+        max-width: 100%;
+        -ms-interpolation-mode: bicubic;
+        line-height: 0;
+
+}
+</style>
+</head>
+<body>
+<div id="container" ></div>
+<script>
+BA=new BlueAccounting();
+Highcharts.setOptions({
+	lang: {
+  	thousandsSep: ',',
+    downloadCSV: "Download CSV"
+  }
+});
+
+ Highcharts.chart('container', {
+        chart: {
+            type: "pie",
+            events: {
+                load: function () {
+                    var logoX = 15;
+                    var size = this.plotBox.y;
+                    size -= 5;
+                    if (this.chartWidth < 500) {
+                        logoX = 10;
+                    }
+                    var img_width = (this.chartWidth - 350)/2 - logoX;
+                    if(img_width >= size * 4){
+                        // wide logo
+                        this.renderer.image("https://c1.staticflickr.com/1/826/26966705327_f80fcd7af1_o.png", logoX, 0, size * 4, size ).add();
+                        // ErieStat logo. Change factor to 3
+                        // this.renderer.image("https://c1.staticflickr.com/1/956/27966542108_a46fd4fa96_o.png", logoX, 0, size*3 , size).add();
+                    }else{
+                        // cube logo
+                        this.renderer.image("https://c1.staticflickr.com/1/868/40969378165_8bd2c065b9_o.png", logoX, 0, size, size).add();
+                    }
+                }
+            },
+        },
+   title: {
+   		text: "Funding for Shoreline Softening"
+   },
+    subtitle: {
+        text: "Blue Accounting Coastal Wetlands Investment Project Database"
+    },
+     credits: {
+            text: 'ArcGIS Online Metadata',
+            href: 'http://tnc.maps.arcgis.com/home/item.html?id=a192b7aafe0c436485b34a2ce1d62176'
+        },
+   tooltip: {
+        pointFormat: '{series.name}: <b>${point.y}</b>'
+    },
+    plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: false
+                },
+                showInLegend: true
+            }
+        },
+        legend: {
+            align: 'right',
+            layout: 'vertical'
+        },
+   series: [{
+   	name: "Funding",
+    	data: [{
+      	name: "Marysville Shoreline Softening",
+        y: 1500000.00,
+        color: BA.ColorPicker.blue1
+      },
+      
+      {
+      	name: "Total Shoreline Softening",
+        y: 9724412.00,
+        color: BA.ColorPicker.blue7
+      	 },  
+     ]
+     
+   }]
+  
+});
+</script> 
+</body>
+</html>
