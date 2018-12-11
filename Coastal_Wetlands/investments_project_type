@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<head>
+
+	<script src="https://code.highcharts.com/highcharts.js"></script>
+
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+
+<link rel="stylesheet" href="https://blueaccounting.github.io/charts/css/BA_styles.css">
+
+<script src="https://blueaccounting.github.io/charts/js/BlueAccounting.js"></script>
+
+<style>
+    #container{
+        border: 0;
+        display: block;
+        height: auto !important;
+        max-width: 100%;
+        -ms-interpolation-mode: bicubic;
+        line-height: 0;
+
+}
+</style>
+</head>
+<body>
+<div id="container" ></div>
+<script>
+BA=new BlueAccounting();
+Highcharts.setOptions({
+	lang: {
+  	thousandsSep: ',',
+    downloadCSV: "Download CSV"
+  }
+})
+
+Highcharts.chart('container', {
+	chart: {
+	  	type: "pie",
+		events: {
+	   	 	load: function () {
+	   	 	 	var logoX = 15;
+	            var size = this.plotBox.y;
+	            size -= 5;
+
+	            if(this.chartWidth < 500){
+	                logoX = 10;
+	            }
+	            this.renderer.image("https://c1.staticflickr.com/1/826/26966705327_f80fcd7af1_o.png", logoX, 0, size * 4, size ).add();
+	   		}
+
+   	}
+   },
+
+   title: {
+   		text: "Blue Accounting Coastal Wetlands Database"
+   },
+    subtitle: {
+        text: "Investments by Project Type"
+    },
+     credits: {
+            text: 'ArcGIS Online Metadata',
+            href: 'http://tnc.maps.arcgis.com/home/item.html?id=a192b7aafe0c436485b34a2ce1d62176'
+        },
+   tooltip: {
+        pointFormat: '{series.name}: <b>${point.y}</b>'
+    },
+    plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: false
+                },
+                showInLegend: true
+            }
+        },
+        legend: {
+            align: 'right',
+            layout: 'vertical'
+        },
+   series: [{
+   	name: "Funding",
+    	data: [{
+      	name: "Enhancement",
+        y: 5481283.00,
+        color: BA.ColorPicker.blue1
+      },
+      
+      {
+      	name: "Invasives Control",
+        y: 17003417.00,
+        color: BA.ColorPicker.blue7
+      	 },
+
+         {
+        name: "Hydrologic Restoration",
+        y: 13582426.00,
+        color: BA.ColorPicker.blue2
+         },
+
+         {
+        name: "Protection",
+        y: 18409387.00,
+        color: BA.ColorPicker.blue6
+         },
+
+         {
+        name: "Restoration",
+        y: 25408942.00,
+        color: BA.ColorPicker.blue3
+         },
+
+               {
+        name: "Shoreline Softening",
+        y: 1764300.00,
+        color: BA.ColorPicker.green_selection_whtbg
+         },
+
+         {
+        name: "Unspecified",
+        y: 30297157.00,
+        color: BA.ColorPicker.blue5
+         },
+
+           {
+        name: "Combined",
+        y: 33838273.00,
+        color: BA.ColorPicker.blue4
+         },
+
+
+      
+     ]
+     
+   }]
+  
+});
+</script> 
+</body>
+</html>
