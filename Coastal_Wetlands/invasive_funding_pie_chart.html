@@ -24,7 +24,9 @@
 </style>
 </head>
 <body>
-<div id="container"></div>
+<div style="width: 600px">
+    <div id="container" style="width: 400px; height: 300px; margin: 1em; border: 1px solid gray"></div>
+</div>
     
 <script>
     BA=new BlueAccounting();
@@ -34,6 +36,15 @@
             downloadCSV: "Download CSV"
         }
     });
+    
+    var wide = false;
+$('#set-div-size').click(function () {
+    $('#container').width(wide ? 400 : 500);
+    wide = !wide;
+});
+$('#reflow-chart').click(function () {
+    chart.reflow();
+});
     
     Highcharts.chart('container', {
         chart: {
