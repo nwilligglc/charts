@@ -33,6 +33,21 @@
             downloadCSV: "Download CSV"
         }
     });
+    
+    $(window).resize(function(){
+        var chart = $('#container').highcharts();
+        
+        console.log('redraw');
+        var w = $('#container').closest(".wrapper").width()
+        // setsize will trigger the graph redraw 
+        chart.setSize(       
+            w,w * (3/4),false
+        );
+     });
+    
+});
+
+
 
     Highcharts.chart('container', {
         chart: {
