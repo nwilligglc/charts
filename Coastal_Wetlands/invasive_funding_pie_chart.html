@@ -24,9 +24,7 @@
 </style>
 </head>
 <body>
-<div class="wrapper">
-    <div id="container" style="width:100%;height:100%;"></div>
-</div>
+<div id="container"></div>
     
 <script>
     BA=new BlueAccounting();
@@ -37,21 +35,6 @@
         }
     });
     
-    $(window).resize(function(){
-        var chart = $('#container').highcharts();
-        
-        console.log('redraw');
-        var w = $('#container').closest(".wrapper").width()
-        // setsize will trigger the graph redraw 
-        chart.setSize(       
-            w,w * (3/4),false
-        );
-     });
-    
-});
-
-
-
     Highcharts.chart('container', {
         chart: {
             type: "pie",
