@@ -4,7 +4,7 @@ function ErieStat() {
     this.watershedNames = {
         "Cattaraugus": "Cattaraugus Creek",
         "Cuyahoga": "Cuyahoga River",
-        "Detroit": "Detroit River",
+        "Detroit": "Detroit River (U.S.)",
         "Grand": "Grand River",
         "Grand (Ontario)": "Grand (Ontario) River",
         "Huron": "Huron River",
@@ -83,7 +83,7 @@ function ErieStat() {
             "Spring TP FWMC": null,
             "Spring SRP FWMC": null
         },
-        "Detroit River": {
+        "Detroit River (U.S.)": {
             "Annual TP Loading": 756,
             "Spring TP Loading": null,
             "Spring SRP Loading": null,
@@ -169,7 +169,7 @@ function ErieStat() {
     this.narratives = {
         "Cattaraugus River": "",
             "Cuyahoga River": "The Cuyahoga River watershed is located in northeastern Ohio. It drains a total of 812 square miles (2,103 km<sup>2</sup>) and flows through all or part of six counties. Major municipalities partially or fully in the watershed include Cleveland and some of its suburbs, Akron, Kent and Cuyahoga Falls. ",
-            "Detroit River": "The Detroit River flows for 32 miles (52 km) from Lake St. Clair to Lake Erie as a strait in the Great Lakes system and forms part of the border between Canada and the U.S.",
+            "Detroit River (U.S.)": "The Detroit River flows for 32 miles (52 km) from Lake St. Clair to Lake Erie as a strait in the Great Lakes system and forms part of the border between Canada and the U.S.",
             "Grand River": "The Grand River watershed is located in northeastern Ohio. It drains a total of 707 square miles (1,831 km<sup>2</sup>) and flows through all or part of five counties. Major municipalities partially or fully in the watershed include Orwell, Roaming Shores, Jefferson, West Farmington, Chardon and Painesville. The watershed is a mixture of forest, agricultural land uses such as cultivated crops and pasture and hay lands, and urban land uses. ",
             "Grand (Ontario) River": "",
             "Huron River": "The Huron River watershed is located on the south shore of Lake Erie between Toledo and Cleveland, in Huron, Erie, Seneca, Richland and Crawford counties.  The Huron River is 59.7 miles (96 km) long and the watershed covers 403 square miles (1,044 km<sup>2</sup>).  Land use is primarily dedicated to agricultural activities with approximately 74 percent cropland, 15 percent woodland, and 3 to 11 percent urban and other land uses.",
