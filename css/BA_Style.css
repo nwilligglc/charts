@@ -30,6 +30,19 @@ body{
 #narrative-content{
     /*text-indent: 50px;*/
 }
+#watersheds {
+    position: absolute;
+    top:20%;
+}
+#watershed-caption{
+    color: #1b75ba;
+    font-size: x-large;
+    text-align: center;
+}
+#watershed-description{
+
+}
+
 #chart-canvas{
     padding-top: 5%;
     /*position: absolute;*/
