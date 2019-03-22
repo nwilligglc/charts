@@ -28,9 +28,12 @@
             "dojo/dom",
             "esri/map",
             "esri/graphic",
+            "esri/layers/GraphicsLayer",
+            "esri/graphicsUtils",
             "esri/Color",
             "esri/layers/ArcGISDynamicMapServiceLayer",
             "esri/layers/FeatureLayer",
+            "esri/geometry/geometryEngine",
             "esri/tasks/query",
             "esri/tasks/QueryTask",
             "esri/tasks/FindParameters",
@@ -56,9 +59,12 @@
             dom,
             Map,
             Graphic,
+            GraphicsLayer,
+            graphicsUtils,
             Color,
             ArcGISDynamicMapServiceLayer,
             FeatureLayer,
+            geometryEngine,
             Query,
             QueryTask,
             FindParameters,
@@ -74,6 +80,7 @@
             BlueAccounting,
             ErieStat
         ) {
+            var map;
             ready(function () {
                 $.getJSON("../data/data.json", function(d){
                     data = d;
@@ -88,9 +95,11 @@
                 var lineSymbol = new SimpleLineSymbol();
                 lineSymbol.setWidth(5);
                 lineSymbol.setColor(new Color([255, 170, 0, 1]));
+
                 var fillSymbol = new SimpleFillSymbol();
                 fillSymbol.setColor(new Color([0, 0, 0, 0]));
                 fillSymbol.setOutline(lineSymbol);
+
                 var watershedStyle = new SimpleFillSymbol();
                 watershedStyle.setColor(new Color([109,178,39]));
                 watershedStyle.setOutline(new SimpleLineSymbol(
@@ -100,12 +109,13 @@
                 ));
 
 //                const mapServiceUrl = "https://gis.glc.org/server/rest/services/ErieStat/SpringSRP/MapServer";
-                var map = new Map("map", {
+                map = new Map("mapDiv", {
                     basemap: "topo",
                     center: [-83.1, 42.1],
                     zoom: 8
                 });
 
+                var graphicLayer = new GraphicsLayer();
                 var basinLayer = new FeatureLayer("https://services7.arcgis.com/Tk0IbKIKhaoYn5sa/arcgis/rest/services/ErieStat_FocusArea/FeatureServer/1");
                 var tribsLayer = new FeatureLayer("https://services7.arcgis.com/Tk0IbKIKhaoYn5sa/arcgis/rest/services/ErieStat_Tribs/FeatureServer/0", {
                     outFields: ["WatershedName"]
@@ -119,10 +129,19 @@
                     var renderer = new SimpleRenderer(watershedStyle);
                     watershedLayer.setRenderer(renderer);
                 });
+
                 map.addLayer(basinLayer);
                 map.addLayer(watershedLayer);
                 map.addLayer(tribsLayer);
+                map.addLayer(graphicLayer);
+                var boundaryQuery = new Query();
+                boundaryQuery.returnGeometry = true;
+                boundaryQuery.where = "1=1";
 //                map.setExtent(basinLayer.fullExtent);
+//                basinLayer.selectFeatures(boundaryQuery, FeatureLayer.SELECTION_NEW, function(features) {
+//                    map.setExtent(features[0].geometry.getExtent());
+//                });
+
 
 //                var queryOrder = [];
                 var query = new Query();
@@ -132,9 +151,6 @@
                 query.returnGeometry = true;
 
 
-
-//                var BA = new BlueAccounting();
-//                var ES = new ErieStat
                 var metric1 = metrics.SRP_L_S,
                     metric2 = metrics.SRP_FWMC_S,
                     metric3 = metrics.TP_L_S,
@@ -148,41 +164,6 @@
                     tabs[i].style.display = "none";
                 }
                 $("#intro").html(intro_SRP);
-
-
-
-
-
-//                var tribsQueryTask = new QueryTask(),
-//                    lakesQueryTask = new QueryTask(),
-//                    watershedQueryTask = new QueryTask();
-////                var queryTask = new QueryTask();
-////                query.objectIds = [22];
-////                query.multipatchOption = "xyFootprint";
-////                query.outFields = ["*"];
-////                query.returnGeometry = true;
-//                tribsQueryTask.on("complete", tribsQueryTaskCompleteHandler);
-//                tribsQueryTask.on("error", tribsQueryTaskCompleteHandler);
-//
-//                lakesQueryTask.on("complete", lakesQueryTaskCompleteHandler);
-//                lakesQueryTask.on("error", lakesQueryTaskCompleteHandler);
-//
-//                watershedQueryTask.on("complete", watershedsQueryTaskCompleteHandler);
-//                watershedQueryTask.on("error", watershedsQueryTaskCompleteHandler);
-//
-//                queryTask.on("complete", queryTaskExecuteCompleteHandler);
-//                queryTask.on("error", queryTaskErrorHandler);
-
-                const queryLayersOrder = [
-                    tribsLayer, watershedLayer
-                    ];
-
-//                var dynamicMapServiceLayer = new ArcGISDynamicMapServiceLayer(mapServiceUrl, {
-//                    "opacity" : 0.5,
-////                    "imageParameters" : imageParameters
-//                });
-//                dynamicMapServiceLayer.setVisibleLayers([0,1,2]);
-//                map.addLayer(dynamicMapServiceLayer);
 
                 const queryTaskList = [
                     new QueryTask(tribsLayer.url, {
@@ -231,7 +212,7 @@
 
                     //
 
-                    // FindTask
+                    // FindTask. works
 //                    var find = new FindTask(mapServiceUrl);
 //                    var params = new FindParameters();
 //                    params.layerIds = [2, 1, 0];
@@ -245,7 +226,7 @@
 
 
 
-                    //Promise.all(). Working method.
+                    //Working method.
                     queryTaskList.forEach(function (qt) {
                         query.geometry = evt.mapPoint;
                         promisesList.push(qt.execute(query));
@@ -281,25 +262,29 @@
 //                    queryTask.execute(query);
                 });
 
-                function selectFeature(response) {
-                    if(response.features.length === 0) {
-                        return false;
-                    }
-
-                    return true;
-                }
 
                 function queryTaskExecuteCompleteHandler(results){
                     var selectedFeature = null;
-                    map.graphics.clear();
+                    graphicLayer.clear();
                     // if tribs
                     if (results[0].features.length > 0) {
-                        selectedFeature = results[0].features[0];
-                        selectedFeature.setSymbol(fillSymbol);
-                        map.graphics.add(selectedFeature);
-                        var tribName = selectedFeature.attributes.WatershedName;
-                        if(buildNarratives(tribName)) {
-                            generateTribsContent(tribName)
+                        var watershed_name = results[0].features[0].attributes.WatershedName;
+                        var tribQuery = new Query();
+                        tribQuery.where = "WatershedName = '" + watershed_name + "'";
+                        tribQuery.returnGeometry = true;
+                        tribsLayer.selectFeatures(tribQuery, FeatureLayer.SELECTION_NEW, function(features) {
+                            var graphics = [];
+                            features.forEach(function(feature) {
+                                var g = new Graphic(feature.geometry, lineSymbol);
+                                graphicLayer.add(g);
+                                graphics.push(g);
+                            });
+                            map.setExtent(graphicsUtils.graphicsExtent(graphics));
+
+                        });
+
+                        if(buildNarratives(watershed_name)) {
+                            generateTribsContent(watershed_name)
                         }else {
                             $(".charts").html("");
                         }
@@ -309,8 +294,10 @@
                     }else if(results[1].features.length > 0) {
                         selectedFeature = results[1].features[0];
                         selectedFeature.setSymbol(fillSymbol);
-                        map.graphics.add(selectedFeature);
+                        graphicLayer.add(selectedFeature);
+                        map.setExtent(graphicsUtils.graphicsExtent(selectedFeature));
                         var watershedName = selectedFeature.attributes.MergeNm;
+                        // Render the content in the panel
                         return;
                     }
 
@@ -750,7 +737,7 @@
         <div id="title">ErieStat Dashboard</div>
         <div id="subtitle">Subtitle holder</div>
     </div>
-    <div id="map" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'center'"></div>
+    <div id="mapDiv" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'center'"></div>
     <div id="rightPane" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'right'">
         <div id="legend"></div>
         <div id="intro"></div>
