@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://js.arcgis.com/3.27/dijit/themes/claro/claro.css">
     <link rel="stylesheet" href="https://js.arcgis.com/3.27/esri/css/esri.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="http://code.highcharts.com/adapters/standalone-framework.js"></script>
     <link rel="stylesheet" href="../css/BA_Style.css">
 
 
@@ -40,13 +41,9 @@
             "esri/symbols/SimpleFillSymbol",
             "esri/symbols/SimpleLineSymbol",
             "esri/renderers/SimpleRenderer",
-//            "esri/dijit/Legend",
-//            "esri/dijit/Scalebar",
-            "//code.highcharts.com/highcharts.js",
-//            "../js/highcharts.js",
-//            "../js/BlueAccounting_ArcGIS.js",
-//            "../js/ErieStat.js",
-            "../js/ErieStat_ArcGIS2.js",
+//            "//code.highcharts.com/highcharts.js",
+            "../js/BlueAccounting_module.js",
+            "../js/ErieStat_module.js",
             "dojo/domReady!"
         ], function (
             parser,
@@ -72,10 +69,8 @@
             SimpleFillSymbol,
             SimpleLineSymbol,
             SimpleRenderer,
-//            Legend,
-//            Scalebar,
-            Highcharts,
-//            BlueAccounting,
+//            Highcharts,
+            BlueAccounting,
             ErieStat
         ) {
             var map;
@@ -83,12 +78,12 @@
                 $.getJSON("../data/data.json", function(d){
                     data = d;
                 }).done(function () {
-                    init(data);
+                    ErieStat.init(data);
                 });
 
                 parser.parse();
 
-                initHighchartOptions();
+//                initHighchartOptions();
 
                 var lineSymbol = new SimpleLineSymbol();
                 lineSymbol.setWidth(5);
@@ -115,7 +110,7 @@
 
                 var graphicLayer = new GraphicsLayer();
                 var basinLayer = new FeatureLayer("https://services7.arcgis.com/Tk0IbKIKhaoYn5sa/arcgis/rest/services/ErieStat_FocusArea/FeatureServer/1");
-                var tribsLayer = new FeatureLayer("https://services7.arcgis.com/Tk0IbKIKhaoYn5sa/arcgis/rest/services/ErieStat_Tribs/FeatureServer/0", {
+                var tribsLayer = new FeatureLayer("https://services7.arcgis.com/Tk0IbKIKhaoYn5sa/arcgis/rest/services/ErieStat_Tribs/FeatureServer/5", {
                     outFields: ["WatershedName"]
                 });
 //                tribsLayer.returnGeometry = true;
@@ -149,19 +144,19 @@
                 query.returnGeometry = true;
 
 
-                var metric1 = metrics.SRP_L_S,
-                    metric2 = metrics.SRP_FWMC_S,
-                    metric3 = metrics.TP_L_S,
-                    metric4 = metrics.TP_FWMS_S,
-                    metric5 = metrics.TP_L,
-                    metric_discharge_S = metrics.Discharge_S,
-                    metric_discharge_A = metrics.Discharge;
+                var metric1 = ErieStat.metrics.SRP_L_S,
+                    metric2 = ErieStat.metrics.SRP_FWMC_S,
+                    metric3 = ErieStat.metrics.TP_L_S,
+                    metric4 = ErieStat.metrics.TP_FWMS_S,
+                    metric5 = ErieStat.metrics.TP_L,
+                    metric_discharge_S = ErieStat.metrics.Discharge_S,
+                    metric_discharge_A = ErieStat.metrics.Discharge;
 
                 var tabs = document.getElementsByClassName("tab");
                 for (var i = 0; i < tabs.length; i++) {
                     tabs[i].style.display = "none";
                 }
-                $("#intro").html(intro_SRP);
+                $("#intro").html(ErieStat.intro_SRP);
 
                 const queryTaskList = [
                     new QueryTask(tribsLayer.url, {
@@ -262,7 +257,7 @@
 
 
                 function queryTaskExecuteCompleteHandler(results){
-                    var selectedFeature = null;
+                    var graphics = [];
                     graphicLayer.clear();
                     // if tribs
                     if (results[0].features.length > 0) {
@@ -271,7 +266,6 @@
                         tribQuery.where = "WatershedName = '" + watershed_name + "'";
                         tribQuery.returnGeometry = true;
                         tribsLayer.selectFeatures(tribQuery, FeatureLayer.SELECTION_NEW, function(features) {
-                            var graphics = [];
                             features.forEach(function(feature) {
                                 var g = new Graphic(feature.geometry, lineSymbol);
                                 graphicLayer.add(g);
@@ -281,8 +275,8 @@
 
                         });
 
-                        if(buildNarratives(watershed_name)) {
-                            generateTribsContent(watershed_name)
+                        if(ErieStat.buildNarratives(ErieStat.watershedNames[watershed_name])) {
+                            generateTribsContent(ErieStat.watershedNames[watershed_name])
                         }else {
                             $(".charts").html("");
                         }
@@ -290,11 +284,12 @@
 
                         return;
                     }else if(results[1].features.length > 0) {
-                        selectedFeature = results[1].features[0];
-                        selectedFeature.setSymbol(fillSymbol);
-                        graphicLayer.add(selectedFeature);
-                        map.setExtent(graphicsUtils.graphicsExtent(selectedFeature));
-                        var watershedName = selectedFeature.attributes.MergeNm;
+                        var selectedFeatureGraphic = new Graphic(results[1].features[0].geometry, fillSymbol);
+//                        selectedFeature.setSymbol(fillSymbol);
+                        graphics.push(selectedFeatureGraphic);
+                        graphicLayer.add(selectedFeatureGraphic);
+                        map.setExtent(graphicsUtils.graphicsExtent(graphics));
+                        var watershedName = results[1].features[0].attributes.MergeNm;
                         // Render the content in the panel
                         return;
                     }
@@ -322,19 +317,19 @@
                     $(".tab").css("display", "block");
                     document.getElementById("defaultOpen").click();
 
-                    var s1_data = getWatershedData(name, metric1.name),
-                        s2_data = getWatershedData(name, metric2.name),
-                        s3_data = getWatershedData(name, metric3.name),
-                        s4_data = getWatershedData(name, metric4.name),
-                        s5_data = getWatershedData(name, metric5.name);
-                    var discharge_data_s = getWatershedData(name, metric_discharge_S.name),
-                        discharge_data_a = getWatershedData(name, metric_discharge_A.name);
+                    var s1_data = ErieStat.getWatershedData(name, metric1.name),
+                        s2_data = ErieStat.getWatershedData(name, metric2.name),
+                        s3_data = ErieStat.getWatershedData(name, metric3.name),
+                        s4_data = ErieStat.getWatershedData(name, metric4.name),
+                        s5_data = ErieStat.getWatershedData(name, metric5.name);
+                    var discharge_data_s = ErieStat.getWatershedData(name, metric_discharge_S.name),
+                        discharge_data_a = ErieStat.getWatershedData(name, metric_discharge_A.name);
 
                     if(s1_data.length > 0 /*&& discharge_data.length > 0*/){
-                        var chart1 = buildDualAxesChart(s1_data, metric1.name, metric1.unit, ColorPicker.blue7, "column",
-                            discharge_data_s, metric_discharge_S.name, metric_discharge_S.unit, ColorPicker.blue6, "line",
+                        var chart1 = BlueAccounting.buildDualAxesChart(s1_data, metric1.name, metric1.unit, BlueAccounting.ColorPicker.blue7, "column",
+                            discharge_data_s, metric_discharge_S.name, metric_discharge_S.unit, BlueAccounting.ColorPicker.blue6, "line",
                             "chart1", name + " " + metric1.name + " and " + metric_discharge_S.name, "<i>*SRP: Soluble reactive phosphorus</i>",
-                            xAxis[0], targets[name][metric1.name], null, //ES.targets[name][metric2.name],
+                            ErieStat.xAxis[0], ErieStat.targets[name][metric1.name], null, //ES.targets[name][metric2.name],
                             (window.innerHeight  - $("#narrative-section").height()) * 0.65
                         );
                     }else{
@@ -342,9 +337,9 @@
                     }
 
                     if(s2_data.length > 0){
-                        var chart2 = buildSingleChart("line", s2_data, metric2.name, metric2.unit, ColorPicker.blue7,
-                            xAxis[0], name + " " + metric2.name, "<i>*SRP: Soluble reactive phosphorus</i><br><i>*FWMC: Flow-weighted mean concentration</i>",
-                            targets[name][metric2.name], "chart2", (window.innerHeight  - $("#narrative-section").height()) * 0.65
+                        var chart2 = BlueAccounting.buildSingleChart("line", s2_data, metric2.name, metric2.unit, BlueAccounting.ColorPicker.blue7,
+                            ErieStat.xAxis[0], name + " " + metric2.name, "<i>*SRP: Soluble reactive phosphorus</i><br><i>*FWMC: Flow-weighted mean concentration</i>",
+                            ErieStat.targets[name][metric2.name], "chart2", (window.innerHeight  - $("#narrative-section").height()) * 0.65
                         );
                     }
                     else {
@@ -352,10 +347,10 @@
                     }
 
                     if(s3_data.length > 0){
-                        var chart3 = buildDualAxesChart(s3_data, metric3.name, metric3.unit, ColorPicker.blue7, "column",
-                            discharge_data_s, metric_discharge_S.name, metric_discharge_S.unit, ColorPicker.blue6, "line",
+                        var chart3 = BlueAccounting.buildDualAxesChart(s3_data, metric3.name, metric3.unit, BlueAccounting.ColorPicker.blue7, "column",
+                            discharge_data_s, metric_discharge_S.name, metric_discharge_S.unit, BlueAccounting.ColorPicker.blue6, "line",
                             "chart3", name + " " + metric3.name + " and " + metric_discharge_S.name, "<i>*TP: Total phosphorus</i>",
-                            xAxis[0], targets[name][metric3.name], null, //ES.targets[name][metric2.name],
+                            ErieStat.xAxis[0], ErieStat.targets[name][metric3.name], null, //ES.targets[name][metric2.name],
                             (window.innerHeight  - $("#narrative-section").height()) * 0.65
                         );
                     }else{
@@ -363,248 +358,248 @@
                     }
 
                     if(s4_data.length > 0){
-                        var chart4 = buildSingleChart("line", s4_data, metric4.name, metric4.unit, ColorPicker.blue7,
-                            xAxis[0], name + " " + metric4.name, "<i>*TP: Total phosphorus</i><br><i>*FWMC: Flow-weighted mean concentration</i>",
-                            targets[name][metric4.name], "chart4", (window.innerHeight  - $("#narrative-section").height()) * 0.65
+                        var chart4 = BlueAccounting.buildSingleChart("line", s4_data, metric4.name, metric4.unit, BlueAccounting.ColorPicker.blue7,
+                            ErieStat.xAxis[0], name + " " + metric4.name, "<i>*TP: Total phosphorus</i><br><i>*FWMC: Flow-weighted mean concentration</i>",
+                            ErieStat.targets[name][metric4.name], "chart4", (window.innerHeight  - $("#narrative-section").height()) * 0.65
                         );
                     }else{
                         $("#chart4").html("<i>* Data under development.</i>");
                     }
 
                     if(s5_data.length > 0){
-                        var chart5 = buildSingleChart("column", s5_data, metric5.name, metric5.unit, ColorPicker.blue7,
-                            xAxis[0], name + " " + metric5.name, "<i>*TP: Total phosphorus</i><br><i>*FWMC: Flow-weighted mean concentration</i>",
-                            targets[name][metric5.name], "chart5", (window.innerHeight  - $("#narrative-section").height()) * 0.65
+                        var chart5 = BlueAccounting.buildSingleChart("column", s5_data, metric5.name, metric5.unit, BlueAccounting.ColorPicker.blue7,
+                            ErieStat.xAxis[0], name + " " + metric5.name, "<i>*TP: Total phosphorus</i><br><i>*FWMC: Flow-weighted mean concentration</i>",
+                            ErieStat.targets[name][metric5.name], "chart5", (window.innerHeight  - $("#narrative-section").height()) * 0.65
                         );
                     }else{
                         $("#chart5").html("<i>* Data under development.</i>");
                     }
                 }
 
-                function buildSingleChart(type, series, seriesName, seriesUnit, color, startingYear, title, subtitle, target, tag, height, width) {
-                    var chart = Highcharts.chart(tag, {
-                        chart: {
-                            background: "transparent",
-                            type: type,
-                            width: width,
-                            height: height,
-                            style: {
-                                color: this.ColorPicker.body
-                            },
-                            events: {
-                                load: function () {
-                                    var logoX = 15;
-                                    var size = this.plotBox.y;
-                                    size -= 5;
-
-                                    if(this.chartWidth < 500){
-                                        logoX = 10;
-                                    }
-                                    var img_width = (this.chartWidth - 350)/2 - logoX;
-                                    var img_height = size;
-                                    if(img_width >= img_height*4){
-                                        // wide logo. local resource
-                                        this.renderer.image("https://c1.staticflickr.com/1/826/26966705327_f80fcd7af1_o.png", logoX, 0, size * 4, size ).add();
-                                        // ErieStat logo. Change factor to 3
-                                        // this.renderer.image("https://c1.staticflickr.com/1/956/27966542108_a46fd4fa96_o.png", logoX, 0, size*3 , size).add();
-                                    }else{
-                                        // cube logo
-                                        this.renderer.image("https://c1.staticflickr.com/1/868/40969378165_8bd2c065b9_o.png", logoX, 0, size, size).add();
-                                    }
-                                    // var w = this.chartWidth - this.title.alignAttr.x;
-                                    // Blue Accounting Cube logo
-                                    // this.renderer.image("https://c1.staticflickr.com/1/868/40969378165_8bd2c065b9_o.png", logoX, 0, size, size).add();
-                                    // Blue Accouting Logo
-                                    // this.renderer.image("https://c1.staticflickr.com/1/826/26966705327_f80fcd7af1_o.png", logoX, 0, size * 4, size ).add();
-                                    // Blue Accounting ErieStat Logo
-                                    // this.renderer.image("https://c1.staticflickr.com/1/956/27966542108_a46fd4fa96_o.png", logoX, 0, size*3 , size).add();
-
-                                    // this.renderer.image("https://c1.staticflickr.com/5/4382/36578347693_3c6032000b_o.png", 0, 0, chart_width, chart_height).add();   //red watermark
-                                    // if (isBgImg) {
-                                    //     this.renderer.image("img/background_draft.png", this.plotLeft, this.plotTop, this.plotWidth, this.plotHeight).add(); //grey watermark
-                                    // }
-                                }
-                            }
-                        },
-                        credits: {
-                            enabled: false
-                        },
-                        exporting: {
-                            enabled: true
-                        },
-                        title: {
-                            text: title
-                        },
-                        subtitle: {
-                            text: subtitle
-                        },
-                        yAxis: {
-                            title: {
-                                text: seriesName + "<br>(" + seriesUnit + ")",
-                                style: {
-                                    color: color
-                                }
-                            },
-                            min: 0
-                        },
-                        xAxis: {
-
-                        },
-                        plotOptions: {
-                            series: {
-                                pointStart: startingYear
-                            }
-                        },
-                        series: [
-                            {
-                                name: seriesName,
-                                data: series,
-                                color: color
-                            }
-                        ]
-                    });
-                    if (target) {
-                        this.addTargetLine(chart, target, seriesName + " Target");
-                    }
-
-                    return chart;
-                };
-
-                function buildDualAxesChart(series1, seriesName1, seriesUnit1, color1, chartType1,
-                                            series2, seriesName2, seriesUnit2, color2, chartType2,
-                                            tag, title, subtitle, startingYear, target1, target2, height, width) {
-                    var chart;
-                    if (!series1) {
-                        seriesName1 += " (not available)";
-                    }
-                    if (!series2) {
-                        seriesName2 += " (not available)";
-                    }
-
-                    chart = Highcharts.chart(tag, {
-                        chart: {
-                            height: height,
-                            width: width,
-                            style: {
-                                color: this.ColorPicker.body
-                            },
-                            events: {
-                                load: function () {
-                                    var logoX = 15;
-                                    var size = this.plotBox.y;
-                                    size -= 5;
-
-                                    if(this.chartWidth < 500){
-                                        logoX = 10;
-                                    }
-                                    var img_width = (this.chartWidth - 350)/2 - logoX;
-                                    // var img_height = size;
-                                    if(img_width >= size * 4){
-                                        // wide logo
-                                        this.renderer.image("https://c1.staticflickr.com/1/826/26966705327_f80fcd7af1_o.png", logoX, 0, size * 4, size ).add();
-                                        // ErieStat logo. Change factor to 3
-                                        // this.renderer.image("https://c1.staticflickr.com/1/956/27966542108_a46fd4fa96_o.png", logoX, 0, size*3 , size).add();
-                                    }else{
-                                        // cube logo
-                                        this.renderer.image("https://c1.staticflickr.com/1/868/40969378165_8bd2c065b9_o.png", logoX, 0, size, size).add();
-                                    }
-                                    // var w = this.chartWidth - this.title.alignAttr.x;
-                                    // Blue Accounting Cube logo
-                                    // this.renderer.image("https://c1.staticflickr.com/1/868/40969378165_8bd2c065b9_o.png", logoX, 0, size, size).add();
-                                    // Blue Accouting Logo
-                                    // this.renderer.image("https://c1.staticflickr.com/1/826/26966705327_f80fcd7af1_o.png", logoX, 0, size * 4, size ).add();
-                                    // Blue Accounting ErieStat Logo
-                                    // this.renderer.image("https://c1.staticflickr.com/1/956/27966542108_a46fd4fa96_o.png", logoX, 0, size*3 , size).add();
-
-                                    // this.renderer.image("https://c1.staticflickr.com/5/4382/36578347693_3c6032000b_o.png", 0, 0, chart_width, chart_height).add();   //red watermark
-//                if (isBgImg) {
-//                    this.renderer.image("img/background_draft.png", this.plotLeft, this.plotTop, this.plotWidth, this.plotHeight).add(); //grey watermark
-//                }
-                                }
-                            }
-                        },
-                        title: {
-                            text: title,
-                            style: {
-                                color: this.ColorPicker.body
-                            }
-                        },
-                        subtitle: {
-                            text: subtitle
-                        },
-                        credits: {
-                            enabled: false,
-                        },
-                        xAxis: [{
-
-                        }],
-                        yAxis: [{ // Primary yAxis
-                            title: {
-                                text: seriesName1 + "<br>(" + seriesUnit1 + ")",
-                                style: {
-                                    color: color1
-                                }
-                            }
-                        }, { // Secondary yAxis
-                            title: {
-                                text: seriesName2 + "<br>(" + seriesUnit2 + ")",
-                                style: {
-                                    color: color2
-                                }
-                            },
-                            min: 0,
-                            opposite: true
-                        }],
-                        plotOptions: {
-                            series: {
-                                pointStart: startingYear
-                            }
-                        },
-                        series: [{
-                            name: seriesName1,
-                            type: chartType1,
-                            unit: seriesUnit1,
-                            data: series1,
-                            color: color1
-                        }, {
-                            name: seriesName2,
-                            type: chartType2,
-                            yAxis: 1,
-                            unit: seriesUnit2,
-                            data: series2,
-                            color: color2,
-                            // visible: isSeriesVisible(s2_visible)
-                        }]
-                    });
-
-                    if (target1) {
-                        this.addTargetLine(chart, target1, seriesName1 + " Target");
-                    }
-                    if (target2) {
-                        this.addTargetLine(chart, target2, seriesName2 + " Target", "shortdot");
-                    }
-
-                    return chart;
-                };
-
-                function addTargetLine(chart, target, targetTitle, lineStyle) {
-                    var targetSeries = [];
-                    chart.series[0].data.map(function() {
-                        targetSeries.push(target);
-                    });
-
-                    chart.addSeries({
-                        type: 'line',
-                        data: targetSeries,
-                        name: targetTitle ,
-                        color: this.ColorPicker.target_red,
-                        lineWidth: 3,
-                        marker: {
-                            radius: 0
-                        },
-                        dashStyle: lineStyle
-                    })
-                };
+//                function buildSingleChart(type, series, seriesName, seriesUnit, color, startingYear, title, subtitle, target, tag, height, width) {
+//                    var chart = Highcharts.chart(tag, {
+//                        chart: {
+//                            background: "transparent",
+//                            type: type,
+//                            width: width,
+//                            height: height,
+//                            style: {
+//                                color: this.ColorPicker.body
+//                            },
+//                            events: {
+//                                load: function () {
+//                                    var logoX = 15;
+//                                    var size = this.plotBox.y;
+//                                    size -= 5;
+//
+//                                    if(this.chartWidth < 500){
+//                                        logoX = 10;
+//                                    }
+//                                    var img_width = (this.chartWidth - 350)/2 - logoX;
+//                                    var img_height = size;
+//                                    if(img_width >= img_height*4){
+//                                        // wide logo. local resource
+//                                        this.renderer.image("https://c1.staticflickr.com/1/826/26966705327_f80fcd7af1_o.png", logoX, 0, size * 4, size ).add();
+//                                        // ErieStat logo. Change factor to 3
+//                                        // this.renderer.image("https://c1.staticflickr.com/1/956/27966542108_a46fd4fa96_o.png", logoX, 0, size*3 , size).add();
+//                                    }else{
+//                                        // cube logo
+//                                        this.renderer.image("https://c1.staticflickr.com/1/868/40969378165_8bd2c065b9_o.png", logoX, 0, size, size).add();
+//                                    }
+//                                    // var w = this.chartWidth - this.title.alignAttr.x;
+//                                    // Blue Accounting Cube logo
+//                                    // this.renderer.image("https://c1.staticflickr.com/1/868/40969378165_8bd2c065b9_o.png", logoX, 0, size, size).add();
+//                                    // Blue Accouting Logo
+//                                    // this.renderer.image("https://c1.staticflickr.com/1/826/26966705327_f80fcd7af1_o.png", logoX, 0, size * 4, size ).add();
+//                                    // Blue Accounting ErieStat Logo
+//                                    // this.renderer.image("https://c1.staticflickr.com/1/956/27966542108_a46fd4fa96_o.png", logoX, 0, size*3 , size).add();
+//
+//                                    // this.renderer.image("https://c1.staticflickr.com/5/4382/36578347693_3c6032000b_o.png", 0, 0, chart_width, chart_height).add();   //red watermark
+//                                    // if (isBgImg) {
+//                                    //     this.renderer.image("img/background_draft.png", this.plotLeft, this.plotTop, this.plotWidth, this.plotHeight).add(); //grey watermark
+//                                    // }
+//                                }
+//                            }
+//                        },
+//                        credits: {
+//                            enabled: false
+//                        },
+//                        exporting: {
+//                            enabled: true
+//                        },
+//                        title: {
+//                            text: title
+//                        },
+//                        subtitle: {
+//                            text: subtitle
+//                        },
+//                        yAxis: {
+//                            title: {
+//                                text: seriesName + "<br>(" + seriesUnit + ")",
+//                                style: {
+//                                    color: color
+//                                }
+//                            },
+//                            min: 0
+//                        },
+//                        xAxis: {
+//
+//                        },
+//                        plotOptions: {
+//                            series: {
+//                                pointStart: startingYear
+//                            }
+//                        },
+//                        series: [
+//                            {
+//                                name: seriesName,
+//                                data: series,
+//                                color: color
+//                            }
+//                        ]
+//                    });
+//                    if (target) {
+//                        this.addTargetLine(chart, target, seriesName + " Target");
+//                    }
+//
+//                    return chart;
+//                };
+//
+//                function buildDualAxesChart(series1, seriesName1, seriesUnit1, color1, chartType1,
+//                                            series2, seriesName2, seriesUnit2, color2, chartType2,
+//                                            tag, title, subtitle, startingYear, target1, target2, height, width) {
+//                    var chart;
+//                    if (!series1) {
+//                        seriesName1 += " (not available)";
+//                    }
+//                    if (!series2) {
+//                        seriesName2 += " (not available)";
+//                    }
+//
+//                    chart = Highcharts.chart(tag, {
+//                        chart: {
+//                            height: height,
+//                            width: width,
+//                            style: {
+//                                color: this.ColorPicker.body
+//                            },
+//                            events: {
+//                                load: function () {
+//                                    var logoX = 15;
+//                                    var size = this.plotBox.y;
+//                                    size -= 5;
+//
+//                                    if(this.chartWidth < 500){
+//                                        logoX = 10;
+//                                    }
+//                                    var img_width = (this.chartWidth - 350)/2 - logoX;
+//                                    // var img_height = size;
+//                                    if(img_width >= size * 4){
+//                                        // wide logo
+//                                        this.renderer.image("https://c1.staticflickr.com/1/826/26966705327_f80fcd7af1_o.png", logoX, 0, size * 4, size ).add();
+//                                        // ErieStat logo. Change factor to 3
+//                                        // this.renderer.image("https://c1.staticflickr.com/1/956/27966542108_a46fd4fa96_o.png", logoX, 0, size*3 , size).add();
+//                                    }else{
+//                                        // cube logo
+//                                        this.renderer.image("https://c1.staticflickr.com/1/868/40969378165_8bd2c065b9_o.png", logoX, 0, size, size).add();
+//                                    }
+//                                    // var w = this.chartWidth - this.title.alignAttr.x;
+//                                    // Blue Accounting Cube logo
+//                                    // this.renderer.image("https://c1.staticflickr.com/1/868/40969378165_8bd2c065b9_o.png", logoX, 0, size, size).add();
+//                                    // Blue Accouting Logo
+//                                    // this.renderer.image("https://c1.staticflickr.com/1/826/26966705327_f80fcd7af1_o.png", logoX, 0, size * 4, size ).add();
+//                                    // Blue Accounting ErieStat Logo
+//                                    // this.renderer.image("https://c1.staticflickr.com/1/956/27966542108_a46fd4fa96_o.png", logoX, 0, size*3 , size).add();
+//
+//                                    // this.renderer.image("https://c1.staticflickr.com/5/4382/36578347693_3c6032000b_o.png", 0, 0, chart_width, chart_height).add();   //red watermark
+////                if (isBgImg) {
+////                    this.renderer.image("img/background_draft.png", this.plotLeft, this.plotTop, this.plotWidth, this.plotHeight).add(); //grey watermark
+////                }
+//                                }
+//                            }
+//                        },
+//                        title: {
+//                            text: title,
+//                            style: {
+//                                color: this.ColorPicker.body
+//                            }
+//                        },
+//                        subtitle: {
+//                            text: subtitle
+//                        },
+//                        credits: {
+//                            enabled: false,
+//                        },
+//                        xAxis: [{
+//
+//                        }],
+//                        yAxis: [{ // Primary yAxis
+//                            title: {
+//                                text: seriesName1 + "<br>(" + seriesUnit1 + ")",
+//                                style: {
+//                                    color: color1
+//                                }
+//                            }
+//                        }, { // Secondary yAxis
+//                            title: {
+//                                text: seriesName2 + "<br>(" + seriesUnit2 + ")",
+//                                style: {
+//                                    color: color2
+//                                }
+//                            },
+//                            min: 0,
+//                            opposite: true
+//                        }],
+//                        plotOptions: {
+//                            series: {
+//                                pointStart: startingYear
+//                            }
+//                        },
+//                        series: [{
+//                            name: seriesName1,
+//                            type: chartType1,
+//                            unit: seriesUnit1,
+//                            data: series1,
+//                            color: color1
+//                        }, {
+//                            name: seriesName2,
+//                            type: chartType2,
+//                            yAxis: 1,
+//                            unit: seriesUnit2,
+//                            data: series2,
+//                            color: color2,
+//                            // visible: isSeriesVisible(s2_visible)
+//                        }]
+//                    });
+//
+//                    if (target1) {
+//                        this.addTargetLine(chart, target1, seriesName1 + " Target");
+//                    }
+//                    if (target2) {
+//                        this.addTargetLine(chart, target2, seriesName2 + " Target", "shortdot");
+//                    }
+//
+//                    return chart;
+//                };
+//
+//                function addTargetLine(chart, target, targetTitle, lineStyle) {
+//                    var targetSeries = [];
+//                    chart.series[0].data.map(function() {
+//                        targetSeries.push(target);
+//                    });
+//
+//                    chart.addSeries({
+//                        type: 'line',
+//                        data: targetSeries,
+//                        name: targetTitle ,
+//                        color: this.ColorPicker.target_red,
+//                        lineWidth: 3,
+//                        marker: {
+//                            radius: 0
+//                        },
+//                        dashStyle: lineStyle
+//                    })
+//                };
 
                 function initHighchartOptions(){
                     Highcharts.Chart.prototype.viewData = function () {
