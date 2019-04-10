@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no">
@@ -9,13 +8,11 @@
     <script src="https://js.arcgis.com/3.27/" data-dojo-config="async:true"></script>
     <link rel="stylesheet" href="https://js.arcgis.com/3.27/dijit/themes/claro/claro.css">
     <link rel="stylesheet" href="https://js.arcgis.com/3.27/esri/css/esri.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="http://code.highcharts.com/adapters/standalone-framework.js"></script>
     <link rel="stylesheet" href="../css/BA_Style.css">
-
-
     <script src="https://js.arcgis.com/3.27/" data-dojo-config="async:true"></script>
-
     <script>
         require([
             "dojo/parser",
@@ -40,8 +37,8 @@
             "esri/arcgis/utils",
             "esri/symbols/SimpleFillSymbol",
             "esri/symbols/SimpleLineSymbol",
+            "esri/SpatialReference",
             "esri/renderers/SimpleRenderer",
-//            "//code.highcharts.com/highcharts.js",
             "../js/BlueAccounting_module.js",
             "../js/ErieStat_module.js",
             "dojo/domReady!"
@@ -68,8 +65,8 @@
             arcgisUtils,
             SimpleFillSymbol,
             SimpleLineSymbol,
+            SpatialReference,
             SimpleRenderer,
-//            Highcharts,
             BlueAccounting,
             ErieStat
         ) {
@@ -82,8 +79,6 @@
                 });
 
                 parser.parse();
-
-//                initHighchartOptions();
 
                 var lineSymbol = new SimpleLineSymbol();
                 lineSymbol.setWidth(5);
@@ -111,13 +106,12 @@
                 var graphicLayer = new GraphicsLayer();
                 var basinLayer = new FeatureLayer("https://services7.arcgis.com/Tk0IbKIKhaoYn5sa/arcgis/rest/services/ErieStat_FocusArea/FeatureServer/1");
                 var tribsLayer = new FeatureLayer("https://services7.arcgis.com/Tk0IbKIKhaoYn5sa/arcgis/rest/services/ErieStat_Tribs/FeatureServer/5", {
-                    outFields: ["WatershedName"]
+//                    outFields: ["WatershedName"]
                 });
-//                tribsLayer.returnGeometry = true;
                 var watershedLayer = new FeatureLayer("https://services7.arcgis.com/Tk0IbKIKhaoYn5sa/arcgis/rest/services/ErieStat_PilotWatesheds/FeatureServer/3", {
-                    outFields: ["MergeNm"]
+//                    outFields: ["MergeNm"],
+                    opacity: 0.55
                 });
-//                watershedLayer.returnGeometry = true;
                 watershedLayer.on("load", function(){
                     var renderer = new SimpleRenderer(watershedStyle);
                     watershedLayer.setRenderer(renderer);
@@ -127,16 +121,18 @@
                 map.addLayer(watershedLayer);
                 map.addLayer(tribsLayer);
                 map.addLayer(graphicLayer);
-                var boundaryQuery = new Query();
-                boundaryQuery.returnGeometry = true;
-                boundaryQuery.where = "1=1";
-//                map.setExtent(basinLayer.fullExtent);
-//                basinLayer.selectFeatures(boundaryQuery, FeatureLayer.SELECTION_NEW, function(features) {
-//                    map.setExtent(features[0].geometry.getExtent());
-//                });
 
+                basinLayer.on("load", function(){
+                    var query = new Query();
+                    query.where = "1=1";
+                    query.outSpatialReference = new SpatialReference(3857);
 
-//                var queryOrder = [];
+                    basinLayer.queryExtent(query, function (response){
+                        var extent = response.extent;
+                        map.setExtent(extent, true);
+                    });
+                });
+
                 var query = new Query();
                 query.units = "kilometers";
                 query.distance = 1;
@@ -161,11 +157,11 @@
                 const queryTaskList = [
                     new QueryTask(tribsLayer.url, {
                         returnGeometry: true,
-                        outFields: ["*"]
+                        outFields: ["WatershedName"]
                     }),
                     new QueryTask(watershedLayer.url, {
                         returnGeometry: true,
-                        outFields: ["*"]
+                        outFields: ["MergeNm"]
                     })
                 ];
 
@@ -203,8 +199,6 @@
                     var promisesList = [];
                     query.geometry = evt.mapPoint;
 
-                    //
-
                     // FindTask. works
 //                    var find = new FindTask(mapServiceUrl);
 //                    var params = new FindParameters();
@@ -214,10 +208,6 @@
 ////                    params.searchFields = ["STATE_NAME","STATE_FIPS"];
 ////                    params.searchText = dom.byId("searchText").value;
 //                    find.execute(params, queryTaskExecuteCompleteHandler);
-
-
-
-
 
                     //Working method.
                     queryTaskList.forEach(function (qt) {
@@ -255,12 +245,12 @@
 //                    queryTask.execute(query);
                 });
 
-
                 function queryTaskExecuteCompleteHandler(results){
                     var graphics = [];
                     graphicLayer.clear();
-                    // if tribs
+                    $("#intro").css("visibility", "hidden");
                     if (results[0].features.length > 0) {
+                        // Trib selected
                         var watershed_name = results[0].features[0].attributes.WatershedName;
                         var tribQuery = new Query();
                         tribQuery.where = "WatershedName = '" + watershed_name + "'";
@@ -280,12 +270,10 @@
                         }else {
                             $(".charts").html("");
                         }
-
-
                         return;
                     }else if(results[1].features.length > 0) {
+                        // Watershed selected
                         var selectedFeatureGraphic = new Graphic(results[1].features[0].geometry, fillSymbol);
-//                        selectedFeature.setSymbol(fillSymbol);
                         graphics.push(selectedFeatureGraphic);
                         graphicLayer.add(selectedFeatureGraphic);
                         map.setExtent(graphicsUtils.graphicsExtent(graphics));
@@ -293,19 +281,19 @@
                         // Render the content in the panel
                         return;
                     }
+                    else if(results[2].features.length > 0){
+                        // Lakes selected
 
-                    // if watershed
+                    }
 
-                    // if lake
-
-                    results.forEach(function (result) {
-                        console.log(result.displayFieldName + ", "+  result.features.length);
-                    })
+//                    results.forEach(function (result) {
+//                        console.log(result.displayFieldName + ", "+  result.features.length);
+//                    })
 
                 }
 
-                function queryTaskErrorHandler() {
-
+                function queryTaskErrorHandler(err) {
+                    console.log(err);
                 }
 
                 function generateTribsContent(name) {
@@ -313,7 +301,7 @@
                         return;
                     }
 
-                    $("#intro").css("visibility", "hidden");
+
                     $(".tab").css("display", "block");
                     document.getElementById("defaultOpen").click();
 
@@ -374,275 +362,6 @@
                     }else{
                         $("#chart5").html("<i>* Data under development.</i>");
                     }
-                }
-
-//                function buildSingleChart(type, series, seriesName, seriesUnit, color, startingYear, title, subtitle, target, tag, height, width) {
-//                    var chart = Highcharts.chart(tag, {
-//                        chart: {
-//                            background: "transparent",
-//                            type: type,
-//                            width: width,
-//                            height: height,
-//                            style: {
-//                                color: this.ColorPicker.body
-//                            },
-//                            events: {
-//                                load: function () {
-//                                    var logoX = 15;
-//                                    var size = this.plotBox.y;
-//                                    size -= 5;
-//
-//                                    if(this.chartWidth < 500){
-//                                        logoX = 10;
-//                                    }
-//                                    var img_width = (this.chartWidth - 350)/2 - logoX;
-//                                    var img_height = size;
-//                                    if(img_width >= img_height*4){
-//                                        // wide logo. local resource
-//                                        this.renderer.image("https://c1.staticflickr.com/1/826/26966705327_f80fcd7af1_o.png", logoX, 0, size * 4, size ).add();
-//                                        // ErieStat logo. Change factor to 3
-//                                        // this.renderer.image("https://c1.staticflickr.com/1/956/27966542108_a46fd4fa96_o.png", logoX, 0, size*3 , size).add();
-//                                    }else{
-//                                        // cube logo
-//                                        this.renderer.image("https://c1.staticflickr.com/1/868/40969378165_8bd2c065b9_o.png", logoX, 0, size, size).add();
-//                                    }
-//                                    // var w = this.chartWidth - this.title.alignAttr.x;
-//                                    // Blue Accounting Cube logo
-//                                    // this.renderer.image("https://c1.staticflickr.com/1/868/40969378165_8bd2c065b9_o.png", logoX, 0, size, size).add();
-//                                    // Blue Accouting Logo
-//                                    // this.renderer.image("https://c1.staticflickr.com/1/826/26966705327_f80fcd7af1_o.png", logoX, 0, size * 4, size ).add();
-//                                    // Blue Accounting ErieStat Logo
-//                                    // this.renderer.image("https://c1.staticflickr.com/1/956/27966542108_a46fd4fa96_o.png", logoX, 0, size*3 , size).add();
-//
-//                                    // this.renderer.image("https://c1.staticflickr.com/5/4382/36578347693_3c6032000b_o.png", 0, 0, chart_width, chart_height).add();   //red watermark
-//                                    // if (isBgImg) {
-//                                    //     this.renderer.image("img/background_draft.png", this.plotLeft, this.plotTop, this.plotWidth, this.plotHeight).add(); //grey watermark
-//                                    // }
-//                                }
-//                            }
-//                        },
-//                        credits: {
-//                            enabled: false
-//                        },
-//                        exporting: {
-//                            enabled: true
-//                        },
-//                        title: {
-//                            text: title
-//                        },
-//                        subtitle: {
-//                            text: subtitle
-//                        },
-//                        yAxis: {
-//                            title: {
-//                                text: seriesName + "<br>(" + seriesUnit + ")",
-//                                style: {
-//                                    color: color
-//                                }
-//                            },
-//                            min: 0
-//                        },
-//                        xAxis: {
-//
-//                        },
-//                        plotOptions: {
-//                            series: {
-//                                pointStart: startingYear
-//                            }
-//                        },
-//                        series: [
-//                            {
-//                                name: seriesName,
-//                                data: series,
-//                                color: color
-//                            }
-//                        ]
-//                    });
-//                    if (target) {
-//                        this.addTargetLine(chart, target, seriesName + " Target");
-//                    }
-//
-//                    return chart;
-//                };
-//
-//                function buildDualAxesChart(series1, seriesName1, seriesUnit1, color1, chartType1,
-//                                            series2, seriesName2, seriesUnit2, color2, chartType2,
-//                                            tag, title, subtitle, startingYear, target1, target2, height, width) {
-//                    var chart;
-//                    if (!series1) {
-//                        seriesName1 += " (not available)";
-//                    }
-//                    if (!series2) {
-//                        seriesName2 += " (not available)";
-//                    }
-//
-//                    chart = Highcharts.chart(tag, {
-//                        chart: {
-//                            height: height,
-//                            width: width,
-//                            style: {
-//                                color: this.ColorPicker.body
-//                            },
-//                            events: {
-//                                load: function () {
-//                                    var logoX = 15;
-//                                    var size = this.plotBox.y;
-//                                    size -= 5;
-//
-//                                    if(this.chartWidth < 500){
-//                                        logoX = 10;
-//                                    }
-//                                    var img_width = (this.chartWidth - 350)/2 - logoX;
-//                                    // var img_height = size;
-//                                    if(img_width >= size * 4){
-//                                        // wide logo
-//                                        this.renderer.image("https://c1.staticflickr.com/1/826/26966705327_f80fcd7af1_o.png", logoX, 0, size * 4, size ).add();
-//                                        // ErieStat logo. Change factor to 3
-//                                        // this.renderer.image("https://c1.staticflickr.com/1/956/27966542108_a46fd4fa96_o.png", logoX, 0, size*3 , size).add();
-//                                    }else{
-//                                        // cube logo
-//                                        this.renderer.image("https://c1.staticflickr.com/1/868/40969378165_8bd2c065b9_o.png", logoX, 0, size, size).add();
-//                                    }
-//                                    // var w = this.chartWidth - this.title.alignAttr.x;
-//                                    // Blue Accounting Cube logo
-//                                    // this.renderer.image("https://c1.staticflickr.com/1/868/40969378165_8bd2c065b9_o.png", logoX, 0, size, size).add();
-//                                    // Blue Accouting Logo
-//                                    // this.renderer.image("https://c1.staticflickr.com/1/826/26966705327_f80fcd7af1_o.png", logoX, 0, size * 4, size ).add();
-//                                    // Blue Accounting ErieStat Logo
-//                                    // this.renderer.image("https://c1.staticflickr.com/1/956/27966542108_a46fd4fa96_o.png", logoX, 0, size*3 , size).add();
-//
-//                                    // this.renderer.image("https://c1.staticflickr.com/5/4382/36578347693_3c6032000b_o.png", 0, 0, chart_width, chart_height).add();   //red watermark
-////                if (isBgImg) {
-////                    this.renderer.image("img/background_draft.png", this.plotLeft, this.plotTop, this.plotWidth, this.plotHeight).add(); //grey watermark
-////                }
-//                                }
-//                            }
-//                        },
-//                        title: {
-//                            text: title,
-//                            style: {
-//                                color: this.ColorPicker.body
-//                            }
-//                        },
-//                        subtitle: {
-//                            text: subtitle
-//                        },
-//                        credits: {
-//                            enabled: false,
-//                        },
-//                        xAxis: [{
-//
-//                        }],
-//                        yAxis: [{ // Primary yAxis
-//                            title: {
-//                                text: seriesName1 + "<br>(" + seriesUnit1 + ")",
-//                                style: {
-//                                    color: color1
-//                                }
-//                            }
-//                        }, { // Secondary yAxis
-//                            title: {
-//                                text: seriesName2 + "<br>(" + seriesUnit2 + ")",
-//                                style: {
-//                                    color: color2
-//                                }
-//                            },
-//                            min: 0,
-//                            opposite: true
-//                        }],
-//                        plotOptions: {
-//                            series: {
-//                                pointStart: startingYear
-//                            }
-//                        },
-//                        series: [{
-//                            name: seriesName1,
-//                            type: chartType1,
-//                            unit: seriesUnit1,
-//                            data: series1,
-//                            color: color1
-//                        }, {
-//                            name: seriesName2,
-//                            type: chartType2,
-//                            yAxis: 1,
-//                            unit: seriesUnit2,
-//                            data: series2,
-//                            color: color2,
-//                            // visible: isSeriesVisible(s2_visible)
-//                        }]
-//                    });
-//
-//                    if (target1) {
-//                        this.addTargetLine(chart, target1, seriesName1 + " Target");
-//                    }
-//                    if (target2) {
-//                        this.addTargetLine(chart, target2, seriesName2 + " Target", "shortdot");
-//                    }
-//
-//                    return chart;
-//                };
-//
-//                function addTargetLine(chart, target, targetTitle, lineStyle) {
-//                    var targetSeries = [];
-//                    chart.series[0].data.map(function() {
-//                        targetSeries.push(target);
-//                    });
-//
-//                    chart.addSeries({
-//                        type: 'line',
-//                        data: targetSeries,
-//                        name: targetTitle ,
-//                        color: this.ColorPicker.target_red,
-//                        lineWidth: 3,
-//                        marker: {
-//                            radius: 0
-//                        },
-//                        dashStyle: lineStyle
-//                    })
-//                };
-
-                function initHighchartOptions(){
-                    Highcharts.Chart.prototype.viewData = function () {
-                        if (!this.insertedTable) {
-                            var div = document.createElement('div');
-                            div.className = 'highcharts-data-table';
-                            // Insert after the chart container
-                            this.renderTo.parentNode.insertBefore(div, this.renderTo.nextSibling);
-                            div.innerHTML = this.getTable();
-                            this.insertedTable = true;
-                            var date_str = new Date().getTime().toString();
-                            var rand_str = Math.floor(Math.random() * (1000000)).toString();
-                            this.insertedTableID = 'div_' + date_str + rand_str
-                            div.id = this.insertedTableID;
-                        }
-                        else {
-                            $('#' + this.insertedTableID).toggle();
-                        }
-                    };
-                    Highcharts.setOptions({
-                        lang: {
-                            numericSymbols: null,
-                            thousandsSep: ',',
-                            // viewData: null
-                        }
-                    });
-                    Highcharts.Chart.prototype.viewData = function () {
-                        if (!insertedTable) {
-                            var div = document.createElement('div');
-                            div.className = 'highcharts-data-table';
-                            // Insert after the chart container
-                            renderTo.parentNode.insertBefore(div, renderTo.nextSibling);
-                            div.innerHTML = getTable();
-                            insertedTable = true;
-                            var date_str = new Date().getTime().toString();
-                            var rand_str = Math.floor(Math.random() * (1000000)).toString();
-                            insertedTableID = 'div_' + date_str + rand_str
-                            div.id = insertedTableID;
-                        }
-                        else {
-                            $('#' + insertedTableID).toggle();
-                        }
-                    };
                 }
             })
         });
@@ -710,7 +429,7 @@
             margin: 5px;
             width: 40%;
         }
-        #map {
+        #mapDiv {
             margin: 5px;
             padding: 0;
         }
