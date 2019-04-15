@@ -1,16 +1,15 @@
 <!DOCTYPE html>
-<html>
 <head>
-    <meta charset="UTF-8">
-    <title>GLRI Funding</title>
-<script src="https://code.highcharts.com/highcharts.js"></script>
+
+	<script src="https://code.highcharts.com/highcharts.js"></script>
 
 <script src="https://code.highcharts.com/modules/exporting.js"></script>
 <script src="https://code.highcharts.com/modules/export-data.js"></script>
 
-<link rel="stylesheet" href="../css/BA_styles.css">
+<link rel="stylesheet" href="https://blueaccounting.github.io/charts/css/BA_styles.css">
 
-<script src="../js/BlueAccounting.js"></script>
+<script src="https://blueaccounting.github.io/charts/js/BlueAccounting.js"></script>
+
 <style>
     #container{
         border: 0;
@@ -20,30 +19,28 @@
         -ms-interpolation-mode: bicubic;
         line-height: 0;
 
-    }
+}
 </style>
 </head>
 <body>
-<div id="container"></div>
-    
+<div id="container" ></div>
 <script>
-    BA=new BlueAccounting();
-    Highcharts.setOptions({
-        lang: {
-            thousandsSep: ',',
-            downloadCSV: "Download CSV"
-        }
-    });
-    
-    Highcharts.chart('container', {
-        chart: {
-            type: "pie",
+BA=new BlueAccounting();
+Highcharts.setOptions({
+	lang: {
+  	thousandsSep: ',',
+    downloadCSV: "Download CSV"
+  }
+});
+
+ Highcharts.chart('container', {
+    chart: {
+        type: 'column',
             events: {
                 load: function () {
                     var logoX = 15;
                     var size = this.plotBox.y;
                     size -= 5;
-
                     if (this.chartWidth < 500) {
                         logoX = 10;
                     }
@@ -61,50 +58,56 @@
             },
         },
 
-        title: {
-            text: "Coastal Wetlands Invasives Control Funding"
-            // text: ""
-        },
-        credits: {
+     credits: {
             text: 'ArcGIS Online Metadata',
             href: 'http://tnc.maps.arcgis.com/home/item.html?id=a192b7aafe0c436485b34a2ce1d62176'
         },
-        tooltip: {
-            pointFormat: '{series.name}: <b>${point.y}</b>'
-        },
-        plotOptions: {
-            pie: {
-                allowPointSelect: true,
-                cursor: 'pointer',
-                dataLabels: {
-                    enabled: false
-                },
-                showInLegend: true
+         title: {
+        text: 'Coastal Wetlands Investments'
+    },
+    subtitle: {
+        text: 'Investments by Project Category Count'
+    },
+    xAxis: {
+        type: 'category',
+        labels: {
+            rotation: -45,
+            style: {
+                fontSize: '13px',
+                fontFamily: 'Verdana, sans-serif'
+             
+  
             }
-        },
-        legend: {
-            align: 'right',
-            layout: 'vertical'
-        },
-        series: [{
-            name: "Funding",
-            data: [{
-                name: "Lake St. Clair Metropark",
-                y: 1492500.00,
-                color: BA.ColorPicker.blue1
-            },
+        }
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'Number of Projects'
+        }
+    },
+    legend: {
+        enabled: false
+    },
+    tooltip: {
+        pointFormat: 'Project Count: <b>{point.y:1f} projects</b>'
+          },
+    series: [{
+        name: 'Project Type',
+        data: [
+            ['Enhancement', 17,],
+            ['Invasives Control', 54],
+            ['Restoration', 35],
+            ['Hydrologic Restoration', 20],
+            ['Shoreline Softening', 3],
+            ['Protection', 28],
+            ['Combined', 38],
 
-                {
-                    name: "Total Invasive Control Funding",
-                    y: 27624307.78,
-                    color: BA.ColorPicker.blue7
-                }
+            
+        ],
 
-            ]
-
-        }]
-
-    });
-</script>
+    }]
+});
+</script> 
 </body>
 </html>

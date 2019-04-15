@@ -1,16 +1,15 @@
 <!DOCTYPE html>
-<html>
 <head>
-    <meta charset="UTF-8">
-    <title>GLRI Funding</title>
-<script src="https://code.highcharts.com/highcharts.js"></script>
+
+	<script src="https://code.highcharts.com/highcharts.js"></script>
 
 <script src="https://code.highcharts.com/modules/exporting.js"></script>
 <script src="https://code.highcharts.com/modules/export-data.js"></script>
 
-<link rel="stylesheet" href="../css/BA_styles.css">
+<link rel="stylesheet" href="https://blueaccounting.github.io/charts/css/BA_styles.css">
 
-<script src="../js/BlueAccounting.js"></script>
+<script src="https://blueaccounting.github.io/charts/js/BlueAccounting.js"></script>
+
 <style>
     #container{
         border: 0;
@@ -20,22 +19,21 @@
         -ms-interpolation-mode: bicubic;
         line-height: 0;
 
-    }
+}
 </style>
 </head>
 <body>
-<div id="container"></div>
-    
+<div id="container" ></div>
 <script>
-    BA=new BlueAccounting();
-    Highcharts.setOptions({
-        lang: {
-            thousandsSep: ',',
-            downloadCSV: "Download CSV"
-        }
-    });
-    
-    Highcharts.chart('container', {
+BA=new BlueAccounting();
+Highcharts.setOptions({
+	lang: {
+  	thousandsSep: ',',
+    downloadCSV: "Download CSV"
+  }
+});
+
+ Highcharts.chart('container', {
         chart: {
             type: "pie",
             events: {
@@ -43,7 +41,6 @@
                     var logoX = 15;
                     var size = this.plotBox.y;
                     size -= 5;
-
                     if (this.chartWidth < 500) {
                         logoX = 10;
                     }
@@ -61,18 +58,20 @@
             },
         },
 
-        title: {
-            text: "Coastal Wetlands Invasives Control Funding"
-            // text: ""
-        },
-        credits: {
+   title: {
+   		text: "Blue Accounting Coastal Wetlands Database"
+   },
+    subtitle: {
+        text: "Investments by Project Type"
+    },
+     credits: {
             text: 'ArcGIS Online Metadata',
             href: 'http://tnc.maps.arcgis.com/home/item.html?id=a192b7aafe0c436485b34a2ce1d62176'
         },
-        tooltip: {
-            pointFormat: '{series.name}: <b>${point.y}</b>'
-        },
-        plotOptions: {
+   tooltip: {
+        pointFormat: '{series.name}: <b>${point.y}</b>'
+    },
+    plotOptions: {
             pie: {
                 allowPointSelect: true,
                 cursor: 'pointer',
@@ -86,25 +85,58 @@
             align: 'right',
             layout: 'vertical'
         },
-        series: [{
-            name: "Funding",
-            data: [{
-                name: "Lake St. Clair Metropark",
-                y: 1492500.00,
-                color: BA.ColorPicker.blue1
-            },
+   series: [{
+   	name: "Funding",
+    	data: [{
+      	name: "Enhancement",
+        y: 29077122.63,
+        color: BA.ColorPicker.blue1
+      },
+      
+      {
+      	name: "Invasives Control",
+        y: 19373310.47,
+        color: BA.ColorPicker.blue7
+      	 },
 
-                {
-                    name: "Total Invasive Control Funding",
-                    y: 27624307.78,
-                    color: BA.ColorPicker.blue7
-                }
+         {
+        name: "Hydrologic Restoration",
+        y: 13868140.17,
+        color: BA.ColorPicker.blue2
+         },
 
-            ]
+         {
+        name: "Protection",
+        y: 20461607.17,
+        color: BA.ColorPicker.blue6
+         },
 
-        }]
+         {
+        name: "Restoration",
+        y: 26198441.91,
+        color: BA.ColorPicker.blue3
+         },
 
-    });
-</script>
+               {
+        name: "Shoreline Softening",
+        y: 1764300.00,
+        color: BA.ColorPicker.blue5
+         },
+
+           {
+        name: "Combined",
+        y: 34792263.03,
+        color: BA.ColorPicker.blue4
+         },
+
+
+      
+     ]
+     
+   }]
+  
+});
+
+</script> 
 </body>
 </html>
