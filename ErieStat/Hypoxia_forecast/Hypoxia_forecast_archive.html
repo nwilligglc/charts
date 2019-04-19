@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lake Erie Hypoxia Forecast Archive</title>
+    <script rel="script" src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <script
+            src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"
+            integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E="
+            crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="https://www.glerl.noaa.gov/images/favicon.ico" />
+    <link rel="stylesheet" href="https://www.glerl.noaa.gov/js/jqueryui/jquery-ui.css" />
+    <link rel="stylesheet" href="https://www.glerl.noaa.gov/js/jqueryui/jquery-ui.structure.css" />
+    <link rel="stylesheet" href="https://www.glerl.noaa.gov/js/jqueryui/jquery-ui.theme.css" />
+    <style>
+        .centeredContent {
+            margin: auto;
+        }
+        #changeMapButtonSet {
+            text-align: center;
+        }
+        body{
+            font-family: "Montserrat", sans-serif;
+        }
+        #mainContainer
+        {
+            width: 1310px;
+            height: 1300px;
+            background-color: #FFFFFF;
+            color: #000000;
+            border: 1px solid #00AAFF;
+            text-align: left;
+            position: relative;
+            margin: 0px auto;
+            padding: 5px;
+        }
+
+        #dTip
+        {
+            position: absolute;
+            display: none;
+            top: 0px;
+            left: 0px;
+            width: 240px;
+            height: 100px;
+            z-index: 99;
+            color: #000000;
+            background-color: #FFFFFF;
+            border: 1px solid #00AAFF;
+            text-align: left;
+            padding: 5px;
+            font-family: "Arial", sans-serif;
+            font-size: 12px;
+        }
+
+        #titleBox
+        {
+            position: relative;
+            font-size: 20px;
+            font-weight: bold;
+            font-family: "Arial", sans-serif;
+        }
+
+
+        #tHead
+        {
+            background-color: #DEEBFC;
+        }
+
+        #tr1
+        {
+            background-color: #a1bee6;
+        }
+
+        #tr2
+        {
+            background-color: #C2DCFF;
+        }
+
+        #habsLoopButtonSet
+        {
+            position: relative;
+            width: auto;
+            height: 32px;
+            z-index: 99;
+        }
+
+        .loopManip, .displaceManip{
+            padding: 5px;
+            margin: 0px;
+        }
+
+        #habsLoopSlider
+        {
+            position: relative;
+            width: 100%;
+            background-color: #0080AA;
+        }
+
+        #habsCastSelector
+        {
+            position: absolute;
+            top: 570px;
+            left: 200px;
+            z-index: 99;
+        }
+
+        #wleMapMicrocystin
+        {
+            position: relative;
+        }
+
+        #mapDir
+        {
+            position: relative;
+        }
+
+        #chartTitle
+        {
+            position: absolute;
+            left: 670px;
+            top: 1050px;
+            color: #000000;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .chartBox
+        {
+            display: none;
+            position: absolute;
+            z-index: 98;
+            width: 300px;
+            height: 200px;
+            background-color: #FFFFFF;
+            border: 1px solid #006699;
+            background-image: url('graphics/chartLogoBack.jpg');
+            background-repeat: no-repeat;
+        }
+
+        /* charts */
+
+        .chartedData
+        {
+            position: relative;
+            width: 100%;
+            height: 320px;
+            background-color: #FFFFFF;
+            border: 1px solid #000000;
+            background-image: url('graphics/chartLogoBack.jpg');
+            background-repeat: no-repeat;
+        }
+
+        #currentsBox
+        {
+            position: relative;
+            height: 720px;
+            padding: 0px;
+        }
+
+        #tempProfileBox, #waveBox
+        {
+            position: relative;
+            height: 400px;
+            padding: 0px;
+            text-align: center;
+        }
+
+        #currentsLegend, #waveLegend, #tempProfileLegend
+        {
+            position: absolute;
+            bottom: 5px;
+            left: 10px;
+        }
+
+        #dTipTempProfile
+        {
+            position: absolute;
+            display: none;
+            top: 0px;
+            left: 0px;
+            width: 240px;
+            height: 240px;
+            z-index: 99;
+            color: #000000;
+            background-color: #FFFFFF;
+            border: 1px solid #00AAFF;
+            text-align: left;
+            padding: 5px;
+            font-size: 12px;
+        }
+
+        #c1Loop, #c2Loop, #c3Loop, #m1Loop, #m2Loop, #m3Loop
+        {
+            position: relative;
+            border: none;
+            background-color: #FFFFFF;
+            /*background-image: url(images/habtracker_background.png);*/
+            /*background-size: 460px 460px;*/
+            overflow: hidden;
+            width: 760px;
+        }
+
+        #c1LoopBox, #c2LoopBox, #c3LoopBox, #m1LoopBox, #m2LoopBox, #m3LoopBox
+        {
+            position: relative;
+            border: none;
+            background-color: #FFFFFF;
+            /*background-image: url(images/habtracker_background.png);*/
+            /*background-size: 460px 460px;*/
+            overflow: hidden;
+            width: 760px;
+            padding: 0px;
+        }
+
+        #xcLoop
+        {
+            position: relative;
+            border: none;
+            background-color: #FFFFFF;
+            /*background-image: url(images/habtracker_background.png);*/
+            /*background-size: 460px 460px;*/
+            overflow: hidden;
+            height: 760px;
+        }
+
+        #changeMapButtonSet, #mapButtonSet
+        {
+            position: relative;
+            width: auto;
+            height: 32px;
+            z-index: 99;
+        }
+
+        .loopManip, .displaceManip, .cLoopManip{
+            padding: 5px;
+            margin: 0px;
+        }
+
+        #changeMapSlider, #mapSlider
+        {
+            position: relative;
+            width: 100%;
+            background-color: #0080AA;
+        }
+
+        #waitBox
+        {
+            color: #BB0000;
+            font-size: 18px;
+        }
+
+        .comHead{
+            padding: 0px 20px 0px 0px;
+            border-bottom: 1px dotted #FFFFFF;
+        }
+
+        .comSec
+        {
+            position: relative;
+            display: none;
+        }
+
+        #changeMapTabs, #forecastMapTabs
+        {
+            background-color: #ACD9E8;
+            width: 760px;
+        }
+        ul.breadcrumb {
+            padding: 10px 16px;
+            list-style: none;
+            background-color: #FFFFFF;
+            font-size: 12px;
+        }
+        ul.breadcrumb li {display: inline;}
+        ul.breadcrumb li+li:before {
+            padding: 8px;
+            color: #00aaff;
+            content: "/\00a0";
+        }
+        ul.breadcrumb li a {
+            color: #4e4e4e;
+            text-decoration: none;
+        }
+        ul.breadcrumb li a:hover {
+            color: #00aaff;
+            text-decoration: underline;
+        }
+
+        .tileNav{
+        }
+
+        .tileTips
+        {
+            font-family: "Arial", sans-serif;
+            font-size: 1.0em;
+        }
+        .tileCaption
+        {
+            vertical-align: top;
+            font-family: "Arial", sans-serif;
+            font-size: .9em;
+            text-align: left;
+            padding: 10px;
+        }
+        .ui-widget{
+            font-family: "Montserrat", sans-serif;
+        }
+
+    </style>
+
+    <script type="text/javascript">
+
+        var arcDateList = {
+            2018: [
+                ["2018-06-14","201816500"],
+                ["2018-06-15","201816600"],
+                ["2018-06-16","201816700"],
+                ["2018-06-17","201816800"],
+                ["2018-06-18","201816900"],
+                ["2018-06-19","201817000"],
+                ["2018-06-20","201817100"],
+                ["2018-06-21","201817200"],
+                ["2018-06-22","201817300"],
+                ["2018-06-23","201817400"],
+                ["2018-06-24","201817500"],
+                ["2018-06-25","201817600"],
+                ["2018-06-26","201817700"],
+                ["2018-06-27","201817800"],
+                ["2018-06-28","201817900"],
+                ["2018-06-29","201818000"],
+                ["2018-06-30","201818100"],
+                ["2018-07-01","201818200"],
+                ["2018-07-02","201818300"],
+                ["2018-07-03","201818400"],
+                ["2018-07-04","201818500"],
+                ["2018-07-05","201818600"],
+                ["2018-07-06","201818700"],
+                ["2018-07-07","201818800"],
+                ["2018-07-08","201818900"],
+                ["2018-07-09","201819000"],
+                ["2018-07-11","201819200"],
+                ["2018-07-12","201819300"],
+                ["2018-07-13","201819400"],
+                ["2018-07-14","201819500"],
+                ["2018-07-15","201819600"],
+                ["2018-07-16","201819700"],
+                ["2018-07-17","201819800"],
+                ["2018-07-18","201819900"],
+                ["2018-07-19","201820000"],
+                ["2018-07-20","201820100"],
+                ["2018-07-21","201820200"],
+                ["2018-07-22","201820300"],
+                ["2018-07-23","201820400"],
+                ["2018-07-24","201820500"],
+                ["2018-07-25","201820600"],
+                ["2018-07-27","201820800"],
+                ["2018-07-28","201820900"],
+                ["2018-07-29","201821000"],
+                ["2018-07-30","201821100"],
+                ["2018-07-31","201821200"],
+                ["2018-08-01","201821300"],
+                ["2018-08-02","201821400"],
+                ["2018-08-03","201821500"],
+                ["2018-08-04","201821600"],
+                ["2018-08-05","201821700"],
+                ["2018-08-06","201821800"],
+                ["2018-08-07","201821900"],
+                ["2018-08-08","201822000"],
+                ["2018-08-09","201822100"],
+                ["2018-08-10","201822200"],
+                ["2018-08-11","201822300"],
+                ["2018-08-12","201822400"],
+                ["2018-08-13","201822500"],
+                ["2018-08-14","201822600"],
+                ["2018-08-15","201822700"],
+                ["2018-08-16","201822800"],
+                ["2018-08-17","201822900"],
+                ["2018-08-18","201823000"],
+                ["2018-08-19","201823100"],
+                ["2018-08-20","201823200"],
+                ["2018-08-21","201823300"],
+                ["2018-08-22","201823400"],
+                ["2018-08-23","201823500"],
+                ["2018-08-24","201823600"],
+                ["2018-08-25","201823700"],
+                ["2018-08-26","201823800"],
+                ["2018-08-27","201823900"],
+                ["2018-08-28","201824000"],
+                ["2018-08-29","201824100"],
+                ["2018-08-30","201824200"],
+                ["2018-08-31","201824300"],
+                ["2018-09-01","201824400"],
+                ["2018-09-02","201824500"],
+                ["2018-09-03","201824600"],
+                ["2018-09-04","201824700"],
+                ["2018-09-05","201824800"],
+                ["2018-09-06","201824900"],
+                ["2018-09-07","201825000"],
+                ["2018-09-08","201825100"],
+                ["2018-09-09","201825200"],
+                ["2018-09-10","201825300"],
+                ["2018-09-11","201825400"],
+                ["2018-09-12","201825500"],
+                ["2018-09-13","201825600"],
+                ["2018-09-14","201825700"],
+                ["2018-09-15","201825800"],
+                ["2018-09-16","201825900"],
+                ["2018-09-17","201826000"],
+                ["2018-09-18","201826100"],
+                ["2018-09-19","201826200"],
+                ["2018-09-20","201826300"],
+                ["2018-09-21","201826400"],
+                ["2018-09-22","201826500"],
+                ["2018-09-23","201826600"],
+                ["2018-09-24","201826700"],
+                ["2018-09-25","201826800"],
+                ["2018-09-26","201826900"],
+                ["2018-09-27","201827000"],
+                ["2018-09-28","201827100"],
+                ["2018-09-29","201827200"],
+                ["2018-09-30","201827300"],
+                ["2018-10-01","201827400"],
+                ["2018-10-02","201827500"],
+                ["2018-10-03","201827600"],
+                ["2018-10-04","201827700"],
+                ["2018-10-05","201827800"],
+                ["2018-10-06","201827900"],
+                ["2018-10-07","201828000"],
+                ["2018-10-08","201828100"],
+                ["2018-10-09","201828200"],
+                ["2018-10-10","201828300"],
+                ["2018-10-11","201828400"],
+                ["2018-10-12","201828500"],
+                ["2018-10-13","201828600"],
+                ["2018-10-14","201828700"],
+                ["2018-10-15","201828800"],
+                ["2018-10-16","201828900"],
+                ["2018-10-17","201829000"]
+            ],
+            2017: [
+                ["2017-06-12","201716300"],
+                ["2017-06-13","201716400"],
+                ["2017-06-14","201716500"],
+                ["2017-06-15","201716600"],
+                ["2017-06-16","201716700"],
+                ["2017-06-17","201716800"],
+                ["2017-06-18","201716900"],
+                ["2017-06-19","201717000"],
+                ["2017-06-20","201717100"],
+                ["2017-06-21","201717200"],
+                ["2017-06-22","201717300"],
+                ["2017-06-23","201717400"],
+                ["2017-06-24","201717500"],
+                ["2017-06-25","201717600"],
+                ["2017-06-26","201717700"],
+                ["2017-06-27","201717800"],
+                ["2017-06-28","201717900"],
+                ["2017-06-29","201718000"],
+                ["2017-06-30","201718100"],
+                ["2017-07-01","201718200"],
+                ["2017-07-02","201718300"],
+                ["2017-07-03","201718400"],
+                ["2017-07-04","201718500"],
+                ["2017-07-05","201718600"],
+                ["2017-07-06","201718700"],
+                ["2017-07-07","201718800"],
+                ["2017-07-08","201718900"],
+                ["2017-07-09","201719000"],
+                ["2017-07-10","201719100"],
+                ["2017-07-11","201719200"],
+                ["2017-07-12","201719300"],
+                ["2017-07-13","201719400"],
+                ["2017-07-14","201719500"],
+                ["2017-07-15","201719600"],
+                ["2017-07-16","201719700"],
+                ["2017-07-17","201719800"],
+                ["2017-07-18","201719900"],
+                ["2017-07-19","201720000"],
+                ["2017-07-20","201720100"],
+                ["2017-07-21","201720200"],
+                ["2017-07-22","201720300"],
+                ["2017-07-23","201720400"],
+                ["2017-07-24","201720500"],
+                ["2017-07-25","201720600"],
+                ["2017-07-26","201720700"],
+                ["2017-07-27","201720800"],
+                ["2017-07-28","201720900"],
+                ["2017-07-29","201721000"],
+                ["2017-07-30","201721100"],
+                ["2017-07-31","201721200"],
+                ["2017-08-01","201721300"],
+                ["2017-08-02","201721400"],
+                ["2017-08-03","201721500"],
+                ["2017-08-04","201721600"],
+                ["2017-08-05","201721700"],
+                ["2017-08-06","201721800"],
+                ["2017-08-07","201721900"],
+                ["2017-08-08","201722000"],
+                ["2017-08-09","201722100"],
+                ["2017-08-10","201722200"],
+                ["2017-08-11","201722300"],
+                ["2017-08-12","201722400"],
+                ["2017-08-13","201722500"],
+                ["2017-08-14","201722600"],
+                ["2017-08-15","201722700"],
+                ["2017-08-16","201722800"],
+                ["2017-08-17","201722900"],
+                ["2017-08-18","201723000"],
+                ["2017-08-19","201723100"],
+                ["2017-08-20","201723200"],
+                ["2017-08-21","201723300"],
+                ["2017-08-22","201723400"],
+                ["2017-08-23","201723500"],
+                ["2017-08-24","201723600"],
+                ["2017-08-25","201723700"],
+                ["2017-08-26","201723800"],
+                ["2017-08-27","201723900"],
+                ["2017-08-28","201724000"],
+                ["2017-08-29","201724100"],
+                ["2017-08-30","201724200"],
+                ["2017-08-31","201724300"],
+                ["2017-09-01","201724400"],
+                ["2017-09-02","201724500"],
+                ["2017-09-03","201724600"],
+                ["2017-09-04","201724700"],
+                ["2017-09-05","201724800"],
+                ["2017-09-06","201724900"],
+                ["2017-09-07","201725000"],
+                ["2017-09-08","201725100"],
+                ["2017-09-09","201725200"],
+                ["2017-09-10","201725300"],
+                ["2017-09-11","201725400"],
+                ["2017-09-12","201725500"],
+                ["2017-09-13","201725600"],
+                ["2017-09-14","201725700"],
+                ["2017-09-15","201725800"],
+                ["2017-09-16","201725900"],
+                ["2017-09-17","201726000"],
+                ["2017-09-18","201726100"],
+                ["2017-09-19","201726200"],
+                ["2017-09-20","201726300"],
+                ["2017-09-21","201726400"],
+                ["2017-09-22","201726500"],
+                ["2017-09-23","201726600"],
+                ["2017-09-24","201726700"],
+                ["2017-09-25","201726800"],
+                ["2017-09-26","201726900"],
+                ["2017-09-27","201727000"],
+                ["2017-09-28","201727100"],
+                ["2017-09-29","201727200"],
+                ["2017-09-30","201727300"],
+                ["2017-10-01","201727400"],
+                ["2017-10-02","201727500"],
+                ["2017-10-03","201727600"],
+                ["2017-10-04","201727700"],
+                ["2017-10-05","201727800"],
+                ["2017-10-06","201727900"],
+                ["2017-10-07","201728000"],
+                ["2017-10-08","201728100"],
+                ["2017-10-09","201728200"],
+                ["2017-10-10","201728300"],
+                ["2017-10-11","201728400"],
+                ["2017-10-12","201728500"],
+                ["2017-10-13","201728600"],
+                ["2017-10-14","201728700"],
+                ["2017-10-15","201728800"],
+                ["2017-10-16","201728900"],
+                ["2017-10-17","201729000"],
+                ["2017-10-18","201729100"],
+                ["2017-10-19","201729200"],
+                ["2017-10-20","201729300"],
+                ["2017-10-21","201729400"],
+                ["2017-10-22","201729500"],
+                ["2017-10-23","201729600"],
+                ["2017-10-24","201729700"],
+                ["2017-10-25","201729800"],
+                ["2017-10-26","201729900"],
+                ["2017-10-27","201730000"],
+                ["2017-10-28","201730100"],
+                ["2017-10-29","201730200"],
+                ["2017-10-30","201730300"],
+                ["2017-10-31","201730400"]
+            ]
+        }
+
+        $.urlParam = function(name){
+            var results = new RegExp('[\\?&]' + name + '=([^&#]*)').exec(window.location.href);
+            if (results==null){
+                return null;
+            }
+            else{
+                return results[1] || 0;
+            }
+        }
+
+        var currentForecastYear = "2018";
+        var currentForecastDate = "2018-10-17";
+//        var currentForecastFolder = "201829000";
+        var currentForecastFolder = "https://www.glerl.noaa.gov/res/HABs_and_Hypoxia/data/erie-clv/hws_archive/201829000";
+
+        function initialize(){
+            $('#changeMapTabs').tabs();
+
+            for(var cd = arcDateList[currentForecastYear].length-1; cd >= 0; cd--){
+                $('#arcDateOps').append('<option value="' + arcDateList[currentForecastYear][cd][1] + '">' + arcDateList[currentForecastYear][cd][0] + '</option>\n');
+            }
+
+            var urlForecastFolder = $.urlParam('forecast');
+            if(urlForecastFolder !== null){
+                currentForecastFolder = urlForecastFolder;
+                for(var k = 0; k < arcDateList[currentForecastYear].length; k++){
+                    if(arcDateList[currentForecastYear][k][1] === currentForecastFolder){
+                        currentForecastDate = arcDateList[currentForecastYear][k][0];
+                        break;
+                    }
+                }
+                currentForecastYear = currentForecastFolder.substring(0,4);
+                $('#mainURL').prop('href', 'hypoxiaWarningSystem.html?forecast='+currentForecastFolder)
+
+                $('#arcDateOps').empty();
+                for(var cd = arcDateList[currentForecastYear].length-1; cd >= 0; cd--){
+                    $('#arcDateOps').append('<option value="' + arcDateList[currentForecastYear][cd][1] + '">' + arcDateList[currentForecastYear][cd][0] + '</option>\n');
+                }
+
+                imageDirAndPrefix_c1 = currentForecastFolder+'/change_map_1_';
+                imageDirAndPrefix_c2 = currentForecastFolder+'/change_map_2_';
+                imageDirAndPrefix_c3 = currentForecastFolder+'/change_map_3_';
+
+                $('#arcDate').html(currentForecastDate)
+                $('#arcYearOps').val(currentForecastYear);
+                $('#arcDateOps').val(currentForecastFolder);
+
+                loadImages();
+            }
+
+            $('#arcYearOps').change(function(e){
+
+                currentForecastYear = $('#arcYearOps').val();
+                if(currentForecastYear == 2018) {
+                    currentForecastFolder = "https://www.glerl.noaa.gov/res/HABs_and_Hypoxia/data/erie-clv/hws_archive/201829000";
+                }
+                else if (currentForecastYear == 2017) {
+                    currentForecastFolder = "https://www.glerl.noaa.gov/res/HABs_and_Hypoxia/data/erie-clv/hws_archive/201730300";
+                }
+                else {
+                    console.log("Data not available for selected year.")
+                }
+
+                $('#arcDateOps').empty();
+
+                for(var cd = arcDateList[currentForecastYear].length-1; cd >= 0; cd--){
+                    $('#arcDateOps').append('<option value="' + arcDateList[currentForecastYear][cd][1] + '">' + arcDateList[currentForecastYear][cd][0] + '</option>\n');
+                }
+
+            });
+
+
+            $('#arcDateOps').change(function(e){
+
+                clearInterval(cjsTimer);
+
+                $('#'+animationContainerID_c1).children().remove('.loopFrame_c1');
+                $('#'+animationContainerID_c2).children().remove('.loopFrame_c2');
+                $('#'+animationContainerID_c3).children().remove('.loopFrame_c3');
+
+//                currentForecastFolder = $('#arcDateOps').val();
+                currentForecastYear = currentForecastFolder.split("/").slice(-1)[0].substring(0,4);
+
+                for(var k = 0; k < arcDateList[currentForecastYear].length; k++){
+                    if(arcDateList[currentForecastYear][k][1] === currentForecastFolder){
+                        currentForecastDate = arcDateList[currentForecastYear][k][0];
+                        break;
+                    }
+                }
+                $('#arcDate').html(currentForecastDate);
+
+                imageDirAndPrefix_c1 = currentForecastFolder+'/change_map_1_';
+                imageDirAndPrefix_c2 = currentForecastFolder+'/change_map_2_';
+                imageDirAndPrefix_c3 = currentForecastFolder+'/change_map_3_';
+
+                $('#mainURL').prop('href', 'hypoxiaWarningSystem.html?forecast='+currentForecastFolder)
+
+                loadImages();
+            });
+
+            if(urlForecastFolder === null){
+                $('#arcDate').html(currentForecastDate)
+                $('#arcYearOps').val(currentForecastYear);
+                $('#arcDateOps').val(currentForecastFolder);
+                loadImages();
+            }
+        }
+
+    </script>
+    <script type="text/javascript" src="anim4P_hws_change_archive.js"></script>
+</head>
+<body onload="initialize(null);">
+<div class="centeredContent">
+    <h1>ARCHIVED forecast <em>change</em> in bottom temperature and dissolved oxygen</h1>
+    <h2>Forecast date: <span id="arcDate"></span></h2>
+</div>
+
+<label for="arcYearOps">Select different forecast year</label>
+<select name="arcYearOps" id="arcYearOps">
+    <option value="2018">2018</option>
+    <option value="2017">2017</option>
+</select>
+<label for="arcDateOps">Select different forecast date: </label>
+<select name="arcDateOps" id="arcDateOps">
+</select> <br /><br />
+
+<div id="changeMapTabs" class="centeredContent">
+    <ul>
+        <li><a href="#c1LoopBox">Lake Erie</a></li>
+        <li><a href="#c2LoopBox">SW Erie</a></li>
+        <li><a href="#c3LoopBox">SE Erie</a></li>
+    </ul>
+    <div id="c1LoopBox">
+        <div class="centeredContent tileNav" id='c1Loop'>
+        </div>
+    </div>
+    <div id="c2LoopBox">
+        <div class="centeredContent tileNav" id="c2Loop">
+        </div>
+    </div>
+    <div id="c3LoopBox">
+        <div class="centeredContent tileNav" id="c3Loop">
+        </div>
+    </div>
+</div>
+
+<div class="centeredContent">
+    <div id="changeMapSlider"></div>
+    <div id="changeMapButtonSet">
+        <button class="cLoopManip" title="First" id="firstFrameButton">&lt;&lt;</button>
+        <button class="cLoopManip" title="Previous" id="prevFrameButton">&lt;</button>
+        <button class="cLoopManip" title="Pause" id="pauseButton">||</button>
+        <button class="cLoopManip" title="Play" id="playButton">&#9658;</button>
+        <button class="cLoopManip" title="Next" id="nextFrameButton">&gt;</button>
+        <button class="cLoopManip" title="Last" id="lastFrameButton">&gt;&gt;</button>
+    </div>
+</div>
+
+</body>
+</html>
