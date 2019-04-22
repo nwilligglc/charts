@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->  <!--<![endif]-->
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Lake Erie HAB Tracker Archive: NOAA Great Lakes Environmental Research Laboratory
+            - Ann Arbor, MI, USA</title>
+        <meta name="description" content="Information from NOAA-GLERL">
+        <meta name="viewport" content="width=device-width, user-scalable=1">
+		<!--<link rel="stylesheet" type="text/css" href="http://www.glerl.noaa.gov/fmt/glerlCSS.css" />-->
+		<style type="text/css">
+			#mainContainer
+			{
+				width: 1310px;
+				height: 1300px;
+				background-color: #FFFFFF;
+				color: #000000;
+				border: 1px solid #00AAFF;
+				text-align: left;
+				position: relative;
+				margin: 0px auto;
+				padding: 5px;
+			}
+
+			#dTip
+			{
+				position: absolute;
+				display: none;
+				top: 0px;
+				left: 0px;
+				width: 240px;
+				height: 100px;
+				z-index: 99;
+				color: #000000;
+				background-color: #FFFFFF;
+				border: 1px solid #00AAFF;
+				text-align: left;
+				padding: 5px;
+				/*font-family: "Arial", sans-serif;*/
+				font-size: 12px;
+			}
+
+			#titleBox
+			{
+				position: relative;
+				font-weight: bold;
+				/*font-family: "Arial", sans-serif;*/
+			}
+
+			#lakeGaugeTable
+			{
+				border: 1px solid #5c85be;
+				border-collapse: collapse;
+			}
+
+			#tHead
+			{
+				background-color: #DEEBFC;
+			}
+
+			#tr1
+			{
+				background-color: #a1bee6;
+			}
+
+			#tr2
+			{
+				background-color: #C2DCFF;
+			}
+
+			#glcfsSurfCurr
+			{
+				position: absolute;
+				top: 50px;
+				right: 5px;
+			}
+
+			#glcfsAnimationLink
+			{
+				position: absolute;
+				top: 415px;
+				left: 670px;
+				background-color: #FFFFFF;
+				color: #000000;
+				height: 20px;
+				width: 100px;
+				padding: 5px;
+				border: 1px dashed #000000;
+			}
+
+
+
+
+
+			.habsCast
+			{
+				position: relative;
+			}
+
+			#habsMonitor
+			{
+				position: relative;
+				width: 1147px;
+				height: 907px;
+				margin: 0px auto;
+			}
+
+			#habsNowCast
+			{
+				position: relative;
+			}
+
+			#habsNowCastCap
+			{
+				position: relative;
+
+			}
+
+
+			#habsLoop
+			{
+				position: relative;
+				border: 1px solid #00AAFF;
+                background-color: #FFFFFF;
+				background-image: url(https://www.glerl.noaa.gov/res/HABs_and_Hypoxia/images/habtracker_background.png);
+				background-size: 460px 363px;
+				overflow: hidden;
+			}
+			
+			#windLoop
+			{
+				position: relative;
+				border: 1px solid #00AAFF;
+                background-color: #FFFFFF;
+				background-image: url(https://www.glerl.noaa.gov/res/HABs_and_Hypoxia/images/ewn_spacer.gif);
+				background-size: 460px 363px;
+				overflow: hidden;
+			}
+			
+			#waveLoop
+			{
+				position: relative;
+				border: 1px solid #00AAFF;
+                background-color: #FFFFFF;
+				background-image: url(https://www.glerl.noaa.gov/res/HABs_and_Hypoxia/images/ewv_spacer.gif);
+				background-size: 460px 363px;
+				overflow: hidden;
+			}
+
+			#lastGoodMODIS
+			{
+				position: relative;
+			}
+
+			#lastGoodMODISTS
+			{
+				position: relative;
+			}
+
+
+			#modis
+			{
+				position: relative;
+			}
+
+			#modisTS
+			{
+				position: relative;
+			}
+
+			#habsLoopButtonSet
+			{
+				position: relative;
+				width: auto;
+				height: 32px;
+				z-index: 99;
+			}
+
+			.loopManip, .displaceManip{
+				padding: 5px;
+				margin: 0px;
+			}
+
+			#habsLoopSlider
+			{
+				position: relative;
+				width: 99%;
+				background-color: #0080AA;
+			}
+
+			#habsCastSelector
+			{
+				position: absolute;
+				top: 570px;
+				left: 200px;
+				z-index: 99;
+			}
+
+			#MCofWLE
+			{
+				position: relative;
+				margin: 0px auto;
+				text-align: center;
+			}
+
+			#wleMapMicrocystin
+			{
+				position: relative;
+			}
+
+			#mapDir
+			{
+				position: relative;
+			}
+
+			#chartTitle
+			{
+				position: absolute;
+				left: 670px;
+				top: 1050px;
+				color: #000000;
+				font-size: 16px;
+				font-weight: bold;
+			}
+
+			.chartBox
+			{
+				display: none;
+				position: absolute;
+				z-index: 98;
+				width: 300px;
+				height: 200px;
+				background-color: #FFFFFF;
+				border: 1px solid #006699;
+				background-image: url('graphics/chartLogoBack.jpg');
+				background-repeat: no-repeat;
+			}
+
+			.WEColumn
+			{
+				width: 647px;
+			}
+
+			#otherWEData
+			{
+				position: relative;
+				width: 100%;
+			}
+
+			#otherWE8Data
+			{
+				position: absolute;
+				top: 5px;
+				right: 5px;
+			}
+
+			#otherWE4Data
+			{
+				position: absolute;
+				top: 5px;
+				left: 5px;
+			}
+
+			.otherWETitle
+			{
+				text-align: center;
+			}
+
+			.mooringChart
+			{
+				width: 100%;
+				height: 200px;
+				border: 1px solid #CCCCCC;
+                background-image: url('graphics/chartLogoBack.jpg');
+				background-repeat: no-repeat;
+			}
+
+			.displacementCast
+			{
+				cursor: pointer;
+			}
+			
+			.dataDisclaimer
+			{
+				position: relative;
+				padding: 10px; 
+				width: 90%; 
+				margin: 10px auto; 
+				text-align: left;
+				font-size: 0.8em;
+			}
+			
+			.closex
+			{
+				position: absolute;
+				top: 5px;
+				right: 5px;
+				text-decoration: underline;
+				font-size: 1.4em;
+				font-weight: bold;
+				width: auto;
+				cursor: pointer;
+			}
+
+		</style>
+
+                <!-- BEGIN BASE LIBRARIES -->
+
+		<!--<link rel="shortcut icon" href="/images/favicon.ico" />-->
+		<!--<link rel="stylesheet" href="/css/normalize.css" />-->
+		<!--<link rel="stylesheet" href="/css/main.css" />-->
+		<!--<script src="/js/jquery/jquery.min.js"></script>-->
+		<!--<script src="/js/jquery-mobile/jquery.mobile.min.js"></script>
+		<script src="/js/jquery-mobile-datebox/jqm-datebox.core.min.js">            
+		</script>-->
+        <script rel="script" src="https://code.jquery.com/jquery-3.1.1.js"></script>
+        <link rel="stylesheet" href="https://www.glerl.noaa.gov/js/jqueryui/jquery-ui.css" />
+		<link rel="stylesheet" href="https://www.glerl.noaa.gov/js/jqueryui/jquery-ui.structure.css" />
+		<link rel="stylesheet" href="https://www.glerl.noaa.gov/js/jqueryui/jquery-ui.theme.css" />
+		<script src="https://www.glerl.noaa.gov/js/jqueryui/jquery-ui.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/3.6.2/iframeResizer.contentWindow.min.js"></script>
+
+		<!--<script type="text/javascript" src="/js/dygraph210.min.js"></script>	-->
+		<!--<link rel="stylesheet" href="/css/dygraph.css" />-->
+		<!--<script src="/js/plugins.js"></script>-->
+		<!--<script src="/js/main.js"></script>-->
+                <!-- END BASE LIBRARIES -->
+
+		<!-- BEGIN ADDITIONAL PAGE SPECIFIC LIBRARIES -->
+		
+		<style>
+            body{
+                font-family: "Montserrat", sans-serif;
+            }
+            .centeredContent {
+                margin: auto;
+            }
+			.centeredContent table {
+				margin:auto;
+			}
+            #habsLoopButtonSet {
+                text-align: center;
+            }
+			ul.breadcrumb {
+				padding: 10px 16px;
+				list-style: none;
+				background-color: #FFFFFF;
+				font-size: 12px;
+			}
+			ul.breadcrumb li {display: inline;}
+			ul.breadcrumb li+li:before {
+				padding: 8px;
+				color: #00aaff;
+				content: "/\00a0";
+			}
+			ul.breadcrumb li a {
+				color: #4e4e4e;
+				text-decoration: none;
+			}
+			ul.breadcrumb li a:hover {
+				color: #00aaff;
+				text-decoration: underline;
+			}
+			
+			.tileNav{
+			}
+			
+			.tileTips
+			{
+				/*font-family: "Arial", sans-serif;*/
+				font-size: 1.0em;
+			}
+			.tileCaption 
+			{
+    			vertical-align: top;
+				/*font-family: "Arial", sans-serif;*/
+				font-size: .9em;
+				text-align: left;
+				padding: 10px;
+			}
+            .ui-widget{
+                font-family: "Montserrat", sans-serif;
+            }
+			
+		</style>
+
+		
+		<script type="text/javascript">
+		
+			var arcDateList = {
+				2017: [
+					["2017-06-25","201717616"],
+					["2017-06-26","201717717"],
+					["2017-06-27","201717800"],
+					["2017-06-28","201717900"],
+					["2017-06-29","201718000"],
+					["2017-06-30","201718100"],
+					["2017-07-01","201718200"],
+					["2017-07-02","201718300"],
+					["2017-07-03","201718400"],
+					["2017-07-04","201718517"],
+					["2017-07-05","201718600"],
+					["2017-07-06","201718700"],
+					["2017-07-07","201718800"],
+					["2017-07-08","201718900"],
+					["2017-07-09","201719017"],
+					["2017-07-10","201719100"],
+					["2017-07-11","201719200"],
+					["2017-07-12","201719300"],
+					["2017-07-13","201719400"],
+					["2017-07-14","201719500"],
+					["2017-07-15","201719617"],
+					["2017-07-16","201719700"],
+					["2017-07-17","201719817"],
+					["2017-07-18","201719917"],
+					["2017-07-19","201720017"],
+					["2017-07-20","201720100"],
+					["2017-07-21","201720217"],
+					["2017-07-22","201720300"],
+					["2017-07-23","201720400"],
+					["2017-07-24","201720500"],
+					["2017-07-25","201720617"],
+					["2017-07-26","201720700"],
+					["2017-07-27","201720817"],
+					["2017-07-28","201720900"],
+					["2017-07-29","201721000"],
+					["2017-07-30","201721117"],
+					["2017-07-31","201721217"],
+					["2017-08-01","201721317"],
+					["2017-08-02","201721417"],
+					["2017-08-03","201721517"],
+					["2017-08-04","201721600"],
+					["2017-08-05","201721717"],
+					["2017-08-06","201721800"],
+					["2017-08-07","201721917"],
+					["2017-08-08","201722017"],
+					["2017-08-09","201722100"],
+					["2017-08-10","201722217"],
+					["2017-08-11","201722300"],
+					["2017-08-12","201722400"],
+					["2017-08-13","201722500"],
+					["2017-08-14","201722617"],
+					["2017-08-15","201722717"],
+					["2017-08-16","201722817"],
+					["2017-08-17","201722900"],
+					["2017-08-18","201723000"],
+					["2017-08-19","201723100"],
+					["2017-08-20","201723217"],
+					["2017-08-21","201723317"],
+					["2017-08-22","201723400"],
+					["2017-08-23","201723517"],
+					["2017-08-24","201723617"],
+					["2017-08-25","201723700"],
+					["2017-08-26","201723815"],
+					["2017-08-27","201723900"],
+					["2017-08-28","201724000"],
+					["2017-08-29","201724100"],
+					["2017-08-30","201724217"],
+					["2017-08-31","201724300"],
+					["2017-09-01","201724400"],
+					["2017-09-02","201724500"],
+					["2017-09-03","201724617"],
+					["2017-09-04","201724700"],
+					["2017-09-05","201724817"],
+					["2017-09-06","201724900"],
+					["2017-09-07","201725017"],
+					["2017-09-08","201725100"],
+					["2017-09-09","201725200"],
+					["2017-09-10","201725317"],
+					["2017-09-11","201725417"],
+					["2017-09-12","201725500"],
+					["2017-09-13","201725600"],
+					["2017-09-14","201725717"],
+					["2017-09-15","201725817"],
+					["2017-09-16","201725900"],
+					["2017-09-17","201726017"],
+					["2017-09-18","201726100"],
+					["2017-09-19","201726200"],
+					["2017-09-20","201726317"],
+					["2017-09-21","201726400"],
+					["2017-09-22","201726500"],
+					["2017-09-23","201726600"],
+					["2017-09-24","201726717"],
+					["2017-09-25","201726817"],
+					["2017-09-26","201726917"],
+					["2017-09-27","201727000"],
+					["2017-09-28","201727100"],
+					["2017-09-29","201727200"],
+					["2017-09-30","201727300"],
+					["2017-10-01","201727417"],
+					["2017-10-02","201727517"],
+					["2017-10-03","201727617"],
+					["2017-10-04","201727700"],
+					["2017-10-05","201727817"],
+					["2017-10-06","201727900"],
+					["2017-10-07","201728000"],
+					["2017-10-08","201728117"],
+					["2017-10-09","201728200"],
+					["2017-10-10","201728300"],
+					["2017-10-11","201728400"],
+					["2017-10-12","201728500"],
+					["2017-10-13","201728617"],
+					["2017-10-14","201728700"],
+					["2017-10-15","201728800"],
+					["2017-10-16","201728917"],
+					["2017-10-17","201729017"],
+					["2017-10-18","201729117"],
+					["2017-10-19","201729217"],
+					["2017-10-20","201729300"],
+					["2017-10-21","201729400"],
+					["2017-10-22","201729517"],
+					["2017-10-23","201729600"],
+					["2017-10-24","201729700"],
+					["2017-10-25","201729800"],
+					["2017-10-26","201729917"],
+					["2017-10-27","201730000"],
+					["2017-10-28","201730100"],
+					["2017-10-29","201730217"],
+					["2017-10-30","201730300"],
+					["2017-10-31","201730400"],
+					["2017-11-01","201730517"],
+					["2017-11-02","201730600"],
+					["2017-11-03","201730700"]
+				],
+				2018: [
+					["2018-06-26","201817717"],
+					["2018-06-28","201817917"],
+					["2018-06-29","201818000"],
+					["2018-06-30","201818117"],
+					["2018-07-01","201818200"],
+					["2018-07-02","201818300"],
+					["2018-07-03","201818400"],
+					["2018-07-04","201818517"],
+					["2018-07-05","201818617"],
+					["2018-07-06","201818700"],
+					["2018-07-07","201818800"],
+					["2018-07-08","201818917"],
+					["2018-07-09","201819017"],
+					["2018-07-10","201819117"],
+					["2018-07-11","201819217"],
+					["2018-07-12","201819317"],
+					["2018-07-13","201819400"],
+					["2018-07-14","201819517"],
+					["2018-07-15","201819600"],
+					["2018-07-16","201819717"],
+					["2018-07-17","201819817"],
+					["2018-07-18","201819917"],
+					["2018-07-19","201820017"],
+					["2018-07-20","201820117"],
+					["2018-07-21","201820200"],
+					["2018-07-22","201820300"],
+					["2018-07-23","201820417"],
+					["2018-07-24","201820517"],
+					["2018-07-25","201820617"],
+					["2018-07-28","201820917"],
+					["2018-07-29","201821000"],
+					["2018-07-30","201821117"],
+					["2018-07-31","201821217"],
+					["2018-08-01","201821317"],
+					["2018-08-02","201821400"],
+					["2018-08-03","201821500"],
+					["2018-08-04","201821600"],
+					["2018-08-05","201821700"],
+					["2018-08-06","201821817"],
+					["2018-08-07","201821917"],
+					["2018-08-08","201822000"],
+					["2018-08-09","201822117"],
+					["2018-08-10","201822200"],
+					["2018-08-11","201822318"],
+					["2018-08-12","201822415"],
+					["2018-08-13","201822517"],
+					["2018-08-14","201822617"],
+					["2018-08-15","201822700"],
+					["2018-08-16","201822817"],
+					["2018-08-17","201822900"],
+					["2018-08-18","201823017"],
+					["2018-08-19","201823100"],
+					["2018-08-20","201823217"],
+					["2018-08-21","201823317"],
+					["2018-08-22","201823400"],
+					["2018-08-23","201823517"],
+					["2018-08-24","201823600"],
+					["2018-08-25","201823717"],
+					["2018-08-26","201823800"],
+					["2018-08-27","201823917"],
+					["2018-08-28","201824017"],
+					["2018-08-29","201824117"],
+					["2018-08-30","201824200"],
+					["2018-08-31","201824300"],
+					["2018-09-01","201824400"],
+					["2018-09-02","201824500"],
+					["2018-09-03","201824615"],
+					["2018-09-04","201824717"],
+					["2018-09-05","201824817"],
+					["2018-09-06","201824917"],
+					["2018-09-07","201825017"],
+					["2018-09-08","201825100"],
+					["2018-09-09","201825200"],
+					["2018-09-10","201825300"],
+					["2018-09-11","201825417"],
+					["2018-09-12","201825500"],
+					["2018-09-13","201825617"],
+					["2018-09-14","201825700"],
+					["2018-09-15","201825817"],
+					["2018-09-16","201825900"],
+					["2018-09-17","201826000"],
+					["2018-09-21","201826415"],
+					["2018-09-22","201826500"],
+					["2018-09-23","201826600"],
+					["2018-09-24","201826700"],
+					["2018-09-25","201826800"],
+					["2018-09-26","201826916"],
+					["2018-09-27","201827000"],
+					["2018-09-28","201827100"],
+					["2018-09-29","201827200"],
+					["2018-09-30","201827317"],
+					["2018-10-01","201827400"],
+					["2018-10-02","201827500"],
+					["2018-10-03","201827617"],
+					["2018-10-04","201827700"],
+					["2018-10-05","201827800"],
+					["2018-10-06","201827900"],
+					["2018-10-07","201828017"],
+					["2018-10-08","201828100"],
+					["2018-10-09","201828217"],
+					["2018-10-10","201828317"],
+					["2018-10-11","201828417"],
+					["2018-10-12","201828500"],
+					["2018-10-13","201828600"],
+					["2018-10-14","201828717"],
+					["2018-10-15","201828817"],
+					["2018-10-16","201828917"],
+					["2018-10-17","201829017"]
+				]
+			};
+		
+			//var arcDateList = [
+				///["2016-06-27","201617900"],
+				///["2016-06-28","201618000"],
+				///["2016-06-29","201618100"],
+				///["2016-06-30","201618200"],
+				///["2016-07-01","201618300"],
+				///["2016-07-02","201618400"],
+				///["2016-07-03","201618500"],
+				///["2016-07-04","201618600"],
+				///["2016-07-05","201618700"],
+				///["2016-07-06","201618800"],
+				///["2016-07-07","201618900"],
+				///["2016-07-08","201619000"],
+				///["2016-07-09","201619100"],
+				///["2016-07-10","201619200"],
+				///["2016-07-11","201619300"],
+				///["2016-07-12","201619400"],
+				///["2016-07-13","201619518"],
+				///["2016-07-14","201619600"],
+				///["2016-07-15","201619716"],
+				///["2016-07-16","201619800"],
+				///["2016-07-17","201619900"],
+				///["2016-07-18","201620000"],
+				///["2016-07-19","201620100"],
+				///["2016-07-20","201620217"],
+				///["2016-07-21","201620300"],
+				///["2016-07-22","201620400"],
+				///["2016-07-23","201620517"],
+				///["2016-07-24","201620600"],
+				///["2016-07-25","201620700"],
+				///["2016-07-26","201620800"],
+				///["2016-07-27","201620917"],
+				///["2016-07-28","201621000"],
+				///["2016-07-29","201621100"],
+				///["2016-07-30","201621200"],
+				///["2016-07-31","201621317"],
+				///["2016-08-01","201621400"],
+				///["2016-08-02","201621500"],
+				///["2016-08-03","201621617"],
+				///["2016-08-04","201621700"],
+				///["2016-08-05","201621800"],
+				///["2016-08-06","201621900"],
+				///["2016-08-07","201622017"],
+				///["2016-08-08","201622100"],
+				///["2016-08-09","201622200"],
+				///["2016-08-10","201622317"],
+				///["2016-08-11","201622417"],
+				///["2016-08-12","201622500"],
+				///["2016-08-13","201622600"],
+				///["2016-08-14","201622700"],
+				///["2016-08-15","201622800"],
+				///["2016-08-16","201622900"],
+				///["2016-08-17","201623000"],
+				///["2016-08-18","201623117"],
+				///["2016-08-19","201623200"],
+				///["2016-08-20","201623300"],
+				///["2016-08-21","201623400"],
+				///["2016-08-22","201623517"],
+				///["2016-08-23","201623617"],
+				///["2016-08-24","201623700"],
+				///["2016-08-25","201623800"],
+				///["2016-08-26","201623917"],
+				///["2016-08-27","201624000"],
+				///["2016-08-28","201624100"],
+				///["2016-08-29","201624217"],
+				///["2016-08-30","201624300"],
+				///["2016-08-31","201624400"],
+				///["2016-09-01","201624500"],
+				///["2016-09-02","201624600"],
+				///["2016-09-03","201624700"],
+				///["2016-09-04","201624817"],
+				///["2016-09-05","201624900"],
+				///["2016-09-06","201625000"],
+				///["2016-09-07","201625117"],
+				///["2016-09-08","201625200"],
+				///["2016-09-09","201625300"],
+				///["2016-09-10","201625400"],
+				///["2016-09-11","201625517"],
+				///["2016-09-12","201625617"],
+				///["2016-09-13","201625700"],
+				///["2016-09-14","201625800"],
+				///["2016-09-15","201625900"],
+				///["2016-09-16","201626000"],
+				///["2016-09-17","201626100"],
+				///["2016-09-18","201626217"],
+				///["2016-09-19","201626300"],
+				///["2016-09-20","201626417"],
+				///["2016-09-21","201626500"],
+				///["2016-09-22","201626617"],
+				///["2016-09-23","201626700"],
+				///["2016-09-24","201626800"],
+				///["2016-09-25","201626900"],
+				///["2016-09-26","201627000"],
+				///["2016-09-27","201627117"],
+				///["2016-09-28","201627200"],
+				///["2016-09-29","201627300"],
+				///["2016-09-30","201627400"],
+				///["2016-10-01","201627500"],
+				///["2016-10-02","201627617"],
+				///["2016-10-03","201627700"],
+				///["2016-10-04","201627800"],
+				///["2016-10-05","201627900"],
+				///["2016-10-06","201628017"],
+				///["2016-10-07","201628100"],
+				///["2016-10-08","201628200"],
+				///["2016-10-09","201628317"],
+				///["2016-10-10","201628400"],
+				///["2016-10-11","201628500"],
+				///["2016-10-12","201628600"],
+				///["2016-10-13","201628700"],
+				///["2016-10-14","201628800"],
+				///["2016-10-15","201628900"],
+				///["2016-10-16","201629000"],
+				///["2016-10-17","201629100"],
+				///["2016-10-18","201629200"],
+				///["2016-10-19","201629300"],
+				///["2016-10-20","201629400"],
+				///["2016-10-21","201629500"],
+				///["2016-10-22","201629600"],
+				///["2016-10-23","201629700"],
+				///["2016-10-24","201629800"],
+				//["2017-06-03","201715415"],
+				//["2017-06-19","201717000"],
+				
+			//];
+			
+			var currentForecastYear = "2018";
+			var currentForecastDate = "2018-10-17";
+//			var currentForecastFolder = "201829017";
+            var currentForecastFolder = "https://www.glerl.noaa.gov/res/HABs_and_Hypoxia/data/habsTracker/archive/201829017";
+
+			function init_habTracker(){
+			
+				//$(".closex").click(function(e){
+				//	$(this).parent().parent().parent().parent().parent().fadeOut(100);
+				//});
+				
+				$(".closex").click(function(e){
+					$(this).parent().fadeOut(100);
+				});
+							
+				for(var cd = arcDateList[currentForecastYear].length-1; cd >= 0; cd--){
+					$('#arcDateOps').append('<option value="' + arcDateList[currentForecastYear][cd][1] + '">' + arcDateList[currentForecastYear][cd][0] + '</option>\n');
+				}	
+
+				$('#arcDate').html(currentForecastDate);
+				$('#arcYearOps').val(currentForecastYear);
+				$('#arcDateOps').val(currentForecastFolder);
+				
+				// Images
+				
+				$('#mSamplMap').prop('src', currentForecastFolder+'/microcystin_stationMap.png');
+				$('#lastGoodMODIS').prop('src', currentForecastFolder+'/modis.jpg');
+				$('#habsNowCast').prop('src', currentForecastFolder+'/habanalysis.png');
+				$('#depthTimePlot').prop('src', currentForecastFolder+'/depth-time_WE2.png');
+				$('#vpStationMap').prop('src', currentForecastFolder+'/1D_stationMap.png');
+				$('#tempProfile').prop('src', currentForecastFolder+'/1D_WE2_TempProfile.png');
+				$('#concProfile').prop('src', currentForecastFolder+'/1D_WE2_concProfile.png');
+				
+				$('.mapPoint').click(function(){
+					var targetLoc = $(this).attr('id').split('_')[0];
+					$('#concProfile').prop('src', currentForecastFolder+'/1D_' + targetLoc + '_concProfile.png');
+					$('#tempProfile').prop('src', currentForecastFolder+'/1D_' + targetLoc + '_TempProfile.png');
+					$('#depthTimePlot').prop('src', currentForecastFolder+'/depth-time_' + targetLoc + '.png');
+				});
+				
+				$('#arcYearOps').change(function(e){
+				
+					currentForecastYear = $('#arcYearOps').val();
+                    if(currentForecastYear == 2018) {
+                        currentForecastFolder = "https://www.glerl.noaa.gov/res/HABs_and_Hypoxia/data/habsTracker/archive/201829017";
+                    }
+                    else if (currentForecastYear == 2017) {
+                        currentForecastFolder = "https://www.glerl.noaa.gov/res/HABs_and_Hypoxia/data/habsTracker/archive/201730600";
+                    }
+                    else {
+                        console.log("Data not available for selected year.")
+                    }
+					
+					$('#arcDateOps').empty();
+					
+					for(var cd = arcDateList[currentForecastYear].length-1; cd >= 0; cd--){
+						$('#arcDateOps').append('<option value="' + arcDateList[currentForecastYear][cd][1] + '">' + arcDateList[currentForecastYear][cd][0] + '</option>\n');
+					}	
+
+				});
+				
+				$('#arcDateOps').change(function(e){
+					clearInterval(jsTimer);
+					
+					$('#'+animationContainerID_hab).children().remove('.loopFrame_hab');
+					$('#'+animationContainerID_wnd).children().remove('.loopFrame_wnd');
+					$('#'+animationContainerID_wav).children().remove('.loopFrame_wav');
+							
+//					currentForecastFolder = $('#arcDateOps').val();
+                    currentForecastYear = currentForecastFolder.split("/").slice(-1)[0].substring(0,4);
+
+					for(var k = 0; k < arcDateList[currentForecastYear].length; k++){
+						if(arcDateList[currentForecastYear][k][1] === currentForecastFolder){
+							currentForecastDate = arcDateList[currentForecastYear][k][0];
+							break;
+						}
+					}
+					$('#arcDate').html(currentForecastDate);
+					
+					var testMCMap = new Image(460, 363);
+					testMCMap.src = currentForecastFolder+'/microcystin_stationMap.png';
+					
+					setTimeout(function(){
+						if(testMCMap.naturalHeight == 0){
+							$('#mSamplMap').prop('src', 'https://www.glerl.noaa.gov/res/HABs_and_Hypoxia/data/habsTracker/archive/noMCMap.png');
+						}
+						else{
+							$('#mSamplMap').prop('src', currentForecastFolder+'/microcystin_stationMap.png');
+						}
+					}, 500);
+					
+					
+					var testMODIS = new Image(460,363);
+					testMODIS.src = currentForecastFolder+'/modis.jpg';
+					
+					setTimeout(function(){
+						if(testMODIS.naturalHeight == 0){
+							$('#lastGoodMODIS').prop('src', 'https://www.glerl.noaa.gov/res/HABs_and_Hypoxia/data/habsTracker/archive/noMODIS.png');
+						}
+						else{
+							$('#lastGoodMODIS').prop('src', currentForecastFolder+'/modis.jpg');
+						}	
+					}, 500);
+					
+					$('#habsNowCast').prop('src', currentForecastFolder+'/habanalysis.png');
+					$('#depthTimePlot').prop('src', currentForecastFolder+'/depth-time_WE2.png');
+					$('#vpStationMap').prop('src', currentForecastFolder+'/1D_stationMap.png');
+					$('#tempProfile').prop('src', currentForecastFolder+'/1D_WE2_TempProfile.png');
+					$('#concProfile').prop('src', currentForecastFolder+'/1D_WE2_concProfile.png');
+				
+					$('.mapPoint').click(function(){
+						var targetLoc = $(this).attr('id').split('_')[0];
+						$('#concProfile').prop('src', currentForecastFolder+'/1D_' + targetLoc + '_concProfile.png');
+						$('#tempProfile').prop('src', currentForecastFolder+'/1D_' + targetLoc + '_TempProfile.png');
+						$('#depthTimePlot').prop('src', currentForecastFolder+'/depth-time_' + targetLoc + '.png');
+					});
+				
+					imageDirAndPrefix_hab = currentForecastFolder+'/cast';
+					imageDirAndPrefix_wnd = currentForecastFolder+'/ewn';
+					imageDirAndPrefix_wav = currentForecastFolder+'/ewv';
+					
+					loadImages();
+				});
+
+
+			}
+		</script>
+		<script type="text/javascript" src="anim4P_archive.js"></script>
+
+        <!-- END ADDITIONAL PAGE SPECIFIC LIBRARIES -->
+				
+
+	</head>
+
+	<body onload="init_habTracker(null);loadImages(null);">
+            <div id="mainContentInner">
+                <a id='main-content'></a>
+				
+				<div class="centeredContent">								
+					<h1 id="titleBox">Experimental Lake Erie Harmful Algal Bloom (HAB) Tracker</h1>
+										
+					<h2>Forecast date: <span id="arcDate"></span></h2>	
+				</div>
+				
+				<label for="arcYearOps">Select different forecast year</label>
+				<select name="arcYearOps" id="arcYearOps">
+					<option value="2018">2018</option>
+					<option value="2017">2017</option>
+				</select>
+				<label for="arcDateOps">Select different forecast date: </label>
+				<select name="arcDateOps" id="arcDateOps">
+					<!--<option value="NOAA-GLERL">GLERL</option>-->
+				</select> <br /><br />
+				
+				<div class="centeredContent" style="border: 2px dotted #7DBD6D; padding: 10px; text-align: center;">
+					<strong><em>Note: The Lake Erie harmful algal bloom season&mdash;typically, July through September&mdash;has ended. Therefore, the Experimental HAB Tracker forecast model is no longer running. Please check back in late June, 2019.</strong><br /><br />
+					<a href="https://www.glerl.noaa.gov/res/HABs_and_Hypoxia/archive/habtracker2018.gif" target="_blank">Click here to view a retrospective animation showing the predicted surface chlorophyll concentrations estimated by the Lake Erie HAB Tracker model during the <strong>2018</strong> season.</a></em>
+				</div>
+
+				<p>
+					<em>The upper left panel below shows the HAB Tracker lake surface forecast. The other panels provide additional information on lake conditions. See <strong><a href="#Panels">panel descriptions</a></strong> below. For more information on the Experimental HAB Tracker, visit the <a href="https://www.glerl.noaa.gov/res/HABs_and_Hypoxia/habTracker_about.html" target="_blank"><strong>About the Lake Erie HAB Tracker</strong></a> page. For general information about HABs in the Great Lakes, download the <a href="https://www.glerl.noaa.gov/pubs/brochures/NOAA_HABs_in_Great_Lakes.pdf" target="_blank">fact sheet</a>. To view the latest images, refresh your browser and/or clear its cache. </em>
+				</p>
+				
+				
+				<!--<img id="glcfsSurfCurr" src="http://www.glerl.noaa.gov/res/glcfs/esfcur-00.gif" height="490" width="650" />
+				<div id="glcfsAnimationLink"><strong><a href="http://www.glerl.noaa.gov/res/glcfs/anim.php?lake=e&param=sfcur&type=f" target="_blank">See Animation</a></strong></div>-->
+				
+				<div>
+				<div class="centeredContent">					
+					
+					<table>
+						<tr>
+							<td>
+								<h3 style="text-align:center">HAB Tracker forecast</h3>
+								
+								<div class="tileNav" alt="This panel depicts the HAB Tracker 5-day forecast. The color scale indicates surface HAB concentration in terms of cyanobacterial chlorophyll-a. " id="habsLoop"></div>
+							</td>
+							<td>
+								<h3 style="text-align:center">GLCFS nowcast & 5-day wind speed forecast</h3>
+								<div class="tileNav" alt="The Great Lakes Coastal Forecasting System (GLCFS) nowcast uses observed winds from stations surrounding the lake, while the forecast uses the National Digital Forecast Database generated by the National Weather Service." id="windLoop"></div>
+							</td></tr>
+						</table>
+					
+						<div class="centeredContent">					
+					<div id="habsLoopSlider"></div>
+					<div id="habsLoopButtonSet">
+						<button class="loopManip" title="First" id="firstFrameButton">&lt;&lt;</button>
+						<button class="loopManip" title="Previous" id="prevFrameButton">&lt;</button>
+						<button class="loopManip" title="Pause" id="pauseButton">||</button>
+						<button class="loopManip" title="Play" id="playButton">&#9658;</button>
+						<button class="loopManip" title="Next" id="nextFrameButton">&gt;</button>
+						<button class="loopManip" title="Last" id="lastFrameButton">&gt;&gt;</button>
+					</div>
+				</div>
+				<table>
+				
+				<tr>
+				<td>
+								<h3 style="text-align:center">Latest reported microcystins concentrations</h3>
+								<img class="tileNav" alt="The HAB Tracker doesn't predict toxin concentrations, so the latest measurements are given here to provide context. Microcystins are the toxic compounds most commonly associated with lake Erie HABs. The symbol shape indicates the depth at which weekly sampling occurred at each monitoring station.  Surface is approximately 0.75 m deep in the water column. Symbol colors correspond with thresholds identified by the Ohio Environmental Protection Agency</a>. Microcystin concentrations exceeding the Elevated Recreational Public Health Advisory are indicated in red. Note that the HAB Tracker uses a different color scale – the HAB Tracker does not indicate toxin concentrations." style="border: 1px solid #0080FF" id="mSamplMap" src="https://www.glerl.noaa.gov/res/HABs_and_Hypoxia/data/habsTracker/habAnim/microcystin_stationMap.png" height="363" width="460" />
+							</td>
+							<td>
+								<h3 style="text-align:center">GLCFS nowcast & 5-day wave height forecast</h3>
+								<div class="tileNav" alt="The wave height forecast is produced by the Great Lakes Coastal Forecasting System (GLCFS)." id="waveLoop"></div>
+							</td>
+						</tr>
+					
+				</table>
+					
+				</div>
+			
+					<a name="Panels"></a><h2>Panel descriptions:</h2>
+					
+					<p><strong>HAB Tracker forecast</strong> - This panel depicts the HAB Tracker 5-day forecast. The color scale indicates surface HAB concentration in terms of cyanobacterial <a href="https://www.epa.gov/national-aquatic-resource-surveys/indicators-chlorophyll" target="_blank">chlorophyll-a.</a><br><br>
+
+<strong>GLCFS nowcast & 5-day wind speed forecast</strong> - The <a href="https://www.glerl.noaa.gov/res/glcfs/glcfs.php?lake=e&ext=wn&type=F&hr=00" target="_blank">Great Lakes Coastal Forecasting System (GLCFS)</a> nowcast uses observed winds from stations surrounding the lake, while the forecast uses the National Digital Forecast Database generated by the National Weather Service.
+							<br><br>
+<strong>Latest reported microcystins concentrations</strong> - The HAB Tracker doesn't predict toxin concentrations, so the latest measurements are given here to provide context. Microcystins are the toxic compounds most commonly associated with lake Erie HABs. The symbol shape indicates the depth at which <a href="https://www.glerl.noaa.gov/res/HABs_and_Hypoxia/habsMonWLE.html" target="_blank">weekly sampling</a> occurred at each monitoring station.  "Surface" is approximately 0.75 m deep in the water column. Symbol colors correspond with thresholds identified by the <a href="http://wwwapp.epa.ohio.gov/gis/mapportal/HAB_Monitoring.html" target="_blank">Ohio Environmental Protection Agency</a>. Microcystins concentrations exceeding the Elevated Recreational Public Health Advisory are indicated in red. Note that the HAB Tracker uses a different color scale – the HAB Tracker does not indicate toxin concentrations.<br><br>
+<strong>GLCFS nowcast & 5-day wave height forecast</strong> - The wave height forecast is produced by the <a href="https://www.glerl.noaa.gov/res/glcfs/glcfs.php?lake=e&ext=wv&type=F&hr=01" target="_blank">Great Lakes Coastal Forecasting System (GLCFS)</a>.</p>
+						
+				For more information on how the HAB Tracker works, who uses it, and what's next in research and operations, visit our <a href="https://www.glerl.noaa.gov/res/HABs_and_Hypoxia/habTracker_about.html" target="_blank"><strong>About the Lake Erie HAB Tracker</a></strong> page. Note: NOAA also provides an operational twice weekly HAB forecast and publishes it in the <a href="https://tidesandcurrents.noaa.gov/hab/lakeerie_bulletins/bulletin_current.pdf" target="_blank"><strong>Lake Erie HAB Bulletin</strong></a>.
+		</p>			
+<p>Please view the laboratory's <strong><a class="panelLink" href="http://www.glerl.noaa.gov/home/notice.html" target="_blank">Disclaimer and Intellectual Property Notice</a></strong>. If you would like to provide feedback on the HAB Tracker, access the <a href="https://umich.qualtrics.com/jfe/form/SV_0MO6qZCE6K8q1cV" target="_blank"><strong>user survey</strong></a> developed by the Cooperative Institute for Great Lakes Research (CIGLR). (This is not a NOAA survey.) </em></p>
+				
+
+
+				</div>
+		</div>
+	</body>
+
+</html>
+
+
+</html>
