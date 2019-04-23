@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Maritime Container Metric</title>
+    <script rel="script" src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
+
+    <!--<script rel="script" src="/charts/js/ba_charts.js"></script>-->
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <!--<script rel="script" src="/charts/js/export-csv_glc.js"></script>-->
+
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">-->
+
+    <!--&lt;!&ndash; Optional theme &ndash;&gt;-->
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">-->
+
+    <!--&lt;!&ndash; Latest compiled and minified JavaScript &ndash;&gt;-->
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>-->
+    <style>
+        body, svg, text {
+            font-family: "Montserrat", sans-serif;
+        }
+        .tab {
+            overflow: hidden;
+            /*border: 1px solid #ccc;*/
+            /*background-color: #f1f1f1;*/
+        }
+
+        /* Style the buttons that are used to open the tab content */
+        .tab button {
+            font-family: "Montserrat", sans-serif;
+            float: left;
+            border: 1px solid #bbb;
+            border-bottom: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            margin-right: 3px;
+            height: 60px;
+        }
+
+        /* Change background color of buttons on hover */
+        .tab button:hover {
+            background-color: #aaa;
+            color: #1b75ba;
+        }
+
+        /* Create an active/current tablink class */
+        .tab button.active {
+            background-color: white;
+        }
+
+        /* Style the tab content */
+        .tabcontent {
+            display: none;
+            padding: 6px 12px;
+            /*border-top: none;*/
+        }
+        .tabcontent {
+            animation: fadeEffect 1s; /* Fading effect takes 1 second */
+        }
+        .topright {
+            float: right;
+            cursor: pointer;
+            font-size: 28px;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            Highcharts.chart("chart_SL", {
+                title: {
+                    text: 'St. Lawrence Seaway'
+                },
+                subtitle: {
+                    text: 'some subtitle'
+                },
+                credits: {
+                    enabled: false
+                },
+                yAxis: {
+                    title: {
+                        text: 'Metric Tonnes'
+                    }
+                },
+                legend: {
+                    layout: 'vertical',
+                    align: 'right',
+                    verticalAlign: 'middle'
+                },
+                plotOptions: {
+                    series: {
+                        label: {
+                            connectorAllowed: false
+                        },
+                        pointStart: 2009
+                    }
+                },
+                series: [{
+                    name: 'Inbound',
+                    data: [3821, 14514, 9053, 6881, 3578, 7074, 29092, 19422, 19379, 16166]
+                }, {
+                    name: 'Outbound',
+                    data: [41530, 23501, 27649, 27241, 33075, 36999, 40705, 39531, 39226, 47106]
+                }, {
+                    name: 'Total',
+                    data: [45351, 38015, 36702, 34122, 36653, 44073, 69797, 58953, 58605, 63272]
+                }]
+            });
+
+            Highcharts.chart("chart_Montreal", {
+                title: {
+                    text: 'Port of Montreal'
+                },
+                subtitle: {
+                    text: 'some subtitle'
+                },
+                credits: {
+                    enabled: false
+                },
+                yAxis: {
+                    title: {
+                        text: 'Metric Tonnes'
+                    }
+                },
+                legend: {
+                    layout: 'vertical',
+                    align: 'right',
+                    verticalAlign: 'middle'
+                },
+                plotOptions: {
+                    series: {
+                        label: {
+                            connectorAllowed: false
+                        },
+                        pointStart: 2009
+                    }
+                },
+                series: [{
+                    name: 'Inbound',
+                    data: [4606974, 5335631, 5597625, 5872561, 5539511, 6205830, 6645260, 6503697, 6861492, 7502925]
+                }, {
+                    name: 'Outbound',
+                    data: [6658894, 6697803, 6873377, 6160405, 6357160, 6369239, 6447347, 6559190, 6957896, 7034597]
+                }, {
+                    name: 'Total',
+                    data: [11265868, 12033434, 12471002, 12032966, 11896671, 12575069, 13092607, 13062887, 13819388, 14537522]
+                }]
+            });
+
+            Highcharts.chart("chart_GL", {
+                title: {
+                    text: 'GLSLS System Estimate'
+                },
+                subtitle: {
+                    text: 'some subtitle'
+                },
+                credits: {
+                    enabled: false
+                },
+                yAxis: {
+                    title: {
+                        text: 'Metric Tonnes'
+                    }
+                },
+                legend: {
+                    layout: 'vertical',
+                    align: 'right',
+                    verticalAlign: 'middle'
+                },
+                plotOptions: {
+                    series: {
+                        label: {
+                            connectorAllowed: false
+                        },
+                        pointStart: 2009
+                    }
+                },
+                series: [{
+                    name: 'Inbound',
+                    data: [4610795, 5350145, 5606678, 5879442, 5543089, 6212904, 6674352, 6523119, 6880871, 7519091]
+                }, {
+                    name: 'Outbound',
+                    data: [6700424, 6721304, 6901026, 6187646, 6390235, 6406238, 6488052, 6598721, 6997122, 7081703]
+                }, {
+                    name: 'Total',
+                    data: [11311219, 12071449, 12507704, 12067088, 11933324, 12619142, 13162404, 13121840, 13877993, 14600794]
+                }]
+            });
+            document.getElementById("defaultOpen").click();
+
+        };
+
+        function openFractionChart(evt, region) {
+            // Declare all variables
+            var i, tabcontent, tablinks;
+
+            // Get all elements with class="tabcontent" and hide them
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            // Get all elements with class="tablinks" and remove the class "active"
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+                tablinks[i].id = "";
+            }
+
+            // Show the current tab, and add an "active" class to the button that opened the tab
+            document.getElementById(region).style.display = "block";
+            evt.currentTarget.className += " active";
+
+            // Maintain current tab open
+            evt.currentTarget.id = "defaultOpen";
+        }
+
+    </script>
+</head>
+<body>
+<div class="tab">
+    <button class="tablinks" onclick="openFractionChart(event, 'SL')" id="defaultOpen">St. Lawrence Seaway</button>
+    <button class="tablinks" onclick="openFractionChart(event, 'Montreal')">Port of Montreal</button>
+    <button class="tablinks" onclick="openFractionChart(event, 'GL')" >GLSLS System</button>
+</div>
+
+<!-- Tab content -->
+<div id="SL" class="tabcontent">
+    <div id="chart_SL"></div>
+</div>
+<div id="Montreal" class="tabcontent">
+    <div id="chart_Montreal"></div>
+</div>
+<div id="GL" class="tabcontent">
+    <div id="chart_GL"></div>
+</div>
+
+</body>
+</html>

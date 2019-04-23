@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chart Test</title>
+    <script rel="script" src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <script rel="script" src="js/BlueAccounting.js"></script>
+    <script rel="script" src="js/ErieStat.js"></script>
+    <!--<script rel="script" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>-->
+    <!--<script rel="script" src="js/ba_charts.js"></script>-->
+    <!--&lt;!&ndash;<script rel="script" src="js/jquery-csv.js"></script>&ndash;&gt;-->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <!--<script src="https://code.highcharts.com/modules/exporting.js"></script>-->
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <!--<script rel="script" src="js/export-csv_glc.js"></script>-->
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">-->
+
+    <!--&lt;!&ndash; Optional theme &ndash;&gt;-->
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">-->
+
+    <!--&lt;!&ndash; Latest compiled and minified JavaScript &ndash;&gt;-->
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>-->
+
+    <link rel="stylesheet" href="../css/BA_Style.css">
+    <script>
+
+
+        var data, dataPath;
+//        ba = new BlueAccounting();
+        dataPath = "data/data.json";
+        ba = new BlueAccounting();
+
+        $.getJSON(dataPath, function(d){
+            data = d;
+        }).done(function(){
+            console.log("Data loaded.");
+            BA = new BlueAccounting();
+            ES = new ErieStat();
+            ES.init(data);
+
+            var maumee_TP = ES.getWatershedData(ES.watershedNames.Maumee, ES.metrics.TP_L.name);
+            var chart1 = BA.buildSingleChart("column", maumee_TP, ES.metrics.TP_L.name, ES.metrics.TP_L.unit,
+                BA.ColorPicker.blue7, ES.xAxis[0],
+                ES.metrics.TP_L.name + " for " + ES.watershedNames.Maumee, null,
+                ES.targets[ES.watershedNames.Maumee][ES.metrics.TP_L.name], "chart-1"
+            );
+//            ba.setData(data);
+//            ba.ErieStat.init(ba.data);
+//
+//            var ES = ba.ErieStat;
+//
+//            var maumee_TP = ba.ErieStat.getWatershedData(ba.ErieStat.watershedNames.Maumee, ba.ErieStat.metrics.TP_L.name);
+//
+//            var chart1 = ba.buildSingleChart("column", maumee_TP, ba.ErieStat.metrics.TP_L.name, ba.ErieStat.metrics.TP_L.unit, ba.ColorPicker.blue7,2008,
+//                ba.ErieStat.metrics.TP_L.name + " for " + ba.ErieStat.watershedNames.Maumee, null,
+//                ba.ErieStat.targets[ba.ErieStat.watershedNames.Maumee][ba.ErieStat.metrics.TP_L.name], "chart-1"
+//            );
+//
+//            var maumee_TP_L_S = ba.ErieStat.getWatershedData(ba.ErieStat.watershedNames.Maumee, ba.ErieStat.metrics.TP_L_S.name);
+//            var maumee_Discharge_S = ba.ErieStat.getWatershedData(ba.ErieStat.watershedNames.Maumee, ba.ErieStat.metrics.Discharge_S.name);
+//
+//
+//            var chart2 = ba.buildDualAxesChart(maumee_TP_L_S, ES.metrics.TP_L_S.name, ES.metrics.TP_L_S.unit, ba.ColorPicker.blue7, "column",
+//                maumee_Discharge_S, ES.metrics.Discharge_S.name, ES.metrics.Discharge_S.unit, ba.ColorPicker.blue2, "line",
+//                "chart-2", ES.metrics.TP_L_S.name + " and " + ES.metrics.Discharge_S.name + " for<br>" + ES.watershedNames.Maumee, null, 2008,
+//                ES.targets[ES.watershedNames.Maumee][ES.metrics.TP_L_S.name], ES.targets[ES.watershedNames.Maumee][ES.metrics.TP_L.name]
+//            );
+
+        }).fail(function (){
+            console.log("ERROR. Load data failed.")
+        }).always(function () {
+            console.log("Read data completed.")
+        });
+
+
+
+
+
+//        ba.loadData("data/data.json");
+
+//        $(document).ready(function (){
+////            setChartTheme();
+//
+//            var chart_info=[
+//                {
+//                    watershedName: 'Maumee',
+//                    fileName: 'Maumee.csv',
+//                    fraction: 'TPloading',
+//                    eleID: 'tploading',
+//                    target: 0,
+//                },
+//                {
+//                    watershedName: 'Maumee',
+//                    fileName: 'Maumee.csv',
+//                    fraction: 'DRPloading',
+//                    eleID: 'bar-chart',
+//                },
+//                {
+//                    watershedName: 'Maumee',
+//                    fileName: 'Maumee.csv',
+//                    fraction: 'TPFWMC',
+//                    eleID: 'bar-chart2',
+//                },
+////                {
+////                    watershedName: 'Maumee',
+////                    fileName: 'Maumee.csv',
+////                    fraction: 'DRPFWMC',
+////                    eleID: '',
+////                },
+////                {
+////                    watershedName: 'Maumee',
+////                    fileName: 'Maumee.csv',
+////                    fraction: 'discharge',
+////                    eleID: '',
+////                },
+////                {
+////                    watershedName: 'Maumee',
+////                    fileName: 'Maumee.csv',
+////                    fraction: 'TPloading_S',
+////                    eleID: '',
+////                },
+////                {
+////                    watershedName: 'Maumee',
+////                    fileName: 'Maumee.csv',
+////                    fraction: 'DRPloading_S',
+////                    eleID: '',
+////                },
+////                {
+////                    watershedName: 'Maumee',
+////                    fileName: 'Maumee.csv',
+////                    fraction: 'TPFWMC_S',
+////                    eleID: '',
+////                },
+////                {
+////                    watershedName: 'Maumee',
+////                    fileName: 'Maumee.csv',
+////                    fraction: 'DRPFWMC_S',
+////                    eleID: '',
+////                },
+////                {
+////                    watershedName: 'Maumee',
+////                    fileName: 'Maumee.csv',
+////                    fraction: 'discharge_S',
+////                    eleID: '',
+////                },
+//            ];
+//
+////            chart_info.forEach(function (d){
+////                createLineChart(d.eleID, d.watershedName, 'data/'+d.fileName, d.fraction, 'line');
+////            })
+//
+//            /**
+//             * Maumee
+//             */
+//            createWatershedChart('chart-1', 'Maumee', 'data/Maumee.csv', 'TPloading', 'column', 0);
+//            createWatershedChart('chart-2', 'Maumee', 'data/Maumee.csv', 'DRPloading', 'column', 0);
+//            createWatershedChart('chart-3', 'Maumee', 'data/Maumee.csv', 'TPFWMC', 'line', 0, 0);
+//            createWatershedChart('chart-4', 'Maumee', 'data/Maumee.csv', 'DRPFWMC', 'line', 0, 0);
+//            createWatershedChart('chart-5', 'Maumee', 'data/Maumee.csv', 'discharge', 'column', 0);
+//            createWatershedChart('chart-6', 'Maumee', 'data/Maumee.csv', 'TPloading_S', 'column', 860);
+//            createWatershedChart('chart-7', 'Maumee', 'data/Maumee.csv', 'DRPloading_S', 'column', 186);
+//            createWatershedChart('chart-8', 'Maumee', 'data/Maumee.csv', 'TPFWMC_S', 'line', 0.23, 0);
+//            createWatershedChart('chart-9', 'Maumee', 'data/Maumee.csv', 'DRPFWMC', 'line', 0.05, 0);
+//            createWatershedChart('chart-10', 'Maumee', 'data/Maumee.csv', 'discharge_S', 'column', 0);
+//
+
+    </script>
+</head>
+<body>
+<div id="chart-1"></div>
+<div id="chart-2"></div>
+<div id="chart-3"></div>
+<div id="chart-4"></div>
+<div id="chart-5"></div>
+<div id="chart-6"></div>
+<div id="chart-7"></div>
+<div id="chart-8"></div>
+<div id="chart-9"></div>
+<div id="chart-10"></div>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Maritime Tonnage and Values</title>
+    <script rel="script" src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
+
+
+    <!--<script rel="script" src="/charts/js/ba_charts.js"></script>-->
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <!--<script rel="script" src="/charts/js/export-csv_glc.js"></script>-->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <style>
+        body, svg, text {
+            font-family: "Montserrat", sans-serif;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var exchage_rate = 1.2986;
+            Highcharts.chart("chart", {
+                chart: {
+                    plotBackgroundColor: null,
+                    plotBorderWidth: null,
+                    plotShadow: false,
+                    type: 'pie'
+                },
+                credits: {
+                    enabled: false
+                },
+                title: {
+                    text: 'Tonnage and Value'
+                },
+                subtitle: {
+                    text: "Canadian dollar value is calculated based on exchange rate of 1.2986"
+                },
+                tooltip: {
+                    formatter: function () {
+                        return this.series.name + ": Value in US Dollars: <b>$" + this.y.toFixed(0) + "</b> (" + (this.y * exchage_rate).toFixed(0) + " in Canadian Dollars)";
+                    }
+                },
+                plotOptions: {
+                    pie: {
+                        allowPointSelect: true,
+                        cursor: 'pointer',
+                        dataLabels: {
+                            enabled: false
+                        },
+                        showInLegend: true
+                    }
+                },
+                series: [{
+                    name: 'Tonnage',
+//                    colorByPoint: true,
+                    data: [{
+                        name: 'Containers',
+                        y: 3441.8554164556,
+//                        sliced: true,
+//                        selected: true
+                    }, {
+                        name: 'Steel',
+                        y: 655.640373197625
+                    }, {
+                        name: 'General Cargo',
+                        y: 945.70821959357
+                    }, {
+                        name: 'Iron Ore',
+                        y: 44.8633785022419
+                    }, {
+                        name: 'Grain',
+                        y: 275.062777670465
+                    }, {
+                        name: 'Stone/Aggregate',
+                        y: 8.96107532903948
+                    }, {
+                        name: 'Cement',
+                        y: 108.000636233498
+                    }, {
+                        name: 'Salt',
+                        y: 28.143585386576
+                    }, {
+                        name: 'Other Dry Bulk',
+                        y: 19.9889563776919
+                    }, {
+                        name: 'Coal',
+                        y: 71.7513809072142
+                    }, {
+                        name: 'Other Liquid Bulk',
+                        y: 396.958174904943
+                    }, {
+                        name: 'Petroleum Products',
+                        y: 396.829463570857
+                    }]
+                }]
+            })
+        }
+    </script>
+</head>
+<body>
+<div id="chart"></div>
+</body>
+</html>

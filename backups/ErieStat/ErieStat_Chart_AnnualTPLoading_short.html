@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Total Phosphorus Loading Estimates to Lake Erie</title>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+
+    <script src="//code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!--&lt;!&ndash; Optional theme &ndash;&gt;-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!--&lt;!&ndash; Latest compiled and minified JavaScript &ndash;&gt;-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!--<script src="js/ba_chart2.js"></script>-->
+    <script src="../js/export-csv_glc.js"></script>
+
+    <script src="../js/BlueAccounting.js"></script>
+    <!--<script src="js/ErieStat.js"></script>-->
+    <link rel="stylesheet" href="../../css/BA_Style.css">
+</head>
+
+<body>
+<div id="chart" style="margin-right: 20px">
+</div>
+
+<script>
+    Highcharts.setOptions({
+        lang: {
+            numericSymbols: null,
+            thousandsSep: ','
+        }
+    });
+
+    Highcharts.chart("chart", {
+        chart: {
+            type: "column",
+            events: {
+                load: function () {
+                    var logoX = 15;
+                    var size = this.plotBox.y;
+                    size -= 5;
+
+                    if (this.chartWidth < 500) {
+                        logoX = 10;
+                        // size = this.chartWidth / 10;
+                    }
+                    var img_width = (this.chartWidth - 350) / 2 - logoX;
+                    var img_height = size;
+                    // var img_url = "";
+                    if (img_width >= img_height * 4) {
+                        // wide logo
+                        this.renderer.image("https://c1.staticflickr.com/1/826/26966705327_f80fcd7af1_o.png", logoX, 0, size * 4, size).add();
+                        // ErieStat logo. Change factor to 3
+                        // this.renderer.image("https://c1.staticflickr.com/1/956/27966542108_a46fd4fa96_o.png", logoX, 0, size*3 , size).add();
+                    } else {
+                        // cube logo
+                        this.renderer.image("https://c1.staticflickr.com/1/868/40969378165_8bd2c065b9_o.png", logoX, 0, size, size).add();
+                    }
+                    // var w = this.chartWidth - this.title.alignAttr.x;
+                    // Blue Accounting Cube logo
+                    // this.renderer.image("https://c1.staticflickr.com/1/868/40969378165_8bd2c065b9_o.png", logoX, 0, size, size).add();
+                    // Blue Accouting Logo
+                    // this.renderer.image("https://c1.staticflickr.com/1/826/26966705327_f80fcd7af1_o.png", logoX, 0, size * 4, size ).add();
+                    // Blue Accounting ErieStat Logo
+                    // this.renderer.image("https://c1.staticflickr.com/1/956/27966542108_a46fd4fa96_o.png", logoX, 0, size*3 , size).add();
+
+                    // this.renderer.image("https://c1.staticflickr.com/5/4382/36578347693_3c6032000b_o.png", 0, 0, chart_width, chart_height).add();   //red watermark
+                    //                if (isBgImg) {
+                    //                    this.renderer.image("img/background_draft.png", this.plotLeft, this.plotTop, this.plotWidth, this.plotHeight).add(); //grey watermark
+                    //                }
+                }
+            }
+        },
+        title: {
+            text: 'Total Phosphorus Loading Estimates (MTA) <br\>To Lake Erie By Source Type'
+        },
+        xAxis: {
+            labels: {
+                rotation: -45
+            }
+        },
+        yAxis: {
+            title: {
+                text: 'Total Phosphorus Load (MTA)'
+            }
+        },
+        credits: {
+            enabled: false,
+        },
+        plotOptions: {
+            column: {
+                stacking: 'normal',
+            },
+            series: {
+                label: {
+                    connectorAllowed: false
+                },
+                pointStart: 2012
+            }
+        },
+
+        series: [
+            // alternative color theme: Blue 2547316
+//        {
+//            name: "Load, all sources",
+//            data: [23437,27944,26977,23724,18077,22271,20485],
+//            color: "#7C5B40"
+//        },
+            {
+                name: "Adjustment for Unmonitored Area",
+                data: [1441, 1872, 1688, 1283, 984],
+                color: "#FFC000"
+            },
+            {
+                name: "Tributary Monitored NPS",
+                data: [4351, 4662, 4173, 3549, 2272],
+                color: "#3618E8"
+            },
+            {
+                name: "Lake Huron Input",
+                data: [321, 321, 321, 321, 321],
+                color: "#FFFF99"
+            },
+            {
+                name: "Atmospheric Deposition",
+                data: [237, 434, 270, 345, 334],
+                color: "#ED1313"
+            },
+            {
+                name: "Indirect Point Sources",
+                data: [356, 370, 327, 337, 332],
+                color: "#16EA48"
+            },
+            {
+                name: "Direct Point Sources",
+                data: [904, 771, 797, 912, 916],
+                color: "#00B0F0"
+            }
+        ],
+    });
+</script>
+</body>
+
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Annual TP Loading in ErieStat Watersheds</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"></script>
+    <!-- Load Esri Leaflet from CDN -->
+    <script src="https://unpkg.com/esri-leaflet@2.1.3/dist/esri-leaflet.js"></script>
+    <script src="//code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!--&lt;!&ndash; Optional theme &ndash;&gt;-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!--&lt;!&ndash; Latest compiled and minified JavaScript &ndash;&gt;-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script src="js/ba_chart2.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="js/export-csv_glc.js"></script>
+    <!--<script src="https://code.highcharts.com/modules/offline-exporting.js"></script>-->
+
+    <link rel="stylesheet" href="../css/BA_Style.css">
+    <style>
+        /*.label div {*/
+            /*color: black;*/
+            /*position: relative;*/
+            /*left: -70%;*/
+            /*font-size: 12px;*/
+            /*font-style: italic;*/
+            /*!*text-shadow: 0px 2px 1px rgba(255,255,255,0.85);*!*/
+        /*}*/
+    </style>
+
+
+</head>
+<body>
+<div>
+    <div id="map"></div>
+    <div class="vl"></div>
+    <div id="right-panel">
+        <div id="intro"></div>
+        <div id="narrative-section">
+            <p id="narrative-caption"></p>
+            <p id="narrative-content"></p>
+        </div>
+        <div id="chart-canvas">
+            <div id="upperChart"></div>
+        </div>
+        <!--<div id="lowerCanvas">-->
+        <!--<div id="lowerChart"></div>-->
+        <!--</div>-->
+    </div>
+</div>
+
+
+<script>
+    var data;
+    var serviceURL = "https://gis.glc.org/server/rest/services/ErieStat/AnnualTP/MapServer";
+    var metric = metrics.TP_L;
+
+    $("#intro").html(intro_TP);
+
+    $.getJSON("data/all_data2.json", function(d){
+        data = d;
+    });
+
+    var map = L.map("map").setView([42.1, -83.1], 8);
+    L.esri.basemapLayer("Topographic").addTo(map);
+
+    var watersheds = L.esri.dynamicMapLayer({
+        url: serviceURL,
+        layers:[0, 1, 2],
+        f: "image",
+        opacity: 0.7
+    }).addTo(map);
+
+    var boundary_query = L.esri.query({
+        url: serviceURL + "/0"
+    });
+    boundary_query.bounds(function(error, latlngbounds){
+        map.fitBounds(latlngbounds);
+    });
+
+//    var query = L.esri.query({
+//        url: 'https://gis.glc.org/server/rest/services/ErieStat/PriorityWatersheds/MapServer/1'
+//    });
+
+    var selectedFeature;
+    map.on("click", function (e){
+        if(selectedFeature){
+            map.removeLayer(selectedFeature);
+        }
+        watersheds.identify().on(map).at(e.latlng).layers("visible:1").simplify(map, 0.5).run(function (error, featureCollection){
+            if(featureCollection.features.length > 0){
+                $("#intro").css("visibility", "hidden");
+                for(var i = 0; i < featureCollection.features.length; i++){
+                    selectedFeature = L.geoJSON(featureCollection.features[i]);
+                    selectedFeature.setStyle({
+                        fill: false,
+                        weight: 4,
+//                            color: "#07fcf0"
+                        color: "#F3A51E"
+                    });
+                    selectedFeature.addTo(map);
+                    var name = featureCollection.features[i].properties["Watershed Name"];
+                    buildNarratives(name);
+                    var temp = window.innerHeight  - $("#narrative-section").height() - 300;
+                    buildChart(data, "upperChart", name, metric, units[metric], null, (window.innerHeight  - $("#narrative-section").height()) * 0.8);
+
+//                        query.where("MergeNm='"+ name +"'").bounds(function(error, latLngBounds, response){
+//                            map.fitBounds(latLngBounds);
+//                        });
+                    break;
+                }
+            }
+        })
+
+    });
+
+
+    // try not to bind with a popup, just bind with a query/highlight
+//    watersheds.bindPopup(function (error, featureCollection) {
+//        if(error || featureCollection.features.length === 0)
+//        {
+//            return false;
+//        } else {
+//            var index = findFeatureLayer(featureCollection);
+//            return ;//'Watershed: ' + featureCollection.features[index].properties["Watershed Name"];
+////            return 'Risk Level: ' + featureCollection.features[0].properties;
+//        }
+//    });
+
+    /*****
+     * Section added for labels
+     */
+
+//    var labels = {};
+//    var pilotWatersheds = L.esri.featureLayer({
+//        url: 'https://gis.glc.org/server/rest/services/ErieStat/AnnualTP/MapServer/1',
+//        style: function(feature){
+//            return {
+//                opacity: 0,
+//                fill: false
+//            }
+//        }
+//    }).addTo(map);
+//    pilotWatersheds.on('createfeature', function(e){
+//        var id = e.feature.id;
+//        var feature = pilotWatersheds.getFeature(id);
+//        var center = feature.getBounds().getCenter();
+//        var label = L.marker(center, {
+//            icon: L.divIcon({
+//                iconSize: null,
+//                className: 'label',
+//                html: '<div>' + e.feature.properties.MergeNm + '</div>'
+//            })
+//        }).addTo(map);
+//        labels[id] = label;
+//    });
+
+//    pilotWatersheds.on('addfeature', function(e){
+//        var label = labels[e.feature.id];
+//        if(label){
+//            label.addTo(map);
+//        }
+//    });
+//
+//    pilotWatersheds.on('removefeature', function(e){
+//        var label = labels[e.feature.id];
+//        if(label){
+//            map.removeLayer(label);
+//        }
+//    });
+    /***
+     * End of section
+     * */
+
+
+
+//    function findFeatureLayer(featureCol){
+//        for(var i = 0; i < featureCol.features.length; i++){
+//            if(featureCol.features[i].layerId == 1){
+//                var name = featureCol.features[i].properties["Watershed Name"];
+//                buildChart(name);
+//                query.where("MergeNm='"+ name +"'").bounds(function(error, latLngBounds, response){
+//                    map.fitBounds(latLngBounds);
+//                });
+//                return i;
+//            }
+//        }
+//        return null;
+//    }
+
+
+
+</script>
+</body>
+</html>
