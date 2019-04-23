@@ -1,4 +1,6 @@
-define(function() {
+define([
+    "//code.highcharts.com/7.0/highcharts.js",
+],function(Highcharts) {
     return {
         es_data: null,
         xAxis: [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016],
@@ -203,6 +205,8 @@ define(function() {
 
         init: function(data){
             es_data = data;
+            this.initHighchartOptions();
+
         },
         getWatershedData: function(watershedName, metricName) {
             var vals = $(es_data).filter(function(i, n) {
@@ -227,6 +231,50 @@ define(function() {
                 $("#narrative-content").html("<p style='font-style: italic'>* Content under development for " + w_name + " watershed.</p>");
                 return false;
             }
+        },
+
+        initHighchartOptions: function(){
+            Highcharts.Chart.prototype.viewData = function () {
+                if (!this.insertedTable) {
+                    var div = document.createElement('div');
+                    div.className = 'highcharts-data-table';
+                    // Insert after the chart container
+                    this.renderTo.parentNode.insertBefore(div, this.renderTo.nextSibling);
+                    div.innerHTML = this.getTable();
+                    this.insertedTable = true;
+                    var date_str = new Date().getTime().toString();
+                    var rand_str = Math.floor(Math.random() * (1000000)).toString();
+                    this.insertedTableID = 'div_' + date_str + rand_str
+                    div.id = this.insertedTableID;
+                }
+                else {
+                    $('#' + this.insertedTableID).toggle();
+                }
+            };
+            Highcharts.setOptions({
+                lang: {
+                    numericSymbols: null,
+                    thousandsSep: ',',
+                    // viewData: null
+                }
+            });
+            Highcharts.Chart.prototype.viewData = function () {
+                if (!insertedTable) {
+                    var div = document.createElement('div');
+                    div.className = 'highcharts-data-table';
+                    // Insert after the chart container
+                    renderTo.parentNode.insertBefore(div, renderTo.nextSibling);
+                    div.innerHTML = getTable();
+                    insertedTable = true;
+                    var date_str = new Date().getTime().toString();
+                    var rand_str = Math.floor(Math.random() * (1000000)).toString();
+                    insertedTableID = 'div_' + date_str + rand_str
+                    div.id = insertedTableID;
+                }
+                else {
+                    $('#' + insertedTableID).toggle();
+                }
+            };
         }
     }
 });

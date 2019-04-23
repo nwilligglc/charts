@@ -1,6 +1,5 @@
 define([
-    // "//code.highcharts.com/highcharts.js",
-    "../js/highcharts.js",
+    "//code.highcharts.com/7.0/highcharts.js",
 ], function(Highcharts){
     return {
         ColorPicker: {
@@ -261,25 +260,6 @@ define([
                 dashStyle: lineStyle
             })
         },
-
-// this.addSecondTargetLine = function (chart, target, targetTitle) {
-//     var targetSeries = [];
-//     chart.series[0].data.map(function() {
-//         targetSeries.push(target);
-//     });
-//
-//     chart.addSeries({
-//         type: 'line',
-//         data: targetSeries,
-//         name: targetTitle ,
-//         color: ColorPicker.target_red,
-//         lineWidth: 3,
-//         marker: {
-//             radius: 0
-//         },
-//         dashStyle: 'shortdot'
-//     })
-// }
 
         buildStockChart: function (tag, title, xTitle, yTitle, data_series, height, width) {
             return Highcharts.stockChart(tag, {
