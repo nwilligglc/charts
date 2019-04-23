@@ -24,12 +24,16 @@
         body, svg, text {
             font-family: "Montserrat", sans-serif;
         }
+        .inline {
+            display: inline-block;
+        }
     </style>
     <script>
         window.onload = function () {
             var exchage_rate = 1.2986;
-            Highcharts.chart("chart", {
+            Highcharts.chart("chart1", {
                 chart: {
+                    width: window.innerWidth / 2 - 5,
                     plotBackgroundColor: null,
                     plotBorderWidth: null,
                     plotShadow: false,
@@ -39,10 +43,13 @@
                     enabled: false
                 },
                 title: {
-                    text: 'Tonnage and Value'
+                    text: 'Tonnage 2017'
                 },
                 subtitle: {
-                    text: "Canadian dollar value is calculated based on exchange rate of 1.2986"
+                    text: "Tonnage"
+                },
+                legend: {
+                    enabled: false
                 },
                 tooltip: {
                     formatter: function () {
@@ -57,49 +64,187 @@
                             enabled: false
                         },
                         showInLegend: true
+                    },
+                    series: {
+                        point: {
+                            events: {
+                                click: function (evt) {
+                                    var XYZ = $('#chart2').highcharts(),
+                                        point = XYZ.get(this.options.id); //get corresponding point
+                                    if (point) {
+                                        point.select();
+                                    }
+                                }
+                            }
+                        }
                     }
                 },
                 series: [{
                     name: 'Tonnage',
 //                    colorByPoint: true,
                     data: [{
+                        id: "containers",
                         name: 'Containers',
-                        y: 3441.8554164556,
+                        y:  13819.39,
 //                        sliced: true,
 //                        selected: true
                     }, {
+                        id: "steel",
                         name: 'Steel',
-                        y: 655.640373197625
+                        y:  3906.00
                     }, {
+                        id: "general_cargo",
                         name: 'General Cargo',
-                        y: 945.70821959357
+                        y:  1346.27
                     }, {
+                        id: "iron_ore",
                         name: 'Iron Ore',
-                        y: 44.8633785022419
+                        y:  56167.66
                     }, {
+                        id: "grain",
                         name: 'Grain',
-                        y: 275.062777670465
+                        y:  14327.60
                     }, {
+                        id: "stone",
                         name: 'Stone/Aggregate',
-                        y: 8.96107532903948
+                        y:  27452.12
                     }, {
+                        id: "cement",
                         name: 'Cement',
-                        y: 108.000636233498
+                        y:  6179.00
                     }, {
+                        id: "salt",
                         name: 'Salt',
-                        y: 28.143585386576
+                        y:  8542.79
                     }, {
+                        id: "other_dry",
                         name: 'Other Dry Bulk',
-                        y: 19.9889563776919
+                        y:  12629.40
                     }, {
+                        id: "coal",
                         name: 'Coal',
-                        y: 71.7513809072142
+                        y:  17371.00
                     }, {
+                        id: "other_liquid",
                         name: 'Other Liquid Bulk',
-                        y: 396.958174904943
+                        y:  2419.68
                     }, {
+                        id: "petro",
                         name: 'Petroleum Products',
-                        y: 396.829463570857
+                        y:  30537.04
+                    }]
+                }]
+            });
+            Highcharts.chart("chart2", {
+                chart: {
+                    width: window.innerWidth / 2 - 5,
+                    plotBackgroundColor: null,
+                    plotBorderWidth: null,
+                    plotShadow: false,
+                    type: 'pie'
+                },
+                credits: {
+                    enabled: false
+                },
+                title: {
+                    text: 'Dollar Value 2017'
+                },
+                subtitle: {
+                    text: "Canadian dollar value is calculated based on exchange rate of 1.2986"
+                },
+                legend: {
+                    layout: 'vertical',
+                    backgroundColor: '#FFFFFF',
+                    align: 'right',
+                },
+                tooltip: {
+                    formatter: function () {
+                        return this.series.name + ": Value in US Dollars: <b>$" + this.y.toFixed(0) + "</b> (" + (this.y * exchage_rate).toFixed(0) + " in Canadian Dollars)";
+                    }
+                },
+                plotOptions: {
+                    pie: {
+                        allowPointSelect: true,
+                        cursor: 'pointer',
+                        dataLabels: {
+                            enabled: false
+                        },
+                        showInLegend: true
+                    },
+                    series: {
+                        point: {
+                            events: {
+                                legendItemClick: function (event) {
+                                    var XYZ = $('#chart1').highcharts(),
+                                        point = XYZ.get(this.options.id); //get corresponding point
+                                    if (point) {
+                                        point.setVisible(!this.visible);
+                                    }
+                                },
+                                click: function (evt) {
+                                        var XYZ = $('#chart1').highcharts(),
+                                            point = XYZ.get(this.options.id); //get corresponding point
+                                        if (point) {
+                                            point.select();
+                                        }
+                                }
+                            }
+                        }
+                    }
+                },
+                series: [{
+                    name: 'Tonnage',
+//                    colorByPoint: true,
+                    data: [{
+                        id: "containers",
+                        name: 'Containers',
+                        y: 47564
+//                        sliced: true,
+//                        selected: true
+                    }, {
+                        id: "steel",
+                        name: 'Steel',
+                        y: 2561
+                    }, {
+                        id: "general_cargo",
+                        name: 'General Cargo',
+                        y: 1273
+                    }, {
+                        id: "iron_ore",
+                        name: 'Iron Ore',
+                        y: 2520
+                    }, {
+                        id: "grain",
+                        name: 'Grain',
+                        y: 3941
+                    }, {
+                        id: "stone",
+                        name: 'Stone/Aggregate',
+                        y: 246
+                    }, {
+                        id: "cement",
+                        name: 'Cement',
+                        y: 667
+                    }, {
+                        id: "salt",
+                        name: 'Salt',
+                        y: 240
+                    }, {
+                        id: "other_dry",
+                        name: 'Other Dry Bulk',
+                        y: 252
+                    }, {
+                        id: "coal",
+                        name: 'Coal',
+                        y: 1250
+                    }, {
+                        id: "other_liquid",
+                        name: 'Other Liquid Bulk',
+                        y: 961
+                    }, {
+                        id: "petro",
+                        name: 'Petroleum Products',
+                        y: 12118
                     }]
                 }]
             })
@@ -107,6 +252,15 @@
     </script>
 </head>
 <body>
-<div id="chart"></div>
+<!--<table>-->
+    <!--<tr>-->
+        <!--<td><div id="chart1"></div></td>-->
+        <!--<td><div id="chart2"></div></td>-->
+    <!--</tr>-->
+<!--</table>-->
+<div id="chart1" class="inline"></div>
+<div id="chart2" class="inline"></div>
+
+
 </body>
 </html>
