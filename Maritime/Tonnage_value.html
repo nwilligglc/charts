@@ -53,7 +53,8 @@
                 },
                 tooltip: {
                     formatter: function () {
-                        return this.series.name + ": Value in US Dollars: <b>$" + this.y.toFixed(0) + "</b> (" + (this.y * exchage_rate).toFixed(0) + " in Canadian Dollars)";
+                        return "<b>" + this.point.name + "</b><br>" +
+                        this.series.name + " Volume: <b>$" + this.y.toFixed(0) + "</b> (" + this.point.percentage.toFixed(2) + "% in total volume.)";
                     }
                 },
                 plotOptions: {
@@ -150,7 +151,7 @@
                     text: 'Dollar Value 2017'
                 },
                 subtitle: {
-                    text: "Canadian dollar value is calculated based on exchange rate of 1.2986"
+                    text: "CAD to USD exchange rate is calculated as the 2017 average of 1.2986. <u><a href='https://www.bankofcanada.ca/rates/exchange/annual-average-exchange-rates/' target='_blank'>(Source)</a></u>"
                 },
                 legend: {
                     layout: 'vertical',
@@ -159,7 +160,9 @@
                 },
                 tooltip: {
                     formatter: function () {
-                        return this.series.name + ": Value in US Dollars: <b>$" + this.y.toFixed(0) + "</b> (" + (this.y * exchage_rate).toFixed(0) + " in Canadian Dollars)";
+                        return "<b>" + this.point.name + "</b><br>" +
+                            "Value in US Dollars: <b>$" + this.y.toFixed(0) + "</b> ($" + (this.y * exchage_rate).toFixed(0) + " in CAD)<br>" +
+                            this.point.percentage.toFixed(2) +"% of total value.";
                     }
                 },
                 plotOptions: {
