@@ -91,7 +91,7 @@ function ErieStat() {
             "Spring SRP FWMC": null
         },
         "Grand River": {
-            "Annual TP Loading": null,
+            "Annual TP Loading": 99,
             "Spring TP Loading": null,
             "Spring SRP Loading": null,
             "Spring TP FWMC": null,
@@ -105,7 +105,7 @@ function ErieStat() {
             "Spring SRP FWMC": null
         },
         "Huron River": {
-            "Annual TP Loading": null,
+            "Annual TP Loading": 123,
             "Spring TP Loading": null,
             "Spring SRP Loading": null,
             "Spring TP FWMC": null,
@@ -133,7 +133,7 @@ function ErieStat() {
             "Spring SRP FWMC": null
         },
         "River Raisin": {
-            "Annual TP Loading": null,
+            "Annual TP Loading": 157,
             "Spring TP Loading": 50,
             "Spring SRP Loading": null,
             "Spring TP FWMC": 0.09,
@@ -154,7 +154,7 @@ function ErieStat() {
             "Spring SRP FWMC": null
         },
         "Vermilion River": {
-            "Annual TP Loading": null,
+            "Annual TP Loading": 121,
             "Spring TP Loading": null,
             "Spring SRP Loading": null,
             "Spring TP FWMC": null,
