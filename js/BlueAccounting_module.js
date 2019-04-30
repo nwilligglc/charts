@@ -35,11 +35,6 @@ define([
         Coastal: {},
         SourceWater: {},
 
-
-// this.setData = function(data){
-//     this.data = data;
-// };
-
         buildSingleChart: function (type, series, seriesName, seriesUnit, color, startingYear, title, subtitle, target, tag, height, width) {
             var chart = Highcharts.chart(tag, {
                 chart: {

@@ -1,9 +1,11 @@
 # charts
-JS library using Highcharts and customized for BA projects
+JS library using Highcharts to create visualizations for BA projects. 
+
+We encourage our program staff to make updates on textual content and data through pull request.
 
 # To use the library
 1. Create a HTML tag on the page, e.g., chart-1
-2. In <Script>, call `createWatershedChart` function, and pass in the following parameters as `createWatershedChart('chart-1', 'Maumee', 'data/Maumee.csv', 'TPloading', 'column', 0)`:
+2. In `<Script>`, call `createWatershedChart` function, and pass in the following parameters as `createWatershedChart('chart-1', 'Maumee', 'data/Maumee.csv', 'TPloading', 'column', 0)`:
     + HTML tag name as string,
     + watershed name as string,
     + csv data file path as string,
