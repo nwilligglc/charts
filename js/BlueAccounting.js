@@ -26,6 +26,27 @@ function BlueAccounting(){
         blue7: '#1b75ba', //getColor(30, 117, 186),
 
         target_red: '#ff0000', //getColor(206, 0, 0),
+
+        // Distinctive colors, with no blues. For shades of blues, refer to blue1 - blue7.
+        red: '#e6194B',
+        green: '#3cb44b',
+        yellow: '#ffe119',
+        orange: '#f58231',
+        purple: '#911eb4',
+        magenta: '#f032e6',
+        lime: '#bfef45',
+        pink: '#fabebe',
+        teal: '#469990',
+        lavender: '#e6beff',
+        brown: '#9A6324',
+        beige: '#fffac8',
+        maroon: '#800000',
+        ming: '#aaffc3',
+        olive: '#808000',
+        apricot: '#ffd8b1',
+        grey: '#a9a9a9',
+        white: '#ffffff',
+        black: '#333333'
     };
 
     this.init = function () {
@@ -113,7 +134,7 @@ function BlueAccounting(){
             },
             yAxis: {
                 title: {
-                    text: seriesName + "<br>(" + seriesUnit + ")",
+                    text: seriesUnit ? seriesName + "<br>(" + seriesUnit + ")" : seriesName,
                     style: {
                         color: color
                     }
@@ -213,14 +234,14 @@ function BlueAccounting(){
             }],
             yAxis: [{ // Primary yAxis
                 title: {
-                    text: seriesName1 + "<br>(" + seriesUnit1 + ")",
+                    text: seriesUnit1 ? seriesName1 + "<br>(" + seriesUnit1 + ")" : seriesName1,
                     style: {
                         color: color1
                     }
                 }
             }, { // Secondary yAxis
                 title: {
-                    text: seriesName2 + "<br>(" + seriesUnit2 + ")",
+                    text: seriesUnit2 ? seriesName2 + "<br>(" + seriesUnit2 + ")" : seriesUnit2,
                     style: {
                         color: color2
                     }

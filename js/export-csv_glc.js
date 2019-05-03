@@ -26,7 +26,7 @@
 
     Highcharts.setOptions({
         lang: {
-            // downloadCSV: 'Download CSV',
+            downloadCSV: 'Download CSV',
             downloadXLS: 'Download XLS',
             // viewData: 'View data table'
         }
@@ -375,10 +375,10 @@
     // https://raw.github.com/highslide-software/highcharts.com/master/studies/csv-export/csv.php
     if (Highcharts.getOptions().exporting) {
         Highcharts.getOptions().exporting.buttons.contextButton.menuItems.push(
-        //     {
-        //     textKey: 'downloadCSV',
-        //     onclick: function () { this.downloadCSV(); }
-        // },
+            {
+            textKey: 'downloadCSV',
+            onclick: function () { this.downloadCSV(); }
+        },
             {
             textKey: 'downloadXLS',
             onclick: function () {
