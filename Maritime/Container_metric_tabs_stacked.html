@@ -10,7 +10,9 @@
 
     <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
-    <!--<script rel="script" src="/charts/js/export-csv_glc.js"></script>-->
+    <script rel="script" src="/charts/js/export-csv_glc.js"></script>
+    <script src="../js/BlueAccounting.js"></script>
+
 
     <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">-->
 
@@ -70,6 +72,7 @@
         }
     </style>
     <script>
+        const BA = new BlueAccounting();
         var data_SL = {
                 name: "St. Lawrence Seaway",
                 inbound: {
@@ -93,7 +96,7 @@
                 }
             },
             data_GL = {
-                name: 'GLSLS System Estimate',
+                name: 'Great Lakes Maritime Transportation Estimated Containerized Cargo',
                 inbound: {
                     name: "Inbound",
                     data: [4610795, 5350145, 5606678, 5879442, 5543089, 6212904, 6674352, 6523119, 6880871, 7519091]
@@ -122,7 +125,27 @@
         function buildStackChart(id, region) {
             Highcharts.chart(id, {
                 chart: {
-                    type: "column"
+                    type: "column",
+                    events: {
+                        load: function () {
+                            var logoX = 15;
+                            var size = this.plotBox.y;
+                            size -= 5;
+
+                            if(this.chartWidth < 500){
+                                logoX = 10;
+                            }
+                            var img_width = (this.chartWidth - 350)/2 - logoX;
+                            var img_height = size;
+                            if(img_width >= img_height*4){
+                                // wide logo. local resource
+                                this.renderer.image("https://c1.staticflickr.com/1/826/26966705327_f80fcd7af1_o.png", logoX, 0, size * 4, size ).add();
+                            }else{
+                                // cube logo
+                                this.renderer.image("https://c1.staticflickr.com/1/868/40969378165_8bd2c065b9_o.png", logoX, 0, size, size).add();
+                            }
+                        }
+                    }
                 },
                 title: {
                     text: region.name
@@ -160,10 +183,12 @@
                 },
                 series: [{
                     name: region.inbound.name,
-                    data: region.inbound.data
+                    data: region.inbound.data,
+                    color: BA.ColorPicker.blue6
                 }, {
                     name: region.outbound.name,
-                    data: region.outbound.data
+                    data: region.outbound.data,
+                    color: BA.ColorPicker.blue7
                 }]
             });
         }
