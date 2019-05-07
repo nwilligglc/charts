@@ -73,29 +73,7 @@
     </style>
     <script>
         const BA = new BlueAccounting();
-        var data_SL = {
-                name: "St. Lawrence Seaway",
-                inbound: {
-                    name: "Inbound",
-                    data: [3821, 14514, 9053, 6881, 3578, 7074, 29092, 19422, 19379, 16166]
-                },
-                outbound: {
-                    name: "Outbound",
-                    data: [41530, 23501, 27649, 27241, 33075, 36999, 40705, 39531, 39226, 47106]
-                }
-            },
-            data_Montreal = {
-                name: 'Port of Montreal',
-                inbound: {
-                    name: "Inbound",
-                    data: [4606974, 5335631, 5597625, 5872561, 5539511, 6205830, 6645260, 6503697, 6861492, 7502925]
-                },
-                outbound: {
-                    name: "Outbound",
-                    data: [6658894, 6697803, 6873377, 6160405, 6357160, 6369239, 6447347, 6559190, 6957896, 7034597]
-                }
-            },
-            data_GL = {
+        var data_GL = {
                 name: 'Great Lakes Maritime Transportation Estimated Containerized Cargo',
                 inbound: {
                     name: "Inbound",
@@ -114,8 +92,6 @@
             }
         });
         window.onload = function () {
-            buildStackChart("chart_SL", data_SL);
-            buildStackChart("chart_Montreal", data_Montreal);
             buildStackChart("chart_GL", data_GL);
 
             document.getElementById("defaultOpen").click();
@@ -220,23 +196,8 @@
 
     </script>
 </head>
-<body>
-<div class="tab">
-    <button class="tablinks" onclick="openFractionChart(event, 'SL')" id="defaultOpen">St. Lawrence Seaway</button>
-    <button class="tablinks" onclick="openFractionChart(event, 'Montreal')">Port of Montreal</button>
-    <button class="tablinks" onclick="openFractionChart(event, 'GL')" >GLSLS System</button>
-</div>
 
-<!-- Tab content -->
-<div id="SL" class="tabcontent">
-    <div id="chart_SL"></div>
-</div>
-<div id="Montreal" class="tabcontent">
-    <div id="chart_Montreal"></div>
-</div>
-<div id="GL" class="tabcontent">
-    <div id="chart_GL"></div>
-</div>
+
 
 </body>
 </html>
