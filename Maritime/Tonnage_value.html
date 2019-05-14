@@ -44,16 +44,14 @@
 
 </body>
 <script>
-    // TO-DO:
-    // Update chart2 colors
-    const BA = new BlueAccounting();
+    var BA = new BlueAccounting();
     Highcharts.setOptions({
         lang: {
             numericSymbols: null,
             thousandsSep: ',',
         }
     });
-    var exchageRate = 1.2986;
+    var exchageRate = 1.23;
     Highcharts.chart("chart1", {
         chart: {
             width: window.innerWidth / 2 - 5,

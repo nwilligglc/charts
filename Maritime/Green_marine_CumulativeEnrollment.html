@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Green Marine Metric</title>
+    <title>Green Marine - Cumulative Enrollment</title>
     <script rel="script" src="https://code.jquery.com/jquery-3.1.1.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
 
@@ -26,11 +26,8 @@
 </head>
 <body>
 <div id="chart_cumulative"></div>
-<div id="chart_firm_count"></div>
 <script>
-    // TO-DO:
-    // break into separate charts
-    const BA = new BlueAccounting();
+    var BA = new BlueAccounting();
     // var cumulative_enroll_data = [32, 32, 33, 37, 42, 43, 46, 52, 56, 64, 65];
     // var chart = BA.buildSingleChart("line", cumulative_enroll_data, "Number of Firms", null, BA.ColorPicker.blue7, 2008, 'Cumulative Enrollment, 2008-2018',
     //     null, null, 'chart_cumulative');
@@ -89,62 +86,6 @@
             color: BA.ColorPicker.blue7,
             data: [32, 32, 33, 37, 42, 43, 46, 52, 56, 64, 65]
         }]
-    });
-    Highcharts.chart('chart_firm_count', {
-        title: {
-            text: 'Count of Firms, 2008-2018'
-        },
-        subtitle: {
-            text: ''
-        },
-        credits: {
-            enabled: false
-        },
-        xAxis: {
-            allowDecimals: false
-        },
-        yAxis: {
-            title: {
-                text: 'Number of Firms'
-            }
-        },
-        tooltip: {
-            shared: true,
-            crosshairs: true
-        },
-        plotOptions: {
-            series: {
-                label: {
-                    connectorAllowed: false
-                },
-                pointStart: 2008,
-                marker: {
-                    radius: 0
-                },
-                lineWidth: 3
-            }
-        },
-        series: [{
-            name: 'At least one score of 5',
-            color: BA.ColorPicker.blue7,
-            data: [7, 7, 7, 9, 8, 8, 13, 14, 17, 15, 15]
-        }, {
-            name: 'At least one score of 4+',
-            color: BA.ColorPicker.yellow,
-            data: [9, 9, 9, 12, 13, 12, 16, 19, 25, 30, 30]
-        }, {
-            name: 'At least one score of 3+',
-            color: BA.ColorPicker.black,
-            data: [12, 12, 18, 22, 28, 30, 33, 36, 42, 44, 44]
-        }, {
-            name: 'At least one score of 2+',
-            color: BA.ColorPicker.gray,
-            data: [22, 22, 27, 27, 33, 33, 37, 39, 45, 52, 52]
-        }, {
-            name: 'All scores are 2 or greater',
-            color: BA.ColorPicker.apricot,
-            data: [17, 17, 21, 23, 30, 30, 36, 36, 38, 46, 46]
-        }],
     });
 </script>
 

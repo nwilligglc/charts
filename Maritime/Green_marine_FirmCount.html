@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Green Marine - Count of Firms</title>
+    <script rel="script" src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="../js/BlueAccounting.js"></script>
+    <!--<script rel="script" src="/charts/js/export-csv_glc.js"></script>-->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <style>
+        body, svg, text {
+            font-family: "Montserrat", sans-serif;
+        }
+    </style>
+</head>
+<body>
+<div id="chart_firm_count"></div>
+<script>
+    var BA = new BlueAccounting();
+    Highcharts.chart('chart_firm_count', {
+        title: {
+            text: 'Count of Firms, 2008-2018'
+        },
+        subtitle: {
+            text: ''
+        },
+        credits: {
+            enabled: false
+        },
+        xAxis: {
+            allowDecimals: false
+        },
+        yAxis: {
+            title: {
+                text: 'Number of Firms'
+            }
+        },
+        tooltip: {
+            shared: true,
+            crosshairs: true
+        },
+        plotOptions: {
+            series: {
+                label: {
+                    connectorAllowed: false
+                },
+                pointStart: 2008,
+                marker: {
+                    radius: 0
+                },
+                lineWidth: 3
+            }
+        },
+        series: [{
+            name: 'At least one score of 5',
+            color: BA.ColorPicker.blue7,
+            data: [7, 7, 7, 9, 8, 8, 13, 14, 17, 15, 15]
+        }, {
+            name: 'At least one score of 4+',
+            color: BA.ColorPicker.yellow,
+            data: [9, 9, 9, 12, 13, 12, 16, 19, 25, 30, 30]
+        }, {
+            name: 'At least one score of 3+',
+            color: BA.ColorPicker.black,
+            data: [12, 12, 18, 22, 28, 30, 33, 36, 42, 44, 44]
+        }, {
+            name: 'At least one score of 2+',
+            color: BA.ColorPicker.gray,
+            data: [22, 22, 27, 27, 33, 33, 37, 39, 45, 52, 52]
+        }, {
+            name: 'All scores are 2 or greater',
+            color: BA.ColorPicker.apricot,
+            data: [17, 17, 21, 23, 30, 30, 36, 36, 38, 46, 46]
+        }],
+    });
+</script>
+
+</body>
+</html>
