@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Cruise traffic for Maritime - Blue Accounting</title>
+    
     <script rel="script" src="https://code.jquery.com/jquery-3.1.1.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
 
@@ -72,17 +73,17 @@
         }];
 
 
-    var cruise_company_chart = BA.buildSingleChart("column", cruise_company_data, "Cruise Company", "Test", BA.ColorPicker.blue7, 2014, "Number of Cruise Companies",
-            null, null, "cruise_company_chart"),
-        // vessles_chart = BA.buildSingleChart("column", vessels_data, "Vessel Count", null, BA.ColorPicker.blue7, 2014, "Number of Vessels",
-        //     null, null, "vessels_chart"),
-        // ports_chart = BA.buildSingleChart("column", ports_data, "Port Count", null, BA.ColorPicker.blue7, 2014, "Ports Served by Cruise Lines",
-        //     null, null, "ports_chart"),
-        // estimated_count_chart = BA.buildSingleChart("column", estimated_count_data, "Cruise Count", null, BA.ColorPicker.blue7, 2014, "Estimated Count of Cruises",
-        //     null, null, "estimated_count_chart"),
-        estimated_passenger_chart = BA.buildSingleChart("column", estimated_passenger_data, "Passenger Count", null, BA.ColorPicker.blue7, 2014, "Estimated Passenger Capacity",
-            null, null, "estimated_passenger_chart");
-
+ /* var cruise_company_chart = BA.buildSingleChart("column", cruise_company_data, "Cruise Company", "Test", BA.ColorPicker.blue7, 2014, "Number of Cruise Companies",
+  *         null, null, "cruise_company_chart"),
+  *     // vessles_chart = BA.buildSingleChart("column", vessels_data, "Vessel Count", null, BA.ColorPicker.blue7, 2014, "Number of Vessels",
+  *     //     null, null, "vessels_chart"),
+  *     // ports_chart = BA.buildSingleChart("column", ports_data, "Port Count", null, BA.ColorPicker.blue7, 2014, "Ports Served by Cruise Lines",
+  *     //     null, null, "ports_chart"),
+  *     // estimated_count_chart = BA.buildSingleChart("column", estimated_count_data, "Cruise Count", null, BA.ColorPicker.blue7, 2014, "Estimated Count of Cruises",
+  *     //     null, null, "estimated_count_chart"),
+  *     estimated_passenger_chart = BA.buildSingleChart("column", estimated_passenger_data, "Passenger Count", null, BA.ColorPicker.blue7, 2014, "Estimated Passenger Capacity",
+  *         null, null, "estimated_passenger_chart");
+  */
     // var estimated_calls_chart = Highcharts.chart("estimated_calls_chart", {
     //     chart: {
     //         background: "transparent",
@@ -213,7 +214,7 @@
             text: "Estimated Port Calls Per Year"
         },
         subtitle: {
-            // text: subtitle
+            text: "Click on jurisdiction names to turn jurisdictions on/off"
         },
         yAxis: {
             title: {

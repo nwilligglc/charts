@@ -66,10 +66,10 @@
             enabled: false
         },
         title: {
-            text: 'Tonnage Carried 2017'
+            text: 'Tonnage Carried on MTS in 2017'
         },
         subtitle: {
-            text: "Metric Tonnage"
+            text: "Metric Tonnes"
         },
         legend: {
             enabled: false
@@ -183,10 +183,10 @@
             enabled: false
         },
         title: {
-            text: 'Value Cargo Carried 2017'
+            text: 'Value Cargo Carried on MTS 2017'
         },
         subtitle: {
-            text: "CAD to USD exchange rate is calculated as the 2017 average of 1.2986. <a href='https://www.bankofcanada.ca/rates/exchange/annual-average-exchange-rates/' target='_blank' style='color: #1b75ba;font-weight: bold'>(Source)</a>"
+            text: "CAD to USD exchange rate is calculated as the 2017 average of 1.23. <a href='https://www.bankofcanada.ca/rates/exchange/annual-average-exchange-rates/' target='_blank' style='color: #1b75ba;font-weight: bold'>(Source)</a>"
         },
         legend: {
             layout: 'vertical',
@@ -236,51 +236,64 @@
                 id: "containers",
                 name: 'Containers',
                 y: 47564,
-
+                color: BA.ColorPicker.blue7
+//                        sliced: true,
+//                        selected: true
             }, {
                 id: "steel",
                 name: 'Steel',
-                y: 2561
+                y: 2561,
+                color: BA.ColorPicker.red
             }, {
                 id: "general_cargo",
                 name: 'General Cargo',
-                y: 1273
+                y: 1273,
+                color: BA.ColorPicker.orange
             }, {
                 id: "iron_ore",
                 name: 'Iron Ore',
-                y: 2520
+                y: 2520,
+                color: BA.ColorPicker.yellow
             }, {
                 id: "grain",
                 name: 'Grain',
-                y: 3941
+                y: 3941,
+                color: BA.ColorPicker.lime
             }, {
                 id: "stone",
                 name: 'Stone/Aggregate',
-                y: 246
+                y: 246,
+                color: BA.ColorPicker.green
             }, {
                 id: "cement",
                 name: 'Cement',
-                y: 667
+                y: 667,
+                color: BA.ColorPicker.blue6
             }, {
                 id: "salt",
                 name: 'Salt',
-                y: 240
+                y: 240,
+                color: BA.ColorPicker.purple
             }, {
                 id: "other_dry",
                 name: 'Other Dry Bulk',
-                y: 252
+                y: 252,
+                color: BA.ColorPicker.magenta
             }, {
                 id: "coal",
                 name: 'Coal',
-                y: 1250
+                y: 1250,
+                color: BA.ColorPicker.blue5
             }, {
                 id: "other_liquid",
                 name: 'Other Liquid Bulk',
-                y: 961
+                y: 961,
+                color: BA.ColorPicker.grey
             }, {
                 id: "petro",
                 name: 'Petroleum Products',
-                y: 12118
+                y: 12118,
+                color: BA.ColorPicker.black
             }]
         }]
     })
