@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cruise traffic for Maritime - Ports</title>
+    
+    <script rel="script" src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
+
+    <!--<script rel="script" src="/charts/js/ba_charts.js"></script>-->
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script rel="script" src="/charts/js/export-csv_glc.js"></script>
+
+    <script src="../js/BlueAccounting.js"></script>
+</head>
+<body>
+<div id="ports_chart"></div>
+<script>
+    var BA = new BlueAccounting();
+    Highcharts.setOptions({
+        lang: {
+            numericSymbols: null,
+            thousandsSep: ',',
+        }
+    });
+    var ports_data = [42, 40, 40, 40, 45];
+    var ports_chart = BA.buildSingleChart("column", ports_data, "Port Count", null, BA.ColorPicker.blue7, 2014, "Ports Served by Cruise Lines",
+        null, null, "ports_chart");
+
+</script>
+</body>
+</html>
