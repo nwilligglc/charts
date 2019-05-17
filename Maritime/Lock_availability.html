@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Lock Availability for Maritime - Blue Accounting</title>
+    <title>Vessel Transits through Locks</title>
     <script rel="script" src="https://code.jquery.com/jquery-3.1.1.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
 
@@ -10,14 +10,28 @@
 
     <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/data.js"></script>
+    <script rel="script" src="/charts/js/export-csv_glc.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
     <script src="../js/BlueAccounting.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <style>
+    body, svg, text {
+        font-family: "Montserrat", sans-serif;
+        }
+        </style>
 </head>
 <body>
     <div id="vessel_transits"></div>
     <div id="availability"></div>
     <div id="avg_delays"></div>
     <script>
-     // For now, including all charts on one page as before
      var BA = new BlueAccounting();
      Highcharts.setOptions({
          lang: {
@@ -25,10 +39,238 @@
              thousandsSep: ',',
          }
      });
-     // Assign chart data
-     var transit_data = [],
-         availability_data = [],
-         delay_data = [];
+     var options_transit = {
+         title: {
+             text: "Vessel Transits through Locks"
+         },
+         subtitle: {
+             text: ""
+         },
+         exporting: {
+             enabled: true
+         },
+         chart: {
+             type: "column",
+             background: "transparent",
+             polar: false,
+             style: {
+                 color: BA.ColorPicker.body
+             },
+             // taken from BlueAccounting.js
+             events: {
+                 load: function () {
+                     var logoX = 15;
+                     var size = this.plotBox.y;
+                     size -= 5;
+
+                     if(this.chartWidth < 500){
+                         logoX = 10;
+                     }
+                     var img_width = (this.chartWidth - 350)/2 - logoX;
+                     var img_height = size;
+                     if(img_width >= img_height*4){
+                         // wide logo. local resource
+                         this.renderer.image("https://c1.staticflickr.com/1/826/26966705327_f80fcd7af1_o.png", logoX, 0, size * 4, size ).add();
+                         // ErieStat logo. Change factor to 3
+                         // this.renderer.image("https://c1.stiaticflickr.com/1/956/27966542108_a46fd4fa96_o.png", logoX, 0, size*3 , size).add();
+                     }else{
+                         // cube logo
+                         this.renderer.image("https://c1.staticflickr.com/1/868/40969378165_8bd2c065b9_o.png", logoX, 0, size, size).add();
+                     }
+                 }
+             }
+         },
+         yAxis: [{
+             title: {
+                 text: "Number of Vessels"
+             },
+             labels: {}
+         }],
+         series: [{
+             name: "SLSMC Niagara Vessel Transits",
+             turboThreshold: 0,
+             marker: {}
+         }, {
+             name: "SLSMC MLO Section Vessel Transits"
+         }, {
+             name: "USACE Soo Locks Vessel Transits"
+         }],
+         plotOptions: {
+             series: {
+                 dataLabels: {},
+                 animation: false
+             }
+         },
+         legend: {},
+         data: {
+             csv: "\"Category\";\"SLSMC Niagara Vessel Transits\";\"SLSMC MLO Section Vessel Transits\";\"USACE Soo Locks Vessel Transits\"\n2009;2799;2395;6642\n2010;3135;2728;8673\n2011;3296;3000;6607\n2012;3243;2975;6663\n2013;3113;2768;6332\n2014;3272;2657;6631\n2015;3006;2529;5999\n2016;3048;2545;6540\n2017;3248;2822;6289\n2018;3147;3118;",
+             googleSpreadsheetKey: false,
+             googleSpreadsheetWorksheet: false
+         },
+         colors: [BA.ColorPicker.blue5, BA.ColorPicker.blue1, BA.ColorPicker.blue2],
+         xAxis: [{
+             title: {},
+             labels: {}
+         }],
+         tooltip: {},
+         credits: {
+             enabled: false
+         }
+     };
+     Highcharts.chart('vessel_transits', options_transit);
+     var options_avail = {
+         title: {
+             text: "Reported Availability (% Available)"
+         },
+         subtitle: {
+             text: ""
+         },
+         exporting: {
+             enabled: true
+         },
+         chart: {
+             type: "column",
+             background: "transparent",
+             polar: false,
+             style: {
+                 color: BA.ColorPicker.body
+             },
+             // taken from BlueAccounting.js
+             events: {
+                 load: function () {
+                     var logoX = 15;
+                     var size = this.plotBox.y;
+                     size -= 5;
+
+                     if(this.chartWidth < 500){
+                         logoX = 10;
+                     }
+                     var img_width = (this.chartWidth - 350)/2 - logoX;
+                     var img_height = size;
+                     if(img_width >= img_height*4){
+                         // wide logo. local resource
+                         this.renderer.image("https://c1.staticflickr.com/1/826/26966705327_f80fcd7af1_o.png", logoX, 0, size * 4, size ).add();
+                         // ErieStat logo. Change factor to 3
+                         // this.renderer.image("https://c1.stiaticflickr.com/1/956/27966542108_a46fd4fa96_o.png", logoX, 0, size*3 , size).add();
+                     }else{
+                         // cube logo
+                         this.renderer.image("https://c1.staticflickr.com/1/868/40969378165_8bd2c065b9_o.png", logoX, 0, size, size).add();
+                     }
+                 }
+             }
+         },
+         yAxis: [{
+             title: {
+                 text: "% Available"
+             },
+             labels: {}
+         }],
+         series: [{
+        "name": "SLSMC"
+        }, {
+        "name": "SLSDC"
+        }],
+         plotOptions: {
+             series: {
+                 dataLabels: {},
+                 animation: false
+             }
+         },
+         legend: {},
+         data: {
+             csv: "\"Category\";\"SLSMC\";\"SLSDC\"\n2012;99.73;99.7\n2013;99.51;99.1\n2014;99.09;99.6\n2015;99.15;99.7\n2016;99.6;99.9\n2017;99.33;99.93",
+             googleSpreadsheetKey: false,
+             googleSpreadsheetWorksheet: false
+         },
+         colors: [BA.ColorPicker.blue5, BA.ColorPicker.blue1, BA.ColorPicker.blue2],
+         xAxis: [{
+             title: {},
+             labels: {}
+         }],
+         tooltip: {},
+         credits: {
+             enabled: false
+         }
+     };
+     Highcharts.chart('availability', options_avail);
+     var options_delay = {
+         title: {
+             text: "Average Delays in Minutes"
+         },
+         subtitle: {
+             text: ""
+         },
+         exporting: {
+             enabled: true
+         },
+         chart: {
+             type: "column",
+             background: "transparent",
+             polar: false,
+             style: {
+                 color: BA.ColorPicker.body
+             },
+             // taken from BlueAccounting.js
+             events: {
+                 load: function () {
+                     var logoX = 15;
+                     var size = this.plotBox.y;
+                     size -= 5;
+
+                     if(this.chartWidth < 500){
+                         logoX = 10;
+                     }
+                     var img_width = (this.chartWidth - 350)/2 - logoX;
+                     var img_height = size;
+                     if(img_width >= img_height*4){
+                         // wide logo. local resource
+                         this.renderer.image("https://c1.staticflickr.com/1/826/26966705327_f80fcd7af1_o.png", logoX, 0, size * 4, size ).add();
+                         // ErieStat logo. Change factor to 3
+                         // this.renderer.image("https://c1.stiaticflickr.com/1/956/27966542108_a46fd4fa96_o.png", logoX, 0, size*3 , size).add();
+                     }else{
+                         // cube logo
+                         this.renderer.image("https://c1.staticflickr.com/1/868/40969378165_8bd2c065b9_o.png", logoX, 0, size, size).add();
+                     }
+                 }
+             }
+         },
+         yAxis: [{
+             title: {
+                 text: "Minutes"
+             },
+             labels: {}
+         }],
+         series: [{
+             "name": "SLSMC Niagara Delays",
+             "turboThreshold": 0
+         }, {
+            "name": "SLSMC MLO Delays"
+         }, {
+             "name": "USACE Soo Locks Delays"
+         }],
+         plotOptions: {
+             series: {
+                 dataLabels: {},
+                 animation: false
+             }
+         },
+         legend: {},
+         data: {
+             csv:"\"Category\";\"SLSMC Niagara Delays\";\"SLSMC MLO Delays\";\"USACE Soo Locks Delays\"\n2009;25;10;9.6\n2010;22;13;16.2\n2011;24;16;17.4\n2012;19;18;39.6\n2013;20;29;28.2\n2014;32;32;30.6\n2015;30;32;28.8\n2016;31;15;29.4\n2017;30;39;40.2",
+             googleSpreadsheetKey: false,
+             googleSpreadsheetWorksheet: false
+         },
+         colors: [BA.ColorPicker.blue5, BA.ColorPicker.blue1, BA.ColorPicker.blue2],
+         xAxis: [{
+             title: {},
+             labels: {}
+         }],
+         tooltip: {},
+         credits: {
+             enabled: false
+         }
+     };
+     Highcharts.chart('avg_delays', options_delay);
     </script>
 </body>
 </html>
