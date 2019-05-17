@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reported Availability</title>
+    <script rel="script" src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
+
+    <!--<script rel="script" src="/charts/js/ba_charts.js"></script>-->
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/data.js"></script>
+    <script rel="script" src="/charts/js/export-csv_glc.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="../js/BlueAccounting.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <style>
+    body, svg, text {
+        font-family: "Montserrat", sans-serif;
+        }
+        </style>
+</head>
+<body>
+    <div id="availability"></div>
+    <script>
+     var BA = new BlueAccounting();
+     Highcharts.setOptions({
+         lang: {
+             numericSymbols: null,
+             thousandsSep: ',',
+         }
+     });
+     var options_avail = {
+         title: {
+             text: "Reported Availability (% Available)"
+         },
+         subtitle: {
+             text: ""
+         },
+         exporting: {
+             enabled: true
+         },
+         chart: {
+             type: "column",
+             background: "transparent",
+             polar: false,
+             style: {
+                 color: BA.ColorPicker.body
+             },
+             // taken from BlueAccounting.js
+             events: {
+                 load: function () {
+                     var logoX = 15;
+                     var size = this.plotBox.y;
+                     size -= 5;
+
+                     if(this.chartWidth < 500){
+                         logoX = 10;
+                     }
+                     var img_width = (this.chartWidth - 350)/2 - logoX;
+                     var img_height = size;
+                     if(img_width >= img_height*4){
+                         // wide logo. local resource
+                         this.renderer.image("https://c1.staticflickr.com/1/826/26966705327_f80fcd7af1_o.png", logoX, 0, size * 4, size ).add();
+                         // ErieStat logo. Change factor to 3
+                         // this.renderer.image("https://c1.stiaticflickr.com/1/956/27966542108_a46fd4fa96_o.png", logoX, 0, size*3 , size).add();
+                     }else{
+                         // cube logo
+                         this.renderer.image("https://c1.staticflickr.com/1/868/40969378165_8bd2c065b9_o.png", logoX, 0, size, size).add();
+                     }
+                 }
+             }
+         },
+         yAxis: [{
+             title: {
+                 text: "% Available"
+             },
+             labels: {}
+         }],
+         series: [{
+        "name": "SLSMC"
+        }, {
+        "name": "SLSDC"
+        }],
+         plotOptions: {
+             series: {
+                 dataLabels: {},
+                 animation: false
+             }
+         },
+         legend: {},
+         data: {
+             csv: "\"Category\";\"SLSMC\";\"SLSDC\"\n2012;99.73;99.7\n2013;99.51;99.1\n2014;99.09;99.6\n2015;99.15;99.7\n2016;99.6;99.9\n2017;99.33;99.93",
+             googleSpreadsheetKey: false,
+             googleSpreadsheetWorksheet: false
+         },
+         colors: [BA.ColorPicker.blue5, BA.ColorPicker.blue1, BA.ColorPicker.blue2],
+         xAxis: [{
+             title: {},
+             labels: {}
+         }],
+         tooltip: {},
+         credits: {
+             enabled: false
+         }
+     };
+     Highcharts.chart('availability', options_avail);
+    </script>
+</body>
+</html>
