@@ -2,8 +2,19 @@
 <head>
     <title>Blue Accounting Visualization Index</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <script src="//code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="js/BlueAccounting.js"></script>
+    <!--<link href="css/BA_Style.css" rel="stylesheet">-->
     <style>
         body {
+            font-family: "Montserrat", sans-serif;
+        }
+        .inline {
+            display: inline-block;
+        }
+        .highcharts-root text{
             font-family: "Montserrat", sans-serif;
         }
     </style>
@@ -97,6 +108,8 @@
     <hr>
     <h2>Visualizations for demonstration.</h2>
         <p>Many are created using data from the ErieStat Pilot.</p>
+    <div id="ba_color_wheel"  class="inline"></div>
+    <div id="additional_color_wheel" class="inline"></div>
 
     <h3>Charts</h3>
     <div>
@@ -193,6 +206,187 @@
     <div style="text-align: center">
         <p>END OF PAGE</p>
     </div>
+<script>
+    var BA = new BlueAccounting();
+    Highcharts.chart("ba_color_wheel", {
+        chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: null,
+            plotShadow: false,
+            type: 'pie'
+        },
+        title: {
+            text: 'Blue Accounting Primary Color Theme'
+        },
+        tooltip: {
+            enabled: false
+        },
+        credits: {
+            enabled: false
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                // dataLabels: {
+                //     enabled: true,
+                //     format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                //     style: {
+                //         color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                //     }
+                // }
+            }
+        },
+        series: [{
+            name: 'Brands',
+            colorByPoint: true,
+            data: [{
+                name: 'Blue 1',
+                color: BA.ColorPicker.blue1,
+                y: 1,
+            }, {
+                name: 'Blue 2',
+                color: BA.ColorPicker.blue2,
+                y: 1
+            }, {
+                name: 'Blue 3',
+                color: BA.ColorPicker.blue3,
+                y: 1
+            }, {
+                name: 'Blue 4',
+                color: BA.ColorPicker.blue4,
+                y: 1
+            }, {
+                name: 'Blue 5',
+                color: BA.ColorPicker.blue5,
+                y: 1
+            }, {
+                name: 'Blue 6',
+                color: BA.ColorPicker.blue6,
+                y: 1
+            }, {
+                name: 'Blue 7',
+                color: BA.ColorPicker.blue7,
+                y: 1
+            }, {
+                name: 'Target Line',
+                color: BA.ColorPicker.target_red,
+                y: 1
+            }]
+        }]
+    });
+    Highcharts.chart("additional_color_wheel", {
+        chart: {
+            plotBackgroundColor: BA.ColorPicker.blue4,
+            plotBorderWidth: null,
+            plotShadow: false,
+            type: 'pie'
+        },
+        title: {
+            text: 'Additional Preferred Colors of Choice'
+        },
+        tooltip: {
+            enabled: false
+        },
+        credits: {
+            enabled: false
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                // dataLabels: {
+                //     enabled: true,
+                //     format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                //     style: {
+                //         color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                //     }
+                // }
+            }
+        },
+        series: [{
+            name: 'Brands',
+            colorByPoint: true,
+            data: [{
+                name: 'Apricot',
+                color: BA.ColorPicker.apricot,
+                y: 1
+            }, {
+                name: 'Beige',
+                color: BA.ColorPicker.beige,
+                y: 1
+            },{
+                name: 'Black',
+                color: BA.ColorPicker.black,
+                y: 1
+            },{
+                name: 'Brown',
+                color: BA.ColorPicker.brown,
+                y: 1
+            },{
+                name: 'Green',
+                color: BA.ColorPicker.green,
+                y: 1
+            },{
+                name: 'Grey',
+                color: BA.ColorPicker.grey,
+                y: 1
+            },{
+                name: 'Lavender',
+                color: BA.ColorPicker.lavender,
+                y: 1
+            },{
+                name: 'Lime',
+                color: BA.ColorPicker.lime,
+                y: 1
+            },{
+                name: 'Magenta',
+                color: BA.ColorPicker.magenta,
+                y: 1
+            },{
+                name: 'Maroon',
+                color: BA.ColorPicker.maroon,
+                y: 1
+            },{
+                name: 'Ming',
+                color: BA.ColorPicker.ming,
+                y: 1
+            },{
+                name: 'Olive',
+                color: BA.ColorPicker.olive,
+                y: 1
+            },{
+                name: 'Orange',
+                color: BA.ColorPicker.orange,
+                y: 1
+            },{
+                name: 'Pink',
+                color: BA.ColorPicker.pink,
+                y: 1
+            },{
+                name: 'Purple',
+                color: BA.ColorPicker.purple,
+                y: 1
+            },{
+                name: 'Red',
+                color: BA.ColorPicker.red,
+                y: 1
+            },{
+                name: 'Teal',
+                color: BA.ColorPicker.teal,
+                y: 1
+            },{
+                name: 'White',
+                color: BA.ColorPicker.white,
+                y: 1
+            },{
+                name: 'Yellow',
+                color: BA.ColorPicker.yellow,
+                y: 1
+            }]
+        }]
+    })
+</script>
 </body>
 </html>
 
