@@ -1,0 +1,3957 @@
+[
+  {
+    "River": "Cattaraugus Creek",
+    "Year": 2008,
+    "Fraction": "Annual TP Loading",
+    "Value": "",
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Cattaraugus Creek",
+    "Year": 2009,
+    "Fraction": "Annual TP Loading",
+    "Value": 44,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Cattaraugus Creek",
+    "Year": 2010,
+    "Fraction": "Annual TP Loading",
+    "Value": 36,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Cattaraugus Creek",
+    "Year": 2011,
+    "Fraction": "Annual TP Loading",
+    "Value": 476,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Cattaraugus Creek",
+    "Year": 2012,
+    "Fraction": "Annual TP Loading",
+    "Value": 559,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Cattaraugus Creek",
+    "Year": 2013,
+    "Fraction": "Annual TP Loading",
+    "Value": 254,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Cattaraugus Creek",
+    "Year": 2014,
+    "Fraction": "Annual TP Loading",
+    "Value": 371,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Cattaraugus Creek",
+    "Year": 2015,
+    "Fraction": "Annual TP Loading",
+    "Value": 20,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Cattaraugus Creek",
+    "Year": 2016,
+    "Fraction": "Annual TP Loading",
+    "Value": 274,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Cattaraugus Creek",
+    "Year": 2009,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.039287586,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Cattaraugus Creek",
+    "Year": 2010,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.05177608,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Cattaraugus Creek",
+    "Year": 2011,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.324819146,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Cattaraugus Creek",
+    "Year": 2012,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.675095901,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Cattaraugus Creek",
+    "Year": 2013,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.299907433,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2014,
+    "Fraction": "Annual TP Loading",
+    "Value": 126,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2015,
+    "Fraction": "Annual TP Loading",
+    "Value": 96,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2016,
+    "Fraction": "Annual TP Loading",
+    "Value": 129,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2008,
+    "Fraction": "Spring Discharge",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2009,
+    "Fraction": "Spring Discharge",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2010,
+    "Fraction": "Spring Discharge",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2011,
+    "Fraction": "Spring Discharge",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2012,
+    "Fraction": "Spring Discharge",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2013,
+    "Fraction": "Spring Discharge",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2014,
+    "Fraction": "Spring Discharge",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2015,
+    "Fraction": "Spring Discharge",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2016,
+    "Fraction": "Spring Discharge",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2008,
+    "Fraction": "Spring TP Loading",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2009,
+    "Fraction": "Spring TP Loading",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2010,
+    "Fraction": "Spring TP Loading",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2011,
+    "Fraction": "Spring TP Loading",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2012,
+    "Fraction": "Spring TP Loading",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2013,
+    "Fraction": "Spring TP Loading",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2014,
+    "Fraction": "Spring TP Loading",
+    "Value": 48.7,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2015,
+    "Fraction": "Spring TP Loading",
+    "Value": 88.8,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2016,
+    "Fraction": "Spring TP Loading",
+    "Value": 52.7,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2008,
+    "Fraction": "Spring SRP Loading",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2009,
+    "Fraction": "Spring SRP Loading",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2010,
+    "Fraction": "Spring SRP Loading",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2011,
+    "Fraction": "Spring SRP Loading",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2012,
+    "Fraction": "Spring SRP Loading",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2013,
+    "Fraction": "Spring SRP Loading",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2014,
+    "Fraction": "Spring SRP Loading",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2015,
+    "Fraction": "Spring SRP Loading",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2016,
+    "Fraction": "Spring SRP Loading",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2008,
+    "Fraction": "Spring TP FWMC",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2009,
+    "Fraction": "Spring TP FWMC",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2010,
+    "Fraction": "Spring TP FWMC",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2011,
+    "Fraction": "Spring TP FWMC",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2012,
+    "Fraction": "Spring TP FWMC",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2013,
+    "Fraction": "Spring TP FWMC",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2014,
+    "Fraction": "Spring TP FWMC",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2015,
+    "Fraction": "Spring TP FWMC",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2016,
+    "Fraction": "Spring TP FWMC",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2008,
+    "Fraction": "Spring SRP FWMC",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2009,
+    "Fraction": "Spring SRP FWMC",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2010,
+    "Fraction": "Spring SRP FWMC",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2011,
+    "Fraction": "Spring SRP FWMC",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2012,
+    "Fraction": "Spring SRP FWMC",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2013,
+    "Fraction": "Spring SRP FWMC",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2014,
+    "Fraction": "Spring SRP FWMC",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2015,
+    "Fraction": "Spring SRP FWMC",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cedar-Toussaint",
+    "Year": 2016,
+    "Fraction": "Spring SRP FWMC",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Chagrin River",
+    "Year": 2014,
+    "Fraction": "Annual TP Loading",
+    "Value": 14,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Chagrin River",
+    "Year": 2015,
+    "Fraction": "Annual TP Loading",
+    "Value": 23,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2008,
+    "Fraction": "Spring Discharge",
+    "Value": 560.23,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2009,
+    "Fraction": "Spring Discharge",
+    "Value": 371.3,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2010,
+    "Fraction": "Spring Discharge",
+    "Value": 374,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2011,
+    "Fraction": "Spring Discharge",
+    "Value": 856.44,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2012,
+    "Fraction": "Spring Discharge",
+    "Value": 273.87,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2013,
+    "Fraction": "Spring Discharge",
+    "Value": 432.34,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2014,
+    "Fraction": "Spring Discharge",
+    "Value": 556.99,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2015,
+    "Fraction": "Spring Discharge",
+    "Value": 631.89,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2016,
+    "Fraction": "Spring Discharge",
+    "Value": 359.77,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2008,
+    "Fraction": "Spring TP Loading",
+    "Value": 138.9,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2009,
+    "Fraction": "Spring TP Loading",
+    "Value": 154.1,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2010,
+    "Fraction": "Spring TP Loading",
+    "Value": 98.2,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2011,
+    "Fraction": "Spring TP Loading",
+    "Value": 190.5,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2012,
+    "Fraction": "Spring TP Loading",
+    "Value": 51.8,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2013,
+    "Fraction": "Spring TP Loading",
+    "Value": 111.4,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2014,
+    "Fraction": "Spring TP Loading",
+    "Value": 170,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2015,
+    "Fraction": "Spring TP Loading",
+    "Value": 145,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2016,
+    "Fraction": "Spring TP Loading",
+    "Value": 48.4,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2008,
+    "Fraction": "Spring SRP Loading",
+    "Value": 14.3,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2009,
+    "Fraction": "Spring SRP Loading",
+    "Value": 11,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2010,
+    "Fraction": "Spring SRP Loading",
+    "Value": 13,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2011,
+    "Fraction": "Spring SRP Loading",
+    "Value": 12.7,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2012,
+    "Fraction": "Spring SRP Loading",
+    "Value": 7.6,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2013,
+    "Fraction": "Spring SRP Loading",
+    "Value": 10.6,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2014,
+    "Fraction": "Spring SRP Loading",
+    "Value": 7.5,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2015,
+    "Fraction": "Spring SRP Loading",
+    "Value": 9.7,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2016,
+    "Fraction": "Spring SRP Loading",
+    "Value": 8.7,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2008,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.248,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2009,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.415,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2010,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.263,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2011,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.222,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2012,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.189,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2013,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.258,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2014,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.305,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2015,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.229,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2016,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.135,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2008,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.026,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2009,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.03,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2010,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.035,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2011,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.015,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2012,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.028,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2013,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.024,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2014,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.014,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2015,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.015,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2016,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.024,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2008,
+    "Fraction": "Annual TP Loading",
+    "Value": 452,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2009,
+    "Fraction": "Annual TP Loading",
+    "Value": 398,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2010,
+    "Fraction": "Annual TP Loading",
+    "Value": 269,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2011,
+    "Fraction": "Annual TP Loading",
+    "Value": 468,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2012,
+    "Fraction": "Annual TP Loading",
+    "Value": 299,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2013,
+    "Fraction": "Annual TP Loading",
+    "Value": 389,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2014,
+    "Fraction": "Annual TP Loading",
+    "Value": 350,
+    "Source": "Santina August 2018"
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2015,
+    "Fraction": "Annual TP Loading",
+    "Value": 304,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2016,
+    "Fraction": "Annual TP Loading",
+    "Value": 213,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2008,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.301977222,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2009,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.357797964,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2010,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.299718739,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2011,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.267023455,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2012,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.216860636,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Cuyahoga River",
+    "Year": 2013,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.30742119,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Detroit River",
+    "Year": 2008,
+    "Fraction": "Annual TP Loading",
+    "Value": 1261,
+    "Source": "Santina August 2018"
+  },
+  {
+    "River": "Detroit River",
+    "Year": 2009,
+    "Fraction": "Annual TP Loading",
+    "Value": 1242,
+    "Source": "Santina August 2018"
+  },
+  {
+    "River": "Detroit River",
+    "Year": 2010,
+    "Fraction": "Annual TP Loading",
+    "Value": 1241,
+    "Source": "Santina August 2018"
+  },
+  {
+    "River": "Detroit River",
+    "Year": 2011,
+    "Fraction": "Annual TP Loading",
+    "Value": 1216,
+    "Source": "Santina August 2018"
+  },
+  {
+    "River": "Detroit River",
+    "Year": 2012,
+    "Fraction": "Annual TP Loading",
+    "Value": 1014,
+    "Source": "Santina August 2018"
+  },
+  {
+    "River": "Detroit River",
+    "Year": 2013,
+    "Fraction": "Annual TP Loading",
+    "Value": 958,
+    "Source": "Santina August 2018"
+  },
+  {
+    "River": "Detroit River",
+    "Year": 2014,
+    "Fraction": "Annual TP Loading",
+    "Value": 625,
+    "Source": "Santina August 2018"
+  },
+  {
+    "River": "Detroit River",
+    "Year": 2015,
+    "Fraction": "Annual TP Loading",
+    "Value": 738,
+    "Source": "Santina August 2018"
+  },
+  {
+    "River": "Detroit River",
+    "Year": 2016,
+    "Fraction": "Annual TP Loading",
+    "Value": 699,
+    "Source": "Santina August 2018"
+  },
+  {
+    "River": "Grand River-OH",
+    "Year": 2014,
+    "Fraction": "Annual TP Loading",
+    "Value": 36,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Grand River-OH",
+    "Year": 2015,
+    "Fraction": "Annual TP Loading",
+    "Value": 65,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Grand River-OH",
+    "Year": 2016,
+    "Fraction": "Annual TP Loading",
+    "Value": 32,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Grand River-OH",
+    "Year": 2008,
+    "Fraction": "Annual TP Loading",
+    "Value": 165,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Grand River-OH",
+    "Year": 2009,
+    "Fraction": "Annual TP Loading",
+    "Value": 66,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Grand River-OH",
+    "Year": 2010,
+    "Fraction": "Annual TP Loading",
+    "Value": 55,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Grand River-OH",
+    "Year": 2011,
+    "Fraction": "Annual TP Loading",
+    "Value": 108,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Grand River-OH",
+    "Year": 2012,
+    "Fraction": "Annual TP Loading",
+    "Value": 52,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Grand River-OH",
+    "Year": 2013,
+    "Fraction": "Annual TP Loading",
+    "Value": 54,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Grand River-OH",
+    "Year": 2008,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.135839371,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Grand River-OH",
+    "Year": 2009,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.081662635,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Grand River-OH",
+    "Year": 2010,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.081968074,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Grand River-OH",
+    "Year": 2011,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.085383106,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Grand River-OH",
+    "Year": 2012,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.053293104,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Grand River-OH",
+    "Year": 2013,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.052083094,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Huron River-MI",
+    "Year": 2014,
+    "Fraction": "Annual TP Loading",
+    "Value": 94,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Huron River-MI",
+    "Year": 2015,
+    "Fraction": "Annual TP Loading",
+    "Value": 106,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Huron River-MI",
+    "Year": 2016,
+    "Fraction": "Annual TP Loading",
+    "Value": 77,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Huron River-OH",
+    "Year": 2014,
+    "Fraction": "Annual TP Loading",
+    "Value": 63,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Huron River-OH",
+    "Year": 2015,
+    "Fraction": "Annual TP Loading",
+    "Value": 20,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Huron River-OH",
+    "Year": 2016,
+    "Fraction": "Annual TP Loading",
+    "Value": 79,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Huron River-OH",
+    "Year": 2008,
+    "Fraction": "Annual TP Loading",
+    "Value": 205,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Huron River-OH",
+    "Year": 2009,
+    "Fraction": "Annual TP Loading",
+    "Value": 32,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Huron River-OH",
+    "Year": 2010,
+    "Fraction": "Annual TP Loading",
+    "Value": 69,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Huron River-OH",
+    "Year": 2011,
+    "Fraction": "Annual TP Loading",
+    "Value": 70,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Huron River-OH",
+    "Year": 2012,
+    "Fraction": "Annual TP Loading",
+    "Value": 48,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Huron River-OH",
+    "Year": 2013,
+    "Fraction": "Annual TP Loading",
+    "Value": 157,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Huron River-OH",
+    "Year": 2008,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.314785001,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Huron River-OH",
+    "Year": 2009,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.08196612,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Huron River-OH",
+    "Year": 2010,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.329266522,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Huron River-OH",
+    "Year": 2011,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.120277279,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Huron River-OH",
+    "Year": 2012,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.112806944,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Huron River-OH",
+    "Year": 2013,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.325223467,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Huron River-OH",
+    "Year": 2008,
+    "Fraction": "Spring Discharge",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Huron River-OH",
+    "Year": 2009,
+    "Fraction": "Spring Discharge",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Huron River-OH",
+    "Year": 2010,
+    "Fraction": "Spring Discharge",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Huron River-OH",
+    "Year": 2011,
+    "Fraction": "Spring Discharge",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Huron River-OH",
+    "Year": 2012,
+    "Fraction": "Spring Discharge",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Huron River-OH",
+    "Year": 2013,
+    "Fraction": "Spring Discharge",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Huron River-OH",
+    "Year": 2014,
+    "Fraction": "Spring Discharge",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Huron River-OH",
+    "Year": 2015,
+    "Fraction": "Spring Discharge",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Huron River-OH",
+    "Year": 2016,
+    "Fraction": "Spring Discharge",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Huron River-OH",
+    "Year": 2008,
+    "Fraction": "Spring TP Loading",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Huron River-OH",
+    "Year": 2009,
+    "Fraction": "Spring TP Loading",
+    "Value": 10,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Huron River-OH",
+    "Year": 2010,
+    "Fraction": "Spring TP Loading",
+    "Value": 29.9,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Huron River-OH",
+    "Year": 2011,
+    "Fraction": "Spring TP Loading",
+    "Value": 20.8,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Huron River-OH",
+    "Year": 2012,
+    "Fraction": "Spring TP Loading",
+    "Value": 3,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Huron River-OH",
+    "Year": 2013,
+    "Fraction": "Spring TP Loading",
+    "Value": 37.4,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Huron River-OH",
+    "Year": 2014,
+    "Fraction": "Spring TP Loading",
+    "Value": 17.9,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Huron River-OH",
+    "Year": 2015,
+    "Fraction": "Spring TP Loading",
+    "Value": 10,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Huron River-OH",
+    "Year": 2016,
+    "Fraction": "Spring TP Loading",
+    "Value": 25.9,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Huron River-OH",
+    "Year": 2008,
+    "Fraction": "Spring SRP Loading",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Huron River-OH",
+    "Year": 2009,
+    "Fraction": "Spring SRP Loading",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Huron River-OH",
+    "Year": 2010,
+    "Fraction": "Spring SRP Loading",
+    "Value": 7.6,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Huron River-OH",
+    "Year": 2011,
+    "Fraction": "Spring SRP Loading",
+    "Value": 14.3,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Huron River-OH",
+    "Year": 2012,
+    "Fraction": "Spring SRP Loading",
+    "Value": 1.1,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Huron River-OH",
+    "Year": 2013,
+    "Fraction": "Spring SRP Loading",
+    "Value": 10.3,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Huron River-OH",
+    "Year": 2014,
+    "Fraction": "Spring SRP Loading",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Huron River-OH",
+    "Year": 2015,
+    "Fraction": "Spring SRP Loading",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Huron River-OH",
+    "Year": 2016,
+    "Fraction": "Spring SRP Loading",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Huron River-OH",
+    "Year": 2008,
+    "Fraction": "Spring TP FWMC",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Huron River-OH",
+    "Year": 2009,
+    "Fraction": "Spring TP FWMC",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Huron River-OH",
+    "Year": 2010,
+    "Fraction": "Spring TP FWMC",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Huron River-OH",
+    "Year": 2011,
+    "Fraction": "Spring TP FWMC",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Huron River-OH",
+    "Year": 2012,
+    "Fraction": "Spring TP FWMC",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Huron River-OH",
+    "Year": 2013,
+    "Fraction": "Spring TP FWMC",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Huron River-OH",
+    "Year": 2014,
+    "Fraction": "Spring TP FWMC",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Huron River-OH",
+    "Year": 2015,
+    "Fraction": "Spring TP FWMC",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Huron River-OH",
+    "Year": 2016,
+    "Fraction": "Spring TP FWMC",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Huron River-OH",
+    "Year": 2008,
+    "Fraction": "Spring SRP FWMC",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Huron River-OH",
+    "Year": 2009,
+    "Fraction": "Spring SRP FWMC",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Huron River-OH",
+    "Year": 2010,
+    "Fraction": "Spring SRP FWMC",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Huron River-OH",
+    "Year": 2011,
+    "Fraction": "Spring SRP FWMC",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Huron River-OH",
+    "Year": 2012,
+    "Fraction": "Spring SRP FWMC",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Huron River-OH",
+    "Year": 2013,
+    "Fraction": "Spring SRP FWMC",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Huron River-OH",
+    "Year": 2014,
+    "Fraction": "Spring SRP FWMC",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Huron River-OH",
+    "Year": 2015,
+    "Fraction": "Spring SRP FWMC",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Huron River-OH",
+    "Year": 2016,
+    "Fraction": "Spring SRP FWMC",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2008,
+    "Fraction": "Spring Discharge",
+    "Value": "",
+    "Source": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2009,
+    "Fraction": "Spring Discharge",
+    "Value": "",
+    "Source": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2010,
+    "Fraction": "Spring Discharge",
+    "Value": "",
+    "Source": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2011,
+    "Fraction": "Spring Discharge",
+    "Value": "",
+    "Source": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2012,
+    "Fraction": "Spring Discharge",
+    "Value": "",
+    "Source": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2013,
+    "Fraction": "Spring Discharge",
+    "Value": "",
+    "Source": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2014,
+    "Fraction": "Spring Discharge",
+    "Value": "",
+    "Source": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2015,
+    "Fraction": "Spring Discharge",
+    "Value": "",
+    "Source": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2016,
+    "Fraction": "Spring Discharge",
+    "Value": "",
+    "Source": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2008,
+    "Fraction": "Spring TP Loading",
+    "Value": "",
+    "Source": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2009,
+    "Fraction": "Spring TP Loading",
+    "Value": "",
+    "Source": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2010,
+    "Fraction": "Spring TP Loading",
+    "Value": "",
+    "Source": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2011,
+    "Fraction": "Spring TP Loading",
+    "Value": "",
+    "Source": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2012,
+    "Fraction": "Spring TP Loading",
+    "Value": "",
+    "Source": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2013,
+    "Fraction": "Spring TP Loading",
+    "Value": "",
+    "Source": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2014,
+    "Fraction": "Spring TP Loading",
+    "Value": "",
+    "Source": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2015,
+    "Fraction": "Spring TP Loading",
+    "Value": "",
+    "Source": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2016,
+    "Fraction": "Spring TP Loading",
+    "Value": "",
+    "Source": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2008,
+    "Fraction": "Spring SRP Loading",
+    "Value": "",
+    "Source": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2009,
+    "Fraction": "Spring SRP Loading",
+    "Value": "",
+    "Source": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2010,
+    "Fraction": "Spring SRP Loading",
+    "Value": "",
+    "Source": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2011,
+    "Fraction": "Spring SRP Loading",
+    "Value": "",
+    "Source": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2012,
+    "Fraction": "Spring SRP Loading",
+    "Value": "",
+    "Source": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2013,
+    "Fraction": "Spring SRP Loading",
+    "Value": "",
+    "Source": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2014,
+    "Fraction": "Spring SRP Loading",
+    "Value": "",
+    "Source": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2015,
+    "Fraction": "Spring SRP Loading",
+    "Value": "",
+    "Source": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2016,
+    "Fraction": "Spring SRP Loading",
+    "Value": "",
+    "Source": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2008,
+    "Fraction": "Spring TP FWMC",
+    "Value": "",
+    "Source": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2009,
+    "Fraction": "Spring TP FWMC",
+    "Value": "",
+    "Source": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2010,
+    "Fraction": "Spring TP FWMC",
+    "Value": "",
+    "Source": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2011,
+    "Fraction": "Spring TP FWMC",
+    "Value": "",
+    "Source": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2012,
+    "Fraction": "Spring TP FWMC",
+    "Value": "",
+    "Source": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2013,
+    "Fraction": "Spring TP FWMC",
+    "Value": "",
+    "Source": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2014,
+    "Fraction": "Spring TP FWMC",
+    "Value": "",
+    "Source": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2015,
+    "Fraction": "Spring TP FWMC",
+    "Value": "",
+    "Source": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2016,
+    "Fraction": "Spring TP FWMC",
+    "Value": "",
+    "Source": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2008,
+    "Fraction": "Spring SRP FWMC",
+    "Value": "",
+    "Source": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2009,
+    "Fraction": "Spring SRP FWMC",
+    "Value": "",
+    "Source": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2010,
+    "Fraction": "Spring SRP FWMC",
+    "Value": "",
+    "Source": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2011,
+    "Fraction": "Spring SRP FWMC",
+    "Value": "",
+    "Source": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2012,
+    "Fraction": "Spring SRP FWMC",
+    "Value": "",
+    "Source": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2013,
+    "Fraction": "Spring SRP FWMC",
+    "Value": "",
+    "Source": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2014,
+    "Fraction": "Spring SRP FWMC",
+    "Value": "",
+    "Source": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2015,
+    "Fraction": "Spring SRP FWMC",
+    "Value": "",
+    "Source": ""
+  },
+  {
+    "River": "Leamington Tributaries",
+    "Year": 2016,
+    "Fraction": "Spring SRP FWMC",
+    "Value": "",
+    "Source": ""
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2008,
+    "Fraction": "Spring Discharge",
+    "Value": 3756.45,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2009,
+    "Fraction": "Spring Discharge",
+    "Value": 3335.14,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2010,
+    "Fraction": "Spring Discharge",
+    "Value": 3612.8,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2011,
+    "Fraction": "Spring Discharge",
+    "Value": 5097.13,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2012,
+    "Fraction": "Spring Discharge",
+    "Value": 1038.78,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2013,
+    "Fraction": "Spring Discharge",
+    "Value": 3341.66,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2014,
+    "Fraction": "Spring Discharge",
+    "Value": 3474.71,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2015,
+    "Fraction": "Spring Discharge",
+    "Value": 5546.94,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2016,
+    "Fraction": "Spring Discharge",
+    "Value": 2490.47,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2008,
+    "Fraction": "Spring TP Loading",
+    "Value": 1414.1,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2009,
+    "Fraction": "Spring TP Loading",
+    "Value": 1369.7,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2010,
+    "Fraction": "Spring TP Loading",
+    "Value": 1307.4,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2011,
+    "Fraction": "Spring TP Loading",
+    "Value": 2318,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2012,
+    "Fraction": "Spring TP Loading",
+    "Value": 393.1,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2013,
+    "Fraction": "Spring TP Loading",
+    "Value": 1249.5,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2014,
+    "Fraction": "Spring TP Loading",
+    "Value": 1155.2,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2015,
+    "Fraction": "Spring TP Loading",
+    "Value": 2059.6,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2016,
+    "Fraction": "Spring TP Loading",
+    "Value": 755.3,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2008,
+    "Fraction": "Spring SRP Loading",
+    "Value": 302.3,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2009,
+    "Fraction": "Spring SRP Loading",
+    "Value": 211.2,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2010,
+    "Fraction": "Spring SRP Loading",
+    "Value": 323.8,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2011,
+    "Fraction": "Spring SRP Loading",
+    "Value": 430,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2012,
+    "Fraction": "Spring SRP Loading",
+    "Value": 63.8,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2013,
+    "Fraction": "Spring SRP Loading",
+    "Value": 288.9,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2014,
+    "Fraction": "Spring SRP Loading",
+    "Value": 306.5,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2015,
+    "Fraction": "Spring SRP Loading",
+    "Value": 609,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2016,
+    "Fraction": "Spring SRP Loading",
+    "Value": 144,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2008,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.376,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2009,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.411,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2010,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.362,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2011,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.455,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2012,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.378,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2013,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.374,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2014,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.332,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2015,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.371,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2016,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.303,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2008,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.08,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2009,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.063,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2010,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.09,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2011,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.084,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2012,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.061,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2013,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.086,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2014,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.088,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2015,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.11,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2016,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.058,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2008,
+    "Fraction": "Annual TP Loading",
+    "Value": 3812,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2009,
+    "Fraction": "Annual TP Loading",
+    "Value": 2329,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2010,
+    "Fraction": "Annual TP Loading",
+    "Value": 1679,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2011,
+    "Fraction": "Annual TP Loading",
+    "Value": 3007,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2012,
+    "Fraction": "Annual TP Loading",
+    "Value": 2411,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2013,
+    "Fraction": "Annual TP Loading",
+    "Value": 2287,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2014,
+    "Fraction": "Annual TP Loading",
+    "Value": 2213,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2015,
+    "Fraction": "Annual TP Loading",
+    "Value": 2467,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2016,
+    "Fraction": "Annual TP Loading",
+    "Value": 1309,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2008,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.456447108,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2009,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.439831621,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2010,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.346261584,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2011,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.452990225,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2012,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.388362502,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Maumee River",
+    "Year": 2013,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.435902298,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Portage River",
+    "Year": 2008,
+    "Fraction": "Spring Discharge",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Portage River",
+    "Year": 2009,
+    "Fraction": "Spring Discharge",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Portage River",
+    "Year": 2010,
+    "Fraction": "Spring Discharge",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Portage River",
+    "Year": 2011,
+    "Fraction": "Spring Discharge",
+    "Value": 415.75,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Portage River",
+    "Year": 2012,
+    "Fraction": "Spring Discharge",
+    "Value": 94.36,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Portage River",
+    "Year": 2013,
+    "Fraction": "Spring Discharge",
+    "Value": 218.64,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Portage River",
+    "Year": 2014,
+    "Fraction": "Spring Discharge",
+    "Value": 186.73,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Portage River",
+    "Year": 2015,
+    "Fraction": "Spring Discharge",
+    "Value": 388.79,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Portage River",
+    "Year": 2016,
+    "Fraction": "Spring Discharge",
+    "Value": 193.6,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Portage River",
+    "Year": 2008,
+    "Fraction": "Spring TP Loading",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Portage River",
+    "Year": 2009,
+    "Fraction": "Spring TP Loading",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Portage River",
+    "Year": 2010,
+    "Fraction": "Spring TP Loading",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Portage River",
+    "Year": 2011,
+    "Fraction": "Spring TP Loading",
+    "Value": 171.4,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Portage River",
+    "Year": 2012,
+    "Fraction": "Spring TP Loading",
+    "Value": 32,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Portage River",
+    "Year": 2013,
+    "Fraction": "Spring TP Loading",
+    "Value": 71.9,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Portage River",
+    "Year": 2014,
+    "Fraction": "Spring TP Loading",
+    "Value": 62.4,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Portage River",
+    "Year": 2015,
+    "Fraction": "Spring TP Loading",
+    "Value": 111.4,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Portage River",
+    "Year": 2016,
+    "Fraction": "Spring TP Loading",
+    "Value": 67.3,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Portage River",
+    "Year": 2008,
+    "Fraction": "Spring SRP Loading",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Portage River",
+    "Year": 2009,
+    "Fraction": "Spring SRP Loading",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Portage River",
+    "Year": 2010,
+    "Fraction": "Spring SRP Loading",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Portage River",
+    "Year": 2011,
+    "Fraction": "Spring SRP Loading",
+    "Value": 32.6,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Portage River",
+    "Year": 2012,
+    "Fraction": "Spring SRP Loading",
+    "Value": 6.6,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Portage River",
+    "Year": 2013,
+    "Fraction": "Spring SRP Loading",
+    "Value": 21.9,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Portage River",
+    "Year": 2014,
+    "Fraction": "Spring SRP Loading",
+    "Value": 14.1,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Portage River",
+    "Year": 2015,
+    "Fraction": "Spring SRP Loading",
+    "Value": 40.1,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Portage River",
+    "Year": 2016,
+    "Fraction": "Spring SRP Loading",
+    "Value": 11,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Portage River",
+    "Year": 2008,
+    "Fraction": "Spring TP FWMC",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Portage River",
+    "Year": 2009,
+    "Fraction": "Spring TP FWMC",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Portage River",
+    "Year": 2010,
+    "Fraction": "Spring TP FWMC",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Portage River",
+    "Year": 2011,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.412,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Portage River",
+    "Year": 2012,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.339,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Portage River",
+    "Year": 2013,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.329,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Portage River",
+    "Year": 2014,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.334,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Portage River",
+    "Year": 2015,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.287,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Portage River",
+    "Year": 2016,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.348,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Portage River",
+    "Year": 2008,
+    "Fraction": "Spring SRP FWMC",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Portage River",
+    "Year": 2009,
+    "Fraction": "Spring SRP FWMC",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Portage River",
+    "Year": 2010,
+    "Fraction": "Spring SRP FWMC",
+    "Value": "",
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Portage River",
+    "Year": 2011,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.078,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Portage River",
+    "Year": 2012,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.07,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Portage River",
+    "Year": 2013,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.1,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Portage River",
+    "Year": 2014,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.076,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Portage River",
+    "Year": 2015,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.103,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Portage River",
+    "Year": 2016,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.057,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Portage River",
+    "Year": 2008,
+    "Fraction": "Annual TP Loading",
+    "Value": 359,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Portage River",
+    "Year": 2009,
+    "Fraction": "Annual TP Loading",
+    "Value": 255,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Portage River",
+    "Year": 2010,
+    "Fraction": "Annual TP Loading",
+    "Value": 131,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Portage River",
+    "Year": 2011,
+    "Fraction": "Annual TP Loading",
+    "Value": 544,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Portage River",
+    "Year": 2012,
+    "Fraction": "Annual TP Loading",
+    "Value": 452,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Portage River",
+    "Year": 2013,
+    "Fraction": "Annual TP Loading",
+    "Value": 305,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Portage River",
+    "Year": 2014,
+    "Fraction": "Annual TP Loading",
+    "Value": 235,
+    "Source": "Santina August 2018"
+  },
+  {
+    "River": "Portage River",
+    "Year": 2015,
+    "Fraction": "Annual TP Loading",
+    "Value": 178,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Portage River",
+    "Year": 2016,
+    "Fraction": "Annual TP Loading",
+    "Value": 149,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Portage River",
+    "Year": 2008,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.55414874,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Portage River",
+    "Year": 2009,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.723349792,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Portage River",
+    "Year": 2010,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.523589186,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Portage River",
+    "Year": 2011,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.935957175,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Portage River",
+    "Year": 2012,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.893687606,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Portage River",
+    "Year": 2013,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.813314531,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2008,
+    "Fraction": "Spring Discharge",
+    "Value": 561.85,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2009,
+    "Fraction": "Spring Discharge",
+    "Value": 574.69,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2010,
+    "Fraction": "Spring Discharge",
+    "Value": 536.7,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2011,
+    "Fraction": "Spring Discharge",
+    "Value": 691.09,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2012,
+    "Fraction": "Spring Discharge",
+    "Value": 249.95,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2013,
+    "Fraction": "Spring Discharge",
+    "Value": 444.88,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2014,
+    "Fraction": "Spring Discharge",
+    "Value": 455.3,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2015,
+    "Fraction": "Spring Discharge",
+    "Value": 511.22,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2016,
+    "Fraction": "Spring Discharge",
+    "Value": 333.19,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2008,
+    "Fraction": "Spring TP Loading",
+    "Value": 83.5,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2009,
+    "Fraction": "Spring TP Loading",
+    "Value": 92,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2010,
+    "Fraction": "Spring TP Loading",
+    "Value": 68.2,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2011,
+    "Fraction": "Spring TP Loading",
+    "Value": 133,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2012,
+    "Fraction": "Spring TP Loading",
+    "Value": 27.1,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2013,
+    "Fraction": "Spring TP Loading",
+    "Value": 56.9,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2014,
+    "Fraction": "Spring TP Loading",
+    "Value": 58.8,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2015,
+    "Fraction": "Spring TP Loading",
+    "Value": 74.9,
+    "Source": "Santina August 2018"
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2016,
+    "Fraction": "Spring TP Loading",
+    "Value": 40.2,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2008,
+    "Fraction": "Spring SRP Loading",
+    "Value": 19.6,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2009,
+    "Fraction": "Spring SRP Loading",
+    "Value": 16.7,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2010,
+    "Fraction": "Spring SRP Loading",
+    "Value": 16.7,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2011,
+    "Fraction": "Spring SRP Loading",
+    "Value": 29.4,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2012,
+    "Fraction": "Spring SRP Loading",
+    "Value": 6.4,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2013,
+    "Fraction": "Spring SRP Loading",
+    "Value": 14.3,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2014,
+    "Fraction": "Spring SRP Loading",
+    "Value": 17.8,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2015,
+    "Fraction": "Spring SRP Loading",
+    "Value": 24.1,
+    "Source": "Santina August 2018"
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2016,
+    "Fraction": "Spring SRP Loading",
+    "Value": 9.1,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2008,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.149,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2009,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.16,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2010,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.127,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2011,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.192,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2012,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.108,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2013,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.128,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2014,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.129,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2015,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.146,
+    "Source": "Santina August 2018"
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2016,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.121,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2008,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.035,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2009,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.029,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2010,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.031,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2011,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.043,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2012,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.025,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2013,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.032,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2014,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.039,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2015,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.047,
+    "Source": "Santina August 2018"
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2016,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.027,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2008,
+    "Fraction": "Annual TP Loading",
+    "Value": 262,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2009,
+    "Fraction": "Annual TP Loading",
+    "Value": 172,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2010,
+    "Fraction": "Annual TP Loading",
+    "Value": 161,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2011,
+    "Fraction": "Annual TP Loading",
+    "Value": 185,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2012,
+    "Fraction": "Annual TP Loading",
+    "Value": 201,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2013,
+    "Fraction": "Annual TP Loading",
+    "Value": 88,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2014,
+    "Fraction": "Annual TP Loading",
+    "Value": 95,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2015,
+    "Fraction": "Annual TP Loading",
+    "Value": 105,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2016,
+    "Fraction": "Annual TP Loading",
+    "Value": 76,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2008,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.197845756,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2009,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.150076414,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2010,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.17753563,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2011,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.172402302,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2012,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.178978244,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "River Raisin",
+    "Year": 2013,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.124600968,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2008,
+    "Fraction": "Spring Discharge",
+    "Value": 962.07,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2009,
+    "Fraction": "Spring Discharge",
+    "Value": 437.34,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2010,
+    "Fraction": "Spring Discharge",
+    "Value": 731.45,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2011,
+    "Fraction": "Spring Discharge",
+    "Value": 1293.68,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2012,
+    "Fraction": "Spring Discharge",
+    "Value": 270.61,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2013,
+    "Fraction": "Spring Discharge",
+    "Value": 871.69,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2014,
+    "Fraction": "Spring Discharge",
+    "Value": 650.95,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2015,
+    "Fraction": "Spring Discharge",
+    "Value": 911.14,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2016,
+    "Fraction": "Spring Discharge",
+    "Value": 494.83,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2008,
+    "Fraction": "Spring TP Loading",
+    "Value": 366.9,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2009,
+    "Fraction": "Spring TP Loading",
+    "Value": 201.6,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2010,
+    "Fraction": "Spring TP Loading",
+    "Value": 311.6,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2011,
+    "Fraction": "Spring TP Loading",
+    "Value": 700.8,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2012,
+    "Fraction": "Spring TP Loading",
+    "Value": 142.7,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2013,
+    "Fraction": "Spring TP Loading",
+    "Value": 364.4,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2014,
+    "Fraction": "Spring TP Loading",
+    "Value": 269.8,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2015,
+    "Fraction": "Spring TP Loading",
+    "Value": 328.9,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2016,
+    "Fraction": "Spring TP Loading",
+    "Value": 160.1,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2008,
+    "Fraction": "Spring SRP Loading",
+    "Value": 69,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2009,
+    "Fraction": "Spring SRP Loading",
+    "Value": 29.5,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2010,
+    "Fraction": "Spring SRP Loading",
+    "Value": 66,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2011,
+    "Fraction": "Spring SRP Loading",
+    "Value": 126.7,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2012,
+    "Fraction": "Spring SRP Loading",
+    "Value": 15.5,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2013,
+    "Fraction": "Spring SRP Loading",
+    "Value": 87.8,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2014,
+    "Fraction": "Spring SRP Loading",
+    "Value": 59.6,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2015,
+    "Fraction": "Spring SRP Loading",
+    "Value": 91.9,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2016,
+    "Fraction": "Spring SRP Loading",
+    "Value": 30.6,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2008,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.381,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2009,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.461,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2010,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.426,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2011,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.542,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2012,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.527,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2013,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.418,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2014,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.414,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2015,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.361,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2016,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.323,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2008,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.072,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2009,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.067,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2010,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.09,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2011,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.098,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2012,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.057,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2013,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.101,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2014,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.092,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2015,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.101,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2016,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.062,
+    "Source": "Greg Koltun"
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2008,
+    "Fraction": "Annual TP Loading",
+    "Value": 1101,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2009,
+    "Fraction": "Annual TP Loading",
+    "Value": 511,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2010,
+    "Fraction": "Annual TP Loading",
+    "Value": 429,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2011,
+    "Fraction": "Annual TP Loading",
+    "Value": 1165,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2012,
+    "Fraction": "Annual TP Loading",
+    "Value": 793,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2013,
+    "Fraction": "Annual TP Loading",
+    "Value": 773,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2014,
+    "Fraction": "Annual TP Loading",
+    "Value": 698,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2015,
+    "Fraction": "Annual TP Loading",
+    "Value": 456,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2016,
+    "Fraction": "Annual TP Loading",
+    "Value": 389,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2008,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.472805958,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2009,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.44124554,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2010,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.397040894,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2011,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.500175761,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Sandusky River",
+    "Year": 2012,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.4257791,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Thames River",
+    "Year": 2008,
+    "Fraction": "Spring TP Loading",
+    "Value": 127,
+    "Source": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2009,
+    "Fraction": "Spring TP Loading",
+    "Value": 185,
+    "Source": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2010,
+    "Fraction": "Spring TP Loading",
+    "Value": 88,
+    "Source": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2011,
+    "Fraction": "Spring TP Loading",
+    "Value": 785,
+    "Source": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2012,
+    "Fraction": "Spring TP Loading",
+    "Value": 34,
+    "Source": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2013,
+    "Fraction": "Spring TP Loading",
+    "Value": 99,
+    "Source": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2014,
+    "Fraction": "Spring TP Loading",
+    "Value": 250,
+    "Source": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2015,
+    "Fraction": "Spring TP Loading",
+    "Value": 206.8,
+    "Source": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2016,
+    "Fraction": "Spring TP Loading",
+    "Value": 50,
+    "Source": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2017,
+    "Fraction": "Spring TP Loading",
+    "Value": 239,
+    "Source": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2018,
+    "Fraction": "Spring TP Loading",
+    "Value": 162,
+    "Source": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2008,
+    "Fraction": "Spring SRP Loading",
+    "Value": 17,
+    "Source": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2009,
+    "Fraction": "Spring SRP Loading",
+    "Value": 39,
+    "Source": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2010,
+    "Fraction": "Spring SRP Loading",
+    "Value": 11,
+    "Source": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2011,
+    "Fraction": "Spring SRP Loading",
+    "Value": 256,
+    "Source": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2012,
+    "Fraction": "Spring SRP Loading",
+    "Value": 8,
+    "Source": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2013,
+    "Fraction": "Spring SRP Loading",
+    "Value": 33,
+    "Source": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2014,
+    "Fraction": "Spring SRP Loading",
+    "Value": 83,
+    "Source": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2015,
+    "Fraction": "Spring SRP Loading",
+    "Value": 72.4,
+    "Source": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2016,
+    "Fraction": "Spring SRP Loading",
+    "Value": 11,
+    "Source": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2017,
+    "Fraction": "Spring SRP Loading",
+    "Value": 40,
+    "Source": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2018,
+    "Fraction": "Spring SRP Loading",
+    "Value": 32,
+    "Source": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2008,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.094,
+    "Source": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2009,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.122,
+    "Source": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2010,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.088,
+    "Source": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2011,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.35,
+    "Source": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2012,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.096,
+    "Source": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2013,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.085,
+    "Source": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2014,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.221,
+    "Source": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2015,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.235,
+    "Source": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2016,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.059,
+    "Source": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2017,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.235,
+    "Source": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2018,
+    "Fraction": "Spring TP FWMC",
+    "Value": 0.215,
+    "Source": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2008,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.013,
+    "Source": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2009,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.026,
+    "Source": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2010,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.011,
+    "Source": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2011,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.114,
+    "Source": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2012,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.021,
+    "Source": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2013,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.028,
+    "Source": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2014,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.073,
+    "Source": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2015,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.082,
+    "Source": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2016,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.013,
+    "Source": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2017,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.039,
+    "Source": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2018,
+    "Fraction": "Spring SRP FWMC",
+    "Value": 0.042,
+    "Source": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2008,
+    "Fraction": "Annual TP Loading",
+    "Value": 292,
+    "Source": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2009,
+    "Fraction": "Annual TP Loading",
+    "Value": 553,
+    "Source": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2010,
+    "Fraction": "Annual TP Loading",
+    "Value": 141,
+    "Source": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2011,
+    "Fraction": "Annual TP Loading",
+    "Value": 971,
+    "Source": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2012,
+    "Fraction": "Annual TP Loading",
+    "Value": 184,
+    "Source": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2013,
+    "Fraction": "Annual TP Loading",
+    "Value": 367,
+    "Source": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2014,
+    "Fraction": "Annual TP Loading",
+    "Value": 556,
+    "Source": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2015,
+    "Fraction": "Annual TP Loading",
+    "Value": 334,
+    "Source": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2016,
+    "Fraction": "Annual TP Loading",
+    "Value": 289,
+    "Source": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2017,
+    "Fraction": "Annual TP Loading",
+    "Value": 415,
+    "Source": ""
+  },
+  {
+    "River": "Thames River",
+    "Year": 2018,
+    "Fraction": "Annual TP Loading",
+    "Value": 591,
+    "Source": ""
+  },
+  {
+    "River": "Vermilion River",
+    "Year": 2008,
+    "Fraction": "Annual TP Loading",
+    "Value": 202,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Vermilion River",
+    "Year": 2009,
+    "Fraction": "Annual TP Loading",
+    "Value": 21,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Vermilion River",
+    "Year": 2010,
+    "Fraction": "Annual TP Loading",
+    "Value": 47,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Vermilion River",
+    "Year": 2011,
+    "Fraction": "Annual TP Loading",
+    "Value": 142,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Vermilion River",
+    "Year": 2012,
+    "Fraction": "Annual TP Loading",
+    "Value": 113,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Vermilion River",
+    "Year": 2013,
+    "Fraction": "Annual TP Loading",
+    "Value": 215,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Vermilion River",
+    "Year": 2014,
+    "Fraction": "Annual TP Loading",
+    "Value": 140,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Vermilion River",
+    "Year": 2015,
+    "Fraction": "Annual TP Loading",
+    "Value": 19,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Vermilion River",
+    "Year": 2016,
+    "Fraction": "Annual TP Loading",
+    "Value": 92,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Vermilion River",
+    "Year": 2008,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.445048267,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Vermilion River",
+    "Year": 2009,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.092179736,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Vermilion River",
+    "Year": 2010,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.269369401,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Vermilion River",
+    "Year": 2011,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.376533409,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Vermilion River",
+    "Year": 2012,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.404885848,
+    "Source": "Santina and Maccoux"
+  },
+  {
+    "River": "Vermilion River",
+    "Year": 2013,
+    "Fraction": "Annual TP FWMC",
+    "Value": 0.73112044,
+    "Source": "Santina and Maccoux"
+  }
+]
