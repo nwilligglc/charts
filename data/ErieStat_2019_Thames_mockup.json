@@ -1294,6 +1294,13 @@
     "Value": "",
     "Source": "Greg Koltun"
   },
+{
+    "River": "Huron River-OH",
+    "Year": 2017,
+    "Fraction": "Spring Discharge",
+    "Value": "",
+    "Source": "Greg Koltun"
+},
   {
     "River": "Huron River-OH",
     "Year": 2018,
@@ -1364,6 +1371,13 @@
     "Value": 25.9,
     "Source": "Greg Koltun"
   },
+{
+    "River": "Huron River-OH",
+    "Year": 2017,
+    "Fraction": "Spring TP Loading",
+    "Value": "",
+    "Source": "Greg Koltun"
+},
   {
     "River": "Huron River-OH",
     "Year": 2018,
@@ -1434,6 +1448,13 @@
     "Value": "",
     "Source": "Greg Koltun"
   },
+{
+    "River": "Huron River-OH",
+    "Year": 2017,
+    "Fraction": "Spring SRP Loading",
+    "Value": "",
+    "Source": "Greg Koltun"
+},
   {
     "River": "Huron River-OH",
     "Year": 2018,
