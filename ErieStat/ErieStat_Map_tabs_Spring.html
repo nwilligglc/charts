@@ -13,7 +13,7 @@
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/modules/export-data.js"></script>
     <script src="../js/BlueAccounting.js"></script>
-    <script src="../js/ErieStat.js"></script>
+    <script src="../js/ErieStat_2019_Thames_mockup.js"></script>
     <link rel="stylesheet" href="../css/BA_Style.css">
 
 </head>
@@ -73,7 +73,7 @@
     init();
 
 
-    $.getJSON("../data/data.json", function(d){
+    $.getJSON("../data/ErieStat_2019_Thames_mockup.json", function(d){
         data = d;
     }).done(function () {
         ES.init(data);
@@ -144,7 +144,7 @@
                             var chart1 = BA.buildDualAxesChart(s1_data, metric1.name, metric1.unit, BA.ColorPicker.blue7, "column",
                                 discharge_data, metric_discharge.name, metric_discharge.unit, BA.ColorPicker.blue6, "line",
                                 "chart1", name + " " + metric1.name + " and " + metric_discharge.name, "<i>*SRP: Soluble reactive phosphorus</i>",
-                                ES.xAxis[0], ES.targets[name][metric1.name], null, //ES.targets[name][metric2.name],
+                                ES.xAxis_start, ES.targets[name][metric1.name], null, //ES.targets[name][metric2.name],
                                 (window.innerHeight  - $("#narrative-section").height()) * 0.7
                             );
                         }else{
@@ -153,7 +153,7 @@
 
                         if(s2_data.length > 0){
                             var chart2 = BA.buildSingleChart("line", s2_data, metric2.name, metric2.unit, BA.ColorPicker.blue7,
-                                ES.xAxis[0], name + " " + metric2.name, "<i>*SRP: Soluble reactive phosphorus</i><br><i>*FWMC: Flow-weighted mean concentration</i>",
+                                ES.xAxis_start, name + " " + metric2.name, "<i>*SRP: Soluble reactive phosphorus</i><br><i>*FWMC: Flow-weighted mean concentration</i>",
                                 ES.targets[name][metric2.name], "chart2", (window.innerHeight  - $("#narrative-section").height()) * 0.7
                             );
                         }
@@ -165,7 +165,7 @@
                             var chart3 = BA.buildDualAxesChart(s3_data, metric3.name, metric3.unit, BA.ColorPicker.blue7, "column",
                                 discharge_data, metric_discharge.name, metric_discharge.unit, BA.ColorPicker.blue6, "line",
                                 "chart3", name + " " + metric3.name + " and " + metric_discharge.name, "<i>*TP: Total phosphorus</i>",
-                                ES.xAxis[0], ES.targets[name][metric3.name], null, //ES.targets[name][metric2.name],
+                                ES.xAxis_start, ES.targets[name][metric3.name], null, //ES.targets[name][metric2.name],
                                 (window.innerHeight  - $("#narrative-section").height()) * 0.7
                             );
                         }else{
@@ -174,7 +174,7 @@
 
                         if(s4_data.length > 0){
                             var chart4 = BA.buildSingleChart("line", s4_data, metric4.name, metric4.unit, BA.ColorPicker.blue7,
-                                ES.xAxis[0], name + " " + metric4.name, "<i>*TP: Total phosphorus</i><br><i>*FWMC: Flow-weighted mean concentration</i>",
+                                ES.xAxis_start, name + " " + metric4.name, "<i>*TP: Total phosphorus</i><br><i>*FWMC: Flow-weighted mean concentration</i>",
                                 ES.targets[name][metric4.name], "chart4", (window.innerHeight  - $("#narrative-section").height()) * 0.7
                             );
                         }else{

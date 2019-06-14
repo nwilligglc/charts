@@ -12,7 +12,7 @@
     <script src="//code.highcharts.com/highcharts.js"></script>
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="../js/BlueAccounting.js"></script>
-    <script src="../js/ErieStat_2019_Thames_mockup.js"></script>
+    <script src="../js/ErieStat.js"></script>
     <link rel="stylesheet" href="../css/BA_Style.css">
 
 </head>
@@ -65,7 +65,7 @@
     init();
 
 
-    $.getJSON("../data/ErieStat_2019_Thames_mockup.json", function(d){
+    $.getJSON("../data/data.json", function(d){
         data = d;
     }).done(function () {
         ES.init(data);
@@ -133,7 +133,7 @@
 
                         if (s1_data.length > 0) {
                             var chart1 = BA.buildSingleChart("column", s1_data, metric1.name, metric1.unit, BA.ColorPicker.blue7,
-                                ES.xAxis_start, name + " " + metric1.name, "<i>*TP: Total phosphorus</i>", ES.targets[name][metric1.name], "chart1",
+                                ES.xAxis[0], name + " " + metric1.name, "<i>*TP: Total phosphorus</i>", ES.targets[name][metric1.name], "chart1",
                                 (window.innerHeight - $("#narrative-section").height()) * 0.75
                             );
                         }else{

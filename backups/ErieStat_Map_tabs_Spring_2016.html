@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Annual TP Loading in ErieStat Watersheds</title>
+    <title>Spring SRP Loading in ErieStat Watersheds</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
@@ -11,16 +11,13 @@
     <script src="https://unpkg.com/esri-leaflet@2.1.3/dist/esri-leaflet.js"></script>
     <script src="//code.highcharts.com/highcharts.js"></script>
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
     <script src="../js/BlueAccounting.js"></script>
-    <script src="../js/ErieStat_2019_Thames_mockup.js"></script>
+    <script src="../js/ErieStat.js"></script>
     <link rel="stylesheet" href="../css/BA_Style.css">
 
 </head>
 <body>
-<style>
-
-
-</style>
 <div>
     <div id="map"></div>
     <div class="vl"></div>
@@ -32,45 +29,55 @@
         </div>
         <!-- Tab links -->
         <div class="tab">
-            <button class="tablinks" onclick="openFractionChart(event, 'TP')" id="defaultOpen">Annual TP Loading<!-- and<br> Annual Discharge--></button>
-            <!--<button class="tablinks" onclick="openFractionChart(event, 'FWMC')">Annual TP FWMC</button>-->
+            <button class="tablinks" onclick="openFractionChart(event, 'SRP_S')" id="defaultOpen">Spring SRP Loading and<br> Spring Discharge</button>
+            <button class="tablinks" onclick="openFractionChart(event, 'SRP_FWMC')">Spring SRP FWMC</button>
+            <button class="tablinks" onclick="openFractionChart(event, 'TP_S')" >Spring TP Loading and<br> Spring Discharge</button>
+            <button class="tablinks" onclick="openFractionChart(event, 'TP_FWMC_S')">Spring TP FWMC</button>
         </div>
 
         <!-- Tab content -->
-        <div id="TP" class="tabcontent">
+        <div id="SRP_S" class="tabcontent">
             <!--<span onclick="this.parentElement.style.display='none'" class="topright">&times</span>-->
             <div id="chart1" class="charts"></div>
         </div>
 
-        <!--<div id="FWMC" class="tabcontent">-->
+        <div id="SRP_FWMC" class="tabcontent">
             <!--<span onclick="this.parentElement.style.display='none'" class="topright">&times</span>-->
-            <!--<div>-->
-                <!--<div id="chart2"></div>-->
-            <!--</div>-->
-        <!--</div>-->
+            <div>
+                <div id="chart2" class="charts"></div>
+            </div>
+        </div>
+        <div id="TP_S" class="tabcontent">
+            <!--<span onclick="this.parentElement.style.display='none'" class="topright">&times</span>-->
+            <div id="chart3" class="charts"></div>
+        </div>
+        <div id="TP_FWMC_S" class="tabcontent">
+            <!--<span onclick="this.parentElement.style.display='none'" class="topright">&times</span>-->
+            <div id="chart4" class="charts"></div>
+        </div>
     </div>
 </div>
 
 
 <script>
     var data;
-    var serviceURL = "https://gis.glc.org/server/rest/services/ErieStat/AnnualTP/MapServer";
+    var serviceURL = "https://gis.glc.org/server/rest/services/ErieStat/SpringSRP/MapServer";
     var BA = new BlueAccounting();
     var ES = new ErieStat();
-    metric1 = ES.metrics.TP_L;
-    metric2 = ES.metrics.Discharge;
-//    var metric1 = metrics.TP_L;
-//    var metric2 = metrics.Discharge;
+    var metric1 = ES.metrics.SRP_L_S;
+    var metric2 = ES.metrics.SRP_FWMC_S;
+    var metric3 = ES.metrics.TP_L_S;
+    var metric4 = ES.metrics.TP_FWMS_S;
+    var metric_discharge = ES.metrics.Discharge_S;
 
     init();
 
 
-    $.getJSON("../data/ErieStat_2019_Thames_mockup.json", function(d){
+    $.getJSON("../data/data.json", function(d){
         data = d;
     }).done(function () {
         ES.init(data);
     });
-
 
     var map = L.map("map").setView([42.1, -83.1], 8);
     L.esri.basemapLayer("Topographic").addTo(map);
@@ -85,7 +92,7 @@
 //    var monitoringLocLayer =
     L.esri.featureLayer({
         url: "https://services7.arcgis.com/Tk0IbKIKhaoYn5sa/arcgis/rest/services/ErieStat_Monitoring/FeatureServer/0",
-        where: "ANNUAL = 'Y'",
+        where: "SPRING = 'Y'",
         pointToLayer: function (geojson, latlng) {
             var p = L.circle(latlng, {
                 radius: 50,
@@ -122,27 +129,60 @@
                     selectedFeature.setStyle({
                         fill: false,
                         weight: 4,
-//                            color: "#07fcf0"
                         color: "#F3A51E"
                     });
                     selectedFeature.addTo(map);
                     var name = ES.watershedNames[featureCollection.features[i].properties["Watershed Name"]];
                     if(ES.buildNarratives(name)){
                         var s1_data = ES.getWatershedData(name, metric1.name);
-//                        var s2_data = ES.getWatershedData(name, metric2.name);
+                        var s2_data = ES.getWatershedData(name, metric2.name);
+                        var s3_data = ES.getWatershedData(name, metric3.name);
+                        var s4_data = ES.getWatershedData(name, metric4.name);
+                        var discharge_data = ES.getWatershedData(name, metric_discharge.name);
 
-                        if (s1_data.length > 0) {
-                            var chart1 = BA.buildSingleChart("column", s1_data, metric1.name, metric1.unit, BA.ColorPicker.blue7,
-                                ES.xAxis_start, name + " " + metric1.name, "<i>*TP: Total phosphorus</i>", ES.targets[name][metric1.name], "chart1",
-                                (window.innerHeight - $("#narrative-section").height()) * 0.75
+                        if(s1_data.length > 0 /*&& discharge_data.length > 0*/){
+                            var chart1 = BA.buildDualAxesChart(s1_data, metric1.name, metric1.unit, BA.ColorPicker.blue7, "column",
+                                discharge_data, metric_discharge.name, metric_discharge.unit, BA.ColorPicker.blue6, "line",
+                                "chart1", name + " " + metric1.name + " and " + metric_discharge.name, "<i>*SRP: Soluble reactive phosphorus</i>",
+                                ES.xAxis[0], ES.targets[name][metric1.name], null, //ES.targets[name][metric2.name],
+                                (window.innerHeight  - $("#narrative-section").height()) * 0.7
                             );
                         }else{
                             $("#chart1").html("<i>* Data under development.</i>");
                         }
+
+                        if(s2_data.length > 0){
+                            var chart2 = BA.buildSingleChart("line", s2_data, metric2.name, metric2.unit, BA.ColorPicker.blue7,
+                                ES.xAxis[0], name + " " + metric2.name, "<i>*SRP: Soluble reactive phosphorus</i><br><i>*FWMC: Flow-weighted mean concentration</i>",
+                                ES.targets[name][metric2.name], "chart2", (window.innerHeight  - $("#narrative-section").height()) * 0.7
+                            );
+                        }
+                        else {
+                            $("#chart2").html("<i>* Data under development.</i>");
+                        }
+
+                        if(s3_data.length > 0){
+                            var chart3 = BA.buildDualAxesChart(s3_data, metric3.name, metric3.unit, BA.ColorPicker.blue7, "column",
+                                discharge_data, metric_discharge.name, metric_discharge.unit, BA.ColorPicker.blue6, "line",
+                                "chart3", name + " " + metric3.name + " and " + metric_discharge.name, "<i>*TP: Total phosphorus</i>",
+                                ES.xAxis[0], ES.targets[name][metric3.name], null, //ES.targets[name][metric2.name],
+                                (window.innerHeight  - $("#narrative-section").height()) * 0.7
+                            );
+                        }else{
+                            $("#chart3").html("<i>* Data under development.</i>");
+                        }
+
+                        if(s4_data.length > 0){
+                            var chart4 = BA.buildSingleChart("line", s4_data, metric4.name, metric4.unit, BA.ColorPicker.blue7,
+                                ES.xAxis[0], name + " " + metric4.name, "<i>*TP: Total phosphorus</i><br><i>*FWMC: Flow-weighted mean concentration</i>",
+                                ES.targets[name][metric4.name], "chart4", (window.innerHeight  - $("#narrative-section").height()) * 0.7
+                            );
+                        }else{
+                            $("#chart4").html("<i>* Data under development.</i>");
+                        }
                     }else{
                         $(".charts").html("");
                     }
-
                     break;
                 }
             }
@@ -157,7 +197,7 @@
             tabs[i].style.display = "none";
         }
         // Show intro
-        $("#intro").html(ES.intro_TP);
+        $("#intro").html(ES.intro_SRP);
     };
 
     function openFractionChart(evt, fraction) {
@@ -184,7 +224,6 @@
         // Maintain current tab open
         evt.currentTarget.id = "defaultOpen";
     }
-
 </script>
 </body>
 </html>
