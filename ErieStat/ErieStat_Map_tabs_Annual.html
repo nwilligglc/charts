@@ -12,7 +12,7 @@
     <script src="//code.highcharts.com/highcharts.js"></script>
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="../js/BlueAccounting.js"></script>
-    <script src="../js/ErieStat_2019_Thames_mockup.js"></script>
+    <script src="../js/ErieStat_2019.js"></script>
     <link rel="stylesheet" href="../css/BA_Style.css">
 
 </head>
@@ -65,7 +65,7 @@
     init();
 
 
-    $.getJSON("../data/ErieStat_2019_Thames_mockup.json", function(d){
+    $.getJSON("../data/ErieStat_2019.json", function(d){
         data = d;
     }).done(function () {
         ES.init(data);
