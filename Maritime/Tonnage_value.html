@@ -75,7 +75,7 @@
         tooltip: {
             formatter: function () {
                 return "<b>" + this.point.name + "</b><br>" +
-                    this.series.name + " Volume: <b>$" + this.y.toFixed(0) + "</b> (" + this.point.percentage.toFixed(2) + "% in total volume.)";
+                    this.series.name + " Volume: <b>" + this.y.toFixed(0) + "</b> (" + this.point.percentage.toFixed(2) + "% in total volume.)";
             }
         },
         plotOptions: {
@@ -194,7 +194,7 @@
         tooltip: {
             formatter: function () {
                 return "<b>" + this.point.name + "</b><br>" +
-                    "Value in US Dollars: <b>$" + this.y.toFixed(0) + "</b> ($" + (this.y * exchageRate).toFixed(0) + " in CAD)<br>" +
+                    "Value in $Billion (USD) : <b>$" + (this.y / 1000).toFixed(2) + "</b> ($" + ((this.y / 1000) * exchageRate).toFixed(2) + " in CAD)<br>" +
                     this.point.percentage.toFixed(2) +"% of total value.";
             }
         },
