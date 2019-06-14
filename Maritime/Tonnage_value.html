@@ -75,7 +75,7 @@
         tooltip: {
             formatter: function () {
                 return "<b>" + this.point.name + "</b><br>" +
-                    this.series.name + " Volume: <b>" + this.y.toFixed(0) + "</b> (" + this.point.percentage.toFixed(2) + "% in total volume.)";
+                    this.series.name + " Volume (in million metric tonnes): <b>" + (this.y / 1000).toFixed(1) + "<br> (" + this.point.percentage.toFixed(1) + "% total volume.)";
             }
         },
         plotOptions: {
@@ -184,7 +184,7 @@
             text: 'Value Cargo Carried on MTS 2017'
         },
         subtitle: {
-            text: "CAD to USD exchange rate is calculated as the 2017 average of 1.23. <a href='https://www.bankofcanada.ca/rates/exchange/annual-average-exchange-rates/' target='_blank' style='color: #1b75ba;font-weight: bold'>(Source)</a>"
+            text: "USD to CAD exchange rate = 1:1.23 (2017 average) <a href='https://www.bankofcanada.ca/rates/exchange/annual-average-exchange-rates/' target='_blank' style='color: #1b75ba;font-weight: bold'>(Source)</a>"
         },
         legend: {
             layout: 'vertical',
@@ -194,7 +194,7 @@
         tooltip: {
             formatter: function () {
                 return "<b>" + this.point.name + "</b><br>" +
-                    "Value in $Billion (USD) : <b>$" + (this.y / 1000).toFixed(2) + "</b> ($" + ((this.y / 1000) * exchageRate).toFixed(2) + " in CAD)<br>" +
+                    "Value in $billion (USD) : <b>$" + (this.y / 1000).toFixed(2) + "</b> ($" + ((this.y / 1000) * exchageRate).toFixed(2) + " in CAD)<br>" +
                     this.point.percentage.toFixed(2) +"% of total value.";
             }
         },
