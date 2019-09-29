@@ -79,7 +79,7 @@
         ES.init(data);
     });
 
-    var map = L.map("map").setView([42.1, -83.1], 8);
+    var map = L.map("map").setView([42.1, -82.0], 7);
     L.esri.basemapLayer("Topographic").addTo(map);
 
     var watersheds = L.esri.dynamicMapLayer({
@@ -110,9 +110,11 @@
     var boundary_query = L.esri.query({
         url: serviceURL + "/0"
     });
-    boundary_query.bounds(function(error, latlngbounds){
-        map.fitBounds(latlngbounds);
-    });
+
+    // Stop auto zoom-in due to auto-resizing on the container page.
+    // boundary_query.bounds(function(error, latlngbounds){
+    //     map.fitBounds(latlngbounds);
+    // });
 
     var selectedFeature;
     map.on("click", function (e){
